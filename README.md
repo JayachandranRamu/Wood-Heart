@@ -1,21 +1,3 @@
-
-# WOOD HEART (posh-division-4370)
-
-# Contributors (Group of 5) 😇 :
-
-#### names : 
-
-* :bust_in_silhouette: [fw27_299-Jayachandran Ramu](https://github.com/JayachandranRamu)
-* :bust_in_silhouette: [fw24_585-Abhay v]()  
-* :bust_in_silhouette: [fw25_233-Narendra Patel]()
-* :bust_in_silhouette: [fw27_265-Gauri Bidwai](https://github.com/gitusergb)
-* :bust_in_silhouette: [fw24_247-baibhav kumar]()
-
-
-# More Info :
-
-###  This website is made from  : https://www.behance.net/gallery/164952317/Wood-Fans-Website?tracking_source=search_projects%7Ce+commerce+web+design+for+furniture
-
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
