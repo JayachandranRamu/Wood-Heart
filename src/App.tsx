@@ -1,3 +1,6 @@
+import { Cart } from "./user/Cart";
+
+
 
 import Admin from "./Admin/Pages/Admin"
 import { DesktopNav } from "./UserPage/Components/BottomNavbar"
@@ -15,11 +18,13 @@ function App() {
   return (
     <>
     
+
       {/* <h1>Vite + React</h1> */}
       <TopNavbar />
         <DesktopNav />
       <MainRoutes />
       <Footer />
+
     </>
   )
 }
