@@ -13,24 +13,24 @@ import {
     useColorModeValue,
     useBreakpointValue,
     useDisclosure,
-  } from '@chakra-ui/react'
+    Image,
+  } from '@chakra-ui/react';
   import {
     HamburgerIcon,
     CloseIcon,
     ChevronDownIcon,
     ChevronRightIcon,
-  } from '@chakra-ui/icons'
-
+  } from '@chakra-ui/icons';
+  import { FaArrowDown } from 'react-icons/fa';
   interface NavItem {
-    label: string
-    subLabel?: string
-    children?: Array<NavItem>
-    href?: string
+    label: string;  
+    src?:string;
+    subLabel?: string;
+    children?: Array<NavItem>;
+    href?: string;
   }
-
-export const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
-
-
+  
+  export const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
     return (
       <Box
         as="a"
@@ -62,96 +62,95 @@ export const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
           </Flex>
         </Stack>
       </Box>
-    )
-  }
+    );
+  };
+  
   const NAV_ITEMS: Array<NavItem> = [
     {
-      label: 'Inspiration',
-      children: [
-        {
-          label: 'Explore Design Work',
-          subLabel: 'Trending Design to inspire you',
-          href: '#',
-        },
-        {
-          label: 'New & Noteworthy',
-          subLabel: 'Up-and-coming Designers',
-          href: '#',
-        },
-      ],
+      label: 'CHAIRS',
+      src:'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category1.svg',
+   href:"#"
     },
     {
-      label: 'Find Work',
-      children: [
-        {
-          label: 'Job Board',
-          subLabel: 'Find your dream design job',
-          href: '#',
-        },
-        {
-          label: 'Freelance Projects',
-          subLabel: 'An exclusive list for contract work',
-          href: '#',
-        },
-      ],
+      label: 'BEDS',
+      src:'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category2.svg',
+      href:"#"
     },
     {
-      label: 'Learn Design',
-      href: '#',
+      label: 'TABLES',
+      href:"#",
+      src: 'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category3.svg',
     },
     {
-      label: 'Hire Designers',
-      href: '#',
+      label: 'DESKS',
+      href:"#",
+      src: 'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category4.svg',
     },
-  ]
- export const DesktopNav = () => {
-    const linkColor = useColorModeValue('gray.600', 'gray.200')
-    const linkHoverColor = useColorModeValue('gray.800', 'white')
-    const popoverContentBgColor = useColorModeValue('white', 'gray.800')
+    {
+      label: 'CABINETS',
+      href:"#",
+      src: 'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category5.svg',
+    },
+    {
+      label: 'LIGHTING',
+      href:"#",
+      src: 'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category6.svg',
+    }
+  ];
+  
+  export const DesktopNav = () => {
+    // Use useBreakpointValue to determine if the component should be displayed
+    const isDesktop = useBreakpointValue({ base: false, md: true });
+  
+    if (!isDesktop) {
+      // Return null if it's not desktop view
+      return null;
+    }
+  
+    const linkColor = useColorModeValue('#0b3954', 'gray.200');
+    const linkHoverColor = useColorModeValue('#ffb128', 'white');
+    const popoverContentBgColor = useColorModeValue('white', 'gray.800');
   
     return (
-        <Box  m={"auto"} boxShadow={"rgba(0, 0, 0, 0.1) -4px 9px 25px -6px"} >
-      <Stack direction={'row'} spacing={4} w={"85%"} m={"auto"} >
-        {NAV_ITEMS.map((navItem) => (
-          <Box key={navItem.label}>
-            <Popover trigger={'hover'} placement={'bottom-start'}>
-              <PopoverTrigger>
-                <Box
-                  as="a"
-                  p={2}
-                  href={navItem.href ?? '#'}
-                  fontSize={'sm'}
-                  fontWeight={500}
-                  color={linkColor}
-                  _hover={{
-                    textDecoration: 'none',
-                    color: linkHoverColor,
-                  }}>
-                  {navItem.label}
-                </Box>
-              </PopoverTrigger>
-  
-              {navItem.children && (
-                <PopoverContent
-                  border={0}
-                  boxShadow={'xl'}
-                  bg={popoverContentBgColor}
-                  p={4}
-                  rounded={'xl'}
-                  minW={'sm'}>
-                  <Stack>
-                    {navItem.children.map((child) => (
-                      <DesktopSubNav key={child.label} {...child} />
-                    ))}
-                  </Stack>
-                </PopoverContent>
-              )}
-            </Popover>
-          </Box>
-        ))}
-      </Stack>
+      <Box fontFamily={"Poppins"} boxShadow="rgba(0, 0, 0, 0.1) -4px 9px 25px -6px" m={"auto"} mt={"10px"}>
+        <Stack direction="row" spacing={4} w="70%" m="auto">
+          {NAV_ITEMS.map((navItem) => (
+            <Box key={navItem.label} m={"auto"} 
+            // borderRight={"1.5px solid #f5f5f5"}
+            >
+           <Image src={navItem.src} w={"25%"} m={"auto"}></Image>
+ 
+                  <Box
+              
+                    // as="a"
+                    p={1.5}
+                    href={navItem.href}
+                    fontSize={'16px'}
+                    fontWeight={500}
+                    color={linkColor}
+                    cursor={'pointer'}
+                    _hover={{
+                      textDecoration: 'none',
+                      color: linkHoverColor,
+                    }}
+                  textAlign={"center"}
+                    >
+                  <Box display={"flex"} justifyContent={'space-evenly'} alignItems={"center"}>
+                    <Box>
+                    {navItem.label}   
+                    </Box>
+                    <Box>
+                    <FaArrowDown /> 
+                    </Box>
+                  </Box>
+                               
+                   
+                  </Box>
+     
+            </Box>
+          ))}
+        </Stack>
       </Box>
-    )
-  }
-  
+    );
+  };
   

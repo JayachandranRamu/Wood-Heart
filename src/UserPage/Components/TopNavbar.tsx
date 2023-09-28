@@ -14,6 +14,12 @@ import {
   useBreakpointValue,
   useDisclosure,
   Image,
+  Input,
+  InputGroup,
+  InputLeftElement,
+  HStack,
+  LinkBox,
+  Link,
 } from '@chakra-ui/react'
 import {
   HamburgerIcon,
@@ -22,20 +28,20 @@ import {
   ChevronRightIcon,
 } from '@chakra-ui/icons'
 import Logo from "/Users/Lenovo/Desktop/posh-division-4370/src/assets/Logo.png"
+import { FaSearch} from 'react-icons/fa';
+
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure()
 
   return (
-    <Box  >
-      <Flex   w={"85%"} m={"auto"}
+    <Box fontFamily={"Poppins"} mt={[0,"10px"]}>
+      <Flex   w={["100%","100%","80%"]} m={"auto"}
         bg={"white"}
   
         minH={'60px'}
         py={{ base: 2 }}
         px={{ base: 4 }}
 
-        
-    
         align={'center'}>
         <Flex
           flex={{ base: 1, md: 'auto' }}
@@ -49,35 +55,59 @@ export default function WithSubnavigation() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-          <Image src={"https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5m15kyve20olnf5nvm31.png"} w={"20%"}
-            textAlign={useBreakpointValue({ base: 'center', md: 'left' })}>
+          <Image src={"https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5m15kyve20olnf5nvm31.png"} w={["100%","100%","60%"]}
+            textAlign={useBreakpointValue({ base: 'center', md: 'left' })} margin={"10px 0"}>
            
           </Image>
 
-
+          
         </Flex>
+        <Box m={"auto"} mr={"150px"}  display={{ base: 'none', md: 'inline-flex' }} >
+        <InputGroup>
+    <InputLeftElement pointerEvents='none'>
 
+    <FaSearch />
+    </InputLeftElement>
+    <Input placeholder='What are you looking for?' variant='filled' type='search' w={["400px","400px","550px"]} />
+  </InputGroup>
+      
+</Box>
         <Stack
           flex={{ base: 1, md: 0 }}
           justify={'flex-end'}
           direction={'row'}
-          spacing={6}>
-          <Button as={'a'} fontSize={'sm'} fontWeight={400} variant={'link'} href={'#'}>
-            Sign In
+          spacing={1}
+          >
+
+             <Button 
+              // display={{ base: 'none', md: 'inline-flex' }} 
+               variant={'link'} href={'#'}>
+            <Image src='https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-cart.svg'  w={["45%","55%"]}>
+
+            </Image></Button>
+              <Button 
+              //  display={{ base: 'none', md: 'inline-flex' }}
+                variant={'link'} href={'#'}>
+            <Image src='https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-wishlist.svg'  w={["45%","55%"]} >
+
+            </Image></Button>
+          <Button variant={'link'} href={'#'}>
+            <Image src='https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-user.svg' w={["45%","55%"]}>
+
+            </Image>
           </Button>
-          <Button
-            as={'a'}
-            display={{ base: 'none', md: 'inline-flex' }}
-            fontSize={'sm'}
-            fontWeight={600}
-            color={'white'}
-            bg={'pink.400'}
-            href={'#'}
-            _hover={{
-              bg: 'pink.300',
-            }}>
-            Sign Up
-          </Button>
+         
+ 
+      
+<Box>
+  <Link to="/cart">
+    <Image
+      src="https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-user.svg"
+      w={["45%", "55%"]}
+      alt="User" // Provide alt text for accessibility
+    />
+  </Link>
+</Box>
         </Stack>
       </Flex>
 
@@ -100,11 +130,11 @@ const MobileNav = () => {
   )
 }
 
-const MobileNavItem = ({ label, children, href }: NavItem) => {
-  const { isOpen, onToggle } = useDisclosure()
+const MobileNavItem = ({ label, href }: NavItem) => {
+  const { isOpen } = useDisclosure()
 
   return (
-    <Stack spacing={4} onClick={children && onToggle}>
+    <Stack spacing={4} >
       <Box
         py={2}
         as="a"
@@ -117,81 +147,46 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         <Text fontWeight={600} color={useColorModeValue('gray.600', 'gray.200')}>
           {label}
         </Text>
-        {children && (
-          <Icon
-            as={ChevronDownIcon}
-            transition={'all .25s ease-in-out'}
-            transform={isOpen ? 'rotate(180deg)' : ''}
-            w={6}
-            h={6}
-          />
-        )}
       </Box>
-
-      <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
-        <Stack
-          mt={2}
-          pl={4}
-          borderLeft={1}
-          borderStyle={'solid'}
-          borderColor={useColorModeValue('gray.200', 'gray.700')}
-          align={'start'}>
-          {children &&
-            children.map((child) => (
-              <Box as="a" key={child.label} py={2} href={child.href}>
-                {child.label}
-              </Box>
-            ))}
-        </Stack>
-      </Collapse>
     </Stack>
   )
 }
 
 interface NavItem {
   label: string
-  subLabel?: string
-  children?: Array<NavItem>
+  src?:string
   href?: string
 }
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: 'Inspiration',
-    children: [
-      {
-        label: 'Explore Design Work',
-        subLabel: 'Trending Design to inspire you',
-        href: '#',
-      },
-      {
-        label: 'New & Noteworthy',
-        subLabel: 'Up-and-coming Designers',
-        href: '#',
-      },
-    ],
+    label: 'CHAIRS',
+    src:'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category1.svg',
+ href:"#"
   },
   {
-    label: 'Find Work',
-    children: [
-      {
-        label: 'Job Board',
-        subLabel: 'Find your dream design job',
-        href: '#',
-      },
-      {
-        label: 'Freelance Projects',
-        subLabel: 'An exclusive list for contract work',
-        href: '#',
-      },
-    ],
+    label: 'BEDS',
+    src:'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category2.svg',
+    href:"#"
   },
   {
-    label: 'Learn Design',
-    href: '#',
+    label: 'TABLES',
+    href:"#",
+    src: 'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category3.svg',
   },
   {
-    label: 'Hire Designers',
-    href: '#',
+    label: 'DESKS',
+    href:"#",
+    src: 'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category4.svg',
   },
-]
+  {
+    label: 'CABINETS',
+    href:"#",
+    src: 'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category5.svg',
+  },
+  {
+    label: 'LIGHTING',
+    href:"#",
+    src: 'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category6.svg',
+  }
+];
