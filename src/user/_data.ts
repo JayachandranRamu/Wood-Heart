@@ -2,7 +2,7 @@ export const cartData = [
     {
       id: '1',
       price: 239.99,
-      currency: 'GBP',
+      currency: 'INR',
       name: 'Fancy chair',
       description: 'abcd, somethingmm',
       quantity: 3,
@@ -12,7 +12,7 @@ export const cartData = [
     {
       id: '2',
       price: 394.99,
-      currency: 'ABC',
+      currency: 'INR',
       name: 'Circle corners table',
       description: 'abcd, somethingmm',
       quantity: 3,
@@ -32,7 +32,7 @@ export const cartData = [
     {
       id: '4',
       price: 2639.99,
-      currency: 'GB',
+      currency: 'INR',
       name: 'SOFA WITH BED',
       description: 'abcd, somethingmm',
       quantity: 3,
