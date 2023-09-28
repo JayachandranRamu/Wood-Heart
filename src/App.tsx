@@ -1,13 +1,11 @@
+import { SingleProductPage } from "./Pages/SingleProductPage";
 
 function App() {
-
-
   return (
     <>
-    
-      <h1>Vite + React</h1>
+      <SingleProductPage />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
