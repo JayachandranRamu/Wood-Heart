@@ -1,11 +1,11 @@
-import HomePage from "./UserPage/Pages/HomePage"
 
+import { ChakraProvider } from "@chakra-ui/react"
+import Admin from "./Admin/Pages/Admin"
+import { BrowserRouter } from 'react-router-dom';
 function App() {
-
-
   return (
     <>
-    <HomePage />
+      <Admin/>
     </>
   )
 }
