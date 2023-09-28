@@ -1,7 +1,7 @@
 export const cartData = [
     {
       id: '1',
-      price: 39.99,
+      price: 239.99,
       currency: 'GBP',
       name: 'Fancy chair',
       description: 'abcd, somethingmm',
@@ -11,8 +11,8 @@ export const cartData = [
     },
     {
       id: '2',
-      price: 39.99,
-      currency: 'GBP',
+      price: 394.99,
+      currency: 'ABC',
       name: 'Circle corners table',
       description: 'abcd, somethingmm',
       quantity: 3,
@@ -21,8 +21,8 @@ export const cartData = [
     },
     {
       id: '3',
-      price: 39.99,
-      currency: 'GBP',
+      price: 4439.99,
+      currency: 'INR',
       name: 'SOFA WITH BED',
       description: 'abcd, somethingmm',
       quantity: 3,
@@ -31,32 +31,13 @@ export const cartData = [
     },
     {
       id: '4',
-      price: 39.99,
-      currency: 'GBP',
+      price: 2639.99,
+      currency: 'GB',
       name: 'SOFA WITH BED',
       description: 'abcd, somethingmm',
       quantity: 3,
       imageUrl:
         'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-megamenu-pic2.webp',
     },
-    {
-      id: '5',
-      price: 39.99,
-      currency: 'GBP',
-      name: 'SOFA WITH BED',
-      description: 'abcd, somethingmm',
-      quantity: 3,
-      imageUrl:
-        'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-megamenu-pic2.webp',
-    },
-    {
-      id: '6',
-      price: 39.99,
-      currency: 'GBP',
-      name: 'SOFA WITH BED',
-      description: 'abcd, somethingmm',
-      quantity: 3,
-      imageUrl:
-        'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-megamenu-pic2.webp',
-    },
+    
   ]
