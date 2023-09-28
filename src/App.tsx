@@ -1,3 +1,6 @@
+import { Cart } from "./user/Cart";
+
+
 
 function App() {
 
@@ -6,6 +9,8 @@ function App() {
     <>
     
       <h1>Vite + React</h1>
+      <Cart />
+
     </>
   )
 }
