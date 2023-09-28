@@ -1,0 +1,1849 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "category": "Tables",
+      "name": "Modern Dining Table",
+      "price": 499.99,
+      "image": "image_url_1.jpg",
+      "brand": "ModernLiving",
+      "size": "72\" x 36\" x 30\"",
+      "material": "Wood",
+      "color": "Walnut",
+      "finish_type": "Matte",
+      "about": "Upgrade your dining area with our Modern Dining Table. This walnut dining table features a matte finish and sleek design, perfect for family gatherings. Dimensions: 72\" x 36\" x 30\".",
+      "rating": 4.5,
+      "reviews": [
+        {
+          "username": "Sarah123",
+          "rating": 5,
+          "comment": "I love this dining table! It's beautiful and sturdy."
+        },
+        {
+          "username": "JohnDoe45",
+          "rating": 4,
+          "comment": "Great value for a modern dining table."
+        },
+        {
+          "username": "ElegantHome",
+          "rating": 5,
+          "comment": "I'm very pleased with this purchase. It's perfect."
+        },
+        {
+          "username": "FurnitureFanatic",
+          "rating": 4,
+          "comment": "Assembly was straightforward, but it took some time."
+        },
+        {
+          "username": "ModernLivingLover",
+          "rating": 5,
+          "comment": "Highly recommend for a contemporary dining space."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "category": "Chairs",
+      "name": "Leather Lounge Chair",
+      "price": 299.95,
+      "image": "image_url_2.jpg",
+      "brand": "LuxuryComfort",
+      "size": "28\" x 32\" x 35\"",
+      "material": "Leather",
+      "color": "Black",
+      "finish_type": "Matte",
+      "about": "Relax in style with our Leather Lounge Chair. This black leather chair features a matte finish and exceptional comfort, perfect for your living room. Dimensions: 28\" x 32\" x 35\".",
+      "rating": 4.6,
+      "reviews": [
+        {
+          "username": "ComfortSeeker",
+          "rating": 5,
+          "comment": "This lounge chair is incredibly comfortable."
+        },
+        {
+          "username": "LeatherLover",
+          "rating": 4,
+          "comment": "Great value for a stylish leather chair."
+        },
+        {
+          "username": "HappyCustomer23",
+          "rating": 5,
+          "comment": "I'm so happy with this purchase. It's comfy and elegant."
+        },
+        {
+          "username": "FurnitureEnthusiast",
+          "rating": 4,
+          "comment": "Assembly was straightforward, but it took some time."
+        },
+        {
+          "username": "ModernLivingFan",
+          "rating": 5,
+          "comment": "Perfect addition to my modern living room."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "category": "Sofas",
+      "name": "Mid-Century Sofa",
+      "price": 599.99,
+      "image": "image_url_3.jpg",
+      "brand": "MidCenturyMasters",
+      "size": "78\" x 32\" x 34\"",
+      "material": "Fabric",
+      "color": "Gray",
+      "finish_type": "Textured",
+      "about": "Add a touch of mid-century charm to your living room with our Mid-Century Sofa. This gray fabric sofa features a textured finish and timeless design. Dimensions: 78\" x 32\" x 34\".",
+      "rating": 4.7,
+      "reviews": [
+        {
+          "username": "MidCenturyModernFan",
+          "rating": 5,
+          "comment": "I'm in love with this mid-century sofa! So comfy and stylish."
+        },
+        {
+          "username": "StylishHomeowner",
+          "rating": 4,
+          "comment": "Pricey, but it's worth it for the quality."
+        },
+        {
+          "username": "SofaConnoisseur",
+          "rating": 5,
+          "comment": "This sofa is amazing. It's perfect for our living room."
+        },
+        {
+          "username": "AssemblyPro",
+          "rating": 4,
+          "comment": "Assembly was a bit challenging due to its size."
+        },
+        {
+          "username": "HomeDecorAddict",
+          "rating": 5,
+          "comment": "Highly recommend for a spacious living room."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "category": "Beds",
+      "name": "Platform Bed",
+      "price": 399.99,
+      "image": "image_url_4.jpg",
+      "brand": "DreamComfort",
+      "size": "80\" x 60\" x 14\"",
+      "material": "Wood",
+      "color": "Espresso",
+      "finish_type": "Satin",
+      "about": "Transform your bedroom with our Platform Bed. This espresso wood platform bed features a satin finish and a sleek design, providing both style and comfort. Dimensions: 80\" x 60\" x 14\".",
+      "rating": 4.5,
+      "reviews": [
+        {
+          "username": "DreamyNights",
+          "rating": 5,
+          "comment": "I love this platform bed! It's beautiful and comfortable."
+        },
+        {
+          "username": "SleepInStyle",
+          "rating": 4,
+          "comment": "Great value for a modern platform bed."
+        },
+        {
+          "username": "BedroomBliss",
+          "rating": 5,
+          "comment": "I'm very pleased with this purchase. It's perfect."
+        },
+        {
+          "username": "HandyAssembly",
+          "rating": 4,
+          "comment": "Assembly was straightforward, but it took some time."
+        },
+        {
+          "username": "SleekSlumber",
+          "rating": 5,
+          "comment": "Highly recommend for a contemporary bedroom."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "category": "Desks",
+      "name": "Minimalist Writing Desk",
+      "price": 199.99,
+      "image": "image_url_5.jpg",
+      "brand": "MinimalCraft",
+      "size": "42\" x 24\" x 30\"",
+      "material": "Wood",
+      "color": "White",
+      "finish_type": "Matte",
+      "about": "Enhance your workspace with our Minimalist Writing Desk. This white wood writing desk features a matte finish and a clean design, perfect for productivity. Dimensions: 42\" x 24\" x 30\".",
+      "rating": 4.6,
+      "reviews": [
+        {
+          "username": "ProductivityPro",
+          "rating": 5,
+          "comment": "This desk has improved my productivity. Love it!"
+        },
+        {
+          "username": "CleanWorkspace",
+          "rating": 4,
+          "comment": "Great value for a stylish writing desk."
+        },
+        {
+          "username": "MinimalistAtHeart",
+          "rating": 5,
+          "comment": "I'm so happy with this purchase. It's perfect."
+        },
+        {
+          "username": "EasyAssembly",
+          "rating": 4,
+          "comment": "Assembly was straightforward, no complaints."
+        },
+        {
+          "username": "WorkspaceEnthusiast",
+          "rating": 5,
+          "comment": "Perfect for my minimalist home office."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "category": "Cabinets",
+      "name": "Vintage Storage Cabinet",
+      "price": 299.95,
+      "image": "image_url_6.jpg",
+      "brand": "VintageVibes",
+      "size": "36\" x 18\" x 42\"",
+      "material": "Wood",
+      "color": "Antique White",
+      "finish_type": "Distressed",
+      "about": "Add a touch of vintage charm to your space with our Vintage Storage Cabinet. This antique white wood cabinet features a distressed finish and ample storage space. Dimensions: 36\" x 18\" x 42\".",
+      "rating": 4.7,
+      "reviews": [
+        {
+          "username": "VintageLover",
+          "rating": 5,
+          "comment": "I adore this vintage cabinet! It's a classic."
+        },
+        {
+          "username": "AntiqueEnthusiast",
+          "rating": 4,
+          "comment": "Great cabinet for a vintage look."
+        },
+        {
+          "username": "HappyHomeowner",
+          "rating": 5,
+          "comment": "I'm thrilled with this purchase. Highly recommend!"
+        },
+        {
+          "username": "EasyStorage",
+          "rating": 4,
+          "comment": "Assembly was straightforward, but it's heavy."
+        },
+        {
+          "username": "RetroStorageFan",
+          "rating": 5,
+          "comment": "Perfect for anyone needing vintage-style storage."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "category": "Lighting",
+      "name": "Industrial Pendant Light",
+      "price": 129.99,
+      "image": "image_url_7.jpg",
+      "brand": "IndustrialGlow",
+      "size": "Diameter: 12\"",
+      "material": "Metal",
+      "color": "Black",
+      "finish_type": "Matte",
+      "about": "Illuminate your space with an industrial touch using our Industrial Pendant Light. This black metal pendant light features a matte finish and a diameter of 12 inches. It's perfect for modern industrial decor. Dimensions: Diameter: 12\".",
+      "rating": 4.5,
+      "reviews": [
+        {
+          "username": "IndustrialStyle",
+          "rating": 5,
+          "comment": "This pendant light is amazing! It adds character to my space."
+        },
+        {
+          "username": "LightingEnthusiast",
+          "rating": 4,
+          "comment": "Great pendant light for an industrial look."
+        },
+        {
+          "username": "HappyHomeowner2",
+          "rating": 5,
+          "comment": "I'm thrilled with this purchase. It's perfect."
+        },
+        {
+          "username": "EasyInstallation",
+          "rating": 4,
+          "comment": "Installation was straightforward, but it's a bit delicate."
+        },
+        {
+          "username": "ModernIndustrialHome",
+          "rating": 5,
+          "comment": "Perfect for anyone wanting industrial-style lighting."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "category": "Tables",
+      "name": "Marble Side Table",
+      "price": 149.99,
+      "image": "image_url_8.jpg",
+      "brand": "MarbleElegance",
+      "size": "24\" x 24\" x 24\"",
+      "material": "Marble and Metal",
+      "color": "White and Gold",
+      "finish_type": "Glossy",
+      "about": "Add a touch of elegance to your living room with our Marble Side Table. This white marble side table features a glossy finish and gold metal accents. It's perfect for showcasing decor. Dimensions: 24\" x 24\" x 24\".",
+      "rating": 4.8,
+      "reviews": [
+        {
+          "username": "MarbleLover",
+          "rating": 5,
+          "comment": "I love this marble side table! It's so elegant."
+        },
+        {
+          "username": "ElegantLiving",
+          "rating": 4,
+          "comment": "A bit pricey, but it's worth it for the quality."
+        },
+        {
+          "username": "HappyDecorator",
+          "rating": 5,
+          "comment": "I'm in love with this table. It's perfect for my decor."
+        },
+        {
+          "username": "EasySetup",
+          "rating": 4,
+          "comment": "Assembly was straightforward, no complaints."
+        },
+        {
+          "username": "HomeDecorEnthusiast",
+          "rating": 5,
+          "comment": "Highly recommend for an elegant living room."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "category": "Chairs",
+      "name": "Ergonomic Office Chair",
+      "price": 249.95,
+      "image": "image_url_9.jpg",
+      "brand": "ErgoComfort",
+      "size": "26\" x 26\" x 40\"",
+      "material": "Mesh",
+      "color": "Black",
+      "finish_type": "Matte",
+      "about": "Upgrade your office with our Ergonomic Office Chair. This black mesh office chair features a matte finish and ergonomic design for maximum comfort during long workdays. Dimensions: 26\" x 26\" x 40\".",
+      "rating": 4.7,
+      "reviews": [
+        {
+          "username": "OfficePro",
+          "rating": 5,
+          "comment": "This office chair is a game-changer! So comfortable."
+        },
+        {
+          "username": "ComfortAtWork",
+          "rating": 4,
+          "comment": "Great value for a comfortable office chair."
+        },
+        {
+          "username": "ProductiveDays",
+          "rating": 5,
+          "comment": "I'm very pleased with this purchase. It's perfect for work."
+        },
+        {
+          "username": "AssemblyChamp",
+          "rating": 4,
+          "comment": "Assembly was straightforward, no complaints."
+        },
+        {
+          "username": "OfficeComfortFan",
+          "rating": 5,
+          "comment": "Perfect for anyone who spends hours at the desk."
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "category": "Sofas",
+      "name": "Linen Sectional Sofa",
+      "price": 799.99,
+      "image": "image_url_10.jpg",
+      "brand": "LinenLux",
+      "size": "96\" x 72\" x 32\"",
+      "material": "Linen",
+      "color": "Beige",
+      "finish_type": "Textured",
+      "about": "Create a cozy living room with our Linen Sectional Sofa. This beige linen sectional features a textured finish and spacious seating, perfect for gatherings. Dimensions: 96\" x 72\" x 32\".",
+      "rating": 4.6,
+      "reviews": [
+        {
+          "username": "CozyNights",
+          "rating": 5,
+          "comment": "I love this sectional sofa! It's so comfortable."
+        },
+        {
+          "username": "LinenLover",
+          "rating": 4,
+          "comment": "Great value for a stylish linen sofa."
+        },
+        {
+          "username": "HappyHost",
+          "rating": 5,
+          "comment": "I'm so happy with this purchase. It's perfect for guests."
+        },
+        {
+          "username": "EasyAssembly2",
+          "rating": 4,
+          "comment": "Assembly was straightforward, but it's a bit bulky."
+        },
+        {
+          "username": "SpaciousLiving",
+          "rating": 5,
+          "comment": "Highly recommend for a spacious living room."
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "category": "Tables",
+      "name": "Rustic Coffee Table",
+      "price": 249.99,
+      "image": "image_url_11.jpg",
+      "brand": "RusticVibes",
+      "size": "48\" x 24\" x 18\"",
+      "material": "Wood",
+      "color": "Rustic Brown",
+      "finish_type": "Distressed",
+      "about": "Add rustic charm to your living room with our Rustic Coffee Table. This rustic brown wood table features a distressed finish and a bottom shelf for storage. Dimensions: 48\" x 24\" x 18\".",
+      "rating": 4.7,
+      "reviews": [
+        {
+          "username": "RusticHome",
+          "rating": 5,
+          "comment": "Love this rustic coffee table! It's the perfect addition."
+        },
+        {
+          "username": "RusticLiving",
+          "rating": 4,
+          "comment": "Great value for a solid wood coffee table."
+        },
+        {
+          "username": "RusticCharm",
+          "rating": 5,
+          "comment": "The rustic finish is beautiful. Highly recommend."
+        },
+        {
+          "username": "EasyAssembly3",
+          "rating": 4,
+          "comment": "Assembly was straightforward, but it's a bit heavy."
+        },
+        {
+          "username": "RusticDesignFan",
+          "rating": 5,
+          "comment": "Perfect for anyone wanting a rustic living room."
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "category": "Cabinets",
+      "name": "Modern Media Cabinet",
+      "price": 349.95,
+      "image": "image_url_12.jpg",
+      "brand": "ModernMedia",
+      "size": "60\" x 18\" x 24\"",
+      "material": "Wood",
+      "color": "Walnut",
+      "finish_type": "Matte",
+      "about": "Organize your media essentials with our Modern Media Cabinet. This walnut wood media cabinet features a matte finish and ample storage space. Dimensions: 60\" x 18\" x 24\".",
+      "rating": 4.6,
+      "reviews": [
+        {
+          "username": "MediaEnthusiast",
+          "rating": 5,
+          "comment": "I'm thrilled with this media cabinet! It's perfect."
+        },
+        {
+          "username": "OrganizedHome",
+          "rating": 4,
+          "comment": "Great cabinet for organizing media equipment."
+        },
+        {
+          "username": "HappyMovieNights",
+          "rating": 5,
+          "comment": "I love this purchase. It's perfect for my home theater."
+        },
+        {
+          "username": "EasyStorage2",
+          "rating": 4,
+          "comment": "Assembly was straightforward, but it's a bit bulky."
+        },
+        {
+          "username": "MediaStorageFan",
+          "rating": 5,
+          "comment": "Perfect for any media enthusiast."
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "category": "Lighting",
+      "name": "Crystal Floor Lamp",
+      "price": 199.99,
+      "image": "image_url_13.jpg",
+      "brand": "CrystalGlow",
+      "size": "Height: 60\"",
+      "material": "Crystal and Metal",
+      "color": "Silver",
+      "finish_type": "Shiny",
+      "about": "Brighten up your space with our Crystal Floor Lamp. This silver crystal floor lamp features a shiny finish and stands at a height of 60 inches. It adds a touch of glamour to any room. Dimensions: Height: 60\".",
+      "rating": 4.7,
+      "reviews": [
+        {
+          "username": "GlamourSpace",
+          "rating": 5,
+          "comment": "This crystal floor lamp is breathtaking! So elegant."
+        },
+        {
+          "username": "ShinyLighting",
+          "rating": 4,
+          "comment": "A bit pricey, but it's a showstopper."
+        },
+        {
+          "username": "CrystalLover",
+          "rating": 5,
+          "comment": "I'm in love with this floor lamp. It's a work of art."
+        },
+        {
+          "username": "EasyAssembly4",
+          "rating": 4,
+          "comment": "Installation was a bit tricky due to its size."
+        },
+        {
+          "username": "GlamorousHome",
+          "rating": 5,
+          "comment": "Highly recommend for a glamorous home."
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "category": "Tables",
+      "name": "Glass Top End Table",
+      "price": 99.99,
+      "image": "image_url_14.jpg",
+      "brand": "GlassGlow",
+      "size": "18\" x 18\" x 22\"",
+      "material": "Glass and Metal",
+      "color": "Clear and Gold",
+      "finish_type": "Glossy",
+      "about": "Add a touch of sophistication to your space with our Glass Top End Table. This clear glass end table features a glossy finish and elegant gold metal accents. It's perfect for placing by your sofa. Dimensions: 18\" x 18\" x 22\".",
+      "rating": 4.6,
+      "reviews": [
+        {
+          "username": "SophisticatedLiving",
+          "rating": 5,
+          "comment": "I love this glass end table! It's so chic."
+        },
+        {
+          "username": "ElegantDecorator",
+          "rating": 4,
+          "comment": "Great value for a stylish glass table."
+        },
+        {
+          "username": "HappyCustomer3",
+          "rating": 5,
+          "comment": "I'm so happy with this purchase. It's perfect for my living room."
+        },
+        {
+          "username": "EasyAssembly3",
+          "rating": 4,
+          "comment": "Assembly was straightforward, no complaints."
+        },
+        {
+          "username": "ChicHomeDesign",
+          "rating": 5,
+          "comment": "Highly recommend for a chic living room."
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "category": "Chairs",
+      "name": "Swivel Accent Chair",
+      "price": 179.95,
+      "image": "image_url_15.jpg",
+      "brand": "AccentStyle",
+      "size": "30\" x 30\" x 32\"",
+      "material": "Velvet",
+      "color": "Pink",
+      "finish_type": "Soft",
+      "about": "Add a pop of color to your space with our Swivel Accent Chair. This pink velvet chair features a soft finish and 360-degree swivel, perfect for adding flair to any room. Dimensions: 30\" x 30\" x 32\".",
+      "rating": 4.5,
+      "reviews": [
+        {
+          "username": "PinkObsession",
+          "rating": 5,
+          "comment": "I adore this pink accent chair! It's a statement piece."
+        },
+        {
+          "username": "ColorfulLiving",
+          "rating": 4,
+          "comment": "Great value for a stylish accent chair."
+        },
+        {
+          "username": "HappyDecorator2",
+          "rating": 5,
+          "comment": "I'm so happy with this purchase. It's perfect for my colorful decor."
+        },
+        {
+          "username": "EasyAssembly4",
+          "rating": 4,
+          "comment": "Assembly was straightforward, no complaints."
+        },
+        {
+          "username": "ColorfulHome",
+          "rating": 5,
+          "comment": "Highly recommend for adding a pop of color."
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "category": "Sofas",
+      "name": "Leather Reclining Sofa",
+      "price": 999.99,
+      "image": "image_url_16.jpg",
+      "brand": "LuxuryRelax",
+      "size": "84\" x 38\" x 40\"",
+      "material": "Leather",
+      "color": "Brown",
+      "finish_type": "Matte",
+      "about": "Experience ultimate relaxation with our Leather Reclining Sofa. This brown leather sofa features a matte finish, reclining seats, and plush comfort. It's perfect for movie nights. Dimensions: 84\" x 38\" x 40\".",
+      "rating": 4.8,
+      "reviews": [
+        {
+          "username": "RelaxationExpert",
+          "rating": 5,
+          "comment": "This reclining sofa is pure luxury! So comfortable."
+        },
+        {
+          "username": "LuxuryLiving",
+          "rating": 4,
+          "comment": "A bit pricey, but it's worth it for the quality."
+        },
+        {
+          "username": "MovieNightFan",
+          "rating": 5,
+          "comment": "I'm in love with this sofa. It's perfect for movie nights."
+        },
+        {
+          "username": "EasyAssembly5",
+          "rating": 4,
+          "comment": "Assembly was straightforward, but it's a bit bulky."
+        },
+        {
+          "username": "PlushComfort",
+          "rating": 5,
+          "comment": "Highly recommend for a luxurious living room."
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "category": "Beds",
+      "name": "Upholstered Platform Bed",
+      "price": 449.99,
+      "image": "image_url_17.jpg",
+      "brand": "ComfortDream",
+      "size": "78\" x 58\" x 12\"",
+      "material": "Fabric",
+      "color": "Gray",
+      "finish_type": "Textured",
+      "about": "Upgrade your bedroom with our Upholstered Platform Bed. This gray fabric platform bed features a textured finish and a stylish headboard. It provides both comfort and style. Dimensions: 78\" x 58\" x 12\".",
+      "rating": 4.7,
+      "reviews": [
+        {
+          "username": "DreamyNights2",
+          "rating": 5,
+          "comment": "I love this platform bed! It's beautiful and comfortable."
+        },
+        {
+          "username": "SleepInStyle2",
+          "rating": 4,
+          "comment": "Great value for a modern platform bed."
+        },
+        {
+          "username": "BedroomBliss2",
+          "rating": 5,
+          "comment": "I'm very pleased with this purchase. It's perfect."
+        },
+        {
+          "username": "HandyAssembly2",
+          "rating": 4,
+          "comment": "Assembly was straightforward, but it took some time."
+        },
+        {
+          "username": "SleekSlumber2",
+          "rating": 5,
+          "comment": "Highly recommend for a contemporary bedroom."
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "category": "Desks",
+      "name": "Corner Computer Desk",
+      "price": 179.99,
+      "image": "image_url_18.jpg",
+      "brand": "CornerCraft",
+      "size": "48\" x 32\" x 30\"",
+      "material": "Wood",
+      "color": "Espresso",
+      "finish_type": "Matte",
+      "about": "Maximize your workspace with our Corner Computer Desk. This espresso wood desk features a matte finish and fits perfectly in the corner of your room. It's ideal for home offices. Dimensions: 48\" x 32\" x 30\".",
+      "rating": 4.6,
+      "reviews": [
+        {
+          "username": "ProductivityPro2",
+          "rating": 5,
+          "comment": "This desk has improved my productivity. Love it!"
+        },
+        {
+          "username": "CleanWorkspace2",
+          "rating": 4,
+          "comment": "Great value for a stylish corner desk."
+        },
+        {
+          "username": "MinimalistAtHeart2",
+          "rating": 5,
+          "comment": "I'm so happy with this purchase. It's perfect for my minimalist home office."
+        },
+        {
+          "username": "EasyAssembly3",
+          "rating": 4,
+          "comment": "Assembly was straightforward, no complaints."
+        },
+        {
+          "username": "WorkspaceEnthusiast2",
+          "rating": 5,
+          "comment": "Perfect for maximizing space in a home office."
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "category": "Cabinets",
+      "name": "Contemporary Bar Cabinet",
+      "price": 329.95,
+      "image": "image_url_19.jpg",
+      "brand": "ContemporaryCraft",
+      "size": "36\" x 18\" x 54\"",
+      "material": "Wood",
+      "color": "Black",
+      "finish_type": "Matte",
+      "about": "Elevate your entertaining space with our Contemporary Bar Cabinet. This black wood bar cabinet features a matte finish and ample storage for your bar essentials. Dimensions: 36\" x 18\" x 54\".",
+      "rating": 4.7,
+      "reviews": [
+        {
+          "username": "BarEnthusiast",
+          "rating": 5,
+          "comment": "I'm thrilled with this bar cabinet! It's perfect for my home bar."
+        },
+        {
+          "username": "EntertainmentHub",
+          "rating": 4,
+          "comment": "Great cabinet for a stylish home bar."
+        },
+        {
+          "username": "HappyEntertainer",
+          "rating": 5,
+          "comment": "I love this purchase. It's perfect for hosting."
+        },
+        {
+          "username": "EasyStorage3",
+          "rating": 4,
+          "comment": "Assembly was straightforward, but it's a bit heavy."
+        },
+        {
+          "username": "BarStorageFan",
+          "rating": 5,
+          "comment": "Perfect for anyone who loves to entertain."
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "category": "Lighting",
+      "name": "Art Deco Chandelier",
+      "price": 249.99,
+      "image": "image_url_20.jpg",
+      "brand": "ArtDecoGlow",
+      "size": "Diameter: 24\"",
+      "material": "Metal",
+      "color": "Gold",
+      "finish_type": "Shiny",
+      "about": "Add a touch of glamour to your space with our Art Deco Chandelier. This gold metal chandelier features a shiny finish and a diameter of 24 inches. It's perfect for creating an art deco-inspired atmosphere. Dimensions: Diameter: 24\".",
+      "rating": 4.8,
+      "reviews": [
+        {
+          "username": "GlamorousSpace",
+          "rating": 5,
+          "comment": "This art deco chandelier is stunning! It's a showstopper."
+        },
+        {
+          "username": "ArtDecoLove",
+          "rating": 4,
+          "comment": "A bit pricey, but it's worth it for the quality."
+        },
+        {
+          "username": "GlamorousHome2",
+          "rating": 5,
+          "comment": "I'm in love with this chandelier. It's perfect for my glamorous decor."
+        },
+        {
+          "username": "EasyInstallation2",
+          "rating": 4,
+          "comment": "Installation was a bit tricky due to its size."
+        },
+        {
+          "username": "ArtDecoFan",
+          "rating": 5,
+          "comment": "Highly recommend for an art deco-themed room."
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "category": "Tables",
+      "name": "Rustic Farmhouse Dining Table",
+      "price": 549.99,
+      "image": "image_url_21.jpg",
+      "brand": "FarmhouseCharm",
+      "size": "84\" x 40\" x 30\"",
+      "material": "Wood",
+      "color": "Antique White",
+      "finish_type": "Distressed",
+      "about": "Gather your family around our Rustic Farmhouse Dining Table. This antique white wood dining table features a distressed finish and a spacious design, perfect for family dinners. Dimensions: 84\" x 40\" x 30\".",
+      "rating": 4.7,
+      "reviews": [
+        {
+          "username": "FarmhouseHome",
+          "rating": 5,
+          "comment": "Love this farmhouse dining table! It's the perfect addition."
+        },
+        {
+          "username": "FarmhouseLiving",
+          "rating": 4,
+          "comment": "Great value for a solid wood dining table."
+        },
+        {
+          "username": "RusticChic",
+          "rating": 5,
+          "comment": "The distressed finish adds character. Highly recommend."
+        },
+        {
+          "username": "EasyAssembly4",
+          "rating": 4,
+          "comment": "Assembly was straightforward, but it's a bit heavy."
+        },
+        {
+          "username": "RusticDesignFan2",
+          "rating": 5,
+          "comment": "Perfect for anyone wanting a rustic dining room."
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "category": "Chairs",
+      "name": "Velvet Dining Chairs",
+      "price": 179.95,
+      "image": "image_url_22.jpg",
+      "brand": "VelvetElegance",
+      "size": "20\" x 22\" x 36\"",
+      "material": "Velvet",
+      "color": "Teal",
+      "finish_type": "Soft",
+      "about": "Add a touch of elegance to your dining area with our Velvet Dining Chairs. These teal velvet chairs feature a soft finish and comfortable seating, perfect for entertaining. Dimensions: 20\" x 22\" x 36\".",
+      "rating": 4.6,
+      "reviews": [
+        {
+          "username": "ElegantDining",
+          "rating": 5,
+          "comment": "I love these velvet dining chairs! They're so elegant."
+        },
+        {
+          "username": "TealLover",
+          "rating": 4,
+          "comment": "Great value for stylish dining chairs."
+        },
+        {
+          "username": "HappyHost2",
+          "rating": 5,
+          "comment": "I'm so happy with this purchase. They're perfect for entertaining."
+        },
+        {
+          "username": "EasyAssembly5",
+          "rating": 4,
+          "comment": "Assembly was straightforward, no complaints."
+        },
+        {
+          "username": "ElegantDiningFan",
+          "rating": 5,
+          "comment": "Highly recommend for an elegant dining room."
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "category": "Sofas",
+      "name": "Velvet Chesterfield Sofa",
+      "price": 899.99,
+      "image": "image_url_23.jpg",
+      "brand": "VelvetLux",
+      "size": "84\" x 34\" x 31\"",
+      "material": "Velvet",
+      "color": "Emerald Green",
+      "finish_type": "Textured",
+      "about": "Upgrade your living room with our Velvet Chesterfield Sofa. This emerald green velvet sofa features a textured finish and classic chesterfield design, perfect for a luxurious look. Dimensions: 84\" x 34\" x 31\".",
+      "rating": 4.7,
+      "reviews": [
+        {
+          "username": "LuxuriousLiving",
+          "rating": 5,
+          "comment": "This velvet chesterfield sofa is pure luxury! So comfortable."
+        },
+        {
+          "username": "VelvetDreams",
+          "rating": 4,
+          "comment": "A bit pricey, but it's worth it for the quality."
+        },
+        {
+          "username": "HappyHomeowner3",
+          "rating": 5,
+          "comment": "I'm in love with this sofa. It's perfect for my luxurious living room."
+        },
+        {
+          "username": "EasyAssembly6",
+          "rating": 4,
+          "comment": "Assembly was straightforward, but it's a bit bulky."
+        },
+        {
+          "username": "PlushComfort2",
+          "rating": 5,
+          "comment": "Highly recommend for a luxurious living room."
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "category": "Beds",
+      "name": "Mid-Century Platform Bed",
+      "price": 349.99,
+      "image": "image_url_24.jpg",
+      "brand": "MidCenturyStyle",
+      "size": "80\" x 60\" x 14\"",
+      "material": "Wood",
+      "color": "Walnut",
+      "finish_type": "Matte",
+      "about": "Upgrade your bedroom with our Mid-Century Platform Bed. This walnut wood platform bed features a matte finish and a stylish headboard. It brings a mid-century modern touch to your space. Dimensions: 80\" x 60\" x 14\".",
+      "rating": 4.6,
+      "reviews": [
+        {
+          "username": "MidCenturyHome",
+          "rating": 5,
+          "comment": "Love this mid-century platform bed! It's the perfect addition."
+        },
+        {
+          "username": "MidCenturyLiving",
+          "rating": 4,
+          "comment": "Great value for a stylish platform bed."
+        },
+        {
+          "username": "StylishSlumber",
+          "rating": 5,
+          "comment": "I'm very pleased with this purchase. It's perfect."
+        },
+        {
+          "username": "HandyAssembly3",
+          "rating": 4,
+          "comment": "Assembly was straightforward, but it took some time."
+        },
+        {
+          "username": "MidCenturyDesignFan",
+          "rating": 5,
+          "comment": "Perfect for anyone wanting a mid-century modern bedroom."
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "category": "Desks",
+      "name": "Modern Writing Desk",
+      "price": 129.99,
+      "image": "image_url_25.jpg",
+      "brand": "ModernStyle",
+      "size": "48\" x 24\" x 30\"",
+      "material": "Wood",
+      "color": "Espresso",
+      "finish_type": "Matte",
+      "about": "Upgrade your workspace with our Modern Writing Desk. This espresso wood desk features a matte finish and a spacious design, perfect for work and study. Dimensions: 48\" x 24\" x 30\".",
+      "rating": 4.7,
+      "reviews": [
+        {
+          "username": "ProductivityPro3",
+          "rating": 5,
+          "comment": "This desk has improved my productivity. Love it!"
+        },
+        {
+          "username": "CleanWorkspace3",
+          "rating": 4,
+          "comment": "Great value for a stylish writing desk."
+        },
+        {
+          "username": "MinimalistAtHeart3",
+          "rating": 5,
+          "comment": "I'm so happy with this purchase. It's perfect."
+        },
+        {
+          "username": "EasyAssembly4",
+          "rating": 4,
+          "comment": "Assembly was straightforward, no complaints."
+        },
+        {
+          "username": "WorkspaceEnthusiast3",
+          "rating": 5,
+          "comment": "Perfect for my minimalist home office."
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "category": "Chairs",
+      "name": "Wooden Dining Chairs",
+      "price": 129.95,
+      "image": "image_url_26.jpg",
+      "brand": "WoodenCraft",
+      "size": "22\" x 20\" x 35\"",
+      "material": "Wood",
+      "color": "Oak",
+      "finish_type": "Matte",
+      "about": "Add a touch of rustic charm to your dining area with our Wooden Dining Chairs. These oak wood chairs feature a matte finish and comfortable seating, perfect for family dinners. Dimensions: 22\" x 20\" x 35\".",
+      "rating": 4.5,
+      "reviews": [
+        {
+          "username": "RusticDining",
+          "rating": 5,
+          "comment": "These wooden dining chairs are perfect for our farmhouse."
+        },
+        {
+          "username": "WoodLover",
+          "rating": 4,
+          "comment": "Great value for rustic dining chairs."
+        },
+        {
+          "username": "FamilyDinners",
+          "rating": 5,
+          "comment": "I'm so pleased with this purchase. They're comfortable and stylish."
+        },
+        {
+          "username": "EasyAssembly6",
+          "rating": 4,
+          "comment": "Assembly was straightforward, no issues."
+        },
+        {
+          "username": "RusticHome2",
+          "rating": 5,
+          "comment": "Highly recommend for a rustic dining room."
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "category": "Sofas",
+      "name": "Modular Sectional Sofa",
+      "price": 899.99,
+      "image": "image_url_27.jpg",
+      "brand": "ModularLiving",
+      "size": "120\" x 84\" x 32\"",
+      "material": "Fabric",
+      "color": "Gray",
+      "finish_type": "Textured",
+      "about": "Create a flexible and spacious living area with our Modular Sectional Sofa. This gray fabric sectional features a textured finish and can be arranged in various configurations. Dimensions: 120\" x 84\" x 32\".",
+      "rating": 4.8,
+      "reviews": [
+        {
+          "username": "FlexLiving",
+          "rating": 5,
+          "comment": "This modular sectional is fantastic! We can change it to fit our needs."
+        },
+        {
+          "username": "ModularStyle",
+          "rating": 4,
+          "comment": "A bit pricey, but the flexibility is worth it."
+        },
+        {
+          "username": "HappyFamily",
+          "rating": 5,
+          "comment": "I love this purchase. It's great for our family gatherings."
+        },
+        {
+          "username": "EasyAssembly7",
+          "rating": 4,
+          "comment": "Assembly was straightforward, but it's a bit large."
+        },
+        {
+          "username": "SpaciousLiving2",
+          "rating": 5,
+          "comment": "Highly recommend for a spacious living room."
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "category": "Tables",
+      "name": "Marble Top Console Table",
+      "price": 299.99,
+      "image": "image_url_28.jpg",
+      "brand": "MarbleElegance",
+      "size": "48\" x 16\" x 30\"",
+      "material": "Marble and Metal",
+      "color": "White and Gold",
+      "finish_type": "Polished",
+      "about": "Elevate your entryway with our Marble Top Console Table. This white marble table features a polished finish and elegant gold metal accents. It's perfect for displaying decor. Dimensions: 48\" x 16\" x 30\".",
+      "rating": 4.7,
+      "reviews": [
+        {
+          "username": "EntrywayCharm",
+          "rating": 5,
+          "comment": "I adore this marble console table! It adds elegance to our entryway."
+        },
+        {
+          "username": "MarbleLover",
+          "rating": 4,
+          "comment": "Great value for a luxurious console table."
+        },
+        {
+          "username": "HappyHomeowner4",
+          "rating": 5,
+          "comment": "I'm so happy with this purchase. It's perfect for our foyer."
+        },
+        {
+          "username": "EasyAssembly8",
+          "rating": 4,
+          "comment": "Assembly was straightforward, no complaints."
+        },
+        {
+          "username": "ElegantHome",
+          "rating": 5,
+          "comment": "Highly recommend for an elegant entryway."
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "category": "Beds",
+      "name": "Canopy Bed Frame",
+      "price": 599.99,
+      "image": "image_url_29.jpg",
+      "brand": "CanopyDreams",
+      "size": "80\" x 60\" x 80\"",
+      "material": "Metal",
+      "color": "Black",
+      "finish_type": "Matte",
+      "about": "Transform your bedroom into a dreamy retreat with our Canopy Bed Frame. This black metal bed frame features a matte finish and a classic canopy design. It adds a touch of romance to your space. Dimensions: 80\" x 60\" x 80\".",
+      "rating": 4.8,
+      "reviews": [
+        {
+          "username": "DreamyRetreat",
+          "rating": 5,
+          "comment": "This canopy bed frame is a dream come true! It's so romantic."
+        },
+        {
+          "username": "CanopyLove",
+          "rating": 4,
+          "comment": "A bit pricey, but it's worth it for the romance."
+        },
+        {
+          "username": "RomanticNights",
+          "rating": 5,
+          "comment": "I love this purchase. It's perfect for our bedroom."
+        },
+        {
+          "username": "EasyAssembly9",
+          "rating": 4,
+          "comment": "Assembly was straightforward, but it's a bit tall."
+        },
+        {
+          "username": "RomanticEscape",
+          "rating": 5,
+          "comment": "Highly recommend for a romantic bedroom."
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "category": "Desks",
+      "name": "Glass Top Writing Desk",
+      "price": 199.99,
+      "image": "image_url_30.jpg",
+      "brand": "GlassElegance",
+      "size": "42\" x 24\" x 30\"",
+      "material": "Glass and Metal",
+      "color": "Clear and Silver",
+      "finish_type": "Glossy",
+      "about": "Add a touch of sophistication to your workspace with our Glass Top Writing Desk. This clear glass desk features a glossy silver metal frame and a minimalist design. It's ideal for modern offices. Dimensions: 42\" x 24\" x 30\".",
+      "rating": 4.6,
+      "reviews": [
+        {
+          "username": "SophisticatedOffice",
+          "rating": 5,
+          "comment": "I love this glass writing desk! It's so chic."
+        },
+        {
+          "username": "ElegantWorkspace",
+          "rating": 4,
+          "comment": "Great value for a stylish glass desk."
+        },
+        {
+          "username": "HappyWorker2",
+          "rating": 5,
+          "comment": "I'm so happy with this purchase. It's perfect for my modern office."
+        },
+        {
+          "username": "EasyAssembly10",
+          "rating": 4,
+          "comment": "Assembly was straightforward, no complaints."
+        },
+        {
+          "username": "ChicWorkspace",
+          "rating": 5,
+          "comment": "Highly recommend for a chic workspace."
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "category": "Cabinets",
+      "name": "Rustic Wine Cabinet",
+      "price": 349.95,
+      "image": "image_url_31.jpg",
+      "brand": "RusticCharm",
+      "size": "36\" x 16\" x 54\"",
+      "material": "Wood",
+      "color": "Weathered Oak",
+      "finish_type": "Distressed",
+      "about": "Enhance your wine collection with our Rustic Wine Cabinet. This weathered oak wood cabinet features a distressed finish and ample storage for wine bottles and glassware. Dimensions: 36\" x 16\" x 54\".",
+      "rating": 4.7,
+      "reviews": [
+        {
+          "username": "WineConnoisseur",
+          "rating": 5,
+          "comment": "I'm thrilled with this wine cabinet! It's perfect for my wine collection."
+        },
+        {
+          "username": "WineLover2",
+          "rating": 4,
+          "comment": "Great cabinet for wine enthusiasts."
+        },
+        {
+          "username": "HappyHostess",
+          "rating": 5,
+          "comment": "I love this purchase. It's perfect for hosting wine tastings."
+        },
+        {
+          "username": "EasyStorage4",
+          "rating": 4,
+          "comment": "Assembly was straightforward, but it's a bit heavy."
+        },
+        {
+          "username": "WineStorageFan",
+          "rating": 5,
+          "comment": "Perfect for anyone who loves wine."
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "category": "Lighting",
+      "name": "Crystal Chandelier",
+      "price": 299.99,
+      "image": "image_url_32.jpg",
+      "brand": "CrystalGlow",
+      "size": "Diameter: 18\"",
+      "material": "Crystal and Metal",
+      "color": "Chrome",
+      "finish_type": "Shiny",
+      "about": "Add a touch of glamour to your space with our Crystal Chandelier. This chrome metal chandelier features shiny crystal accents and a diameter of 18 inches. It's perfect for creating a luxurious atmosphere. Dimensions: Diameter: 18\".",
+      "rating": 4.8,
+      "reviews": [
+        {
+          "username": "GlamourSpace2",
+          "rating": 5,
+          "comment": "This crystal chandelier is stunning! It's a showstopper."
+        },
+        {
+          "username": "CrystalLove",
+          "rating": 4,
+          "comment": "A bit pricey, but it's worth it for the quality."
+        },
+        {
+          "username": "GlamourHome2",
+          "rating": 5,
+          "comment": "I'm in love with this chandelier. It's perfect for my glamorous decor."
+        },
+        {
+          "username": "EasyInstallation3",
+          "rating": 4,
+          "comment": "Installation was a bit tricky due to its size."
+        },
+        {
+          "username": "CrystalFan",
+          "rating": 5,
+          "comment": "Highly recommend for a luxurious room."
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "category": "Tables",
+      "name": "Mid-Century Coffee Table",
+      "price": 249.99,
+      "image": "image_url_33.jpg",
+      "brand": "MidCenturyStyle",
+      "size": "42\" x 24\" x 18\"",
+      "material": "Wood",
+      "color": "Walnut",
+      "finish_type": "Matte",
+      "about": "Complete your living room with our Mid-Century Coffee Table. This walnut wood table features a matte finish and a classic mid-century design, perfect for holding coffee and magazines. Dimensions: 42\" x 24\" x 18\".",
+      "rating": 4.7,
+      "reviews": [
+        {
+          "username": "MidCenturyLiving2",
+          "rating": 5,
+          "comment": "Love this mid-century coffee table! It's the perfect addition."
+        },
+        {
+          "username": "CoffeeTableFan",
+          "rating": 4,
+          "comment": "Great value for a stylish coffee table."
+        },
+        {
+          "username": "StylishLiving",
+          "rating": 5,
+          "comment": "I'm very pleased with this purchase. It's perfect."
+        },
+        {
+          "username": "HandyAssembly4",
+          "rating": 4,
+          "comment": "Assembly was straightforward, but it took some time."
+        },
+        {
+          "username": "MidCenturyDesignLover",
+          "rating": 5,
+          "comment": "Perfect for anyone wanting a mid-century modern living room."
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "category": "Chairs",
+      "name": "Leather Armchair",
+      "price": 279.95,
+      "image": "image_url_34.jpg",
+      "brand": "LeatherLux",
+      "size": "28\" x 30\" x 35\"",
+      "material": "Leather",
+      "color": "Brown",
+      "finish_type": "Matte",
+      "about": "Add sophistication to your space with our Leather Armchair. This brown leather chair features a matte finish and a comfortable design, perfect for cozy reading nooks. Dimensions: 28\" x 30\" x 35\".",
+      "rating": 4.6,
+      "reviews": [
+        {
+          "username": "SophisticatedLiving2",
+          "rating": 5,
+          "comment": "I love this leather armchair! It's so chic."
+        },
+        {
+          "username": "LeatherLover2",
+          "rating": 4,
+          "comment": "Great value for a stylish leather chair."
+        },
+        {
+          "username": "CozyCorner",
+          "rating": 5,
+          "comment": "I'm so happy with this purchase. It's perfect for my reading nook."
+        },
+        {
+          "username": "EasyAssembly11",
+          "rating": 4,
+          "comment": "Assembly was straightforward, no complaints."
+        },
+        {
+          "username": "ChicLiving",
+          "rating": 5,
+          "comment": "Highly recommend for a chic living room."
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "category": "Sofas",
+      "name": "Linen Sleeper Sofa",
+      "price": 599.99,
+      "image": "image_url_35.jpg",
+      "brand": "LinenComfort",
+      "size": "78\" x 34\" x 32\"",
+      "material": "Linen",
+      "color": "Gray",
+      "finish_type": "Textured",
+      "about": "Maximize your space with our Linen Sleeper Sofa. This gray linen sofa features a textured finish and a pull-out sleeper function, perfect for overnight guests. Dimensions: 78\" x 34\" x 32\".",
+      "rating": 4.7,
+      "reviews": [
+        {
+          "username": "SpaceSaver",
+          "rating": 5,
+          "comment": "This linen sleeper sofa is a space-saving wonder!"
+        },
+        {
+          "username": "LinenLove2",
+          "rating": 4,
+          "comment": "Great value for a stylish sleeper sofa."
+        },
+        {
+          "username": "GuestReady",
+          "rating": 5,
+          "comment": "I love this purchase. It's great for accommodating guests."
+        },
+        {
+          "username": "EasyAssembly12",
+          "rating": 4,
+          "comment": "Assembly was straightforward, but it's a bit heavy."
+        },
+        {
+          "username": "SleeperSofaFan",
+          "rating": 5,
+          "comment": "Perfect for anyone needing a versatile sofa."
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "category": "Beds",
+      "name": "Upholstered Platform Bed",
+      "price": 449.99,
+      "image": "image_url_36.jpg",
+      "brand": "UpholsteredLux",
+      "size": "84\" x 62\" x 36\"",
+      "material": "Fabric",
+      "color": "Beige",
+      "finish_type": "Soft",
+      "about": "Upgrade your bedroom with our Upholstered Platform Bed. This beige fabric platform bed features a soft finish and a stylish headboard. It adds a touch of luxury to your space. Dimensions: 84\" x 62\" x 36\".",
+      "rating": 4.6,
+      "reviews": [
+        {
+          "username": "LuxuriousRetreat",
+          "rating": 5,
+          "comment": "This upholstered platform bed is pure luxury! So comfortable."
+        },
+        {
+          "username": "UpholsteredLove",
+          "rating": 4,
+          "comment": "Great value for a stylish platform bed."
+        },
+        {
+          "username": "CozyBedroom",
+          "rating": 5,
+          "comment": "I'm in love with this bed. It's perfect for my cozy bedroom."
+        },
+        {
+          "username": "HandyAssembly5",
+          "rating": 4,
+          "comment": "Assembly was straightforward, but it took some time."
+        },
+        {
+          "username": "LuxuryBedroomFan",
+          "rating": 5,
+          "comment": "Perfect for anyone wanting a luxurious bedroom."
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "category": "Desks",
+      "name": "Industrial Writing Desk",
+      "price": 159.99,
+      "image": "image_url_37.jpg",
+      "brand": "IndustrialStyle",
+      "size": "48\" x 30\" x 30\"",
+      "material": "Metal and Wood",
+      "color": "Rustic Brown",
+      "finish_type": "Textured",
+      "about": "Upgrade your workspace with our Industrial Writing Desk. This rustic brown metal and wood desk features a textured finish and a sturdy design, perfect for a rustic-industrial look. Dimensions: 48\" x 30\" x 30\".",
+      "rating": 4.7,
+      "reviews": [
+        {
+          "username": "IndustrialOffice",
+          "rating": 5,
+          "comment": "This desk adds an industrial vibe to my office. Love it!"
+        },
+        {
+          "username": "RusticWorkspace",
+          "rating": 4,
+          "comment": "Great value for a sturdy industrial desk."
+        },
+        {
+          "username": "HappyWorker3",
+          "rating": 5,
+          "comment": "I'm so happy with this purchase. It's perfect for my rustic workspace."
+        },
+        {
+          "username": "EasyAssembly13",
+          "rating": 4,
+          "comment": "Assembly was straightforward, no complaints."
+        },
+        {
+          "username": "IndustrialDesignFan",
+          "rating": 5,
+          "comment": "Highly recommend for an industrial workspace."
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "category": "Cabinets",
+      "name": "Modern TV Stand",
+      "price": 249.95,
+      "image": "image_url_38.jpg",
+      "brand": "ModernLiving",
+      "size": "60\" x 16\" x 24\"",
+      "material": "Wood and Metal",
+      "color": "White and Black",
+      "finish_type": "Matte",
+      "about": "Elevate your entertainment area with our Modern TV Stand. This white wood and black metal TV stand features a matte finish and ample storage for media devices. Dimensions: 60\" x 16\" x 24\".",
+      "rating": 4.7,
+      "reviews": [
+        {
+          "username": "EntertainmentLover",
+          "rating": 5,
+          "comment": "I'm thrilled with this TV stand! It's perfect for my entertainment setup."
+        },
+        {
+          "username": "ModernHome",
+          "rating": 4,
+          "comment": "Great value for a stylish TV stand."
+        },
+        {
+          "username": "HappyBingeWatcher",
+          "rating": 5,
+          "comment": "I love this purchase. It's great for binge-watching."
+        },
+        {
+          "username": "EasyStorage5",
+          "rating": 4,
+          "comment": "Assembly was straightforward, but it's a bit heavy."
+        },
+        {
+          "username": "TVStandFan",
+          "rating": 5,
+          "comment": "Perfect for anyone who loves entertainment."
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "category": "Lighting",
+      "name": "Modern Pendant Light",
+      "price": 139.99,
+      "image": "image_url_39.jpg",
+      "brand": "ModernGlow",
+      "size": "Diameter: 14\"",
+      "material": "Glass and Metal",
+      "color": "Bronze",
+      "finish_type": "Shiny",
+      "about": "Illuminate your space with our Modern Pendant Light. This bronze metal pendant light features a shiny glass shade with a diameter of 14 inches. It adds a contemporary touch to any room. Dimensions: Diameter: 14\".",
+      "rating": 4.8,
+      "reviews": [
+        {
+          "username": "ContemporarySpace",
+          "rating": 5,
+          "comment": "This pendant light is a modern masterpiece!"
+        },
+        {
+          "username": "ModernLighting",
+          "rating": 4,
+          "comment": "A bit pricey, but it's worth it for the quality."
+        },
+        {
+          "username": "GlowingHome",
+          "rating": 5,
+          "comment": "I'm in love with this pendant light. It's perfect for my contemporary decor."
+        },
+        {
+          "username": "EasyInstallation4",
+          "rating": 4,
+          "comment": "Installation was straightforward, no complaints."
+        },
+        {
+          "username": "ContemporaryFan",
+          "rating": 5,
+          "comment": "Highly recommend for a contemporary room."
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "category": "Tables",
+      "name": "Glass Top Dining Table",
+      "price": 379.99,
+      "image": "image_url_40.jpg",
+      "brand": "GlassElegance",
+      "size": "72\" x 36\" x 30\"",
+      "material": "Glass and Metal",
+      "color": "Clear and Gold",
+      "finish_type": "Glossy",
+      "about": "Elevate your dining area with our Glass Top Dining Table. This clear glass table features a glossy gold metal base and a spacious design, perfect for hosting dinner parties. Dimensions: 72\" x 36\" x 30\".",
+      "rating": 4.7,
+      "reviews": [
+        {
+          "username": "ElegantDining",
+          "rating": 5,
+          "comment": "I adore this glass dining table! It adds elegance to our dining room."
+        },
+        {
+          "username": "GlassLover",
+          "rating": 4,
+          "comment": "Great value for a luxurious dining table."
+        },
+        {
+          "username": "HappyHost4",
+          "rating": 5,
+          "comment": "I'm so happy with this purchase. It's perfect for hosting dinners."
+        },
+        {
+          "username": "EasyAssembly14",
+          "rating": 4,
+          "comment": "Assembly was straightforward, no complaints."
+        },
+        {
+          "username": "ElegantDiningFan",
+          "rating": 5,
+          "comment": "Highly recommend for an elegant dining room."
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "category": "Chairs",
+      "name": "Velvet Accent Chairs",
+      "price": 199.95,
+      "image": "image_url_41.jpg",
+      "brand": "VelvetChic",
+      "size": "26\" x 28\" x 32\"",
+      "material": "Velvet",
+      "color": "Navy Blue",
+      "finish_type": "Matte",
+      "about": "Add a pop of color to your space with our Velvet Accent Chairs. These navy blue velvet chairs feature a matte finish and a sleek design, perfect for a chic look. Dimensions: 26\" x 28\" x 32\".",
+      "rating": 4.6,
+      "reviews": [
+        {
+          "username": "ChicLiving2",
+          "rating": 5,
+          "comment": "I love these velvet accent chairs! They're so chic."
+        },
+        {
+          "username": "VelvetLover2",
+          "rating": 4,
+          "comment": "Great value for stylish velvet chairs."
+        },
+        {
+          "username": "ColorfulHome",
+          "rating": 5,
+          "comment": "I'm so pleased with this purchase. They add a pop of color to my home."
+        },
+        {
+          "username": "EasyAssembly15",
+          "rating": 4,
+          "comment": "Assembly was straightforward, no complaints."
+        },
+        {
+          "username": "ChicHome",
+          "rating": 5,
+          "comment": "Highly recommend for a chic living room."
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "category": "Sofas",
+      "name": "L-Shaped Sectional Sofa",
+      "price": 849.99,
+      "image": "image_url_42.jpg",
+      "brand": "SectionalComfort",
+      "size": "120\" x 84\" x 32\"",
+      "material": "Fabric",
+      "color": "Beige",
+      "finish_type": "Textured",
+      "about": "Create a cozy and spacious living area with our L-Shaped Sectional Sofa. This beige fabric sectional features a textured finish and an L-shaped design, perfect for relaxation. Dimensions: 120\" x 84\" x 32\".",
+      "rating": 4.8,
+      "reviews": [
+        {
+          "username": "CozyLiving2",
+          "rating": 5,
+          "comment": "This L-shaped sectional is perfect for our family."
+        },
+        {
+          "username": "SectionalStyle",
+          "rating": 4,
+          "comment": "A bit pricey, but the comfort is worth it."
+        },
+        {
+          "username": "RelaxationZone",
+          "rating": 5,
+          "comment": "I love this purchase. It's great for unwinding."
+        },
+        {
+          "username": "EasyAssembly16",
+          "rating": 4,
+          "comment": "Assembly was straightforward, but it's large."
+        },
+        {
+          "username": "SpaciousLiving3",
+          "rating": 5,
+          "comment": "Highly recommend for a spacious living room."
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "category": "Tables",
+      "name": "Rustic End Table",
+      "price": 129.99,
+      "image": "image_url_43.jpg",
+      "brand": "RusticCharm",
+      "size": "24\" x 24\" x 24\"",
+      "material": "Wood",
+      "color": "Weathered Oak",
+      "finish_type": "Distressed",
+      "about": "Complete your rustic decor with our Rustic End Table. This weathered oak wood table features a distressed finish and a lower shelf for storage. Dimensions: 24\" x 24\" x 24\".",
+      "rating": 4.7,
+      "reviews": [
+        {
+          "username": "RusticLiving",
+          "rating": 5,
+          "comment": "I'm thrilled with this rustic end table! It's perfect for our cabin."
+        },
+        {
+          "username": "WoodLover3",
+          "rating": 4,
+          "comment": "Great table for rustic enthusiasts."
+        },
+        {
+          "username": "HappyHomeowner5",
+          "rating": 5,
+          "comment": "I love this purchase. It's perfect for our living room."
+        },
+        {
+          "username": "EasyAssembly17",
+          "rating": 4,
+          "comment": "Assembly was straightforward, no complaints."
+        },
+        {
+          "username": "RusticDecorFan",
+          "rating": 5,
+          "comment": "Perfect for anyone who loves rustic decor."
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "category": "Beds",
+      "name": "Sleigh Bed Frame",
+      "price": 499.99,
+      "image": "image_url_44.jpg",
+      "brand": "SleighDreams",
+      "size": "88\" x 62\" x 48\"",
+      "material": "Wood",
+      "color": "Cherry",
+      "finish_type": "Polished",
+      "about": "Transform your bedroom into an elegant retreat with our Sleigh Bed Frame. This cherry wood bed frame features a polished finish and a classic sleigh design. It exudes timeless beauty. Dimensions: 88\" x 62\" x 48\".",
+      "rating": 4.8,
+      "reviews": [
+        {
+          "username": "ElegantRetreat2",
+          "rating": 5,
+          "comment": "This sleigh bed frame is pure elegance! So luxurious."
+        },
+        {
+          "username": "SleighLove",
+          "rating": 4,
+          "comment": "A bit pricey, but it's worth it for the elegance."
+        },
+        {
+          "username": "LuxuryRetreat",
+          "rating": 5,
+          "comment": "I'm in love with this purchase. It's perfect for our elegant bedroom."
+        },
+        {
+          "username": "EasyAssembly18",
+          "rating": 4,
+          "comment": "Assembly was straightforward, but it's a bit heavy."
+        },
+        {
+          "username": "ElegantBedroomFan",
+          "rating": 5,
+          "comment": "Highly recommend for a luxurious bedroom."
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "category": "Desks",
+      "name": "Rustic L-Shaped Desk",
+      "price": 249.99,
+      "image": "image_url_45.jpg",
+      "brand": "RusticCharm",
+      "size": "66\" x 66\" x 30\"",
+      "material": "Wood and Metal",
+      "color": "Weathered Oak",
+      "finish_type": "Distressed",
+      "about": "Upgrade your workspace with our Rustic L-Shaped Desk. This weathered oak wood and metal desk features a distressed finish and ample space for productivity. Dimensions: 66\" x 66\" x 30\".",
+      "rating": 4.7,
+      "reviews": [
+        {
+          "username": "RusticOffice",
+          "rating": 5,
+          "comment": "This L-shaped desk adds rustic charm to my office. Love it!"
+        },
+        {
+          "username": "WeatheredWorkspace",
+          "rating": 4,
+          "comment": "Great value for a spacious rustic desk."
+        },
+        {
+          "username": "HappyWorker4",
+          "rating": 5,
+          "comment": "I'm so happy with this purchase. It's perfect for my rustic workspace."
+        },
+        {
+          "username": "EasyAssembly19",
+          "rating": 4,
+          "comment": "Assembly was straightforward, no complaints."
+        },
+        {
+          "username": "RusticDesignFan",
+          "rating": 5,
+          "comment": "Highly recommend for a rustic-industrial workspace."
+        }
+      ]
+    }
+  ]
+}
