@@ -3,6 +3,7 @@ import thunk from "redux-thunk"
 import {reducer as adminReducer} from "./Admin/reducer"
 
 
+
 const rootReducer=combineReducers({
     adminReducer
 })

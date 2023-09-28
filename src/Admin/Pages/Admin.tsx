@@ -19,8 +19,8 @@ const Admin = () => {
        case "/":{
          return setPage("Dashboard");
        }
-       case "/analytics":{
-        return setPage("Analytics");
+       case "/orders":{
+        return setPage("Orders");
        }
        case "/users":{
         return setPage("Users")
@@ -35,12 +35,13 @@ const Admin = () => {
   },[pathname]);
   
   return (
-    <div className='admin' style={{border:"1px solid red"}}>
+
+<div className='admin' style={{border:"1px solid red"}}>
        <Grid
   m="10px" 
   h='750px'
   templateRows='repeat(6, 1fr)'
-  templateColumns='repeat(7, 1fr)'
+  templateColumns='repeat(9, 1fr)'
   gap={4}
   bg='white'
 >
@@ -53,7 +54,7 @@ const Admin = () => {
 
 
                                                       {/* header */}
-  <GridItem  colSpan={5} borderRadius="20px" bg='orange'
+  <GridItem  colSpan={7} borderRadius="20px" bg='orange'
    display="flex" 
    alignItems="center"
    justifyContent="center">  
@@ -99,7 +100,7 @@ const Admin = () => {
 
 
 {/* all routes wrapper (contentss) */}
-  <GridItem rowSpan={5} borderRadius="20px" colSpan={5} bg='orange'>
+  <GridItem rowSpan={5} borderRadius="20px" colSpan={7} bg='orange'>
    <AllRoutes/>
   </GridItem>
   {/*  till here */}
