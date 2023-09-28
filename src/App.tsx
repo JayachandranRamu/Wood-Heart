@@ -1,5 +1,4 @@
 
-import { ChakraProvider } from "@chakra-ui/react"
 import Admin from "./Admin/Pages/Admin"
 
 
