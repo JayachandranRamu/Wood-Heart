@@ -1,6 +1,6 @@
 
 import Admin from "./Admin/Pages/Admin"
-import { BrowserRouter } from 'react-router-dom';
+
 
 
 
