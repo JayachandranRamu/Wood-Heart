@@ -1913,7 +1913,180 @@
         "phone": "1-104-001-4567",
         "orders": [],
         "wishList": [],
-        "addToCart": []
+        "addToCart": [],
+        "cartData":[
+
+          {
+            "id": 10,
+            "category": "Cabinets",
+            "name": "Modern Media Cabinet",
+            "price": 349.95,
+            "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2iynmuzk4wih564f3vg3.png",
+            "brand": "ModernMedia",
+            "size": "60\" x 18\" x 24\"",
+            "material": "Wood",
+            "color": "Walnut",
+            "quantity": 1,
+            "finish_type": "Matte",
+            "about": "Organize your media essentials with our Modern Media Cabinet. This walnut wood media cabinet features a matte finish and ample storage space. Dimensions: 60\" x 18\" x 24\".",
+            "rating": 4.6,
+            "reviews": [
+              {
+                "username": "MediaEnthusiast",
+                "rating": 5,
+                "comment": "I'm thrilled with this media cabinet! It's perfect."
+              },
+              {
+                "username": "OrganizedHome",
+                "rating": 4,
+                "comment": "Great cabinet for organizing media equipment."
+              },
+              {
+                "username": "HappyMovieNights",
+                "rating": 5,
+                "comment": "I love this purchase. It's perfect for my home theater."
+              },
+              {
+                "username": "EasyStorage2",
+                "rating": 4,
+                "comment": "Assembly was straightforward, but it's a bit bulky."
+              },
+              {
+                "username": "MediaStorageFan",
+                "rating": 5,
+                "comment": "Perfect for any media enthusiast."
+              }
+            ]
+          },
+          {
+            "id": 11,
+            "category": "Lighting",
+            "name": "Crystal Floor Lamp",
+            "price": 199.99,
+            "image": "https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-product-pic2.webp",
+            "brand": "CrystalGlow",
+            "size": "Height: 60\"",
+            "material": "Crystal and Metal",
+            "color": "Silver",
+            "quantity": 1,
+            "finish_type": "Shiny",
+            "about": "Brighten up your space with our Crystal Floor Lamp. This silver crystal floor lamp features a shiny finish and stands at a height of 60 inches. It adds a touch of glamour to any room. Dimensions: Height: 60\".",
+            "rating": 4.7,
+            "reviews": [
+              {
+                "username": "GlamourSpace",
+                "rating": 5,
+                "comment": "This crystal floor lamp is breathtaking! So elegant."
+              },
+              {
+                "username": "ShinyLighting",
+                "rating": 4,
+                "comment": "A bit pricey, but it's a showstopper."
+              },
+              {
+                "username": "CrystalLover",
+                "rating": 5,
+                "comment": "I'm in love with this floor lamp. It's a work of art."
+              },
+              {
+                "username": "EasyAssembly4",
+                "rating": 4,
+                "comment": "Installation was a bit tricky due to its size."
+              },
+              {
+                "username": "GlamorousHome",
+                "rating": 5,
+                "comment": "Highly recommend for a glamorous home."
+              }
+            ]
+          },
+          {
+            "id": 12,
+            "category": "Tables",
+            "name": "Glass Top End Table",
+            "price": 99.99,
+            "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/n9z22hla9a1iopdhugz5.png",
+            "brand": "GlassGlow",
+            "size": "18\" x 18\" x 22\"",
+            "material": "Glass and Metal",
+            "color": "Clear and Gold",
+            "quantity": 1,
+            "finish_type": "Glossy",
+            "about": "Add a touch of sophistication to your space with our Glass Top End Table. This clear glass end table features a glossy finish and elegant gold metal accents. It's perfect for placing by your sofa. Dimensions: 18\" x 18\" x 22\".",
+            "rating": 4.6,
+            "reviews": [
+              {
+                "username": "SophisticatedLiving",
+                "rating": 5,
+                "comment": "I love this glass end table! It's so chic."
+              },
+              {
+                "username": "ElegantDecorator",
+                "rating": 4,
+                "comment": "Great value for a stylish glass table."
+              },
+              {
+                "username": "HappyCustomer3",
+                "rating": 5,
+                "comment": "I'm so happy with this purchase. It's perfect for my living room."
+              },
+              {
+                "username": "EasyAssembly3",
+                "rating": 4,
+                "comment": "Assembly was straightforward, no complaints."
+              },
+              {
+                "username": "ChicHomeDesign",
+                "rating": 5,
+                "comment": "Highly recommend for a chic living room."
+              }
+            ]
+          },
+          {
+            "id": 13,
+            "category": "Chairs",
+            "name": "Swivel Accent Chair",
+            "price": 179.95,
+            "image": "https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-product-pic7.webp",
+            "brand": "AccentStyle",
+            "size": "30\" x 30\" x 32\"",
+            "material": "Velvet",
+            "color": "Pink",
+            "quantity": 1,
+            "finish_type": "Soft",
+            "about": "Add a pop of color to your space with our Swivel Accent Chair. This pink velvet chair features a soft finish and 360-degree swivel, perfect for adding flair to any room. Dimensions: 30\" x 30\" x 32\".",
+            "rating": 4.5,
+            "reviews": [
+              {
+                "username": "PinkObsession",
+                "rating": 5,
+                "comment": "I adore this pink accent chair! It's a statement piece."
+              },
+              {
+                "username": "ColorfulLiving",
+                "rating": 4,
+                "comment": "Great value for a stylish accent chair."
+              },
+              {
+                "username": "HappyDecorator2",
+                "rating": 5,
+                "comment": "I'm so happy with this purchase. It's perfect for my colorful decor."
+              },
+              {
+                "username": "EasyAssembly4",
+                "rating": 4,
+                "comment": "Assembly was straightforward, no complaints."
+              },
+              {
+                "username": "ColorfulHome",
+                "rating": 5,
+                "comment": "Highly recommend for adding a pop of color."
+              }
+            ]
+          }
+         
+  
+        ]
       }
     ]
 
