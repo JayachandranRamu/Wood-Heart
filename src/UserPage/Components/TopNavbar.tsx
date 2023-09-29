@@ -19,7 +19,6 @@ import {
   InputLeftElement,
   HStack,
   LinkBox,
-  Link,
 } from '@chakra-ui/react'
 import {
   HamburgerIcon,
@@ -29,10 +28,11 @@ import {
 } from '@chakra-ui/icons'
 import Logo from "/Users/Lenovo/Desktop/posh-division-4370/src/assets/Logo.png"
 import { FaSearch} from 'react-icons/fa';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure()
-
+const Navigate=useNavigate();
   return (
     <Box fontFamily={"Poppins"} mt={[0,"10px"]}>
       <Flex   w={["100%","100%","80%"]} m={"auto"}
@@ -56,7 +56,7 @@ export default function WithSubnavigation() {
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
           <Image src={"https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5m15kyve20olnf5nvm31.png"} w={["100%","100%","60%"]}
-            textAlign={useBreakpointValue({ base: 'center', md: 'left' })} margin={"10px 0"}>
+            textAlign={useBreakpointValue({ base: 'center', md: 'left' })} margin={"10px 0"} onClick={()=>Navigate("/")} >
            
           </Image>
 
@@ -78,36 +78,41 @@ export default function WithSubnavigation() {
           direction={'row'}
           spacing={1}
           >
-
-             <Button 
-              // display={{ base: 'none', md: 'inline-flex' }} 
-               variant={'link'} href={'#'}>
+<Link to="/admin"> 
+             <Button
+              display={{ base: 'none', md: 'inline-flex' }} 
+              variant={'link'} href={'#'}>
             <Image src='https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-cart.svg'  w={["45%","55%"]}>
 
             </Image></Button>
+            </Link>
+            <Link to="/admin"> 
               <Button 
-              //  display={{ base: 'none', md: 'inline-flex' }}
+               display={{ base: 'none', md: 'inline-flex' }}
                 variant={'link'} href={'#'}>
             <Image src='https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-wishlist.svg'  w={["45%","55%"]} >
 
             </Image></Button>
-          <Button variant={'link'} href={'#'}>
-            <Image src='https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-user.svg' w={["45%","55%"]}>
+            </Link>
+            <Link to="/admin"> {/* Wrap the button with a Link component */}
+      <Button variant="link">
+        <Image
+          src="https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-user.svg"
+          w={["15%","15%", "55%"]}
+          alt="User Icon" // Add an alt attribute for accessibility
+        />
+      </Button>
+    </Link>
 
-            </Image>
-          </Button>
+
+
+
+
+
+
+
          
- 
-      
-<Box>
-  <Link to="/cart">
-    <Image
-      src="https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-user.svg"
-      w={["45%", "55%"]}
-      alt="User" // Provide alt text for accessibility
-    />
-  </Link>
-</Box>
+
         </Stack>
       </Flex>
 
@@ -129,8 +134,9 @@ const MobileNav = () => {
     </Stack>
   )
 }
-
-const MobileNavItem = ({ label, href }: NavItem) => {
+const linkColor:string = '#0b3954';
+const linkHoverColor:string = '#ffb128';
+const MobileNavItem = ({ label, href,src }: NavItem) => {
   const { isOpen } = useDisclosure()
 
   return (
@@ -144,9 +150,22 @@ const MobileNavItem = ({ label, href }: NavItem) => {
         _hover={{
           textDecoration: 'none',
         }}>
-        <Text fontWeight={600} color={useColorModeValue('gray.600', 'gray.200')}>
+          <Box display={"flex"} alignItems={"center"}  w={"100%"}  >
+            {/* <Box> */}
+            <Image src={src} w={"8%"}></Image>
+            {/* </Box> */}
+            {/* <Box> */}
+            <Text fontWeight={600}  ml={"20px"} color={linkColor} 
+             _hover={{
+                      color: linkHoverColor,
+                    }}
+                    >
           {label}
         </Text>
+            {/* </Box> */}
+          </Box>
+       
+      
       </Box>
     </Stack>
   )
@@ -159,6 +178,7 @@ interface NavItem {
 }
 
 const NAV_ITEMS: Array<NavItem> = [
+ 
   {
     label: 'CHAIRS',
     src:'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category1.svg',
@@ -188,5 +208,15 @@ const NAV_ITEMS: Array<NavItem> = [
     label: 'LIGHTING',
     href:"#",
     src: 'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category6.svg',
-  }
+  },
+//   {
+//     label: 'CHECKOUT',
+//     src:'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-cart.svg',
+//  href:"#"
+//   },
+//   {
+//     label: 'WISHLIST',
+//     src:'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-wishlist.svg',
+//  href:"#"
+//   },
 ];

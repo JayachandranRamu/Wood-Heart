@@ -18,14 +18,10 @@ function App() {
     <>
     
 
-      {/* <h1>Vite + React</h1> */}
-      <TopNavbar />
-        <DesktopNav />
 
+    
       <MainRoutes />
-      <UserSteps/>
-      <Cart />
-      <Footer />
+
 
     </>
   )
