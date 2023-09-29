@@ -33,7 +33,7 @@ const TrustedSection = () => {
       </Flex>
       <Flex p={8} flex={1} align="center" justify="center">
         <Flex direction="column">
-          <Text fontWeight="500" fontSize="52" mb={2}>
+          <Text fontWeight="500" fontSize={["40","52"]} mb={2}>
             <Box  display="inline-block" position="relative">
               Trusted by Our Customers
             

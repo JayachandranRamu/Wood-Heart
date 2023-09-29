@@ -1,9 +1,21 @@
+import React, { useEffect } from "react";
+import TopNavbar from "../Components/TopNavbar"
+import ProductItems from "../Components/ProductItems";
+import { Box } from "@chakra-ui/react";
+import { DesktopNav } from "../Components/BottomNavbar";
+import Footer from "../Components/Footer";
 
 
-const ProductPage = () => {
-  return (
-    <div>ProductPage</div>
-  )
-}
+const ProductPage: React.FC = () => {
 
-export default ProductPage
+  return<>
+  <TopNavbar />
+        <DesktopNav />
+  <Box fontFamily={"Poppins"}>
+  <ProductItems />
+  </Box>
+  <Footer />
+    </> ;
+};
+
+export default ProductPage;
