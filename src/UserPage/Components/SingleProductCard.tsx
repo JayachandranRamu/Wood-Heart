@@ -11,22 +11,29 @@ import {
   Input,
   Text,
   useNumberInput,
+    Container,
+    Heading,
+    Stack,
+    Avatar,
+    useColorModeValue
 } from '@chakra-ui/react';
 import { FaStar } from 'react-icons/fa';
 import { CartDrawer } from './CartDrawer';
 import { getSingleProductData } from '../Redux/UserPage/action';
 
 export const SingleProductCard: React.FC = () => {
-  let { id } = useParams<{ id: any }>();
+  let { id } = useParams<{ id: number }>();
 
    // Specify the type for 'name'
   const dispatch = useDispatch();
   
-  let { singleProduct, isLoading, isError } = useSelector((store: RootState) => ({
-    singleProduct: store.productReducer.singleProduct,
-    isLoading: store.productReducer.isLoading,
-    isError: store.productReducer.isError,
-  }));
+//   let { singleProduct, isLoading, isError } = useSelector((store: RootState) => ({
+//     singleProduct: store.productReducer.singleProduct,
+//     isLoading: store.productReducer.isLoading,
+//     isError: store.productReducer.isError,
+//   }));
+
+let singleProduct=useSelector((store:RootState)=>store.productReducer.singleProduct)
 
   const {
     getInputProps,
@@ -51,15 +58,16 @@ export const SingleProductCard: React.FC = () => {
   }
 
   useEffect(() => {
-    // Dispatch the action to fetch single product data
+ 
     dispatch(getSingleProductData(id));
   }, []);
 
   // ... rest of your component code
-console.log(singleProduct)
+console.log(singleProduct,id)
 
 
   return (
+    <>
     <Flex
       direction={["column", "row"]}
       w={"80%"}
@@ -90,7 +98,7 @@ console.log(singleProduct)
           ))}
           <Box ml={"10px"} alignItems={"center"}>
             <Text fontSize={"15px"} color={"#5c676d"}>
-              ({singleProduct?.reviews.length} customer reviews)
+              ({singleProduct?.reviews?.length} customer reviews)
             </Text>
           </Box>
         </Flex>
@@ -128,5 +136,65 @@ console.log(singleProduct)
       </Box>
       {isOpen && <CartDrawer onOpen={isOpen} onClose={onClose} />}
     </Flex>
+    <Box>
+        
+    </Box>
+    <Box>
+    <Container maxW="80%" p={{ base: 5, md: 10 }} fontFamily={"poppins"} > 
+        <Flex justify="center">
+          <Heading as="h3" size="xl" fontWeight="bold" textAlign="left" fontFamily={"poppins"} mb={{ base: '4', md: '2' }}>
+            Recent Reviews
+          </Heading>
+        </Flex>
+        <Stack direction="column" spacing={5} my={4}>
+          {singleProduct?.reviews?.map((el, index) => {
+            return (
+              <Stack key={index} direction="column" maxW="2xl">
+                <HStack spacing={3}>
+                  <Avatar size="md" name={el?.username} src={'https://dev-to-uploads.s3.amazonaws.com/uploads/articles/9tof838jn4del088vd49.jpg'} />
+                  <Flex direction="column">
+                    <Text fontWeight="500" fontSize="md">
+                      {el?.username}
+                    </Text>
+                    {/* <Text fontWeight="light" fontSize="xs">
+                      {el.dateTime}
+                    </Text> */}
+                  </Flex>
+                </HStack>
+                <Flex  fontSize={18} m={"8px 0"}>
+          {new Array(Math.floor(el?.rating || 1)).fill(0).map((el, index) => (
+            <Box key={index} m={"0px 1px"}>
+              <FaStar color="#ffb128" />
+            </Box>
+          ))}
+          {new Array(5 - Math.floor(el?.rating || 1)).fill(0).map((el, index) => (
+            <Box key={index} m={"0px 1px"}>
+              <FaStar color="grey" />
+            </Box>
+          ))}
+        </Flex>
+                <Text
+     color={"#5c676d"} 
+     fontFamily={"poppins"}
+                  fontSize="16"
+                  textAlign="left"
+                  lineHeight="1.375"
+                  fontWeight="400"
+                >
+                  {el?.comment}
+                </Text>
+              </Stack>
+            );
+          })}
+        </Stack>
+      </Container>
+    </Box>
+    </>
   )
 };
+
+  
+
+  
+
+ 
