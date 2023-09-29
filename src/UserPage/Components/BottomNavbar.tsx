@@ -1,99 +1,84 @@
 import {
     Box,
-    Flex,
-    Text,
-    IconButton,
-    Button,
     Stack,
-    Collapse,
-    Icon,
-    Popover,
-    PopoverTrigger,
-    PopoverContent,
     useColorModeValue,
     useBreakpointValue,
-    useDisclosure,
     Image,
   } from '@chakra-ui/react';
-  import {
-    HamburgerIcon,
-    CloseIcon,
-    ChevronDownIcon,
-    ChevronRightIcon,
-  } from '@chakra-ui/icons';
+
   import { FaArrowDown } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
   interface NavItem {
     label: string;  
     src?:string;
     subLabel?: string;
-    children?: Array<NavItem>;
-    href?: string;
+    href: string;
   }
   
-  export const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
-    return (
-      <Box
-        as="a"
-        href={href}
-        role={'group'}
-        display={'block'}
-        p={2}
-        rounded={'md'}
-        _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}>
-        <Stack direction={'row'} align={'center'}>
-          <Box>
-            <Text
-              transition={'all .3s ease'}
-              _groupHover={{ color: 'pink.400' }}
-              fontWeight={500}>
-              {label}
-            </Text>
-            <Text fontSize={'sm'}>{subLabel}</Text>
-          </Box>
-          <Flex
-            transition={'all .3s ease'}
-            transform={'translateX(-10px)'}
-            opacity={0}
-            _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
-            justify={'flex-end'}
-            align={'center'}
-            flex={1}>
-            <Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} />
-          </Flex>
-        </Stack>
-      </Box>
-    );
-  };
+  // export const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
+  //   return (
+  //     <Box
+  //       as="a"
+  //       href={href}
+  //       role={'group'}
+  //       display={'block'}
+  //       p={2}
+  //       rounded={'md'}
+  //       _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}>
+  //       <Stack direction={'row'} align={'center'}>
+  //         <Box>
+  //           <Text
+  //             transition={'all .3s ease'}
+  //             _groupHover={{ color: 'pink.400' }}
+  //             fontWeight={500}>
+  //             {label}
+  //           </Text>
+  //           <Text fontSize={'sm'}>{subLabel}</Text>
+  //         </Box>
+  //         <Flex
+  //           transition={'all .3s ease'}
+  //           transform={'translateX(-10px)'}
+  //           opacity={0}
+  //           _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
+  //           justify={'flex-end'}
+  //           align={'center'}
+  //           flex={1}>
+  //           <Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} />
+  //         </Flex>
+  //       </Stack>
+  //     </Box>
+  //   );
+  // };
   
   const NAV_ITEMS: Array<NavItem> = [
     {
       label: 'CHAIRS',
       src:'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category1.svg',
-   href:"#"
+   href:"/Chairs"
     },
     {
       label: 'BEDS',
       src:'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category2.svg',
-      href:"#"
+      href:"/Beds"
     },
     {
       label: 'TABLES',
-      href:"#",
+      href:"/Tables",
       src: 'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category3.svg',
     },
     {
       label: 'DESKS',
-      href:"#",
+      href:"/Desks",
       src: 'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category4.svg',
     },
     {
       label: 'CABINETS',
-      href:"#",
+      href:"/Cabinets",
       src: 'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category5.svg',
     },
     {
       label: 'LIGHTING',
-      href:"#",
+      href:"/Lighting",
       src: 'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category6.svg',
     }
   ];
@@ -124,7 +109,7 @@ import {
               
                     // as="a"
                     p={1.5}
-                    href={navItem.href}
+                    
                     fontSize={'16px'}
                     fontWeight={500}
                     color={linkColor}
@@ -137,11 +122,14 @@ import {
                     >
                   <Box display={"flex"} justifyContent={'space-evenly'} alignItems={"center"}>
                     <Box>
-                    {navItem.label}   
+                      <Link to={navItem.href}>
+                      {navItem.label}  
+                      </Link>
+                    
                     </Box>
-                    <Box>
+                    {/* <Box>
                     <FaArrowDown /> 
-                    </Box>
+                    </Box> */}
                   </Box>
                                
                    

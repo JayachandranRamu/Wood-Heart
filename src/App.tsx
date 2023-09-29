@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import { Cart } from "./UserPage/user/Cart";
+=======
+
+import { Cart } from "./user/Cart";
+>>>>>>> f7faa0b6ccf1a801a6b3ba3e6182f9f5d79da4e9
 
 import Admin from "./Admin/Pages/Admin"
 import { DesktopNav } from "./UserPage/Components/BottomNavbar"
@@ -18,15 +23,17 @@ function App() {
     <>
     
 
-      {/* <h1>Vite + React</h1> */}
-      <TopNavbar />
-        <DesktopNav />
 
+    
       <MainRoutes />
+<<<<<<< HEAD
       <UserSteps/>
       <Cart />
       
       <Footer />
+=======
+
+>>>>>>> f7faa0b6ccf1a801a6b3ba3e6182f9f5d79da4e9
 
     </>
   )
