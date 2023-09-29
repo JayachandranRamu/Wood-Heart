@@ -21,19 +21,27 @@ const ProductItems: React.FC = () => {
   }));
 
   useEffect(() => {
-    const params = {
-      params: {
-        category: name,
-      },
-    };
-    dispatch(getProductsData(params));
-  }, [dispatch, name]);
+   
+      let params = {
+        params: {
+          category: name=="product"?null:name,
+        },
+      }
+      
+
+dispatch(getProductsData(params))
+
+  }, []);
 
   console.log(products);
 
-  return <SimpleGrid spacing={10} columns={[1,2,3]}  m={"80px auto"} w={"80%"} >
+  return <>
+  
+  <SimpleGrid spacing={10} columns={[1,2,3]}  m={"80px auto"} w={"80%"} >
   {products?.map((el:any)=><ProductCard key={el.id} {...el} />)}
-  </SimpleGrid>;
+  </SimpleGrid>
+  
+  </>
 };
 
 export default ProductItems;
