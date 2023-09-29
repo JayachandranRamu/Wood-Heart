@@ -1,9 +1,10 @@
 import { Center, Grid, GridItem, Stat, StatArrow, StatHelpText, StatLabel, StatNumber } from '@chakra-ui/react'
 import React from 'react'
-
+import AdminNavbar from "../Components/Admin-Navbar";
 const Dashboard = () => {
   return (
     <>
+    <AdminNavbar />
     <Center>
     <Grid
     mt="10px"
