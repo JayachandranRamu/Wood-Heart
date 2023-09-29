@@ -1,6 +1,7 @@
 import { Center, Grid, GridItem, Stat, StatArrow, StatHelpText, StatLabel, StatNumber } from '@chakra-ui/react'
 import React from 'react'
 import AdminNavbar from "../Components/Admin-Navbar";
+import { AdminFooter } from './AdminFooter';
 const Dashboard = () => {
   return (
     <>
@@ -32,6 +33,7 @@ const Dashboard = () => {
 <GridItem  rowSpan={2} colSpan={1} bg="orange"></GridItem>
   </Grid> 
   </Center>
+  <AdminFooter/>
     </>
   )
 }
