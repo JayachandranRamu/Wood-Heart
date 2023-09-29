@@ -6,3 +6,8 @@ export const getProductDataFromAPI=(params:AxiosRequestConfig)=>{
 
   return  axios.get(ProductURL,params)
 }
+
+export const getSingleProductDataFromAPI=(id:any)=>{
+console.log(id)
+  return  axios.get(ProductURL+"/"+id)
+}

@@ -12,8 +12,10 @@ import {
 } from '@chakra-ui/react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import {FaArrowRight } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 const Hero: React.FC = () => {
   const bg = useColorModeValue('white', 'gray.800');
+  let Navigate=useNavigate()
   return (
       <Box m={"50px auto"} fontFamily={"urbanist"}
     borderRadius={["35px","50px"]}  mb={"100px"}
@@ -69,7 +71,7 @@ ml={["5%","5%"]}
            <Button
            //   colorScheme="brand"
            borderRadius={"20px"}
-         
+         onClick={()=>Navigate("/product")}
              textTransform="uppercase"
              w="fit-content"
            >GO TO SHOP   

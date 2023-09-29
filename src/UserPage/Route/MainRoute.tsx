@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { Route, Routes } from 'react-router-dom'
 
 import { Alert, AlertIcon, Stack } from '@chakra-ui/react'
@@ -7,6 +7,8 @@ import ProductPage from '../Pages/ProductPage'
 import SingleProduct from '../Pages/SingleProduct'
 import Dashboard from '../../Admin/Pages/Dashboard'
 // import Analytics from '../../Admin/Pages/Analytics'
+
+
 import Users from '../../Admin/Pages/Users'
 import Products from '../../Admin/Pages/Products'
 import Admin from '../../Admin/Pages/Admin'
@@ -19,12 +21,14 @@ const MainRoutes = () => {
     <Routes>
         <Route path="/" element={<HomePage/>}   />  
         <Route path="/:name" element={<ProductPage/>} />
+
         <Route path="/product:id" element={<SingleProduct/>} />
         {/* <Route path='/admin' element={<Admin />}></Route> */}
         <Route path="/admin" element={<Dashboard/>}></Route>
         <Route path="/admin/users" element={<Users/>}></Route>
         <Route path="/admin/singleUser/:id" element={<SingleUserAdmin/>}></Route>
         <Route path="/admin/products" element={<Products/>}></Route>
+
         <Route path="*" element={<Stack spacing={3}>
   <Alert status='error'>
     <AlertIcon />

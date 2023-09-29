@@ -1,34 +1,18 @@
 import {
     Box,
-    Flex,
-    Text,
-    IconButton,
-    Button,
     Stack,
-    Collapse,
-    Icon,
-    Popover,
-    PopoverTrigger,
-    PopoverContent,
     useColorModeValue,
     useBreakpointValue,
-    useDisclosure,
     Image,
   } from '@chakra-ui/react';
-  import {
-    HamburgerIcon,
-    CloseIcon,
-    ChevronDownIcon,
-    ChevronRightIcon,
-  } from '@chakra-ui/icons';
+
   import { FaArrowDown } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
   interface NavItem {
     label: string;  
     src?:string;
     subLabel?: string;
-    children?: Array<NavItem>;
-    href?: string;
+    href: string;
   }
   
   // export const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
@@ -143,9 +127,9 @@ import { Link } from 'react-router-dom';
                       </Link>
                     
                     </Box>
-                    <Box>
+                    {/* <Box>
                     <FaArrowDown /> 
-                    </Box>
+                    </Box> */}
                   </Box>
                                
                    
