@@ -1,4 +1,4 @@
-import { Box, Image, Text } from '@chakra-ui/react';
+import { Box, Flex, Image, Text } from '@chakra-ui/react';
 import React from 'react';
 
 interface ProductCardProps {
@@ -22,17 +22,21 @@ const ProductCard: React.FC<ProductCardProps> = ({
 }) => {
   return (
   <Box bg={"#f5f5f5"} borderRadius={"20px"} m={"auto"} p={"40px"} textAlign={"center"}>
-      <Image
+    <Flex  h={"400px"} alignItems={"center"} justifyContent={"center"} >
+    <Image
       m={"20px auto"}
       w={"100%"}
+      
     // boxSize="320px" // Set a fixed size for the image (adjust as needed)
         // objectFit={"cover"}
         src={image}
       />
+    </Flex>
+   
       <Text>{name}</Text>
       <Text fontWeight={"500"}>$ {price}</Text>
     </Box>
   );
 };
 
-export default ProductCard;
+export default React.memo(ProductCard);
