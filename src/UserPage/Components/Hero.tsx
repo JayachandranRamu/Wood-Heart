@@ -71,7 +71,7 @@ ml={["5%","5%"]}
            <Button
            //   colorScheme="brand"
            borderRadius={"20px"}
-         onClick={()=>Navigate("/products")}
+         onClick={()=>Navigate("/product")}
              textTransform="uppercase"
              w="fit-content"
            >GO TO SHOP   

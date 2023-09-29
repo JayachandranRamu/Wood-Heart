@@ -24,13 +24,14 @@ const ProductItems: React.FC = () => {
    
       let params = {
         params: {
-          category: name=="products"?null:name,
+          category: name=="product"?null:name,
         },
-      };
-    
-   
-    dispatch(getProductsData(params));
-  }, [dispatch, name]);
+      }
+      
+
+dispatch(getProductsData(params))
+
+  }, []);
 
   console.log(products);
 

@@ -127,9 +127,9 @@ import { Link } from 'react-router-dom';
                       </Link>
                     
                     </Box>
-                    <Box>
+                    {/* <Box>
                     <FaArrowDown /> 
-                    </Box>
+                    </Box> */}
                   </Box>
                                
                    
