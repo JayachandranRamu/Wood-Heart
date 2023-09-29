@@ -1,4 +1,4 @@
-import { Cart } from "./user/Cart";
+import { Cart } from "./UserPage/user/Cart";
 
 import Admin from "./Admin/Pages/Admin"
 import { DesktopNav } from "./UserPage/Components/BottomNavbar"
@@ -10,7 +10,7 @@ import TrustedSection from "./UserPage/Components/TrustedSection"
 import { Carousal } from "./UserPage/Components/Carousal"
 import NewsLetter from "./UserPage/Components/NewsLetter"
 import MainRoutes from "./UserPage/Route/MainRoute"
-import { UserSteps } from "./user/UserSteps";
+import { UserSteps } from "./UserPage/user/UserSteps";
 
 
 function App() {
@@ -25,6 +25,7 @@ function App() {
       <MainRoutes />
       <UserSteps/>
       <Cart />
+      
       <Footer />
 
     </>

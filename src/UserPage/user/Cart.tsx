@@ -11,36 +11,51 @@ import {
 
 import { CartItem } from './CartItem';
 import { CartOrderSummary } from './CartOrderSummary';
-import { cartData } from './_data';
+// import { cartData } from './_data';
 
 type CartItemData = {
   id: number;
   name: string;
-  description: string;
+  about: string;
   quantity: number;
   price: number;
-  currency: string;
+  currency:string;
 };
 
 export const Cart = () => {
   // State to manage cart items
-  const [cartItems, setCartItems] = useState<CartItemData[]>(cartData);
+  const [cartItems, setCartItems] = useState<CartItemData[]>([]);
   
   // const [cartItems, setCartItems] = useState<CartItemData[]>([]);
+
 
   const [totalCartPrice, setTotalCartPrice] = useState<number>(0);
   const isCartEmpty = cartItems.length === 0;
     
-  // useEffect(() => {
-  //   fetch('/path-to-your-db.json') // Replace with the actual path to db.json
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       setCartItems(data.cartData);
-  //     })
-  //     .catch((error) => {
-  //       console.error('Error fetching cart data:', error);
-  //     });
-  // }, []);
+  useEffect(() => {
+    // Check if cart data exists in local storage
+    const localStorageCartData = localStorage.getItem('cartData');
+
+    if (localStorageCartData) {
+      // If cart data exists, parse it back to an array
+      const cartItems = JSON.parse(localStorageCartData);
+      setCartItems(cartItems);
+    } else {
+      // If cart data doesn't exist, fetch it from the server
+      fetch('http://localhost:8000/user/10/') // Replace with the actual path to db.json
+        .then((response) => response.json())
+        .then((data) => {
+          const cartItems = data.cartData;
+          setCartItems(cartItems);
+
+          // Store the fetched cart data in local storage
+          localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        })
+        .catch((error) => {
+          console.error('Error fetching cart data:', error);
+        });
+    }
+  }, []);
 
   // Function to handle changing the quantity of a cart item
   const handleQuantityChange = (id: number, newQuantity: number) => {
@@ -58,6 +73,7 @@ export const Cart = () => {
     if (itemIndex !== -1) {
       newCartItems[itemIndex].price = newPrice;
       setCartItems(newCartItems);
+      localStorage.setItem('cartData', JSON.stringify(newCartItems));
     }
   };
 
@@ -65,13 +81,18 @@ export const Cart = () => {
   const handleRemoveItem = (id: number) => {
     const newCartItems = cartItems.filter((item) => item.id !== id);
     setCartItems(newCartItems);
+    localStorage.setItem('cartData', JSON.stringify(newCartItems));
   };
 
 
-
+  const handleContinueShopping = () => {
+   
+    window.location.href =("/");
+  };
     useEffect(() => {
     const newTotalPrice = cartItems.reduce((total, item) => total + (item.price*item.quantity), 0);
     setTotalCartPrice(newTotalPrice);
+    localStorage.setItem('cartPrice', JSON.stringify(newTotalPrice));
   }, [cartItems]);
 
 
@@ -102,7 +123,7 @@ export const Cart = () => {
             {cartItems.map((item) => (
         
                 <CartItem
-                imageUrl={''}
+                image={''}
                 key={item.id}
                 {...item}
                 onChangeQuantity={(newQuantity: number) =>
@@ -129,11 +150,14 @@ export const Cart = () => {
             </>
           ) : (
             <>
-        <CartOrderSummary totalCartPrice={totalCartPrice} />
+        <CartOrderSummary  cartItems={cartItems} 
+              totalCartPrice={totalCartPrice}/>
       
           <HStack mt="6" fontWeight="semibold">
             <p>or</p>
-            <Link color={mode('#0b3954', '#0b3954')}>Continue shopping</Link>
+            <Link color={mode('#0b3954', '#0b3954')} onClick={handleContinueShopping}>
+          Continue shopping
+        </Link>
           </HStack>
           </>
           )}

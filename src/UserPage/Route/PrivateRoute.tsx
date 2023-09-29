@@ -11,4 +11,4 @@ const PrivateRouter: React.FC<PrivateRouterProps> = ({ children }) => {
   return <div>{auth ? children : <Navigate to="/login" />}</div>;
 };
 
-export default PrivateRouter;
+export default PrivateRouter;

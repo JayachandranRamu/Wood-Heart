@@ -9,6 +9,9 @@ import {
 } from '@chakra-ui/react'
 import { FaArrowRight } from 'react-icons/fa'
 import { formatPrice } from './PriceTag'
+import React, { useState } from 'react';
+
+
 
 type OrderSummaryItemProps = {
   label: string
@@ -17,12 +20,15 @@ type OrderSummaryItemProps = {
 }
 type CartOrderSummaryProps = {
   totalCartPrice: number; 
+  cartItems: unknown;
 };
 
 
 
 
 const OrderSummaryItem = (props: OrderSummaryItemProps) => {
+
+
   const { label, value, children } = props
   return (
     <Flex justify="space-between" fontSize="sm">
@@ -36,10 +42,33 @@ const OrderSummaryItem = (props: OrderSummaryItemProps) => {
 
 
 
-export const CartOrderSummary = ({ totalCartPrice }: CartOrderSummaryProps) => {
+export const CartOrderSummary = ({ cartItems, totalCartPrice }: CartOrderSummaryProps) => {
+
+ 
   const formattedPrice = formatPrice(totalCartPrice);
   console.log('Total Price:', totalCartPrice);
   console.log('Formatted Price:', formattedPrice);
+  const [checkoutStatus, setCheckoutStatus] = useState('');
+
+
+
+  const handleCheckout = async () => {
+    try {
+      const ordersData = [
+        {
+          cartItems: cartItems, 
+          totalCartPrice: totalCartPrice, 
+  
+        },
+      ];
+      // Store the orders data in local storage
+      localStorage.setItem('orders', JSON.stringify(ordersData));
+      window.location.href = '/checkout';
+    } catch (error) {
+      console.error('Error placing order:', error);
+      setCheckoutStatus('Error placing the order.');
+    }
+  };
 
   return (
     <Stack spacing="8" 
@@ -70,9 +99,18 @@ export const CartOrderSummary = ({ totalCartPrice }: CartOrderSummaryProps) => {
           </Text>
         </Flex>
       </Stack>
-      <Button bg="#0b3954" color="#ffb128" size="lg" fontSize="md" rightIcon={<FaArrowRight />}>
+    
+      <Button
+        bg="#0b3954"
+        color="#ffb128"
+        size="lg"
+        fontSize="md"
+        rightIcon={<FaArrowRight />}
+        onClick={handleCheckout} 
+      >
         Checkout
       </Button>
+      {checkoutStatus && <Text color={checkoutStatus.includes('Error') ? 'red' : 'green'}>{checkoutStatus}</Text>}
     </Stack>
   )
 }

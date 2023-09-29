@@ -22,11 +22,11 @@ type CartItemProps = {
   isGiftWrapping?: boolean;
   id: number; 
   name: string;
-  description: string;
+  about: string;
   quantity: number;
   price: number;
   currency: string;
-  imageUrl: string;
+  image: string;
   availableQuantity?: number; 
   onChangeQuantity?: (id: number, newQuantity: number) => void;
   onPriceChange?: (id: number, newPrice: number) => void;
@@ -41,10 +41,9 @@ export const CartItem = (props: CartItemProps) => {
     isGiftWrapping,
     id,
     name,
-    description,
+    about,
     quantity: initialQuantity,
-    imageUrl,
-    currency,
+    image,
     price,
     availableQuantity, 
     onChangeQuantity,
@@ -103,8 +102,8 @@ const calculateUpdatedPrice = (newQuantity: number) => {
     <Flex direction={{ base: 'column', md: 'row' }} justify="space-between" align="center">
       <CartProductMeta
         name={name}
-        description={description}
-        image={imageUrl}
+        description={about}
+        image={image}
         isGiftWrapping={isGiftWrapping}
       />
 
@@ -138,7 +137,7 @@ const calculateUpdatedPrice = (newQuantity: number) => {
           >+</button>
         </Flex>
 
-        <PriceTag price={calculateUpdatedPrice(quantity)} currency={currency} />
+        <PriceTag price={calculateUpdatedPrice(quantity)} currency={"INR"} />
         <CloseButton aria-label={`Delete ${name} from cart`} onClick={()=>{onClickDelete?.(id)} }/>
       </Flex>
 
@@ -180,7 +179,7 @@ const calculateUpdatedPrice = (newQuantity: number) => {
           
           >+</button>
         </Flex>
-        <PriceTag price={calculateUpdatedPrice(quantity)} currency={currency} />
+        <PriceTag price={calculateUpdatedPrice(quantity)} currency={"INR"} />
       </Flex>
     </Flex>
   )

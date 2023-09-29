@@ -5,7 +5,7 @@
       "category": "Tables",
       "name": "Modern Dining Table",
       "price": 499.99,
-      "image": "image_url_1.jpg",
+      "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/9u4f9oue8m019gqn61l9.png",
       "brand": "ModernLiving",
       "size": "72\" x 36\" x 30\"",
       "material": "Wood",
@@ -33,11 +33,6 @@
           "username": "FurnitureFanatic",
           "rating": 4,
           "comment": "Assembly was straightforward, but it took some time."
-        },
-        {
-          "username": "ModernLivingLover",
-          "rating": 5,
-          "comment": "Highly recommend for a contemporary dining space."
         }
       ]
     },
@@ -46,7 +41,7 @@
       "category": "Chairs",
       "name": "Leather Lounge Chair",
       "price": 299.95,
-      "image": "image_url_2.jpg",
+      "image": "https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-product-pic6.webp",
       "brand": "LuxuryComfort",
       "size": "28\" x 32\" x 35\"",
       "material": "Leather",
@@ -65,11 +60,7 @@
           "rating": 4,
           "comment": "Great value for a stylish leather chair."
         },
-        {
-          "username": "HappyCustomer23",
-          "rating": 5,
-          "comment": "I'm so happy with this purchase. It's comfy and elegant."
-        },
+        
         {
           "username": "FurnitureEnthusiast",
           "rating": 4,
@@ -82,53 +73,13 @@
         }
       ]
     },
+    
     {
       "id": 3,
-      "category": "Sofas",
-      "name": "Mid-Century Sofa",
-      "price": 599.99,
-      "image": "image_url_3.jpg",
-      "brand": "MidCenturyMasters",
-      "size": "78\" x 32\" x 34\"",
-      "material": "Fabric",
-      "color": "Gray",
-      "finish_type": "Textured",
-      "about": "Add a touch of mid-century charm to your living room with our Mid-Century Sofa. This gray fabric sofa features a textured finish and timeless design. Dimensions: 78\" x 32\" x 34\".",
-      "rating": 4.7,
-      "reviews": [
-        {
-          "username": "MidCenturyModernFan",
-          "rating": 5,
-          "comment": "I'm in love with this mid-century sofa! So comfy and stylish."
-        },
-        {
-          "username": "StylishHomeowner",
-          "rating": 4,
-          "comment": "Pricey, but it's worth it for the quality."
-        },
-        {
-          "username": "SofaConnoisseur",
-          "rating": 5,
-          "comment": "This sofa is amazing. It's perfect for our living room."
-        },
-        {
-          "username": "AssemblyPro",
-          "rating": 4,
-          "comment": "Assembly was a bit challenging due to its size."
-        },
-        {
-          "username": "HomeDecorAddict",
-          "rating": 5,
-          "comment": "Highly recommend for a spacious living room."
-        }
-      ]
-    },
-    {
-      "id": 4,
       "category": "Beds",
       "name": "Platform Bed",
       "price": 399.99,
-      "image": "image_url_4.jpg",
+      "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4d2owcfjil8f1nfdq9yg.png",
       "brand": "DreamComfort",
       "size": "80\" x 60\" x 14\"",
       "material": "Wood",
@@ -143,16 +94,6 @@
           "comment": "I love this platform bed! It's beautiful and comfortable."
         },
         {
-          "username": "SleepInStyle",
-          "rating": 4,
-          "comment": "Great value for a modern platform bed."
-        },
-        {
-          "username": "BedroomBliss",
-          "rating": 5,
-          "comment": "I'm very pleased with this purchase. It's perfect."
-        },
-        {
           "username": "HandyAssembly",
           "rating": 4,
           "comment": "Assembly was straightforward, but it took some time."
@@ -165,11 +106,11 @@
       ]
     },
     {
-      "id": 5,
+      "id": 4,
       "category": "Desks",
       "name": "Minimalist Writing Desk",
       "price": 199.99,
-      "image": "image_url_5.jpg",
+      "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/h74a1saedzwy1fo7w41r.png",
       "brand": "MinimalCraft",
       "size": "42\" x 24\" x 30\"",
       "material": "Wood",
@@ -206,11 +147,11 @@
       ]
     },
     {
-      "id": 6,
+      "id": 5,
       "category": "Cabinets",
       "name": "Vintage Storage Cabinet",
       "price": 299.95,
-      "image": "image_url_6.jpg",
+      "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/9kewtxq5gla58cldafzf.png",
       "brand": "VintageVibes",
       "size": "36\" x 18\" x 42\"",
       "material": "Wood",
@@ -247,11 +188,11 @@
       ]
     },
     {
-      "id": 7,
+      "id": 6,
       "category": "Lighting",
       "name": "Industrial Pendant Light",
       "price": 129.99,
-      "image": "image_url_7.jpg",
+      "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5auf2lvuqiejjheon9v9.png",
       "brand": "IndustrialGlow",
       "size": "Diameter: 12\"",
       "material": "Metal",
@@ -288,11 +229,11 @@
       ]
     },
     {
-      "id": 8,
+      "id": 7,
       "category": "Tables",
       "name": "Marble Side Table",
       "price": 149.99,
-      "image": "image_url_8.jpg",
+      "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/eey91thaalxhwr21xczt.png",
       "brand": "MarbleElegance",
       "size": "24\" x 24\" x 24\"",
       "material": "Marble and Metal",
@@ -329,11 +270,11 @@
       ]
     },
     {
-      "id": 9,
+      "id": 8,
       "category": "Chairs",
       "name": "Ergonomic Office Chair",
       "price": 249.95,
-      "image": "image_url_9.jpg",
+      "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/u5ui5g6ahhlflfnx2ocz.png",
       "brand": "ErgoComfort",
       "size": "26\" x 26\" x 40\"",
       "material": "Mesh",
@@ -369,53 +310,13 @@
         }
       ]
     },
+   
     {
-      "id": 10,
-      "category": "Sofas",
-      "name": "Linen Sectional Sofa",
-      "price": 799.99,
-      "image": "image_url_10.jpg",
-      "brand": "LinenLux",
-      "size": "96\" x 72\" x 32\"",
-      "material": "Linen",
-      "color": "Beige",
-      "finish_type": "Textured",
-      "about": "Create a cozy living room with our Linen Sectional Sofa. This beige linen sectional features a textured finish and spacious seating, perfect for gatherings. Dimensions: 96\" x 72\" x 32\".",
-      "rating": 4.6,
-      "reviews": [
-        {
-          "username": "CozyNights",
-          "rating": 5,
-          "comment": "I love this sectional sofa! It's so comfortable."
-        },
-        {
-          "username": "LinenLover",
-          "rating": 4,
-          "comment": "Great value for a stylish linen sofa."
-        },
-        {
-          "username": "HappyHost",
-          "rating": 5,
-          "comment": "I'm so happy with this purchase. It's perfect for guests."
-        },
-        {
-          "username": "EasyAssembly2",
-          "rating": 4,
-          "comment": "Assembly was straightforward, but it's a bit bulky."
-        },
-        {
-          "username": "SpaciousLiving",
-          "rating": 5,
-          "comment": "Highly recommend for a spacious living room."
-        }
-      ]
-    },
-    {
-      "id": 11,
+      "id": 9,
       "category": "Tables",
       "name": "Rustic Coffee Table",
       "price": 249.99,
-      "image": "image_url_11.jpg",
+      "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0u8kmah3viy0ip0f9qmg.png",
       "brand": "RusticVibes",
       "size": "48\" x 24\" x 18\"",
       "material": "Wood",
@@ -452,11 +353,11 @@
       ]
     },
     {
-      "id": 12,
+      "id": 10,
       "category": "Cabinets",
       "name": "Modern Media Cabinet",
       "price": 349.95,
-      "image": "image_url_12.jpg",
+      "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2iynmuzk4wih564f3vg3.png",
       "brand": "ModernMedia",
       "size": "60\" x 18\" x 24\"",
       "material": "Wood",
@@ -493,11 +394,11 @@
       ]
     },
     {
-      "id": 13,
+      "id": 11,
       "category": "Lighting",
       "name": "Crystal Floor Lamp",
       "price": 199.99,
-      "image": "image_url_13.jpg",
+      "image": "https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-product-pic2.webp",
       "brand": "CrystalGlow",
       "size": "Height: 60\"",
       "material": "Crystal and Metal",
@@ -534,11 +435,11 @@
       ]
     },
     {
-      "id": 14,
+      "id": 12,
       "category": "Tables",
       "name": "Glass Top End Table",
       "price": 99.99,
-      "image": "image_url_14.jpg",
+      "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/n9z22hla9a1iopdhugz5.png",
       "brand": "GlassGlow",
       "size": "18\" x 18\" x 22\"",
       "material": "Glass and Metal",
@@ -575,11 +476,11 @@
       ]
     },
     {
-      "id": 15,
+      "id": 13,
       "category": "Chairs",
       "name": "Swivel Accent Chair",
       "price": 179.95,
-      "image": "image_url_15.jpg",
+      "image": "https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-product-pic7.webp",
       "brand": "AccentStyle",
       "size": "30\" x 30\" x 32\"",
       "material": "Velvet",
@@ -615,53 +516,13 @@
         }
       ]
     },
+   
     {
-      "id": 16,
-      "category": "Sofas",
-      "name": "Leather Reclining Sofa",
-      "price": 999.99,
-      "image": "image_url_16.jpg",
-      "brand": "LuxuryRelax",
-      "size": "84\" x 38\" x 40\"",
-      "material": "Leather",
-      "color": "Brown",
-      "finish_type": "Matte",
-      "about": "Experience ultimate relaxation with our Leather Reclining Sofa. This brown leather sofa features a matte finish, reclining seats, and plush comfort. It's perfect for movie nights. Dimensions: 84\" x 38\" x 40\".",
-      "rating": 4.8,
-      "reviews": [
-        {
-          "username": "RelaxationExpert",
-          "rating": 5,
-          "comment": "This reclining sofa is pure luxury! So comfortable."
-        },
-        {
-          "username": "LuxuryLiving",
-          "rating": 4,
-          "comment": "A bit pricey, but it's worth it for the quality."
-        },
-        {
-          "username": "MovieNightFan",
-          "rating": 5,
-          "comment": "I'm in love with this sofa. It's perfect for movie nights."
-        },
-        {
-          "username": "EasyAssembly5",
-          "rating": 4,
-          "comment": "Assembly was straightforward, but it's a bit bulky."
-        },
-        {
-          "username": "PlushComfort",
-          "rating": 5,
-          "comment": "Highly recommend for a luxurious living room."
-        }
-      ]
-    },
-    {
-      "id": 17,
+      "id": 14,
       "category": "Beds",
       "name": "Upholstered Platform Bed",
       "price": 449.99,
-      "image": "image_url_17.jpg",
+      "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/awvvjmsn4ozzb4sekqs6.png",
       "brand": "ComfortDream",
       "size": "78\" x 58\" x 12\"",
       "material": "Fabric",
@@ -698,11 +559,11 @@
       ]
     },
     {
-      "id": 18,
+      "id": 15,
       "category": "Desks",
       "name": "Corner Computer Desk",
       "price": 179.99,
-      "image": "image_url_18.jpg",
+      "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/se3hudwzxseqx1m7h2xm.png",
       "brand": "CornerCraft",
       "size": "48\" x 32\" x 30\"",
       "material": "Wood",
@@ -739,11 +600,11 @@
       ]
     },
     {
-      "id": 19,
+      "id": 16,
       "category": "Cabinets",
       "name": "Contemporary Bar Cabinet",
       "price": 329.95,
-      "image": "image_url_19.jpg",
+      "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/h1f1eicinc7077o7ns52.png",
       "brand": "ContemporaryCraft",
       "size": "36\" x 18\" x 54\"",
       "material": "Wood",
@@ -780,11 +641,11 @@
       ]
     },
     {
-      "id": 20,
+      "id": 17,
       "category": "Lighting",
       "name": "Art Deco Chandelier",
       "price": 249.99,
-      "image": "image_url_20.jpg",
+      "image": "https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-product-pic9.webp",
       "brand": "ArtDecoGlow",
       "size": "Diameter: 24\"",
       "material": "Metal",
@@ -821,11 +682,11 @@
       ]
     },
     {
-      "id": 21,
+      "id": 18,
       "category": "Tables",
       "name": "Rustic Farmhouse Dining Table",
       "price": 549.99,
-      "image": "image_url_21.jpg",
+      "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/uw3tiqxrlu8l42fhc30k.png",
       "brand": "FarmhouseCharm",
       "size": "84\" x 40\" x 30\"",
       "material": "Wood",
@@ -862,11 +723,11 @@
       ]
     },
     {
-      "id": 22,
+      "id": 19,
       "category": "Chairs",
       "name": "Velvet Dining Chairs",
       "price": 179.95,
-      "image": "image_url_22.jpg",
+      "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/1wob3yg0fkzx3qk51q8g.png",
       "brand": "VelvetElegance",
       "size": "20\" x 22\" x 36\"",
       "material": "Velvet",
@@ -902,53 +763,13 @@
         }
       ]
     },
+   
     {
-      "id": 23,
-      "category": "Sofas",
-      "name": "Velvet Chesterfield Sofa",
-      "price": 899.99,
-      "image": "image_url_23.jpg",
-      "brand": "VelvetLux",
-      "size": "84\" x 34\" x 31\"",
-      "material": "Velvet",
-      "color": "Emerald Green",
-      "finish_type": "Textured",
-      "about": "Upgrade your living room with our Velvet Chesterfield Sofa. This emerald green velvet sofa features a textured finish and classic chesterfield design, perfect for a luxurious look. Dimensions: 84\" x 34\" x 31\".",
-      "rating": 4.7,
-      "reviews": [
-        {
-          "username": "LuxuriousLiving",
-          "rating": 5,
-          "comment": "This velvet chesterfield sofa is pure luxury! So comfortable."
-        },
-        {
-          "username": "VelvetDreams",
-          "rating": 4,
-          "comment": "A bit pricey, but it's worth it for the quality."
-        },
-        {
-          "username": "HappyHomeowner3",
-          "rating": 5,
-          "comment": "I'm in love with this sofa. It's perfect for my luxurious living room."
-        },
-        {
-          "username": "EasyAssembly6",
-          "rating": 4,
-          "comment": "Assembly was straightforward, but it's a bit bulky."
-        },
-        {
-          "username": "PlushComfort2",
-          "rating": 5,
-          "comment": "Highly recommend for a luxurious living room."
-        }
-      ]
-    },
-    {
-      "id": 24,
+      "id": 20,
       "category": "Beds",
       "name": "Mid-Century Platform Bed",
       "price": 349.99,
-      "image": "image_url_24.jpg",
+      "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2tul7wpwrirr29fh5w8g.png",
       "brand": "MidCenturyStyle",
       "size": "80\" x 60\" x 14\"",
       "material": "Wood",
@@ -985,11 +806,11 @@
       ]
     },
     {
-      "id": 25,
+      "id": 21,
       "category": "Desks",
       "name": "Modern Writing Desk",
       "price": 129.99,
-      "image": "image_url_25.jpg",
+      "image": "https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-product-pic14.webp",
       "brand": "ModernStyle",
       "size": "48\" x 24\" x 30\"",
       "material": "Wood",
@@ -1026,11 +847,11 @@
       ]
     },
     {
-      "id": 26,
+      "id": 22,
       "category": "Chairs",
       "name": "Wooden Dining Chairs",
       "price": 129.95,
-      "image": "image_url_26.jpg",
+      "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/1rdfsjexb0ty9gj61ndc.png",
       "brand": "WoodenCraft",
       "size": "22\" x 20\" x 35\"",
       "material": "Wood",
@@ -1066,53 +887,13 @@
         }
       ]
     },
+    
     {
-      "id": 27,
-      "category": "Sofas",
-      "name": "Modular Sectional Sofa",
-      "price": 899.99,
-      "image": "image_url_27.jpg",
-      "brand": "ModularLiving",
-      "size": "120\" x 84\" x 32\"",
-      "material": "Fabric",
-      "color": "Gray",
-      "finish_type": "Textured",
-      "about": "Create a flexible and spacious living area with our Modular Sectional Sofa. This gray fabric sectional features a textured finish and can be arranged in various configurations. Dimensions: 120\" x 84\" x 32\".",
-      "rating": 4.8,
-      "reviews": [
-        {
-          "username": "FlexLiving",
-          "rating": 5,
-          "comment": "This modular sectional is fantastic! We can change it to fit our needs."
-        },
-        {
-          "username": "ModularStyle",
-          "rating": 4,
-          "comment": "A bit pricey, but the flexibility is worth it."
-        },
-        {
-          "username": "HappyFamily",
-          "rating": 5,
-          "comment": "I love this purchase. It's great for our family gatherings."
-        },
-        {
-          "username": "EasyAssembly7",
-          "rating": 4,
-          "comment": "Assembly was straightforward, but it's a bit large."
-        },
-        {
-          "username": "SpaciousLiving2",
-          "rating": 5,
-          "comment": "Highly recommend for a spacious living room."
-        }
-      ]
-    },
-    {
-      "id": 28,
+      "id": 23,
       "category": "Tables",
       "name": "Marble Top Console Table",
       "price": 299.99,
-      "image": "image_url_28.jpg",
+      "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qhw8gbttvylu68nvhyc6.png",
       "brand": "MarbleElegance",
       "size": "48\" x 16\" x 30\"",
       "material": "Marble and Metal",
@@ -1149,11 +930,11 @@
       ]
     },
     {
-      "id": 29,
+      "id": 24,
       "category": "Beds",
       "name": "Canopy Bed Frame",
       "price": 599.99,
-      "image": "image_url_29.jpg",
+      "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2ltn4cw9jdlhjo3feh76.png",
       "brand": "CanopyDreams",
       "size": "80\" x 60\" x 80\"",
       "material": "Metal",
@@ -1190,11 +971,11 @@
       ]
     },
     {
-      "id": 30,
+      "id": 25,
       "category": "Desks",
       "name": "Glass Top Writing Desk",
       "price": 199.99,
-      "image": "image_url_30.jpg",
+      "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/oh2exehvntq1y0s6aokw.png",
       "brand": "GlassElegance",
       "size": "42\" x 24\" x 30\"",
       "material": "Glass and Metal",
@@ -1231,11 +1012,11 @@
       ]
     },
     {
-      "id": 31,
+      "id": 26,
       "category": "Cabinets",
       "name": "Rustic Wine Cabinet",
       "price": 349.95,
-      "image": "image_url_31.jpg",
+      "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/i1qh212qzryb4k1kh1fx.png",
       "brand": "RusticCharm",
       "size": "36\" x 16\" x 54\"",
       "material": "Wood",
@@ -1272,11 +1053,11 @@
       ]
     },
     {
-      "id": 32,
+      "id": 27,
       "category": "Lighting",
       "name": "Crystal Chandelier",
       "price": 299.99,
-      "image": "image_url_32.jpg",
+      "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ay4wujm1xd2gg90m6wrm.png",
       "brand": "CrystalGlow",
       "size": "Diameter: 18\"",
       "material": "Crystal and Metal",
@@ -1313,11 +1094,11 @@
       ]
     },
     {
-      "id": 33,
+      "id": 28,
       "category": "Tables",
       "name": "Mid-Century Coffee Table",
       "price": 249.99,
-      "image": "image_url_33.jpg",
+      "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/1h4zda1a2urv4as45rom.png",
       "brand": "MidCenturyStyle",
       "size": "42\" x 24\" x 18\"",
       "material": "Wood",
@@ -1354,11 +1135,11 @@
       ]
     },
     {
-      "id": 34,
+      "id": 29,
       "category": "Chairs",
       "name": "Leather Armchair",
       "price": 279.95,
-      "image": "image_url_34.jpg",
+      "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2twu4xqbv670356et2v4.png",
       "brand": "LeatherLux",
       "size": "28\" x 30\" x 35\"",
       "material": "Leather",
@@ -1394,53 +1175,13 @@
         }
       ]
     },
+   
     {
-      "id": 35,
-      "category": "Sofas",
-      "name": "Linen Sleeper Sofa",
-      "price": 599.99,
-      "image": "image_url_35.jpg",
-      "brand": "LinenComfort",
-      "size": "78\" x 34\" x 32\"",
-      "material": "Linen",
-      "color": "Gray",
-      "finish_type": "Textured",
-      "about": "Maximize your space with our Linen Sleeper Sofa. This gray linen sofa features a textured finish and a pull-out sleeper function, perfect for overnight guests. Dimensions: 78\" x 34\" x 32\".",
-      "rating": 4.7,
-      "reviews": [
-        {
-          "username": "SpaceSaver",
-          "rating": 5,
-          "comment": "This linen sleeper sofa is a space-saving wonder!"
-        },
-        {
-          "username": "LinenLove2",
-          "rating": 4,
-          "comment": "Great value for a stylish sleeper sofa."
-        },
-        {
-          "username": "GuestReady",
-          "rating": 5,
-          "comment": "I love this purchase. It's great for accommodating guests."
-        },
-        {
-          "username": "EasyAssembly12",
-          "rating": 4,
-          "comment": "Assembly was straightforward, but it's a bit heavy."
-        },
-        {
-          "username": "SleeperSofaFan",
-          "rating": 5,
-          "comment": "Perfect for anyone needing a versatile sofa."
-        }
-      ]
-    },
-    {
-      "id": 36,
+      "id": 30,
       "category": "Beds",
       "name": "Upholstered Platform Bed",
       "price": 449.99,
-      "image": "image_url_36.jpg",
+      "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/xhqk5jwp6ku2nijcrjhg.png",
       "brand": "UpholsteredLux",
       "size": "84\" x 62\" x 36\"",
       "material": "Fabric",
@@ -1477,11 +1218,11 @@
       ]
     },
     {
-      "id": 37,
+      "id": 31,
       "category": "Desks",
       "name": "Industrial Writing Desk",
       "price": 159.99,
-      "image": "image_url_37.jpg",
+      "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8whwca080vnqm65yp245.png",
       "brand": "IndustrialStyle",
       "size": "48\" x 30\" x 30\"",
       "material": "Metal and Wood",
@@ -1518,11 +1259,11 @@
       ]
     },
     {
-      "id": 38,
+      "id": 32,
       "category": "Cabinets",
       "name": "Modern TV Stand",
       "price": 249.95,
-      "image": "image_url_38.jpg",
+      "image": "https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-product-pic5.webp",
       "brand": "ModernLiving",
       "size": "60\" x 16\" x 24\"",
       "material": "Wood and Metal",
@@ -1559,11 +1300,11 @@
       ]
     },
     {
-      "id": 39,
+      "id": 33,
       "category": "Lighting",
       "name": "Modern Pendant Light",
       "price": 139.99,
-      "image": "image_url_39.jpg",
+      "image": "https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-product-pic1.webp",
       "brand": "ModernGlow",
       "size": "Diameter: 14\"",
       "material": "Glass and Metal",
@@ -1600,11 +1341,11 @@
       ]
     },
     {
-      "id": 40,
+      "id": 34,
       "category": "Tables",
       "name": "Glass Top Dining Table",
       "price": 379.99,
-      "image": "image_url_40.jpg",
+      "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/1hayjw5stfixp15o5a6i.png",
       "brand": "GlassElegance",
       "size": "72\" x 36\" x 30\"",
       "material": "Glass and Metal",
@@ -1641,11 +1382,11 @@
       ]
     },
     {
-      "id": 41,
+      "id": 35,
       "category": "Chairs",
       "name": "Velvet Accent Chairs",
       "price": 199.95,
-      "image": "image_url_41.jpg",
+      "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/vlrdbn28hqij6m3fyru7.png",
       "brand": "VelvetChic",
       "size": "26\" x 28\" x 32\"",
       "material": "Velvet",
@@ -1678,170 +1419,6 @@
           "username": "ChicHome",
           "rating": 5,
           "comment": "Highly recommend for a chic living room."
-        }
-      ]
-    },
-    {
-      "id": 42,
-      "category": "Sofas",
-      "name": "L-Shaped Sectional Sofa",
-      "price": 849.99,
-      "image": "image_url_42.jpg",
-      "brand": "SectionalComfort",
-      "size": "120\" x 84\" x 32\"",
-      "material": "Fabric",
-      "color": "Beige",
-      "finish_type": "Textured",
-      "about": "Create a cozy and spacious living area with our L-Shaped Sectional Sofa. This beige fabric sectional features a textured finish and an L-shaped design, perfect for relaxation. Dimensions: 120\" x 84\" x 32\".",
-      "rating": 4.8,
-      "reviews": [
-        {
-          "username": "CozyLiving2",
-          "rating": 5,
-          "comment": "This L-shaped sectional is perfect for our family."
-        },
-        {
-          "username": "SectionalStyle",
-          "rating": 4,
-          "comment": "A bit pricey, but the comfort is worth it."
-        },
-        {
-          "username": "RelaxationZone",
-          "rating": 5,
-          "comment": "I love this purchase. It's great for unwinding."
-        },
-        {
-          "username": "EasyAssembly16",
-          "rating": 4,
-          "comment": "Assembly was straightforward, but it's large."
-        },
-        {
-          "username": "SpaciousLiving3",
-          "rating": 5,
-          "comment": "Highly recommend for a spacious living room."
-        }
-      ]
-    },
-    {
-      "id": 43,
-      "category": "Tables",
-      "name": "Rustic End Table",
-      "price": 129.99,
-      "image": "image_url_43.jpg",
-      "brand": "RusticCharm",
-      "size": "24\" x 24\" x 24\"",
-      "material": "Wood",
-      "color": "Weathered Oak",
-      "finish_type": "Distressed",
-      "about": "Complete your rustic decor with our Rustic End Table. This weathered oak wood table features a distressed finish and a lower shelf for storage. Dimensions: 24\" x 24\" x 24\".",
-      "rating": 4.7,
-      "reviews": [
-        {
-          "username": "RusticLiving",
-          "rating": 5,
-          "comment": "I'm thrilled with this rustic end table! It's perfect for our cabin."
-        },
-        {
-          "username": "WoodLover3",
-          "rating": 4,
-          "comment": "Great table for rustic enthusiasts."
-        },
-        {
-          "username": "HappyHomeowner5",
-          "rating": 5,
-          "comment": "I love this purchase. It's perfect for our living room."
-        },
-        {
-          "username": "EasyAssembly17",
-          "rating": 4,
-          "comment": "Assembly was straightforward, no complaints."
-        },
-        {
-          "username": "RusticDecorFan",
-          "rating": 5,
-          "comment": "Perfect for anyone who loves rustic decor."
-        }
-      ]
-    },
-    {
-      "id": 44,
-      "category": "Beds",
-      "name": "Sleigh Bed Frame",
-      "price": 499.99,
-      "image": "image_url_44.jpg",
-      "brand": "SleighDreams",
-      "size": "88\" x 62\" x 48\"",
-      "material": "Wood",
-      "color": "Cherry",
-      "finish_type": "Polished",
-      "about": "Transform your bedroom into an elegant retreat with our Sleigh Bed Frame. This cherry wood bed frame features a polished finish and a classic sleigh design. It exudes timeless beauty. Dimensions: 88\" x 62\" x 48\".",
-      "rating": 4.8,
-      "reviews": [
-        {
-          "username": "ElegantRetreat2",
-          "rating": 5,
-          "comment": "This sleigh bed frame is pure elegance! So luxurious."
-        },
-        {
-          "username": "SleighLove",
-          "rating": 4,
-          "comment": "A bit pricey, but it's worth it for the elegance."
-        },
-        {
-          "username": "LuxuryRetreat",
-          "rating": 5,
-          "comment": "I'm in love with this purchase. It's perfect for our elegant bedroom."
-        },
-        {
-          "username": "EasyAssembly18",
-          "rating": 4,
-          "comment": "Assembly was straightforward, but it's a bit heavy."
-        },
-        {
-          "username": "ElegantBedroomFan",
-          "rating": 5,
-          "comment": "Highly recommend for a luxurious bedroom."
-        }
-      ]
-    },
-    {
-      "id": 45,
-      "category": "Desks",
-      "name": "Rustic L-Shaped Desk",
-      "price": 249.99,
-      "image": "image_url_45.jpg",
-      "brand": "RusticCharm",
-      "size": "66\" x 66\" x 30\"",
-      "material": "Wood and Metal",
-      "color": "Weathered Oak",
-      "finish_type": "Distressed",
-      "about": "Upgrade your workspace with our Rustic L-Shaped Desk. This weathered oak wood and metal desk features a distressed finish and ample space for productivity. Dimensions: 66\" x 66\" x 30\".",
-      "rating": 4.7,
-      "reviews": [
-        {
-          "username": "RusticOffice",
-          "rating": 5,
-          "comment": "This L-shaped desk adds rustic charm to my office. Love it!"
-        },
-        {
-          "username": "WeatheredWorkspace",
-          "rating": 4,
-          "comment": "Great value for a spacious rustic desk."
-        },
-        {
-          "username": "HappyWorker4",
-          "rating": 5,
-          "comment": "I'm so happy with this purchase. It's perfect for my rustic workspace."
-        },
-        {
-          "username": "EasyAssembly19",
-          "rating": 4,
-          "comment": "Assembly was straightforward, no complaints."
-        },
-        {
-          "username": "RusticDesignFan",
-          "rating": 5,
-          "comment": "Highly recommend for a rustic-industrial workspace."
         }
       ]
     }
@@ -2094,260 +1671,187 @@
       },
       "phone": "1-104-001-4567",
       "__v": 0,
-      "orders": [],
-      "wishList": [],
-      "addToCart": []
+      "orders": [
+      ],
+      "wishList": [
+      ],
+      "addToCart": [
+      ],
+      "cartData":[
+
+        {
+          "id": 10,
+          "category": "Cabinets",
+          "name": "Modern Media Cabinet",
+          "price": 349.95,
+          "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2iynmuzk4wih564f3vg3.png",
+          "brand": "ModernMedia",
+          "size": "60\" x 18\" x 24\"",
+          "material": "Wood",
+          "color": "Walnut",
+          "quantity": 1,
+          "finish_type": "Matte",
+          "about": "Organize your media essentials with our Modern Media Cabinet. This walnut wood media cabinet features a matte finish and ample storage space. Dimensions: 60\" x 18\" x 24\".",
+          "rating": 4.6,
+          "reviews": [
+            {
+              "username": "MediaEnthusiast",
+              "rating": 5,
+              "comment": "I'm thrilled with this media cabinet! It's perfect."
+            },
+            {
+              "username": "OrganizedHome",
+              "rating": 4,
+              "comment": "Great cabinet for organizing media equipment."
+            },
+            {
+              "username": "HappyMovieNights",
+              "rating": 5,
+              "comment": "I love this purchase. It's perfect for my home theater."
+            },
+            {
+              "username": "EasyStorage2",
+              "rating": 4,
+              "comment": "Assembly was straightforward, but it's a bit bulky."
+            },
+            {
+              "username": "MediaStorageFan",
+              "rating": 5,
+              "comment": "Perfect for any media enthusiast."
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "category": "Lighting",
+          "name": "Crystal Floor Lamp",
+          "price": 199.99,
+          "image": "https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-product-pic2.webp",
+          "brand": "CrystalGlow",
+          "size": "Height: 60\"",
+          "material": "Crystal and Metal",
+          "color": "Silver",
+          "quantity": 1,
+          "finish_type": "Shiny",
+          "about": "Brighten up your space with our Crystal Floor Lamp. This silver crystal floor lamp features a shiny finish and stands at a height of 60 inches. It adds a touch of glamour to any room. Dimensions: Height: 60\".",
+          "rating": 4.7,
+          "reviews": [
+            {
+              "username": "GlamourSpace",
+              "rating": 5,
+              "comment": "This crystal floor lamp is breathtaking! So elegant."
+            },
+            {
+              "username": "ShinyLighting",
+              "rating": 4,
+              "comment": "A bit pricey, but it's a showstopper."
+            },
+            {
+              "username": "CrystalLover",
+              "rating": 5,
+              "comment": "I'm in love with this floor lamp. It's a work of art."
+            },
+            {
+              "username": "EasyAssembly4",
+              "rating": 4,
+              "comment": "Installation was a bit tricky due to its size."
+            },
+            {
+              "username": "GlamorousHome",
+              "rating": 5,
+              "comment": "Highly recommend for a glamorous home."
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "category": "Tables",
+          "name": "Glass Top End Table",
+          "price": 99.99,
+          "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/n9z22hla9a1iopdhugz5.png",
+          "brand": "GlassGlow",
+          "size": "18\" x 18\" x 22\"",
+          "material": "Glass and Metal",
+          "color": "Clear and Gold",
+          "quantity": 1,
+          "finish_type": "Glossy",
+          "about": "Add a touch of sophistication to your space with our Glass Top End Table. This clear glass end table features a glossy finish and elegant gold metal accents. It's perfect for placing by your sofa. Dimensions: 18\" x 18\" x 22\".",
+          "rating": 4.6,
+          "reviews": [
+            {
+              "username": "SophisticatedLiving",
+              "rating": 5,
+              "comment": "I love this glass end table! It's so chic."
+            },
+            {
+              "username": "ElegantDecorator",
+              "rating": 4,
+              "comment": "Great value for a stylish glass table."
+            },
+            {
+              "username": "HappyCustomer3",
+              "rating": 5,
+              "comment": "I'm so happy with this purchase. It's perfect for my living room."
+            },
+            {
+              "username": "EasyAssembly3",
+              "rating": 4,
+              "comment": "Assembly was straightforward, no complaints."
+            },
+            {
+              "username": "ChicHomeDesign",
+              "rating": 5,
+              "comment": "Highly recommend for a chic living room."
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "category": "Chairs",
+          "name": "Swivel Accent Chair",
+          "price": 179.95,
+          "image": "https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-product-pic7.webp",
+          "brand": "AccentStyle",
+          "size": "30\" x 30\" x 32\"",
+          "material": "Velvet",
+          "color": "Pink",
+          "quantity": 1,
+          "finish_type": "Soft",
+          "about": "Add a pop of color to your space with our Swivel Accent Chair. This pink velvet chair features a soft finish and 360-degree swivel, perfect for adding flair to any room. Dimensions: 30\" x 30\" x 32\".",
+          "rating": 4.5,
+          "reviews": [
+            {
+              "username": "PinkObsession",
+              "rating": 5,
+              "comment": "I adore this pink accent chair! It's a statement piece."
+            },
+            {
+              "username": "ColorfulLiving",
+              "rating": 4,
+              "comment": "Great value for a stylish accent chair."
+            },
+            {
+              "username": "HappyDecorator2",
+              "rating": 5,
+              "comment": "I'm so happy with this purchase. It's perfect for my colorful decor."
+            },
+            {
+              "username": "EasyAssembly4",
+              "rating": 4,
+              "comment": "Assembly was straightforward, no complaints."
+            },
+            {
+              "username": "ColorfulHome",
+              "rating": 5,
+              "comment": "Highly recommend for adding a pop of color."
+            }
+          ]
+        }
+       
+
+      ]
     }
-=======
-
-
-
-
-
-  "users":[
-    [
-      {
-        "address": {
-          "geolocation": {
-            "lat": "-37.3159",
-            "long": "81.1496"
-          },
-          "city": "kilcoole",
-          "street": "new road",
-          "number": 7682,
-          "zipcode": "12926-3874"
-        },
-        "id": 1,
-        "email": "john@gmail.com",
-        "username": "johnd",
-        "password": "m38rmF$",
-        "name": {
-          "firstname": "john",
-          "lastname": "doe"
-        },
-        "phone": "1-570-236-7033",
-        "orders": [],
-        "wishList": [],
-        "addToCart": []
-      },
-      {
-        "address": {
-          "geolocation": {
-            "lat": "-37.3159",
-            "long": "81.1496"
-          },
-          "city": "kilcoole",
-          "street": "Lovers Ln",
-          "number": 7267,
-          "zipcode": "12926-3874"
-        },
-        "id": 2,
-        "email": "morrison@gmail.com",
-        "username": "mor_2314",
-        "password": "83r5^_",
-        "name": {
-          "firstname": "david",
-          "lastname": "morrison"
-        },
-        "phone": "1-570-236-7033",
-        "orders": [],
-        "wishList": [],
-        "addToCart": []
-      },
-      {
-        "address": {
-          "geolocation": {
-            "lat": "40.3467",
-            "long": "-30.1310"
-          },
-          "city": "Cullman",
-          "street": "Frances Ct",
-          "number": 86,
-          "zipcode": "29567-1452"
-        },
-        "id": 3,
-        "email": "kevin@gmail.com",
-        "username": "kevinryan",
-        "password": "kev02937@",
-        "name": {
-          "firstname": "kevin",
-          "lastname": "ryan"
-        },
-        "phone": "1-567-094-1345",
-        "orders": [],
-        "wishList": [],
-        "addToCart": []
-      },
-      {
-        "address": {
-          "geolocation": {
-            "lat": "50.3467",
-            "long": "-20.1310"
-          },
-          "city": "San Antonio",
-          "street": "Hunters Creek Dr",
-          "number": 6454,
-          "zipcode": "98234-1734"
-        },
-        "id": 4,
-        "email": "don@gmail.com",
-        "username": "donero",
-        "password": "ewedon",
-        "name": {
-          "firstname": "don",
-          "lastname": "romer"
-        },
-        "phone": "1-765-789-6734",
-        "orders": [],
-        "wishList": [],
-        "addToCart": []
-      },
-      {
-        "address": {
-          "geolocation": {
-            "lat": "40.3467",
-            "long": "-40.1310"
-          },
-          "city": "san Antonio",
-          "street": "adams St",
-          "number": 245,
-          "zipcode": "80796-1234"
-        },
-        "id": 5,
-        "email": "derek@gmail.com",
-        "username": "derek",
-        "password": "jklg*_56",
-        "name": {
-          "firstname": "derek",
-          "lastname": "powell"
-        },
-        "phone": "1-956-001-1945",
-        "orders": [],
-        "wishList": [],
-        "addToCart": []
-      },
-      {
-        "address": {
-          "geolocation": {
-            "lat": "20.1677",
-            "long": "-10.6789"
-          },
-          "city": "el paso",
-          "street": "prospect st",
-          "number": 124,
-          "zipcode": "12346-0456"
-        },
-        "id": 6,
-        "email": "david_r@gmail.com",
-        "username": "david_r",
-        "password": "3478*#54",
-        "name": {
-          "firstname": "david",
-          "lastname": "russell"
-        },
-        "phone": "1-678-345-9856",
-        "orders": [],
-        "wishList": [],
-        "addToCart": []
-      },
-      {
-        "address": {
-          "geolocation": {
-            "lat": "10.3456",
-            "long": "20.6419"
-          },
-          "city": "fresno",
-          "street": "saddle st",
-          "number": 1342,
-          "zipcode": "96378-0245"
-        },
-        "id": 7,
-        "email": "miriam@gmail.com",
-        "username": "snyder",
-        "password": "f238&@*$",
-        "name": {
-          "firstname": "miriam",
-          "lastname": "snyder"
-        },
-        "phone": "1-123-943-0563",
-        "orders": [],
-        "wishList": [],
-        "addToCart": []
-      },
-      {
-        "address": {
-          "geolocation": {
-            "lat": "50.3456",
-            "long": "10.6419"
-          },
-          "city": "mesa",
-          "street": "vally view ln",
-          "number": 1342,
-          "zipcode": "96378-0245"
-        },
-        "id": 8,
-        "email": "william@gmail.com",
-        "username": "hopkins",
-        "password": "William56$hj",
-        "name": {
-          "firstname": "william",
-          "lastname": "hopkins"
-        },
-        "phone": "1-478-001-0890",
-        "orders": [],
-        "wishList": [],
-        "addToCart": []
-      },
-      {
-        "address": {
-          "geolocation": {
-            "lat": "40.12456",
-            "long": "20.5419"
-          },
-          "city": "miami",
-          "street": "avondale ave",
-          "number": 345,
-          "zipcode": "96378-0245"
-        },
-        "id": 9,
-        "email": "kate@gmail.com",
-        "username": "kate_h",
-        "password": "kfejk@*_",
-        "name": {
-          "firstname": "kate",
-          "lastname": "hale"
-        },
-        "phone": "1-678-456-1934",
-        "orders": [],
-        "wishList": [],
-        "addToCart": []
-      },
-      {
-        "address": {
-          "geolocation": {
-            "lat": "30.24788",
-            "long": "-20.545419"
-          },
-          "city": "fort wayne",
-          "street": "oak lawn ave",
-          "number": 526,
-          "zipcode": "10256-4532"
-        },
-        "id": 10,
-        "email": "jimmie@gmail.com",
-        "username": "jimmie_k",
-        "password": "klein*#%*",
-        "name": {
-          "firstname": "jimmie",
-          "lastname": "klein"
-        },
-        "phone": "1-104-001-4567",
-        "orders": [],
-        "wishList": [],
-        "addToCart": []
-      }
-    ]
-
-
   ]
+
+  
 }
