@@ -34,7 +34,13 @@ const OrderSummaryItem = (props: OrderSummaryItemProps) => {
   )
 }
 
+
+
 export const CartOrderSummary = ({ totalCartPrice }: CartOrderSummaryProps) => {
+  const formattedPrice = formatPrice(totalCartPrice);
+  console.log('Total Price:', totalCartPrice);
+  console.log('Formatted Price:', formattedPrice);
+
   return (
     <Stack spacing="8" 
     borderWidth="1px" 
@@ -42,7 +48,7 @@ export const CartOrderSummary = ({ totalCartPrice }: CartOrderSummaryProps) => {
       <Heading size="md">Order Summary</Heading>
 
       <Stack spacing="6">
-        <OrderSummaryItem label="Subtotal" value={formatPrice(totalCartPrice)} />
+        <OrderSummaryItem label="Subtotal" value={formattedPrice} />
         <OrderSummaryItem label="Shipping + Tax">
           <Link href="#" textDecor="underline">
             Calculate shipping
@@ -58,7 +64,9 @@ export const CartOrderSummary = ({ totalCartPrice }: CartOrderSummaryProps) => {
             Total
           </Text>
           <Text fontSize="xl" fontWeight="extrabold">
-            {formatPrice(totalCartPrice)}
+            {formattedPrice}
+
+
           </Text>
         </Flex>
       </Stack>
