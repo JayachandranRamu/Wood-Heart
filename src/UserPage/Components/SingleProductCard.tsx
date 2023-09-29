@@ -17,16 +17,18 @@ import { CartDrawer } from './CartDrawer';
 import { getSingleProductData } from '../Redux/UserPage/action';
 
 export const SingleProductCard: React.FC = () => {
-  let { id } = useParams<{ id: any }>();
+  let { id } = useParams<{ id: number }>();
 
    // Specify the type for 'name'
   const dispatch = useDispatch();
   
-  let { singleProduct, isLoading, isError } = useSelector((store: RootState) => ({
-    singleProduct: store.productReducer.singleProduct,
-    isLoading: store.productReducer.isLoading,
-    isError: store.productReducer.isError,
-  }));
+//   let { singleProduct, isLoading, isError } = useSelector((store: RootState) => ({
+//     singleProduct: store.productReducer.singleProduct,
+//     isLoading: store.productReducer.isLoading,
+//     isError: store.productReducer.isError,
+//   }));
+
+let singleProduct=useSelector((store:RootState)=>store.productReducer.singleProduct)
 
   const {
     getInputProps,
@@ -51,12 +53,12 @@ export const SingleProductCard: React.FC = () => {
   }
 
   useEffect(() => {
-    // Dispatch the action to fetch single product data
+ 
     dispatch(getSingleProductData(id));
   }, []);
 
   // ... rest of your component code
-console.log(singleProduct)
+console.log(singleProduct,id)
 
 
   return (
@@ -90,7 +92,7 @@ console.log(singleProduct)
           ))}
           <Box ml={"10px"} alignItems={"center"}>
             <Text fontSize={"15px"} color={"#5c676d"}>
-              ({singleProduct?.reviews.length} customer reviews)
+              ({singleProduct?.reviews?.length} customer reviews)
             </Text>
           </Box>
         </Flex>
