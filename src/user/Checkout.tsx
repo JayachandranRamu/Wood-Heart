@@ -184,7 +184,6 @@ export const Checkout = () => {
 
           
             {!isSameAddress && (
-                  
                 <form action="">
             <Grid templateColumns="1fr" gap={4} mt={4}>
                 <Heading as="h3" size="lg">
