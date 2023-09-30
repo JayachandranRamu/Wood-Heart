@@ -6,6 +6,7 @@ import { DELETE_PRODUCT } from "../../UserPage/Redux/Admin/actionTypes";
 import axios from "axios";
 // import { ProductURL } from "../../UserPage/Utilis/api";
 
+
 interface ProductCardProps {
   id: number;
   category: string;

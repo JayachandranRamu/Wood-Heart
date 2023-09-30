@@ -17,6 +17,7 @@ const HomePage = () => {
         <Carousal />
         {/* <NewsLetter /> */}
         <Footer />
+        
     </div>
   )
 }

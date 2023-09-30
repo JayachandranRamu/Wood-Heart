@@ -16,6 +16,7 @@ import { Checkout } from '../../user/Checkout'
 import  OrderConfirmation  from '../../user/OrderConfirmation'
 
 
+
 const MainRoutes = () => {
   return (
     <Routes>
@@ -23,7 +24,7 @@ const MainRoutes = () => {
         <Route path="/:name" element={<ProductPage/>} />
 
         <Route path="/product/:id" element={<SingleProduct/>} />
-  
+  <Route path='/checkout' element={<Checkout />}/>
         <Route path="/admin" element={<Dashboard/>}></Route>
         <Route path="/admin/users" element={<Users/>}></Route>
         <Route path="/admin/singleUser/:id" element={<SingleUserAdmin/>}></Route>
