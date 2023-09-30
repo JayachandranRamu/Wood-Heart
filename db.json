@@ -73,7 +73,6 @@
         }
       ]
     },
-    
     {
       "id": 3,
       "category": "Beds",
@@ -269,48 +268,6 @@
         }
       ]
     },
-    {
-      "id": 8,
-      "category": "Chairs",
-      "name": "Ergonomic Office Chair",
-      "price": 249.95,
-      "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/u5ui5g6ahhlflfnx2ocz.png",
-      "brand": "ErgoComfort",
-      "size": "26\" x 26\" x 40\"",
-      "material": "Mesh",
-      "color": "Black",
-      "finish_type": "Matte",
-      "about": "Upgrade your office with our Ergonomic Office Chair. This black mesh office chair features a matte finish and ergonomic design for maximum comfort during long workdays. Dimensions: 26\" x 26\" x 40\".",
-      "rating": 4.7,
-      "reviews": [
-        {
-          "username": "OfficePro",
-          "rating": 5,
-          "comment": "This office chair is a game-changer! So comfortable."
-        },
-        {
-          "username": "ComfortAtWork",
-          "rating": 4,
-          "comment": "Great value for a comfortable office chair."
-        },
-        {
-          "username": "ProductiveDays",
-          "rating": 5,
-          "comment": "I'm very pleased with this purchase. It's perfect for work."
-        },
-        {
-          "username": "AssemblyChamp",
-          "rating": 4,
-          "comment": "Assembly was straightforward, no complaints."
-        },
-        {
-          "username": "OfficeComfortFan",
-          "rating": 5,
-          "comment": "Perfect for anyone who spends hours at the desk."
-        }
-      ]
-    },
-   
     {
       "id": 9,
       "category": "Tables",
@@ -516,7 +473,6 @@
         }
       ]
     },
-   
     {
       "id": 14,
       "category": "Beds",
@@ -763,7 +719,6 @@
         }
       ]
     },
-   
     {
       "id": 20,
       "category": "Beds",
@@ -887,7 +842,6 @@
         }
       ]
     },
-    
     {
       "id": 23,
       "category": "Tables",
@@ -1175,7 +1129,6 @@
         }
       ]
     },
-   
     {
       "id": 30,
       "category": "Beds",
@@ -1423,8 +1376,7 @@
       ]
     }
   ],
-
-  "user":[
+  "user": [
     {
       "address": {
         "geolocation": {
@@ -1676,6 +1628,4 @@
       "addToCart": []
     }
   ]
-
-  
 }

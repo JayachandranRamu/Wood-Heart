@@ -1,4 +1,5 @@
-import axios,{AxiosRequestConfig} from "axios";
+import axios, { AxiosRequestConfig } from "axios";
+
 
 let ProductURL="http://localhost:8080/products";
 export const userUrl="http://localhost:8080/user"
@@ -11,3 +12,4 @@ export const getSingleProductDataFromAPI=(id:any)=>{
 console.log(id)
   return  axios.get(ProductURL+"/"+id)
 }
+

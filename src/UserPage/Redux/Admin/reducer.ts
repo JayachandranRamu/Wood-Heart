@@ -33,3 +33,4 @@ export const reducer=(state=initstate,{type,payload}:action)=>{
          }
       }
 }
+
