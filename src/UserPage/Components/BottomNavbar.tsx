@@ -97,7 +97,7 @@ import { Link } from 'react-router-dom';
     const popoverContentBgColor = useColorModeValue('white', 'gray.800');
   
     return (
-      <Box fontFamily={"Poppins"} boxShadow="rgba(0, 0, 0, 0.1) -4px 9px 25px -6px" m={"auto"} mt={"10px"}>
+      <Box fontFamily={"Poppins"} boxShadow="rgba(0, 0, 0, 0.1) -4px 9px 25px -6px" m={"auto"} mt={"10px"} >
         <Stack direction="row" spacing={4} w="70%" m="auto">
           {NAV_ITEMS.map((navItem) => (
             <Box key={navItem.label} m={"auto"} 

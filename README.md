@@ -8,7 +8,6 @@
 * :bust_in_silhouette: [fw24_585-Abhay v]()  
 * :bust_in_silhouette: [fw25_233-Narendra Patel]()
 * :bust_in_silhouette: [fw27_265-Gauri Bidwai](https://github.com/gitusergb)
-* :bust_in_silhouette: [fw24_247-baibhav kumar]()
 
 
 # More Info :

@@ -35,7 +35,9 @@ export const Cart = () => {
       const cartItems = JSON.parse(localStorageCartData);
       setCartItems(cartItems);
     } else {
+
       fetch(`http://localhost:8000/user/${id}/`)
+
         .then((response) => response.json())
         .then((data) => {
           const cartItems = data.cartData.map((item: CartItemData) => ({
@@ -68,6 +70,7 @@ export const Cart = () => {
     const newCartItems = [...cartItems];
     const itemIndex = newCartItems.findIndex((item) => item.id === id);
     if (itemIndex !== -1) {
+   
       newCartItems[itemIndex].price = newPrice;
       setCartItems(newCartItems);
       
