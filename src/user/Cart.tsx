@@ -42,7 +42,7 @@ export const Cart = () => {
       setCartItems(cartItems);
     } else {
       // If cart data doesn't exist, fetch it from the server
-      fetch('http://localhost:8000/user/10/') // Replace with the actual path to db.json
+      fetch('http://localhost:8080/user/10/') // Replace with the actual path to db.json
         .then((response) => response.json())
         .then((data) => {
           const cartItems = data.cartData;
@@ -71,6 +71,7 @@ export const Cart = () => {
     const newCartItems = [...cartItems];
     const itemIndex = newCartItems.findIndex((item) => item.id === id);
     if (itemIndex !== -1) {
+   
       newCartItems[itemIndex].price = newPrice;
       setCartItems(newCartItems);
       localStorage.setItem('cartData', JSON.stringify(newCartItems));
