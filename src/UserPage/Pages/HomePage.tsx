@@ -15,7 +15,7 @@ const HomePage = () => {
         <Hero />
         <TrustedSection />
         <Carousal />
-        <NewsLetter />
+        {/* <NewsLetter /> */}
         <Footer />
     </div>
   )
