@@ -2,10 +2,9 @@ import React, { useEffect, useState } from 'react';
 import {
   Box,
   Flex,
-//   Heading,
+  Heading,
   Image,
   Text,
-//   useColorModeValue as mode,
   Stack,
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
@@ -36,7 +35,8 @@ const OrderSummary: React.FC = () => {
   }, []);
 
   return (
-    <Box boxShadow='2xl' p='6' rounded='md' bg='white'>
+    <Box boxShadow='2xl' p='6' rounded='md' bg='white'  marginTop={10}
+    marginBottom={10}>
    
 
     <motion.div
@@ -53,6 +53,10 @@ const OrderSummary: React.FC = () => {
         {/* <Heading as="h1" size="xl" mb={6}>
           Cart Summary
         </Heading> */}
+         <Heading as="h3" mt={4} mb={4}>
+                    Order Summary
+                    </Heading>
+
         <Stack spacing={4}>
           {cartItems.map((item) => (
             <motion.div
@@ -82,7 +86,7 @@ const OrderSummary: React.FC = () => {
                 >
                   <Text fontSize="xl">{item.name}</Text>
                   <Text fontSize="lg">
-                    Price: ${item.price.toFixed(2)}
+                    Price: ${item.price.toFixed(1)}
                   </Text>
                 </Flex>
               </Flex>
@@ -91,7 +95,7 @@ const OrderSummary: React.FC = () => {
         </Stack>
         <Box mt={6}>
           <Text fontSize="lg">
-            Total Price: ${totalCartPrice.toFixed(2)}
+            Total Price: ${totalCartPrice.toFixed(1)}
           </Text>
         </Box>
       </Flex>
