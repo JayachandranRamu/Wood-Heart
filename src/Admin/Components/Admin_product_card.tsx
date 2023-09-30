@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../Redux/rootReducer"; // Import the RootState type
 import { DELETE_PRODUCT } from "../../UserPage/Redux/Admin/actionTypes";
 import axios from "axios";
-import { ProductURL } from "../../UserPage/Utilis/api";
+// import { ProductURL } from "../../UserPage/Utilis/api";
 
 interface ProductCardProps {
   id: number;
