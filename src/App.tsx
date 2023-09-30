@@ -18,11 +18,9 @@ function App() {
   return (
     <>
     
-
-
-    
       <MainRoutes />
 
+       <Cart />
 
     </>
   )
