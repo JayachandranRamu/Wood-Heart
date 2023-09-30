@@ -6,6 +6,7 @@ import { DesktopNav } from "../Components/BottomNavbar";
 import Footer from "../Components/Footer";
 
 import TopProductPage from "../Components/TopProductPage";
+import FAQ from "../Components/FAQ";
 
 6;
 const ProductPage: React.FC = () => {
@@ -18,6 +19,7 @@ const ProductPage: React.FC = () => {
       <Box fontFamily={"Poppins"}>
         <ProductItems />
       </Box>
+      <FAQ />
       <Footer />
     </>
   );

@@ -1,7 +1,9 @@
 import { DesktopNav } from "../Components/BottomNavbar"
 import { Carousal } from "../Components/Carousal"
+import FAQ from "../Components/FAQ"
 import Footer from "../Components/Footer"
 import Hero from "../Components/Hero"
+import LoginMenu from "../Components/Login"
 import NewsLetter from "../Components/NewsLetter"
 import TopNavbar from "../Components/TopNavbar"
 import TrustedSection from "../Components/TrustedSection"
@@ -16,6 +18,8 @@ const HomePage = () => {
         <TrustedSection />
         <Carousal />
         {/* <NewsLetter /> */}
+        <FAQ />
+      
         <Footer />
         
     </div>

@@ -27,7 +27,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
   return (
   <Box bg={"#f5f5f5"} borderRadius={"20px"} m={"auto"} p={"40px"} textAlign={"center"}>
-    <Flex  h={"400px"}  alignItems={"center"} justifyContent={"center"} >
+    <Flex  h={["300px","350","400px"]}  alignItems={"center"} justifyContent={"center"} >
     <Image
       m={"20px auto"}
       w={"100%"}

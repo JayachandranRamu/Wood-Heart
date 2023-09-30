@@ -12,10 +12,10 @@ import Products from '../../Admin/Pages/Products'
 
 import Admin from '../../Admin/Pages/Admin'
 
-// import SingleUser from '../../Admin/Pages/SingleUser'
+import SingleUser from '../../Admin/Pages/SingleUser'
 import SingleUserAdmin from '../../Admin/Pages/SingleUserAdmin'
 import { Checkout } from '../../user/Checkout'
-import  OrderConfirmation  from '../../user/OrderConfirmation'
+
 
 
 
@@ -33,7 +33,7 @@ const MainRoutes = () => {
         <Route path="/admin/singleUser/:id" element={<SingleUserAdmin/>}></Route>
         <Route path="/admin/products" element={<Products/>}></Route>
         <Route path="/checkout" element={<Checkout/>}></Route>
-        <Route path="/order-confirmation" element={<OrderConfirmation />}></Route>
+        {/* <Route path="/order-confirmation" element={<OrderConfirmation />}></Route> */}
 
 
         <Route path="*" element={<Stack spacing={3}>

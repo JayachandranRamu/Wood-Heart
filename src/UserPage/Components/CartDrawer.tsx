@@ -47,7 +47,7 @@ size={"sm"}
               <Box>
 
               </Box>
-              <Button  colorScheme='white' fontSize={"16"} fontWeight={"400"}  bg={"#2b3954"} mr={3} >
+              <Button    _hover={{ bgColor: "#e89f22" }} colorScheme='white' fontSize={"16"} fontWeight={"400"}  bg={"#2b3954"} mr={3} >
                PROCESSED TO CHECKOUT
               </Button>
               <Button  variant='outline' color={"#2b3954"}>VIEW CART</Button>
