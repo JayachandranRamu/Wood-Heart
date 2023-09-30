@@ -1625,7 +1625,176 @@
       "__v": 0,
       "orders": [],
       "wishList": [],
-      "addToCart": []
+      "addToCart": [],
+      "cartData":[
+        {
+          "id": 25,
+          "category": "Desks",
+          "name": "Glass Top Writing Desk",
+          "price": 199.99,
+          "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/oh2exehvntq1y0s6aokw.png",
+          "brand": "GlassElegance",
+          "size": "42\" x 24\" x 30\"",
+          "material": "Glass and Metal",
+          "color": "Clear and Silver",
+          "finish_type": "Glossy",
+          "about": "Add a touch of sophistication to your workspace with our Glass Top Writing Desk. This clear glass desk features a glossy silver metal frame and a minimalist design. It's ideal for modern offices. Dimensions: 42\" x 24\" x 30\".",
+          "rating": 4.6,
+          "reviews": [
+            {
+              "username": "SophisticatedOffice",
+              "rating": 5,
+              "comment": "I love this glass writing desk! It's so chic."
+            },
+            {
+              "username": "ElegantWorkspace",
+              "rating": 4,
+              "comment": "Great value for a stylish glass desk."
+            },
+            {
+              "username": "HappyWorker2",
+              "rating": 5,
+              "comment": "I'm so happy with this purchase. It's perfect for my modern office."
+            },
+            {
+              "username": "EasyAssembly10",
+              "rating": 4,
+              "comment": "Assembly was straightforward, no complaints."
+            },
+            {
+              "username": "ChicWorkspace",
+              "rating": 5,
+              "comment": "Highly recommend for a chic workspace."
+            }
+          ]
+        },
+        {
+          "id": 26,
+          "category": "Cabinets",
+          "name": "Rustic Wine Cabinet",
+          "price": 349.95,
+          "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/i1qh212qzryb4k1kh1fx.png",
+          "brand": "RusticCharm",
+          "size": "36\" x 16\" x 54\"",
+          "material": "Wood",
+          "color": "Weathered Oak",
+          "finish_type": "Distressed",
+          "about": "Enhance your wine collection with our Rustic Wine Cabinet. This weathered oak wood cabinet features a distressed finish and ample storage for wine bottles and glassware. Dimensions: 36\" x 16\" x 54\".",
+          "rating": 4.7,
+          "reviews": [
+            {
+              "username": "WineConnoisseur",
+              "rating": 5,
+              "comment": "I'm thrilled with this wine cabinet! It's perfect for my wine collection."
+            },
+            {
+              "username": "WineLover2",
+              "rating": 4,
+              "comment": "Great cabinet for wine enthusiasts."
+            },
+            {
+              "username": "HappyHostess",
+              "rating": 5,
+              "comment": "I love this purchase. It's perfect for hosting wine tastings."
+            },
+            {
+              "username": "EasyStorage4",
+              "rating": 4,
+              "comment": "Assembly was straightforward, but it's a bit heavy."
+            },
+            {
+              "username": "WineStorageFan",
+              "rating": 5,
+              "comment": "Perfect for anyone who loves wine."
+            }
+          ]
+        },
+        {
+          "id": 27,
+          "category": "Lighting",
+          "name": "Crystal Chandelier",
+          "price": 299.99,
+          "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ay4wujm1xd2gg90m6wrm.png",
+          "brand": "CrystalGlow",
+          "size": "Diameter: 18\"",
+          "material": "Crystal and Metal",
+          "color": "Chrome",
+          "finish_type": "Shiny",
+          "about": "Add a touch of glamour to your space with our Crystal Chandelier. This chrome metal chandelier features shiny crystal accents and a diameter of 18 inches. It's perfect for creating a luxurious atmosphere. Dimensions: Diameter: 18\".",
+          "rating": 4.8,
+          "reviews": [
+            {
+              "username": "GlamourSpace2",
+              "rating": 5,
+              "comment": "This crystal chandelier is stunning! It's a showstopper."
+            },
+            {
+              "username": "CrystalLove",
+              "rating": 4,
+              "comment": "A bit pricey, but it's worth it for the quality."
+            },
+            {
+              "username": "GlamourHome2",
+              "rating": 5,
+              "comment": "I'm in love with this chandelier. It's perfect for my glamorous decor."
+            },
+            {
+              "username": "EasyInstallation3",
+              "rating": 4,
+              "comment": "Installation was a bit tricky due to its size."
+            },
+            {
+              "username": "CrystalFan",
+              "rating": 5,
+              "comment": "Highly recommend for a luxurious room."
+            }
+          ]
+        },
+        {
+          "id": 28,
+          "category": "Tables",
+          "name": "Mid-Century Coffee Table",
+          "price": 249.99,
+          "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/1h4zda1a2urv4as45rom.png",
+          "brand": "MidCenturyStyle",
+          "size": "42\" x 24\" x 18\"",
+          "material": "Wood",
+          "color": "Walnut",
+          "finish_type": "Matte",
+          "about": "Complete your living room with our Mid-Century Coffee Table. This walnut wood table features a matte finish and a classic mid-century design, perfect for holding coffee and magazines. Dimensions: 42\" x 24\" x 18\".",
+          "rating": 4.7,
+          "reviews": [
+            {
+              "username": "MidCenturyLiving2",
+              "rating": 5,
+              "comment": "Love this mid-century coffee table! It's the perfect addition."
+            },
+            {
+              "username": "CoffeeTableFan",
+              "rating": 4,
+              "comment": "Great value for a stylish coffee table."
+            },
+            {
+              "username": "StylishLiving",
+              "rating": 5,
+              "comment": "I'm very pleased with this purchase. It's perfect."
+            },
+            {
+              "username": "HandyAssembly4",
+              "rating": 4,
+              "comment": "Assembly was straightforward, but it took some time."
+            },
+            {
+              "username": "MidCenturyDesignLover",
+              "rating": 5,
+              "comment": "Perfect for anyone wanting a mid-century modern living room."
+            }
+          ]
+        }
+
+
+
+      ]
     }
   ]
 }
