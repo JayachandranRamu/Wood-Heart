@@ -33,11 +33,6 @@
           "username": "FurnitureFanatic",
           "rating": 4,
           "comment": "Assembly was straightforward, but it took some time."
-        },
-        {
-          "username": "ModernLivingLover",
-          "rating": 5,
-          "comment": "Highly recommend for a contemporary dining space."
         }
       ]
     },
@@ -65,11 +60,7 @@
           "rating": 4,
           "comment": "Great value for a stylish leather chair."
         },
-        {
-          "username": "HappyCustomer23",
-          "rating": 5,
-          "comment": "I'm so happy with this purchase. It's comfy and elegant."
-        },
+        
         {
           "username": "FurnitureEnthusiast",
           "rating": 4,
@@ -100,16 +91,6 @@
           "username": "DreamyNights",
           "rating": 5,
           "comment": "I love this platform bed! It's beautiful and comfortable."
-        },
-        {
-          "username": "SleepInStyle",
-          "rating": 4,
-          "comment": "Great value for a modern platform bed."
-        },
-        {
-          "username": "BedroomBliss",
-          "rating": 5,
-          "comment": "I'm very pleased with this purchase. It's perfect."
         },
         {
           "username": "HandyAssembly",

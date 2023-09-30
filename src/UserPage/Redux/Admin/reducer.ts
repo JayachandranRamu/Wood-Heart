@@ -1,58 +1,36 @@
-import {
-  DELETE_PRODUCT,
-  GET_PRODUCT_FAILURE,
-  GET_PRODUCT_REQUEST,
-  GET_PRODUCT_SUCCESS,
-} from "./actionTypes";
+import { GET_USER_FAILURE, GET_USER_LOADING, GET_USER_SUCCESS } from "./userTypes"
 
-interface InitialState {
-  users: any;
-  orders: any;
-  products: any;
-  isError: boolean;
-  isLoading: boolean; // Replace 'any' with the actual type of singleProduct
+
+const initstate={
+    users:[],
+    totalPages:0,
+    orders:[],
+    products:[],
+    isError:false,
+    isAuth:false,
+    isLoading:false
 }
 
-const initstate = {
-  users: [],
-  orders: [],
-  products: [],
-  isError: false,
-  isLoading: false,
-};
+type action={
+    type:string,
+    payload:any
+}
 
-export const reducer = (
-  state: InitialState = initstate,
-  action: { type: string; payload: any }
-) => {
-  switch (action.type) {
-    case GET_PRODUCT_REQUEST: {
-      return {
-        ...state,
-        isLoading: true,
-      };
-    }
-    case GET_PRODUCT_FAILURE: {
-      return {
-        ...state,
-        isError: true,
-        isLoading: false,
-      };
-    }
-    case GET_PRODUCT_SUCCESS: {
-      return {
-        ...state,
-        isLoading: false,
-        products: action.payload,
-      };
-    }
-    case DELETE_PRODUCT: {
-      return {
-        ...state,
-        products: action.payload,
-      };
-    }
-    default:
-      return state;
-  }
-};
+export const reducer=(state=initstate,{type,payload}:action)=>{
+      switch(type){
+         case GET_USER_LOADING:{
+            return {...state,isLoading:true};
+         }
+         case GET_USER_SUCCESS:{
+            console.log(payload.headers["x-total-count"],"pages");
+            return {...state,isLoading:false,users:payload.data,totalPages:payload.headers["x-total-count"]}
+         }
+         case GET_USER_FAILURE:{
+            return {...state,isError:true}
+         }
+         default:{
+            return state;
+         }
+      }
+}
+

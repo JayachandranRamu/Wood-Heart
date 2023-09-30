@@ -1,38 +1,40 @@
-import { CloseButton, Flex, Link, Select, SelectProps, useColorModeValue } from '@chakra-ui/react'
+import { CloseButton, Flex, Link, useColorModeValue,Text } from '@chakra-ui/react'
 import { PriceTag } from './PriceTag'
 import { CartProductMeta } from './CartProductMeta'
 import React, { useState,useEffect } from 'react';
 
 
+// type CartItemProps = {
+//   isGiftWrapping?: boolean
+//   id: string; 
+//   name: string
+//   description: string
+//   quantity: number
+//   price: number
+//   currency: string
+//   imageUrl: string
+//   onChangeQuantity?: (quantity: number) => void
+//   onClickGiftWrapping?: () => void
+//   onClickDelete?: () => void
+//   onUpdateTotalPrice?: (newTotal: number) => void; 
+// }
 type CartItemProps = {
-  isGiftWrapping?: boolean
-  name: string
-  description: string
-  quantity: number
-  price: number
-  currency: string
-  imageUrl: string
-  onChangeQuantity?: (quantity: number) => void
-  onClickGiftWrapping?: () => void
-  onClickDelete?: () => void
-  onUpdateTotalPrice?: (newTotal: number) => void; 
-}
+  isGiftWrapping?: boolean;
+  id: number; 
+  name: string;
+  description: string;
+  quantity: number;
+  price: number;
+  currency: string;
+  imageUrl: string;
+  availableQuantity?: number; 
+  onChangeQuantity?: (id: number, newQuantity: number) => void;
+  onPriceChange?: (id: number, newPrice: number) => void;
+  onClickGiftWrapping?: () => void;
+  onClickDelete?: (id: number) => void; 
+  onUpdateTotalPrice?: (newTotal: number) => void;
+};
 
-const QuantitySelect = (props: SelectProps) => {
-  return (
-    <Select
-      maxW="64px"
-      aria-label="Select quantity"
-      focusBorderColor={useColorModeValue('#0b3954', '#0b3954')}
-      {...props}
-    >
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </Select>
-  )
-}
 
 export const CartItem = (props: CartItemProps) => {
   const {
@@ -44,40 +46,58 @@ export const CartItem = (props: CartItemProps) => {
     imageUrl,
     currency,
     price,
+    availableQuantity, 
     onChangeQuantity,
     onClickDelete,
     onUpdateTotalPrice,
   } = props
 
-
-  // Use state to track gauris the quantity
+  
+  
+  // Use state to track gauris quantity
   const [quantity, setQuantity] = useState(initialQuantity);
 
-   // Function gauri to handle quantity change
-   const handleQuantityChange = (newQuantity: number) => {
-    setQuantity(newQuantity); // Update the local state
-    onChangeQuantity?.(id, newQuantity); // Call the prop function
-    onUpdateTotalPrice?.(calculateUpdatedPrice(newQuantity)); //Gauri Call the function to update total price
+  const borderColor = useColorModeValue('#0b3954', '#0b3954'); 
+    // Used the ternary operator to set a default value of 50 for availableQuantity
+    const quantityLimit = availableQuantity || 50;
+
+
+
+const handleQuantityChange = (newQuantity: number) => {
+  setQuantity(newQuantity);
+  onChangeQuantity?.(id, newQuantity);
+  const updatedPrice = calculateUpdatedPrice(newQuantity);
+
+    onUpdateTotalPrice?.(updatedPrice);
+};
+
+// Function to calculate the updated price based on quantity
+const calculateUpdatedPrice = (newQuantity: number) => {
+  return price * newQuantity;
+};
+
+
   
+
+    // Function to increment the quantity
+  const incrementQuantity = () => {
+    if (quantity < quantityLimit) {
+    
+      handleQuantityChange(quantity+1);
+    }
   };
 
-   // Function to calculate the updated price based on quantity
-   const calculateUpdatedPrice = (newQuantity: number) => {
-    // return price * quantity;
-    return price * newQuantity;
+  // Function to decrement the quantity
+  const decrementQuantity = () => {
+    if (quantity > 1) {
+      handleQuantityChange(quantity - 1);
+    }
   };
-
-
-    // // Function to remove an item from the cart
-    // const handleRemoveItem = () => {
-    //   onClickDelete?.(id); // Pass "id" here instead of "name"
-    // };
-  
 
    // Update the total cart price when quantity changes
   useEffect(() => {
     onUpdateTotalPrice?.(calculateUpdatedPrice(quantity));
-  }, [quantity, onUpdateTotalPrice]);
+  }, []);
 
   return (
     <Flex direction={{ base: 'column', md: 'row' }} justify="space-between" align="center">
@@ -90,12 +110,34 @@ export const CartItem = (props: CartItemProps) => {
 
       {/* gbDesktop */}
       <Flex width="full" justify="space-between" display={{ base: 'none', md: 'flex' }}>
-        <QuantitySelect
-          value={quantity}
-          onChange={(e) => {
-            handleQuantityChange(+e.currentTarget.value); 
+
+        <Flex align="center" gap={5} 
+        justify="space-between" 
+        border="1px solid " 
+         borderColor={ "gray.200"} 
+         borderRadius='4'
+         boxShadow='base' 
+         p='1' 
+         rounded='md'
+        bg='white'>
+          <button onClick={decrementQuantity} disabled={quantity <= 1}   
+           style={{
+            border: `1px solid ${borderColor}`,
+            borderRadius: '4px', 
+            padding: '4px', 
           }}
-        />
+          >-</button>
+          <Text>{quantity}</Text>
+          <button onClick={incrementQuantity} disabled={quantity >= quantityLimit}
+           style={{
+            border: `1px solid ${borderColor}`,
+            borderRadius: '4px', 
+            padding: '4px', 
+          }}
+          
+          >+</button>
+        </Flex>
+
         <PriceTag price={calculateUpdatedPrice(quantity)} currency={currency} />
         <CloseButton aria-label={`Delete ${name} from cart`} onClick={()=>{onClickDelete?.(id)} }/>
       </Flex>
@@ -108,15 +150,36 @@ export const CartItem = (props: CartItemProps) => {
         justify="space-between"
         display={{ base: 'flex', md: 'none' }}
       >
-        <Link fontSize="sm" textDecor="underline">
+        <Link fontSize="sm" textDecor="underline" onClick={() => onClickDelete?.(id)}>
           Delete
         </Link>
-        <QuantitySelect
-          value={quantity}
-          onChange={(e) => {
-            handleQuantityChange(+e.currentTarget.value);
+  
+
+        <Flex align="center" gap={5} 
+        justify="space-between" 
+        border="1px solid  "  
+        borderColor={"gray.200"}  
+        borderRadius='4'
+        boxShadow='base' p='1' 
+        rounded='md' bg='white'>
+          <button onClick={decrementQuantity} disabled={quantity <= 1}
+           style={{
+            border: `1px solid ${borderColor}`,
+            borderRadius: '4px', 
+            padding: '4px', 
           }}
-        />
+          >-</button>
+          <Text>{quantity}</Text>
+          <button onClick={incrementQuantity} disabled={quantity >= quantityLimit}
+           style={{
+            border: `1px solid ${borderColor}`,
+            borderRadius: '4px', 
+            padding: '4px', 
+          }}
+          
+          
+          >+</button>
+        </Flex>
         <PriceTag price={calculateUpdatedPrice(quantity)} currency={currency} />
       </Flex>
     </Flex>

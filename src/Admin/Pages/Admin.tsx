@@ -8,8 +8,8 @@ const Admin = () => {
 
   
   return  <>
-  <AdminNavbar />
-  <Dashboard />
+  {/* <AdminNavbar />
+  <Dashboard /> */}
     </>
 
   
