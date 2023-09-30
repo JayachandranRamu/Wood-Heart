@@ -15,7 +15,10 @@ import {
     Heading,
     Stack,
     Avatar,
-    useColorModeValue
+    useColorModeValue,
+    SimpleGrid,
+    List,
+    ListItem
 } from '@chakra-ui/react';
 import { FaStar } from 'react-icons/fa';
 import { CartDrawer } from './CartDrawer';
@@ -139,10 +142,33 @@ console.log(singleProduct,id)
     <Box>
         
     </Box>
+    <Box m={"auto"} w={"80%"}>
+              <Text
+                fontSize={{ base: '16px', lg: '18px' }}
+                color={useColorModeValue('yellow.500', 'yellow.300')}
+                fontWeight={'500'}
+                textTransform={'uppercase'}
+                mb={'4'}>
+                Features
+              </Text>
+
+              <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} m={"auto"}>
+                <List spacing={2}>
+                  <ListItem>Chronograph</ListItem>
+                  <ListItem>Master Chronometer Certified</ListItem>{' '}
+                  <ListItem>Tachymeter</ListItem>
+                </List>
+                <List spacing={2}>
+                  <ListItem>Anti‑magnetic</ListItem>
+                  <ListItem>Chronometer</ListItem>
+                  <ListItem>Small seconds</ListItem>
+                </List>
+              </SimpleGrid>
+            </Box>
     <Box>
     <Container maxW="80%" p={{ base: 5, md: 10 }} fontFamily={"poppins"} > 
         <Flex justify="center">
-          <Heading as="h3" size="xl" fontWeight="bold" textAlign="left" fontFamily={"poppins"} mb={{ base: '4', md: '2' }}>
+          <Heading as="h3" size="xl" color={"#0b3954"}  fontWeight="bold" textAlign="left" fontFamily={"poppins"} mb={{ base: '4', md: '2' }}>
             Recent Reviews
           </Heading>
         </Flex>
@@ -151,7 +177,7 @@ console.log(singleProduct,id)
             return (
               <Stack key={index} direction="column" maxW="2xl">
                 <HStack spacing={3}>
-                  <Avatar size="md" name={el?.username} src={'https://dev-to-uploads.s3.amazonaws.com/uploads/articles/9tof838jn4del088vd49.jpg'} />
+                  <Avatar size="md" name={el?.username} src={'https://media.geeksforgeeks.org/wp-content/uploads/20210209004403/AVATAR1.png'} />
                   <Flex direction="column">
                     <Text fontWeight="500" fontSize="md">
                       {el?.username}
