@@ -1,4 +1,4 @@
-import { useState , useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import {
   Box,
   Flex,
@@ -11,7 +11,6 @@ import {
 
 import { CartItem } from './CartItem';
 import { CartOrderSummary } from './CartOrderSummary';
-// import { cartData } from './_data';
 
 type CartItemData = {
   id: number;
@@ -19,48 +18,49 @@ type CartItemData = {
   about: string;
   quantity: number;
   price: number;
-  currency:string;
+  currency: string;
 };
 
-export const Cart = () => {
-  
-  const [cartItems, setCartItems] = useState<CartItemData[]>([]);
+const id = 10;
 
+export const Cart = () => {
+  const [cartItems, setCartItems] = useState<CartItemData[]>([]);
   const [totalCartPrice, setTotalCartPrice] = useState<number>(0);
   const isCartEmpty = cartItems.length === 0;
-    
-  useEffect(() => {
 
+  useEffect(() => {
     const localStorageCartData = localStorage.getItem('cartData');
 
     if (localStorageCartData) {
-      
       const cartItems = JSON.parse(localStorageCartData);
       setCartItems(cartItems);
     } else {
-    
-      fetch('http://localhost:8000/user/10/') 
+      fetch(`http://localhost:8000/user/${id}/`)
         .then((response) => response.json())
         .then((data) => {
-          const cartItems = data.cartData;
+          const cartItems = data.cartData.map((item: CartItemData) => ({
+            ...item,
+            quantity: parseInt(`${item.quantity}`),
+            price: parseFloat(`${item.price}`),
+          }));
           setCartItems(cartItems);
-
-      
-          localStorage.setItem('cartItems', JSON.stringify(cartItems));
+          
+          localStorage.setItem('cartData', JSON.stringify(cartItems));
         })
         .catch((error) => {
           console.error('Error fetching cart data:', error);
         });
     }
-  }, []);
-
+  }, []); 
 
   const handleQuantityChange = (id: number, newQuantity: number) => {
     const newCartItems = [...cartItems];
-    const itemIndex = newCartItems.findIndex((item) =>item.id === id);
+    const itemIndex = newCartItems.findIndex((item) => item.id === id);
     if (itemIndex !== -1) {
       newCartItems[itemIndex].quantity = newQuantity;
       setCartItems(newCartItems);
+    
+      localStorage.setItem('cartData', JSON.stringify(newCartItems));
     }
   };
 
@@ -70,6 +70,7 @@ export const Cart = () => {
     if (itemIndex !== -1) {
       newCartItems[itemIndex].price = newPrice;
       setCartItems(newCartItems);
+      
       localStorage.setItem('cartData', JSON.stringify(newCartItems));
     }
   };
@@ -77,21 +78,25 @@ export const Cart = () => {
   const handleRemoveItem = (id: number) => {
     const newCartItems = cartItems.filter((item) => item.id !== id);
     setCartItems(newCartItems);
+
     localStorage.setItem('cartData', JSON.stringify(newCartItems));
   };
 
-
   const handleContinueShopping = () => {
    
-    window.location.href =("/");
+    window.location.href = '/';
   };
-    useEffect(() => {
-    const newTotalPrice = cartItems.reduce((total, item) => total + (item.price*item.quantity), 0);
+
+  useEffect(() => {
+ 
+    const newTotalPrice = cartItems.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0
+    );
     setTotalCartPrice(newTotalPrice);
+   
     localStorage.setItem('cartPrice', JSON.stringify(newTotalPrice));
-  }, [cartItems]);
-
-
+  }, [cartItems]); 
 
   return (
     <Box
@@ -117,8 +122,7 @@ export const Cart = () => {
 
           <Stack spacing="6">
             {cartItems.map((item) => (
-        
-                <CartItem
+              <CartItem
                 image={''}
                 key={item.id}
                 {...item}
@@ -135,27 +139,24 @@ export const Cart = () => {
         </Stack>
 
         <Flex direction="column" align="center" flex="1">
-
-        {isCartEmpty ? (
+          {isCartEmpty ? (
             <>
               <div role="img" aria-label="Empty Bag Emoji">
                 🛍️
               </div>
-              <h2 style={{ color:"#0b3954"}}> Your cart is empty</h2>
-             
+              <h2 style={{ color: '#0b3954' }}> Your cart is empty</h2>
             </>
           ) : (
             <>
-        <CartOrderSummary  cartItems={cartItems} 
-              totalCartPrice={totalCartPrice}/>
-      
-          <HStack mt="6" fontWeight="semibold">
-            <p>or</p>
-            <Link color={mode('#0b3954', '#0b3954')} onClick={handleContinueShopping}>
-          Continue shopping
-        </Link>
-          </HStack>
-          </>
+              <CartOrderSummary cartItems={cartItems} totalCartPrice={totalCartPrice} />
+
+              <HStack mt="6" fontWeight="semibold">
+                <p>or</p>
+                <Link color={mode('#0b3954', '#0b3954')} onClick={handleContinueShopping}>
+                  Continue shopping
+                </Link>
+              </HStack>
+            </>
           )}
         </Flex>
       </Stack>
