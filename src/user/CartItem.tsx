@@ -1,23 +1,8 @@
 import { CloseButton, Flex, Link, useColorModeValue,Text } from '@chakra-ui/react'
 import { PriceTag } from './PriceTag'
 import { CartProductMeta } from './CartProductMeta'
-import React, { useState,useEffect } from 'react';
+import { useState,useEffect } from 'react';
 
-
-// type CartItemProps = {
-//   isGiftWrapping?: boolean
-//   id: string; 
-//   name: string
-//   description: string
-//   quantity: number
-//   price: number
-//   currency: string
-//   imageUrl: string
-//   onChangeQuantity?: (quantity: number) => void
-//   onClickGiftWrapping?: () => void
-//   onClickDelete?: () => void
-//   onUpdateTotalPrice?: (newTotal: number) => void; 
-// }
 type CartItemProps = {
   isGiftWrapping?: boolean;
   id: number; 
@@ -57,7 +42,7 @@ export const CartItem = (props: CartItemProps) => {
   const [quantity, setQuantity] = useState(initialQuantity);
 
   const borderColor = useColorModeValue('#0b3954', '#0b3954'); 
-    // Used the ternary operator to set a default value of 50 for availableQuantity
+  
     const quantityLimit = availableQuantity || 50;
 
 
@@ -70,15 +55,13 @@ const handleQuantityChange = (newQuantity: number) => {
     onUpdateTotalPrice?.(updatedPrice);
 };
 
-// Function to calculate the updated price based on quantity
+
+// eslint-disable-next-line react-hooks/exhaustive-deps
 const calculateUpdatedPrice = (newQuantity: number) => {
   return price * newQuantity;
 };
 
 
-  
-
-    // Function to increment the quantity
   const incrementQuantity = () => {
     if (quantity < quantityLimit) {
     
@@ -86,17 +69,16 @@ const calculateUpdatedPrice = (newQuantity: number) => {
     }
   };
 
-  // Function to decrement the quantity
+
   const decrementQuantity = () => {
     if (quantity > 1) {
       handleQuantityChange(quantity - 1);
     }
   };
 
-   // Update the total cart price when quantity changes
   useEffect(() => {
     onUpdateTotalPrice?.(calculateUpdatedPrice(quantity));
-  }, []);
+  }, [calculateUpdatedPrice, onUpdateTotalPrice, quantity]);
 
   return (
     <Flex direction={{ base: 'column', md: 'row' }} justify="space-between" align="center">
@@ -184,3 +166,5 @@ const calculateUpdatedPrice = (newQuantity: number) => {
     </Flex>
   )
 }
+
+

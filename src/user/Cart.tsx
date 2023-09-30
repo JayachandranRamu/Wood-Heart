@@ -1,4 +1,4 @@
-import React, { useState , useEffect } from 'react';
+import { useState , useEffect } from 'react';
 import {
   Box,
   Flex,
@@ -23,32 +23,34 @@ type CartItemData = {
 };
 
 export const Cart = () => {
-  // State to manage cart items
-  const [cartItems, setCartItems] = useState<CartItemData[]>([]);
   
-  // const [cartItems, setCartItems] = useState<CartItemData[]>([]);
-
+  const [cartItems, setCartItems] = useState<CartItemData[]>([]);
 
   const [totalCartPrice, setTotalCartPrice] = useState<number>(0);
   const isCartEmpty = cartItems.length === 0;
     
   useEffect(() => {
-    // Check if cart data exists in local storage
+
     const localStorageCartData = localStorage.getItem('cartData');
 
     if (localStorageCartData) {
-      // If cart data exists, parse it back to an array
+      
       const cartItems = JSON.parse(localStorageCartData);
       setCartItems(cartItems);
     } else {
+
       // If cart data doesn't exist, fetch it from the server
       fetch('http://localhost:8080/user/10/') // Replace with the actual path to db.json
+
+    
+      fetch('http://localhost:8000/user/10/') 
+
         .then((response) => response.json())
         .then((data) => {
           const cartItems = data.cartData;
           setCartItems(cartItems);
 
-          // Store the fetched cart data in local storage
+      
           localStorage.setItem('cartItems', JSON.stringify(cartItems));
         })
         .catch((error) => {
@@ -57,7 +59,7 @@ export const Cart = () => {
     }
   }, []);
 
-  // Function to handle changing the quantity of a cart item
+
   const handleQuantityChange = (id: number, newQuantity: number) => {
     const newCartItems = [...cartItems];
     const itemIndex = newCartItems.findIndex((item) =>item.id === id);
@@ -78,7 +80,6 @@ export const Cart = () => {
     }
   };
 
-  // Function to remove an item from the cart
   const handleRemoveItem = (id: number) => {
     const newCartItems = cartItems.filter((item) => item.id !== id);
     setCartItems(newCartItems);
