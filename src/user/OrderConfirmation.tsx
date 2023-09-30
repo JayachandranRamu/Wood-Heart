@@ -1,12 +1,12 @@
-import React from 'react';
-import { Heading, Text } from '@chakra-ui/react';
+
+import { Heading} from '@chakra-ui/react';
 
 const OrderConfirmation = () => {
   return (
     <div>
-      <Heading as="h1">Order Confirmation</Heading>
+      <Heading >Order Confirmation</Heading>
      
-      <Text>Your order has been successfully placed. Thank you!</Text>
+      <h1>Your order has been successfully placed. Thank you!</h1>
     </div>
   );
 };

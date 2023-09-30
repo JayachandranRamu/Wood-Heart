@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import {
   Button,
-  Container,
+ Box,
   Divider,
   FormControl,
   FormLabel,
@@ -43,13 +43,21 @@ export const Checkout = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
-    // Handle form submission here,send data to a server, process payment, etc.
     window.location.href = ('/order-confirmation');
   };
 
   return (
-    <Container maxW="container.sm">
+    <Box maxW="container.sm"  
+    display={'grid'}
+
+    boxShadow="dark-lg"
+    borderRadius={10}
+    mx="auto"
+    px={{ base: '4', md: '8', lg: '12' }}
+    py={{ base: '6', md: '8', lg: '12' }}
+    color="#0b3954"
+    marginTop={20}
+    marginBottom={20}>
       <Heading as="h1" mt={8} mb={4}>
         Shipping Information
       </Heading>
@@ -113,9 +121,9 @@ export const Checkout = () => {
           <Divider />
 
           <Heading as="h2" mt={4} mb={4}>
-            Shipping Method
+            Shipping Details
           </Heading>
-          {/*shipping method options here */}
+          {/*shipping options here */}
 
           <Divider />
 
@@ -188,6 +196,6 @@ export const Checkout = () => {
           </Button>
         </Stack>
       </form>
-    </Container>
+    </Box>
   );
 };
