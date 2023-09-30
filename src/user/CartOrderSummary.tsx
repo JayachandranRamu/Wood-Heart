@@ -108,7 +108,7 @@ export const CartOrderSummary = ({ cartItems, totalCartPrice }: CartOrderSummary
         rightIcon={<FaArrowRight />}
         onClick={handleCheckout} 
       >
-        Checkout
+       Continue to checkout
       </Button>
       {checkoutStatus && <Text color={checkoutStatus.includes('Error') ? 'red' : 'green'}>{checkoutStatus}</Text>}
     </Stack>
