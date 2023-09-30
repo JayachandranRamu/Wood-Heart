@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 import { getProductsData } from "../Redux/UserPage/action";
 import { RootState } from "../Redux/rootReducer"; // Import the RootState type
 import ProductCard from "./ProductCard";
 import { SimpleGrid } from "@chakra-ui/react";
+import Sort from "./Sort";
 
 interface RouteParams {
   name: string;
@@ -19,21 +20,36 @@ const ProductItems: React.FC = () => {
     isLoading: store.productReducer.isLoading,
     isError: store.productReducer.isError,
   }));
+  const [searchParam] = useSearchParams();
+
+const params = {
+  params: {
+category:name=="product"?null:name,
+    _sort:searchParam.get("_sort"),
+    _order:searchParam.get("_order"),
+  },
+
+};
+let rating=searchParam.get("rating");
+if(rating!=""){
+  params.params.rating=rating;
+}
 
   useEffect(() => {
-    const params = {
-      params: {
-        category: name,
-      },
-    };
-    dispatch(getProductsData(params));
-  }, [dispatch, name]);
+   console.log(params)
+dispatch(getProductsData(params))
 
-  console.log(products);
+  }, [searchParam,name]);
 
-  return <SimpleGrid spacing={10} columns={[1,2,3]}  m={"80px auto"} w={"80%"} >
+ 
+
+  return <>
+  <Sort results={products?.length} />
+  <SimpleGrid spacing={10} columns={[1,2,3]}  m={"80px auto"} mt={"40px"} w={"80%"} >
   {products?.map((el:any)=><ProductCard key={el.id} {...el} />)}
-  </SimpleGrid>;
+  </SimpleGrid>
+  
+  </>
 };
 
 export default ProductItems;

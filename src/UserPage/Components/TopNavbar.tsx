@@ -6,10 +6,6 @@ import {
   Button,
   Stack,
   Collapse,
-  Icon,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
@@ -17,16 +13,11 @@ import {
   Input,
   InputGroup,
   InputLeftElement,
-  HStack,
-  LinkBox,
 } from '@chakra-ui/react'
 import {
   HamburgerIcon,
   CloseIcon,
-  ChevronDownIcon,
-  ChevronRightIcon,
 } from '@chakra-ui/icons'
-import Logo from "/Users/Lenovo/Desktop/posh-division-4370/src/assets/Logo.png"
 import { FaSearch} from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -55,7 +46,7 @@ const Navigate=useNavigate();
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-          <Image src={"https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5m15kyve20olnf5nvm31.png"} w={["100%","100%","60%"]}
+          <Image src={"https://dev-to-uploads.s3.amazonaws.com/uploads/articles/abbpihhn1ujbkght2zby.png"} w={["100%","100%","60%"]}
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })} margin={"10px 0"} onClick={()=>Navigate("/")} >
            
           </Image>
@@ -81,7 +72,7 @@ const Navigate=useNavigate();
 <Link to="/admin"> 
              <Button
               display={{ base: 'none', md: 'inline-flex' }} 
-              variant={'link'} href={'#'}>
+              variant={'link'} >
             <Image src='https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-cart.svg'  w={["45%","55%"]}>
 
             </Image></Button>
@@ -89,7 +80,7 @@ const Navigate=useNavigate();
             <Link to="/admin"> 
               <Button 
                display={{ base: 'none', md: 'inline-flex' }}
-                variant={'link'} href={'#'}>
+                variant={'link'}>
             <Image src='https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-wishlist.svg'  w={["45%","55%"]} >
 
             </Image></Button>
@@ -104,14 +95,6 @@ const Navigate=useNavigate();
       </Button>
     </Link>
 
-
-
-
-
-
-
-
-         
 
         </Stack>
       </Flex>
@@ -137,14 +120,14 @@ const MobileNav = () => {
 const linkColor:string = '#0b3954';
 const linkHoverColor:string = '#ffb128';
 const MobileNavItem = ({ label, href,src }: NavItem) => {
-  const { isOpen } = useDisclosure()
+ 
 
   return (
     <Stack spacing={4} >
       <Box
         py={2}
         as="a"
-        href={href ?? '#'}
+        href={href}
         justifyContent="space-between"
         alignItems="center"
         _hover={{
@@ -159,6 +142,7 @@ const MobileNavItem = ({ label, href,src }: NavItem) => {
              _hover={{
                       color: linkHoverColor,
                     }}
+                  
                     >
           {label}
         </Text>
@@ -177,38 +161,7 @@ interface NavItem {
   href?: string
 }
 
-const NAV_ITEMS: Array<NavItem> = [
- 
-  {
-    label: 'CHAIRS',
-    src:'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category1.svg',
- href:"#"
-  },
-  {
-    label: 'BEDS',
-    src:'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category2.svg',
-    href:"#"
-  },
-  {
-    label: 'TABLES',
-    href:"#",
-    src: 'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category3.svg',
-  },
-  {
-    label: 'DESKS',
-    href:"#",
-    src: 'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category4.svg',
-  },
-  {
-    label: 'CABINETS',
-    href:"#",
-    src: 'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category5.svg',
-  },
-  {
-    label: 'LIGHTING',
-    href:"#",
-    src: 'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category6.svg',
-  },
+
 //   {
 //     label: 'CHECKOUT',
 //     src:'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-cart.svg',
@@ -219,4 +172,36 @@ const NAV_ITEMS: Array<NavItem> = [
 //     src:'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-wishlist.svg',
 //  href:"#"
 //   },
+
+const NAV_ITEMS: Array<NavItem> = [
+  {
+    label: 'CHAIRS',
+    src:'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category1.svg',
+ href:"/Chairs"
+  },
+  {
+    label: 'BEDS',
+    src:'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category2.svg',
+    href:"/Beds"
+  },
+  {
+    label: 'TABLES',
+    href:"/Tables",
+    src: 'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category3.svg',
+  },
+  {
+    label: 'DESKS',
+    href:"/Desks",
+    src: 'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category4.svg',
+  },
+  {
+    label: 'CABINETS',
+    href:"/Cabinets",
+    src: 'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category5.svg',
+  },
+  {
+    label: 'LIGHTING',
+    href:"/Lighting",
+    src: 'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category6.svg',
+  }
 ];

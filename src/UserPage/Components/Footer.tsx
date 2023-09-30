@@ -77,18 +77,18 @@ export default function Footer() {
             </Box>
           </Stack>
           <Stack align={'flex-start'}>
-            <ListHeader>Legal</ListHeader>
+            <ListHeader>Branches</ListHeader>
             <Box as="a" href={'#'}>
-              Cookies Policy
+              Chennai
             </Box>
             <Box as="a" href={'#'}>
-              Privacy Policy
+              Mumbai
             </Box>
             <Box as="a" href={'#'}>
-              Terms of Service
+              Kolkata
             </Box>
             <Box as="a" href={'#'}>
-              Status
+              Delhi
             </Box>
           </Stack>
           <Stack align={'flex-start'}>
@@ -120,7 +120,7 @@ export default function Footer() {
             flexGrow: 1,
             ml: 8,
           }}>
-         <Image w="190px" src={"https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5m15kyve20olnf5nvm31.png"} />
+         <Image w="190px" src={"https://dev-to-uploads.s3.amazonaws.com/uploads/articles/abbpihhn1ujbkght2zby.png"} />
         </Flex>
         <Text pt={6} fontSize={'sm'} textAlign={'center'}>
      

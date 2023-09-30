@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState , useEffect } from 'react';
 import {
   Box,
   Flex,
@@ -11,14 +11,56 @@ import {
 
 import { CartItem } from './CartItem';
 import { CartOrderSummary } from './CartOrderSummary';
-import { cartData } from './_data';
+// import { cartData } from './_data';
+
+type CartItemData = {
+  id: number;
+  name: string;
+  about: string;
+  quantity: number;
+  price: number;
+  currency:string;
+};
 
 export const Cart = () => {
-  // State to manage cart items
-  const [cartItems, setCartItems] = useState(cartData);
+  
+  const [cartItems, setCartItems] = useState<CartItemData[]>([]);
 
-  // Function to handle changing the quantity of a cart item
-  const handleQuantityChange = (id, newQuantity) => {
+  const [totalCartPrice, setTotalCartPrice] = useState<number>(0);
+  const isCartEmpty = cartItems.length === 0;
+    
+  useEffect(() => {
+
+    const localStorageCartData = localStorage.getItem('cartData');
+
+    if (localStorageCartData) {
+      
+      const cartItems = JSON.parse(localStorageCartData);
+      setCartItems(cartItems);
+    } else {
+
+      // If cart data doesn't exist, fetch it from the server
+      fetch('http://localhost:8080/user/10/') // Replace with the actual path to db.json
+
+    
+      fetch('http://localhost:8000/user/10/') 
+
+        .then((response) => response.json())
+        .then((data) => {
+          const cartItems = data.cartData;
+          setCartItems(cartItems);
+
+      
+          localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        })
+        .catch((error) => {
+          console.error('Error fetching cart data:', error);
+        });
+    }
+  }, []);
+
+
+  const handleQuantityChange = (id: number, newQuantity: number) => {
     const newCartItems = [...cartItems];
     const itemIndex = newCartItems.findIndex((item) =>item.id === id);
     if (itemIndex !== -1) {
@@ -27,17 +69,35 @@ export const Cart = () => {
     }
   };
 
-  // Function to remove an item from the cart
-  const handleRemoveItem = (id) => {
+  const handlePriceChange = (id: number, newPrice: number) => {
+    const newCartItems = [...cartItems];
+    const itemIndex = newCartItems.findIndex((item) => item.id === id);
+    if (itemIndex !== -1) {
+   
+      newCartItems[itemIndex].price = newPrice;
+      setCartItems(newCartItems);
+      localStorage.setItem('cartData', JSON.stringify(newCartItems));
+    }
+  };
+
+  const handleRemoveItem = (id: number) => {
     const newCartItems = cartItems.filter((item) => item.id !== id);
     setCartItems(newCartItems);
+    localStorage.setItem('cartData', JSON.stringify(newCartItems));
   };
-  
 
-  // Function to calculate the total cart price based on cart items
-  const calculateTotalCartPrice = () => {
-    return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+
+  const handleContinueShopping = () => {
+   
+    window.location.href =("/");
   };
+    useEffect(() => {
+    const newTotalPrice = cartItems.reduce((total, item) => total + (item.price*item.quantity), 0);
+    setTotalCartPrice(newTotalPrice);
+    localStorage.setItem('cartPrice', JSON.stringify(newTotalPrice));
+  }, [cartItems]);
+
+
 
   return (
     <Box
@@ -48,6 +108,8 @@ export const Cart = () => {
       px={{ base: '4', md: '8', lg: '12' }}
       py={{ base: '6', md: '8', lg: '12' }}
       color="#0b3954"
+      marginTop={20}
+      marginBottom={20}
     >
       <Stack
         direction={{ base: 'column', lg: 'row' }}
@@ -61,10 +123,17 @@ export const Cart = () => {
 
           <Stack spacing="6">
             {cartItems.map((item) => (
-              <CartItem
+        
+                <CartItem
+                image={''}
                 key={item.id}
                 {...item}
-                onChangeQuantity={(newQuantity) => handleQuantityChange(item.id, newQuantity)}
+                onChangeQuantity={(newQuantity: number) =>
+                  handleQuantityChange(item.id, newQuantity)
+                }
+                onPriceChange={(newPrice: number) =>
+                  handlePriceChange(item.id, newPrice)
+                }
                 onClickDelete={() => handleRemoveItem(item.id)}
               />
             ))}
@@ -72,11 +141,28 @@ export const Cart = () => {
         </Stack>
 
         <Flex direction="column" align="center" flex="1">
-          <CartOrderSummary totalCartPrice={calculateTotalCartPrice()} />
+
+        {isCartEmpty ? (
+            <>
+              <div role="img" aria-label="Empty Bag Emoji">
+                🛍️
+              </div>
+              <h2 style={{ color:"#0b3954"}}> Your cart is empty</h2>
+             
+            </>
+          ) : (
+            <>
+        <CartOrderSummary  cartItems={cartItems} 
+              totalCartPrice={totalCartPrice}/>
+      
           <HStack mt="6" fontWeight="semibold">
             <p>or</p>
-            <Link color={mode('#0b3954', '#0b3954')}>Continue shopping</Link>
+            <Link color={mode('#0b3954', '#0b3954')} onClick={handleContinueShopping}>
+          Continue shopping
+        </Link>
           </HStack>
+          </>
+          )}
         </Flex>
       </Stack>
     </Box>

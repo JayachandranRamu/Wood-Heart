@@ -1,27 +1,36 @@
 import * as React from 'react';
 import { Text, SimpleGrid, Box, Image, Flex, Stack } from '@chakra-ui/react';
+import CountUp from 'react-countup';
 
 interface StatData {
   id: number;
   label: string;
   score: string;
+  start?:string;
+  end?:string
 }
 
 const statData: StatData[] = [
   {
     id: 1,
     label: 'Clients',
-    score: '550'
+    score: '550',
+    start:"",
+    end:""
   },
   {
     id: 2,
     label: 'Projects',
-    score: '421'
+    score: '421',
+    start:"",
+    end:""
   },
   {
     id: 3,
     label: 'Revenue',
-    score: '$5M'
+    start:"$",
+    score: '5',
+    end:"M"
   }
 ];
 
@@ -46,10 +55,13 @@ Above all, a top-notch furniture store values long-term relationships with its c
           <SimpleGrid columns={{ base: 2, sm: 3, md: 3 }} spacing={1} mt={12} mb={4}>
             {statData.map((data) => (
               <Box key={data.id} p={{ base: 2, sm: 5 }} textAlign="center">
-                <Text fontWeight="bold" fontSize="48" color={"#ffb128"}>
-                  {data.score}
-                </Text>
-                <Text fontSize="18">{data.label}</Text>
+                <span style={{color:"#ffb128", fontWeight:"bold",fontSize:48}}>{data.start}</span>
+                 <CountUp style={{color:"#ffb128", fontWeight:"bold",fontSize:48}}  end={data.score} enableScrollSpy >
+                
+                </CountUp>
+                <span style={{color:"#ffb128", fontWeight:"bold",fontSize:48}}>{data.end}</span>
+                <Text fontSize="18" >{data.label}</Text>
+            
               </Box>
             ))}
           </SimpleGrid>

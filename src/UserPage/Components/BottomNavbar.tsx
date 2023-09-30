@@ -1,34 +1,18 @@
 import {
     Box,
-    Flex,
-    Text,
-    IconButton,
-    Button,
     Stack,
-    Collapse,
-    Icon,
-    Popover,
-    PopoverTrigger,
-    PopoverContent,
     useColorModeValue,
     useBreakpointValue,
-    useDisclosure,
     Image,
   } from '@chakra-ui/react';
-  import {
-    HamburgerIcon,
-    CloseIcon,
-    ChevronDownIcon,
-    ChevronRightIcon,
-  } from '@chakra-ui/icons';
+
   import { FaArrowDown } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
   interface NavItem {
     label: string;  
     src?:string;
     subLabel?: string;
-    children?: Array<NavItem>;
-    href?: string;
+    href: string;
   }
   
   // export const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
@@ -113,7 +97,7 @@ import { Link } from 'react-router-dom';
     const popoverContentBgColor = useColorModeValue('white', 'gray.800');
   
     return (
-      <Box fontFamily={"Poppins"} boxShadow="rgba(0, 0, 0, 0.1) -4px 9px 25px -6px" m={"auto"} mt={"10px"}>
+      <Box fontFamily={"Poppins"} boxShadow="rgba(0, 0, 0, 0.1) -4px 9px 25px -6px" m={"auto"} mt={"10px"} >
         <Stack direction="row" spacing={4} w="70%" m="auto">
           {NAV_ITEMS.map((navItem) => (
             <Box key={navItem.label} m={"auto"} 
@@ -143,9 +127,9 @@ import { Link } from 'react-router-dom';
                       </Link>
                     
                     </Box>
-                    <Box>
+                    {/* <Box>
                     <FaArrowDown /> 
-                    </Box>
+                    </Box> */}
                   </Box>
                                
                    
