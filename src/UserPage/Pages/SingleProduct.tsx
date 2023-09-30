@@ -10,7 +10,7 @@ const SingleProduct = () => {
     return (<>
     <TopNavbar />
           <DesktopNav />
-          <Box bg={"#f5f5f5"}>
+          <Box >
           <SingleProductCard />
           </Box>
           

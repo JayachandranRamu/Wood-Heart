@@ -46,7 +46,7 @@ const Navigate=useNavigate();
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-          <Image src={"https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5m15kyve20olnf5nvm31.png"} w={["100%","100%","60%"]}
+          <Image src={"https://dev-to-uploads.s3.amazonaws.com/uploads/articles/abbpihhn1ujbkght2zby.png"} w={["100%","100%","60%"]}
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })} margin={"10px 0"} onClick={()=>Navigate("/")} >
            
           </Image>

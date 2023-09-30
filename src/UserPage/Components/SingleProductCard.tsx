@@ -63,7 +63,7 @@ let singleProduct=useSelector((store:RootState)=>store.productReducer.singleProd
   useEffect(() => {
  
     dispatch(getSingleProductData(id));
-  }, []);
+  }, [id]);
 
   // ... rest of your component code
 console.log(singleProduct,id)
@@ -72,18 +72,20 @@ console.log(singleProduct,id)
   return (
     <>
     <Flex
-      direction={["column", "row"]}
-      w={"80%"}
+      direction={["column","column", "row"]}
+      w={"100%"}
       m={"auto"}
       pb={"80px"}
+      pl={["10%"]}
+      pr={["10%"]}
       pt={"50px"}
       fontFamily={"Poppins"}
       bg={"#f5f5f5"}
     >
       <Box>
-        <Image src={singleProduct?.image} w={["500px", "500px"]} m={"50px auto"} />
+        <Image src={singleProduct?.image} w={["500px","500px", "500px"]} m={"50px auto"} />
       </Box>
-      <Box bgColor={"white"} borderRadius={"20px"} w={["100%", "45%"]} p={"50px"} m={"auto"}>
+      <Box bgColor={"white"} borderRadius={"20px"} w={["100%","100%", "45%"]} p={"50px"} m={"auto"}>
         <Text color={"#0b3954"} textTransform={"uppercase"} fontSize={32} fontWeight={600}>
           {singleProduct?.name}
         </Text>
@@ -129,7 +131,7 @@ console.log(singleProduct,id)
           fontWeight={500}
           _hover={{ bgColor: "#e89f22" }}
           p={"20px 20px"}
-          w={["100%", "300px"]}
+          w={["100%","100%", "70%"]}
           m={"20px 0"}
           borderRadius={"10px"}
           fontSize={20}
@@ -139,52 +141,60 @@ console.log(singleProduct,id)
       </Box>
       {isOpen && <CartDrawer onOpen={isOpen} onClose={onClose} />}
     </Flex>
-    <Box>
-        
-    </Box>
-    <Box m={"auto"} w={"80%"}>
-              <Text
-                fontSize={{ base: '16px', lg: '18px' }}
-                color={useColorModeValue('yellow.500', 'yellow.300')}
-                fontWeight={'500'}
-                textTransform={'uppercase'}
-                mb={'4'}>
-                Features
-              </Text>
-
-              <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} m={"auto"}>
-                <List spacing={2}>
-                  <ListItem>Chronograph</ListItem>
-                  <ListItem>Master Chronometer Certified</ListItem>{' '}
-                  <ListItem>Tachymeter</ListItem>
-                </List>
-                <List spacing={2}>
-                  <ListItem>Anti‑magnetic</ListItem>
-                  <ListItem>Chronometer</ListItem>
-                  <ListItem>Small seconds</ListItem>
-                </List>
-              </SimpleGrid>
+   
+    <Box bg={"white"} mt={"50px"} fontFamily={"poppins"}>
+    <Heading  as="h3" size="xl" fontStyle={"italic"} color={"#0b3954"}  fontWeight="lightbold" textAlign="center" fontFamily={"poppins"} mb={{ base: '4', md: '4' }} >
+            Product Details
+          </Heading>
+    <Box m={["50px auto"]} w={["85%","85%","70%"]}  borderRadius={"20px"}  border={"1px solid #ebebeb"} p={[0,"10px","20px"]}>
+            <Flex alignItems={"center"} justifyContent={["center","space-between"]} p={["5px","5px","20px"]}>
+              <Box w={["40%","40%","20%"]} ml={[0,"20px"]} fontSize={"16"} color={"#444444"} fontWeight={"500"} p={["0","0","20px"]}>
+<Text p={"10px"}>Brand</Text>
+<Text p={"10px"}>Color</Text>
+<Text p={"10px"}>Material</Text>
+<Text p={"10px"}>Size</Text>
+<Text p={"10px"}>Finish Type</Text>
+              </Box>
+              <Box w={["60%","60%","80%"]} p={["5px",0]}>
+                <Flex>
+                <Box display={"inline-flex"} pos={"relative"} flexDirection={"column"} gap={"30px"}  mr={"5px"} alignItems={"center"}>
+<Box p={"6px"} borderBottom={"1px solid #ebebeb"}  w={["40px","120px","600px"]} mt={"10px"} ></Box>
+<Box p={"10px"} borderBottom={"1px solid #ebebeb"}  w={"100%"} mt={"-5px"}></Box>
+<Box p={"9px"} borderBottom={"1px solid #ebebeb"}  w={"100%"}mt={"-5px"} ></Box>
+<Box p={"9px"} borderBottom={"1px solid #ebebeb"}  w={"100%"}mt={"-7px"} ></Box>
+<Box  p={"9px"} borderBottom={"1px solid #ebebeb"}  w={"100%"}mt={"-7px"} ></Box>
+                </Box>
+                <Box fontStyle={"italic"} color={"#5c676d"} textAlign={"left"} ml={"3px"} textTransform={"lowercase"}>
+                <Text  p={"10px"}>{singleProduct?.brand}</Text>
+<Text p={"10px"}>{singleProduct?.color}</Text>
+<Text p={"10px"}>{singleProduct?.material}</Text>
+<Text p={"10px"}>{singleProduct?.size}</Text>
+<Text p={"10px"}>{singleProduct?.finish_type}</Text>
+                </Box>
+                </Flex>
+              </Box>
+            </Flex>
             </Box>
     <Box>
     <Container maxW="80%" p={{ base: 5, md: 10 }} fontFamily={"poppins"} > 
         <Flex justify="center">
-          <Heading as="h3" size="xl" color={"#0b3954"}  fontWeight="bold" textAlign="left" fontFamily={"poppins"} mb={{ base: '4', md: '2' }}>
+          <Heading as="h3" size="xl" pb={"20px"} fontStyle={"italic"} color={"#0b3954"}  fontWeight="lightbold" textAlign="left" fontFamily={"poppins"} mb={{ base: '4', md: '2' }}>
             Recent Reviews
           </Heading>
         </Flex>
         <Stack direction="column" spacing={5} my={4}>
           {singleProduct?.reviews?.map((el, index) => {
             return (
-              <Stack key={index} direction="column" maxW="2xl">
+              <Stack bg={"#fafafa"} m={"auto"} w={["100%","85%"]} p={["05px","20px"]} borderRadius={"20px"} key={index} direction="column" >
                 <HStack spacing={3}>
                   <Avatar size="md" name={el?.username} src={'https://media.geeksforgeeks.org/wp-content/uploads/20210209004403/AVATAR1.png'} />
                   <Flex direction="column">
                     <Text fontWeight="500" fontSize="md">
                       {el?.username}
                     </Text>
-                    {/* <Text fontWeight="light" fontSize="xs">
-                      {el.dateTime}
-                    </Text> */}
+                    <Text fontWeight="light" fontSize="xs">
+                      4 Oct 2022
+                    </Text>
                   </Flex>
                 </HStack>
                 <Flex  fontSize={18} m={"8px 0"}>
@@ -214,6 +224,7 @@ console.log(singleProduct,id)
           })}
         </Stack>
       </Container>
+      </Box>
     </Box>
     </>
   )

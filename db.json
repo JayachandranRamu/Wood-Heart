@@ -12,7 +12,7 @@
       "color": "Walnut",
       "finish_type": "Matte",
       "about": "Upgrade your dining area with our Modern Dining Table. This walnut dining table features a matte finish and sleek design, perfect for family gatherings. Dimensions: 72\" x 36\" x 30\".",
-      "rating": 4.5,
+      "rating": 4,
       "reviews": [
         {
           "username": "Sarah123",
@@ -48,7 +48,7 @@
       "color": "Black",
       "finish_type": "Matte",
       "about": "Relax in style with our Leather Lounge Chair. This black leather chair features a matte finish and exceptional comfort, perfect for your living room. Dimensions: 28\" x 32\" x 35\".",
-      "rating": 4.6,
+      "rating": 4,
       "reviews": [
         {
           "username": "ComfortSeeker",
@@ -73,6 +73,7 @@
         }
       ]
     },
+    
     {
       "id": 3,
       "category": "Beds",
@@ -85,7 +86,7 @@
       "color": "Espresso",
       "finish_type": "Satin",
       "about": "Transform your bedroom with our Platform Bed. This espresso wood platform bed features a satin finish and a sleek design, providing both style and comfort. Dimensions: 80\" x 60\" x 14\".",
-      "rating": 4.5,
+      "rating": 4,
       "reviews": [
         {
           "username": "DreamyNights",
@@ -116,7 +117,7 @@
       "color": "White",
       "finish_type": "Matte",
       "about": "Enhance your workspace with our Minimalist Writing Desk. This white wood writing desk features a matte finish and a clean design, perfect for productivity. Dimensions: 42\" x 24\" x 30\".",
-      "rating": 4.6,
+      "rating": 5,
       "reviews": [
         {
           "username": "ProductivityPro",
@@ -157,7 +158,7 @@
       "color": "Antique White",
       "finish_type": "Distressed",
       "about": "Add a touch of vintage charm to your space with our Vintage Storage Cabinet. This antique white wood cabinet features a distressed finish and ample storage space. Dimensions: 36\" x 18\" x 42\".",
-      "rating": 4.7,
+      "rating": 3,
       "reviews": [
         {
           "username": "VintageLover",
@@ -190,7 +191,7 @@
       "id": 6,
       "category": "Lighting",
       "name": "Industrial Pendant Light",
-      "price": 129.99,
+      "price": 299.9,
       "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5auf2lvuqiejjheon9v9.png",
       "brand": "IndustrialGlow",
       "size": "Diameter: 12\"",
@@ -239,7 +240,7 @@
       "color": "White and Gold",
       "finish_type": "Glossy",
       "about": "Add a touch of elegance to your living room with our Marble Side Table. This white marble side table features a glossy finish and gold metal accents. It's perfect for showcasing decor. Dimensions: 24\" x 24\" x 24\".",
-      "rating": 4.8,
+      "rating": 1,
       "reviews": [
         {
           "username": "MarbleLover",
@@ -269,6 +270,48 @@
       ]
     },
     {
+      "id": 8,
+      "category": "Chairs",
+      "name": "Ergonomic Office Chair",
+      "price": 249.95,
+      "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/u5ui5g6ahhlflfnx2ocz.png",
+      "brand": "ErgoComfort",
+      "size": "26\" x 26\" x 40\"",
+      "material": "Mesh",
+      "color": "Black",
+      "finish_type": "Matte",
+      "about": "Upgrade your office with our Ergonomic Office Chair. This black mesh office chair features a matte finish and ergonomic design for maximum comfort during long workdays. Dimensions: 26\" x 26\" x 40\".",
+      "rating": 2,
+      "reviews": [
+        {
+          "username": "OfficePro",
+          "rating": 5,
+          "comment": "This office chair is a game-changer! So comfortable."
+        },
+        {
+          "username": "ComfortAtWork",
+          "rating": 4,
+          "comment": "Great value for a comfortable office chair."
+        },
+        {
+          "username": "ProductiveDays",
+          "rating": 5,
+          "comment": "I'm very pleased with this purchase. It's perfect for work."
+        },
+        {
+          "username": "AssemblyChamp",
+          "rating": 4,
+          "comment": "Assembly was straightforward, no complaints."
+        },
+        {
+          "username": "OfficeComfortFan",
+          "rating": 5,
+          "comment": "Perfect for anyone who spends hours at the desk."
+        }
+      ]
+    },
+   
+    {
       "id": 9,
       "category": "Tables",
       "name": "Rustic Coffee Table",
@@ -280,7 +323,7 @@
       "color": "Rustic Brown",
       "finish_type": "Distressed",
       "about": "Add rustic charm to your living room with our Rustic Coffee Table. This rustic brown wood table features a distressed finish and a bottom shelf for storage. Dimensions: 48\" x 24\" x 18\".",
-      "rating": 4.7,
+      "rating": 3,
       "reviews": [
         {
           "username": "RusticHome",
@@ -321,7 +364,7 @@
       "color": "Walnut",
       "finish_type": "Matte",
       "about": "Organize your media essentials with our Modern Media Cabinet. This walnut wood media cabinet features a matte finish and ample storage space. Dimensions: 60\" x 18\" x 24\".",
-      "rating": 4.6,
+      "rating": 5,
       "reviews": [
         {
           "username": "MediaEnthusiast",
@@ -362,7 +405,7 @@
       "color": "Silver",
       "finish_type": "Shiny",
       "about": "Brighten up your space with our Crystal Floor Lamp. This silver crystal floor lamp features a shiny finish and stands at a height of 60 inches. It adds a touch of glamour to any room. Dimensions: Height: 60\".",
-      "rating": 4.7,
+      "rating": 5,
       "reviews": [
         {
           "username": "GlamourSpace",
@@ -403,7 +446,7 @@
       "color": "Clear and Gold",
       "finish_type": "Glossy",
       "about": "Add a touch of sophistication to your space with our Glass Top End Table. This clear glass end table features a glossy finish and elegant gold metal accents. It's perfect for placing by your sofa. Dimensions: 18\" x 18\" x 22\".",
-      "rating": 4.6,
+      "rating": 1,
       "reviews": [
         {
           "username": "SophisticatedLiving",
@@ -436,7 +479,7 @@
       "id": 13,
       "category": "Chairs",
       "name": "Swivel Accent Chair",
-      "price": 179.95,
+      "price": 299.9,
       "image": "https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-product-pic7.webp",
       "brand": "AccentStyle",
       "size": "30\" x 30\" x 32\"",
@@ -473,6 +516,7 @@
         }
       ]
     },
+   
     {
       "id": 14,
       "category": "Beds",
@@ -485,7 +529,7 @@
       "color": "Gray",
       "finish_type": "Textured",
       "about": "Upgrade your bedroom with our Upholstered Platform Bed. This gray fabric platform bed features a textured finish and a stylish headboard. It provides both comfort and style. Dimensions: 78\" x 58\" x 12\".",
-      "rating": 4.7,
+      "rating": 4,
       "reviews": [
         {
           "username": "DreamyNights2",
@@ -526,7 +570,7 @@
       "color": "Espresso",
       "finish_type": "Matte",
       "about": "Maximize your workspace with our Corner Computer Desk. This espresso wood desk features a matte finish and fits perfectly in the corner of your room. It's ideal for home offices. Dimensions: 48\" x 32\" x 30\".",
-      "rating": 4.6,
+      "rating": 3,
       "reviews": [
         {
           "username": "ProductivityPro2",
@@ -567,7 +611,7 @@
       "color": "Black",
       "finish_type": "Matte",
       "about": "Elevate your entertaining space with our Contemporary Bar Cabinet. This black wood bar cabinet features a matte finish and ample storage for your bar essentials. Dimensions: 36\" x 18\" x 54\".",
-      "rating": 4.7,
+      "rating": 5,
       "reviews": [
         {
           "username": "BarEnthusiast",
@@ -608,7 +652,7 @@
       "color": "Gold",
       "finish_type": "Shiny",
       "about": "Add a touch of glamour to your space with our Art Deco Chandelier. This gold metal chandelier features a shiny finish and a diameter of 24 inches. It's perfect for creating an art deco-inspired atmosphere. Dimensions: Diameter: 24\".",
-      "rating": 4.8,
+      "rating": 1,
       "reviews": [
         {
           "username": "GlamorousSpace",
@@ -649,7 +693,7 @@
       "color": "Antique White",
       "finish_type": "Distressed",
       "about": "Gather your family around our Rustic Farmhouse Dining Table. This antique white wood dining table features a distressed finish and a spacious design, perfect for family dinners. Dimensions: 84\" x 40\" x 30\".",
-      "rating": 4.7,
+      "rating": 4,
       "reviews": [
         {
           "username": "FarmhouseHome",
@@ -690,7 +734,7 @@
       "color": "Teal",
       "finish_type": "Soft",
       "about": "Add a touch of elegance to your dining area with our Velvet Dining Chairs. These teal velvet chairs feature a soft finish and comfortable seating, perfect for entertaining. Dimensions: 20\" x 22\" x 36\".",
-      "rating": 4.6,
+      "rating": 3,
       "reviews": [
         {
           "username": "ElegantDining",
@@ -719,6 +763,7 @@
         }
       ]
     },
+   
     {
       "id": 20,
       "category": "Beds",
@@ -731,7 +776,7 @@
       "color": "Walnut",
       "finish_type": "Matte",
       "about": "Upgrade your bedroom with our Mid-Century Platform Bed. This walnut wood platform bed features a matte finish and a stylish headboard. It brings a mid-century modern touch to your space. Dimensions: 80\" x 60\" x 14\".",
-      "rating": 4.6,
+      "rating": 4,
       "reviews": [
         {
           "username": "MidCenturyHome",
@@ -772,7 +817,7 @@
       "color": "Espresso",
       "finish_type": "Matte",
       "about": "Upgrade your workspace with our Modern Writing Desk. This espresso wood desk features a matte finish and a spacious design, perfect for work and study. Dimensions: 48\" x 24\" x 30\".",
-      "rating": 4.7,
+      "rating": 5,
       "reviews": [
         {
           "username": "ProductivityPro3",
@@ -813,7 +858,7 @@
       "color": "Oak",
       "finish_type": "Matte",
       "about": "Add a touch of rustic charm to your dining area with our Wooden Dining Chairs. These oak wood chairs feature a matte finish and comfortable seating, perfect for family dinners. Dimensions: 22\" x 20\" x 35\".",
-      "rating": 4.5,
+      "rating": 2,
       "reviews": [
         {
           "username": "RusticDining",
@@ -842,6 +887,7 @@
         }
       ]
     },
+    
     {
       "id": 23,
       "category": "Tables",
@@ -854,7 +900,7 @@
       "color": "White and Gold",
       "finish_type": "Polished",
       "about": "Elevate your entryway with our Marble Top Console Table. This white marble table features a polished finish and elegant gold metal accents. It's perfect for displaying decor. Dimensions: 48\" x 16\" x 30\".",
-      "rating": 4.7,
+      "rating": 3,
       "reviews": [
         {
           "username": "EntrywayCharm",
@@ -895,7 +941,7 @@
       "color": "Black",
       "finish_type": "Matte",
       "about": "Transform your bedroom into a dreamy retreat with our Canopy Bed Frame. This black metal bed frame features a matte finish and a classic canopy design. It adds a touch of romance to your space. Dimensions: 80\" x 60\" x 80\".",
-      "rating": 4.8,
+      "rating": 3,
       "reviews": [
         {
           "username": "DreamyRetreat",
@@ -936,7 +982,7 @@
       "color": "Clear and Silver",
       "finish_type": "Glossy",
       "about": "Add a touch of sophistication to your workspace with our Glass Top Writing Desk. This clear glass desk features a glossy silver metal frame and a minimalist design. It's ideal for modern offices. Dimensions: 42\" x 24\" x 30\".",
-      "rating": 4.6,
+      "rating": 1,
       "reviews": [
         {
           "username": "SophisticatedOffice",
@@ -977,7 +1023,7 @@
       "color": "Weathered Oak",
       "finish_type": "Distressed",
       "about": "Enhance your wine collection with our Rustic Wine Cabinet. This weathered oak wood cabinet features a distressed finish and ample storage for wine bottles and glassware. Dimensions: 36\" x 16\" x 54\".",
-      "rating": 4.7,
+      "rating": 5,
       "reviews": [
         {
           "username": "WineConnoisseur",
@@ -1018,7 +1064,7 @@
       "color": "Chrome",
       "finish_type": "Shiny",
       "about": "Add a touch of glamour to your space with our Crystal Chandelier. This chrome metal chandelier features shiny crystal accents and a diameter of 18 inches. It's perfect for creating a luxurious atmosphere. Dimensions: Diameter: 18\".",
-      "rating": 4.8,
+      "rating": 4,
       "reviews": [
         {
           "username": "GlamourSpace2",
@@ -1059,7 +1105,7 @@
       "color": "Walnut",
       "finish_type": "Matte",
       "about": "Complete your living room with our Mid-Century Coffee Table. This walnut wood table features a matte finish and a classic mid-century design, perfect for holding coffee and magazines. Dimensions: 42\" x 24\" x 18\".",
-      "rating": 4.7,
+      "rating": 4,
       "reviews": [
         {
           "username": "MidCenturyLiving2",
@@ -1100,7 +1146,7 @@
       "color": "Brown",
       "finish_type": "Matte",
       "about": "Add sophistication to your space with our Leather Armchair. This brown leather chair features a matte finish and a comfortable design, perfect for cozy reading nooks. Dimensions: 28\" x 30\" x 35\".",
-      "rating": 4.6,
+      "rating": 5,
       "reviews": [
         {
           "username": "SophisticatedLiving2",
@@ -1129,6 +1175,7 @@
         }
       ]
     },
+   
     {
       "id": 30,
       "category": "Beds",
@@ -1141,7 +1188,7 @@
       "color": "Beige",
       "finish_type": "Soft",
       "about": "Upgrade your bedroom with our Upholstered Platform Bed. This beige fabric platform bed features a soft finish and a stylish headboard. It adds a touch of luxury to your space. Dimensions: 84\" x 62\" x 36\".",
-      "rating": 4.6,
+      "rating": 3,
       "reviews": [
         {
           "username": "LuxuriousRetreat",
@@ -1182,7 +1229,7 @@
       "color": "Rustic Brown",
       "finish_type": "Textured",
       "about": "Upgrade your workspace with our Industrial Writing Desk. This rustic brown metal and wood desk features a textured finish and a sturdy design, perfect for a rustic-industrial look. Dimensions: 48\" x 30\" x 30\".",
-      "rating": 4.7,
+      "rating": 3,
       "reviews": [
         {
           "username": "IndustrialOffice",
@@ -1223,7 +1270,7 @@
       "color": "White and Black",
       "finish_type": "Matte",
       "about": "Elevate your entertainment area with our Modern TV Stand. This white wood and black metal TV stand features a matte finish and ample storage for media devices. Dimensions: 60\" x 16\" x 24\".",
-      "rating": 4.7,
+      "rating": 5,
       "reviews": [
         {
           "username": "EntertainmentLover",
@@ -1264,7 +1311,7 @@
       "color": "Bronze",
       "finish_type": "Shiny",
       "about": "Illuminate your space with our Modern Pendant Light. This bronze metal pendant light features a shiny glass shade with a diameter of 14 inches. It adds a contemporary touch to any room. Dimensions: Diameter: 14\".",
-      "rating": 4.8,
+      "rating": 4,
       "reviews": [
         {
           "username": "ContemporarySpace",
@@ -1305,7 +1352,7 @@
       "color": "Clear and Gold",
       "finish_type": "Glossy",
       "about": "Elevate your dining area with our Glass Top Dining Table. This clear glass table features a glossy gold metal base and a spacious design, perfect for hosting dinner parties. Dimensions: 72\" x 36\" x 30\".",
-      "rating": 4.7,
+      "rating": 1,
       "reviews": [
         {
           "username": "ElegantDining",
@@ -1346,7 +1393,7 @@
       "color": "Navy Blue",
       "finish_type": "Matte",
       "about": "Add a pop of color to your space with our Velvet Accent Chairs. These navy blue velvet chairs feature a matte finish and a sleek design, perfect for a chic look. Dimensions: 26\" x 28\" x 32\".",
-      "rating": 4.6,
+      "rating": 5,
       "reviews": [
         {
           "username": "ChicLiving2",
@@ -1376,7 +1423,8 @@
       ]
     }
   ],
-  "user": [
+
+  "user":[
     {
       "address": {
         "geolocation": {
@@ -1625,176 +1673,423 @@
       "__v": 0,
       "orders": [],
       "wishList": [],
-      "addToCart": [],
-      "cartData":[
-        {
-          "id": 25,
-          "category": "Desks",
-          "name": "Glass Top Writing Desk",
-          "price": 199.99,
-          "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/oh2exehvntq1y0s6aokw.png",
-          "brand": "GlassElegance",
-          "size": "42\" x 24\" x 30\"",
-          "material": "Glass and Metal",
-          "color": "Clear and Silver",
-          "finish_type": "Glossy",
-          "about": "Add a touch of sophistication to your workspace with our Glass Top Writing Desk. This clear glass desk features a glossy silver metal frame and a minimalist design. It's ideal for modern offices. Dimensions: 42\" x 24\" x 30\".",
-          "rating": 4.6,
-          "reviews": [
-            {
-              "username": "SophisticatedOffice",
-              "rating": 5,
-              "comment": "I love this glass writing desk! It's so chic."
-            },
-            {
-              "username": "ElegantWorkspace",
-              "rating": 4,
-              "comment": "Great value for a stylish glass desk."
-            },
-            {
-              "username": "HappyWorker2",
-              "rating": 5,
-              "comment": "I'm so happy with this purchase. It's perfect for my modern office."
-            },
-            {
-              "username": "EasyAssembly10",
-              "rating": 4,
-              "comment": "Assembly was straightforward, no complaints."
-            },
-            {
-              "username": "ChicWorkspace",
-              "rating": 5,
-              "comment": "Highly recommend for a chic workspace."
-            }
-          ]
+      "addToCart": []
+    },
+      {
+        "address": {
+          "geolocation": {
+            "lat": "-37.3159",
+            "long": "81.1496"
+          },
+          "city": "kilcoole",
+          "street": "new road",
+          "number": 7682,
+          "zipcode": "12926-3874"
         },
-        {
-          "id": 26,
-          "category": "Cabinets",
-          "name": "Rustic Wine Cabinet",
-          "price": 349.95,
-          "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/i1qh212qzryb4k1kh1fx.png",
-          "brand": "RusticCharm",
-          "size": "36\" x 16\" x 54\"",
-          "material": "Wood",
-          "color": "Weathered Oak",
-          "finish_type": "Distressed",
-          "about": "Enhance your wine collection with our Rustic Wine Cabinet. This weathered oak wood cabinet features a distressed finish and ample storage for wine bottles and glassware. Dimensions: 36\" x 16\" x 54\".",
-          "rating": 4.7,
-          "reviews": [
-            {
-              "username": "WineConnoisseur",
-              "rating": 5,
-              "comment": "I'm thrilled with this wine cabinet! It's perfect for my wine collection."
-            },
-            {
-              "username": "WineLover2",
-              "rating": 4,
-              "comment": "Great cabinet for wine enthusiasts."
-            },
-            {
-              "username": "HappyHostess",
-              "rating": 5,
-              "comment": "I love this purchase. It's perfect for hosting wine tastings."
-            },
-            {
-              "username": "EasyStorage4",
-              "rating": 4,
-              "comment": "Assembly was straightforward, but it's a bit heavy."
-            },
-            {
-              "username": "WineStorageFan",
-              "rating": 5,
-              "comment": "Perfect for anyone who loves wine."
-            }
-          ]
+        "id": 1,
+        "email": "john@gmail.com",
+        "username": "johnd",
+        "password": "m38rmF$",
+        "name": {
+          "firstname": "john",
+          "lastname": "doe"
         },
-        {
-          "id": 27,
-          "category": "Lighting",
-          "name": "Crystal Chandelier",
-          "price": 299.99,
-          "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ay4wujm1xd2gg90m6wrm.png",
-          "brand": "CrystalGlow",
-          "size": "Diameter: 18\"",
-          "material": "Crystal and Metal",
-          "color": "Chrome",
-          "finish_type": "Shiny",
-          "about": "Add a touch of glamour to your space with our Crystal Chandelier. This chrome metal chandelier features shiny crystal accents and a diameter of 18 inches. It's perfect for creating a luxurious atmosphere. Dimensions: Diameter: 18\".",
-          "rating": 4.8,
-          "reviews": [
-            {
-              "username": "GlamourSpace2",
-              "rating": 5,
-              "comment": "This crystal chandelier is stunning! It's a showstopper."
-            },
-            {
-              "username": "CrystalLove",
-              "rating": 4,
-              "comment": "A bit pricey, but it's worth it for the quality."
-            },
-            {
-              "username": "GlamourHome2",
-              "rating": 5,
-              "comment": "I'm in love with this chandelier. It's perfect for my glamorous decor."
-            },
-            {
-              "username": "EasyInstallation3",
-              "rating": 4,
-              "comment": "Installation was a bit tricky due to its size."
-            },
-            {
-              "username": "CrystalFan",
-              "rating": 5,
-              "comment": "Highly recommend for a luxurious room."
-            }
-          ]
+        "phone": "1-570-236-7033",
+        "orders": [],
+        "wishList": [],
+        "addToCart": []
+      },
+      {
+        "address": {
+          "geolocation": {
+            "lat": "-37.3159",
+            "long": "81.1496"
+          },
+          "city": "kilcoole",
+          "street": "Lovers Ln",
+          "number": 7267,
+          "zipcode": "12926-3874"
         },
-        {
-          "id": 28,
-          "category": "Tables",
-          "name": "Mid-Century Coffee Table",
-          "price": 249.99,
-          "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/1h4zda1a2urv4as45rom.png",
-          "brand": "MidCenturyStyle",
-          "size": "42\" x 24\" x 18\"",
-          "material": "Wood",
-          "color": "Walnut",
-          "finish_type": "Matte",
-          "about": "Complete your living room with our Mid-Century Coffee Table. This walnut wood table features a matte finish and a classic mid-century design, perfect for holding coffee and magazines. Dimensions: 42\" x 24\" x 18\".",
-          "rating": 4.7,
-          "reviews": [
-            {
-              "username": "MidCenturyLiving2",
-              "rating": 5,
-              "comment": "Love this mid-century coffee table! It's the perfect addition."
-            },
-            {
-              "username": "CoffeeTableFan",
-              "rating": 4,
-              "comment": "Great value for a stylish coffee table."
-            },
-            {
-              "username": "StylishLiving",
-              "rating": 5,
-              "comment": "I'm very pleased with this purchase. It's perfect."
-            },
-            {
-              "username": "HandyAssembly4",
-              "rating": 4,
-              "comment": "Assembly was straightforward, but it took some time."
-            },
-            {
-              "username": "MidCenturyDesignLover",
-              "rating": 5,
-              "comment": "Perfect for anyone wanting a mid-century modern living room."
-            }
-          ]
-        }
+        "id": 2,
+        "email": "morrison@gmail.com",
+        "username": "mor_2314",
+        "password": "83r5^_",
+        "name": {
+          "firstname": "david",
+          "lastname": "morrison"
+        },
+        "phone": "1-570-236-7033",
+        "orders": [],
+        "wishList": [],
+        "addToCart": []
+      },
+      {
+        "address": {
+          "geolocation": {
+            "lat": "40.3467",
+            "long": "-30.1310"
+          },
+          "city": "Cullman",
+          "street": "Frances Ct",
+          "number": 86,
+          "zipcode": "29567-1452"
+        },
+        "id": 3,
+        "email": "kevin@gmail.com",
+        "username": "kevinryan",
+        "password": "kev02937@",
+        "name": {
+          "firstname": "kevin",
+          "lastname": "ryan"
+        },
+        "phone": "1-567-094-1345",
+        "orders": [],
+        "wishList": [],
+        "addToCart": []
+      },
+      {
+        "address": {
+          "geolocation": {
+            "lat": "50.3467",
+            "long": "-20.1310"
+          },
+          "city": "San Antonio",
+          "street": "Hunters Creek Dr",
+          "number": 6454,
+          "zipcode": "98234-1734"
+        },
+        "id": 4,
+        "email": "don@gmail.com",
+        "username": "donero",
+        "password": "ewedon",
+        "name": {
+          "firstname": "don",
+          "lastname": "romer"
+        },
+        "phone": "1-765-789-6734",
+        "orders": [],
+        "wishList": [],
+        "addToCart": []
+      },
+      {
+        "address": {
+          "geolocation": {
+            "lat": "40.3467",
+            "long": "-40.1310"
+          },
+          "city": "san Antonio",
+          "street": "adams St",
+          "number": 245,
+          "zipcode": "80796-1234"
+        },
+        "id": 5,
+        "email": "derek@gmail.com",
+        "username": "derek",
+        "password": "jklg*_56",
+        "name": {
+          "firstname": "derek",
+          "lastname": "powell"
+        },
+        "phone": "1-956-001-1945",
+        "orders": [],
+        "wishList": [],
+        "addToCart": []
+      },
+      {
+        "address": {
+          "geolocation": {
+            "lat": "20.1677",
+            "long": "-10.6789"
+          },
+          "city": "el paso",
+          "street": "prospect st",
+          "number": 124,
+          "zipcode": "12346-0456"
+        },
+        "id": 6,
+        "email": "david_r@gmail.com",
+        "username": "david_r",
+        "password": "3478*#54",
+        "name": {
+          "firstname": "david",
+          "lastname": "russell"
+        },
+        "phone": "1-678-345-9856",
+        "orders": [],
+        "wishList": [],
+        "addToCart": []
+      },
+      {
+        "address": {
+          "geolocation": {
+            "lat": "10.3456",
+            "long": "20.6419"
+          },
+          "city": "fresno",
+          "street": "saddle st",
+          "number": 1342,
+          "zipcode": "96378-0245"
+        },
+        "id": 7,
+        "email": "miriam@gmail.com",
+        "username": "snyder",
+        "password": "f238&@*$",
+        "name": {
+          "firstname": "miriam",
+          "lastname": "snyder"
+        },
+        "phone": "1-123-943-0563",
+        "orders": [],
+        "wishList": [],
+        "addToCart": []
+      },
+      {
+        "address": {
+          "geolocation": {
+            "lat": "50.3456",
+            "long": "10.6419"
+          },
+          "city": "mesa",
+          "street": "vally view ln",
+          "number": 1342,
+          "zipcode": "96378-0245"
+        },
+        "id": 8,
+        "email": "william@gmail.com",
+        "username": "hopkins",
+        "password": "William56$hj",
+        "name": {
+          "firstname": "william",
+          "lastname": "hopkins"
+        },
+        "phone": "1-478-001-0890",
+        "orders": [],
+        "wishList": [],
+        "addToCart": []
+      },
+      {
+        "address": {
+          "geolocation": {
+            "lat": "40.12456",
+            "long": "20.5419"
+          },
+          "city": "miami",
+          "street": "avondale ave",
+          "number": 345,
+          "zipcode": "96378-0245"
+        },
+        "id": 9,
+        "email": "kate@gmail.com",
+        "username": "kate_h",
+        "password": "kfejk@*_",
+        "name": {
+          "firstname": "kate",
+          "lastname": "hale"
+        },
+        "phone": "1-678-456-1934",
+        "orders": [],
+        "wishList": [],
+        "addToCart": []
+      },
+      {
+        "address": {
+          "geolocation": {
+            "lat": "30.24788",
+            "long": "-20.545419"
+          },
+          "city": "fort wayne",
+          "street": "oak lawn ave",
+          "number": 526,
+          "zipcode": "10256-4532"
+        },
+        "id": 10,
+        "email": "jimmie@gmail.com",
+        "username": "jimmie_k",
+        "password": "klein*#%*",
+        "name": {
+          "firstname": "jimmie",
+          "lastname": "klein"
+        },
+        "phone": "1-104-001-4567",
+        "orders": [],
+        "wishList": [],
+        "addToCart": [],
+        "cartData":[
+
+          {
+            "id": 10,
+            "category": "Cabinets",
+            "name": "Modern Media Cabinet",
+            "price": 349.95,
+            "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2iynmuzk4wih564f3vg3.png",
+            "brand": "ModernMedia",
+            "size": "60\" x 18\" x 24\"",
+            "material": "Wood",
+            "color": "Walnut",
+            "quantity": 1,
+            "finish_type": "Matte",
+            "about": "Organize your media essentials with our Modern Media Cabinet. This walnut wood media cabinet features a matte finish and ample storage space. Dimensions: 60\" x 18\" x 24\".",
+            "rating": 4.6,
+            "reviews": [
+              {
+                "username": "MediaEnthusiast",
+                "rating": 5,
+                "comment": "I'm thrilled with this media cabinet! It's perfect."
+              },
+              {
+                "username": "OrganizedHome",
+                "rating": 4,
+                "comment": "Great cabinet for organizing media equipment."
+              },
+              {
+                "username": "HappyMovieNights",
+                "rating": 5,
+                "comment": "I love this purchase. It's perfect for my home theater."
+              },
+              {
+                "username": "EasyStorage2",
+                "rating": 4,
+                "comment": "Assembly was straightforward, but it's a bit bulky."
+              },
+              {
+                "username": "MediaStorageFan",
+                "rating": 5,
+                "comment": "Perfect for any media enthusiast."
+              }
+            ]
+          },
+          {
+            "id": 11,
+            "category": "Lighting",
+            "name": "Crystal Floor Lamp",
+            "price": 199.99,
+            "image": "https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-product-pic2.webp",
+            "brand": "CrystalGlow",
+            "size": "Height: 60\"",
+            "material": "Crystal and Metal",
+            "color": "Silver",
+            "quantity": 1,
+            "finish_type": "Shiny",
+            "about": "Brighten up your space with our Crystal Floor Lamp. This silver crystal floor lamp features a shiny finish and stands at a height of 60 inches. It adds a touch of glamour to any room. Dimensions: Height: 60\".",
+            "rating": 4.7,
+            "reviews": [
+              {
+                "username": "GlamourSpace",
+                "rating": 5,
+                "comment": "This crystal floor lamp is breathtaking! So elegant."
+              },
+              {
+                "username": "ShinyLighting",
+                "rating": 4,
+                "comment": "A bit pricey, but it's a showstopper."
+              },
+              {
+                "username": "CrystalLover",
+                "rating": 5,
+                "comment": "I'm in love with this floor lamp. It's a work of art."
+              },
+              {
+                "username": "EasyAssembly4",
+                "rating": 4,
+                "comment": "Installation was a bit tricky due to its size."
+              },
+              {
+                "username": "GlamorousHome",
+                "rating": 5,
+                "comment": "Highly recommend for a glamorous home."
+              }
+            ]
+          },
+          {
+            "id": 12,
+            "category": "Tables",
+            "name": "Glass Top End Table",
+            "price": 99.99,
+            "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/n9z22hla9a1iopdhugz5.png",
+            "brand": "GlassGlow",
+            "size": "18\" x 18\" x 22\"",
+            "material": "Glass and Metal",
+            "color": "Clear and Gold",
+            "quantity": 1,
+            "finish_type": "Glossy",
+            "about": "Add a touch of sophistication to your space with our Glass Top End Table. This clear glass end table features a glossy finish and elegant gold metal accents. It's perfect for placing by your sofa. Dimensions: 18\" x 18\" x 22\".",
+            "rating": 4.6,
+            "reviews": [
+              {
+                "username": "SophisticatedLiving",
+                "rating": 5,
+                "comment": "I love this glass end table! It's so chic."
+              },
+              {
+                "username": "ElegantDecorator",
+                "rating": 4,
+                "comment": "Great value for a stylish glass table."
+              },
+              {
+                "username": "HappyCustomer3",
+                "rating": 5,
+                "comment": "I'm so happy with this purchase. It's perfect for my living room."
+              },
+              {
+                "username": "EasyAssembly3",
+                "rating": 4,
+                "comment": "Assembly was straightforward, no complaints."
+              },
+              {
+                "username": "ChicHomeDesign",
+                "rating": 5,
+                "comment": "Highly recommend for a chic living room."
+              }
+            ]
+          },
+          {
+            "id": 13,
+            "category": "Chairs",
+            "name": "Swivel Accent Chair",
+            "price": 179.95,
+            "image": "https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-product-pic7.webp",
+            "brand": "AccentStyle",
+            "size": "30\" x 30\" x 32\"",
+            "material": "Velvet",
+            "color": "Pink",
+            "quantity": 1,
+            "finish_type": "Soft",
+            "about": "Add a pop of color to your space with our Swivel Accent Chair. This pink velvet chair features a soft finish and 360-degree swivel, perfect for adding flair to any room. Dimensions: 30\" x 30\" x 32\".",
+            "rating": 4.5,
+            "reviews": [
+              {
+                "username": "PinkObsession",
+                "rating": 5,
+                "comment": "I adore this pink accent chair! It's a statement piece."
+              },
+              {
+                "username": "ColorfulLiving",
+                "rating": 4,
+                "comment": "Great value for a stylish accent chair."
+              },
+              {
+                "username": "HappyDecorator2",
+                "rating": 5,
+                "comment": "I'm so happy with this purchase. It's perfect for my colorful decor."
+              },
+              {
+                "username": "EasyAssembly4",
+                "rating": 4,
+                "comment": "Assembly was straightforward, no complaints."
+              },
+              {
+                "username": "ColorfulHome",
+                "rating": 5,
+                "comment": "Highly recommend for adding a pop of color."
+              }
+            ]
+          }
+         
+  
+        ]
+      }
+    ]
 
 
-
-      ]
-    }
-  ]
+  
 }
