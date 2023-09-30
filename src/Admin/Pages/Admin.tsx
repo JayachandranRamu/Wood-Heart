@@ -7,10 +7,11 @@ const Admin = () => {
   
 
   
-  return  <>
-  {/* <AdminNavbar />
-  <Dashboard /> */}
-    </>
+  return ( <>  
+  <AdminNavbar />
+         <h1 style={{textAlign:"center"}}> heyyy admin here</h1>
+   
+  </>)
 
   
 }

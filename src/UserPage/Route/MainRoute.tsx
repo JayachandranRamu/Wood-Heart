@@ -10,7 +10,7 @@ import Dashboard from '../../Admin/Pages/Dashboard'
 import Users from '../../Admin/Pages/Users'
 import Products from '../../Admin/Pages/Products'
 import Admin from '../../Admin/Pages/Admin'
-import SingleUser from '../../Admin/Pages/SingleUser'
+// import SingleUser from '../../Admin/Pages/SingleUser'
 import SingleUserAdmin from '../../Admin/Pages/SingleUserAdmin'
 
 
@@ -22,6 +22,7 @@ const MainRoutes = () => {
         <Route path="/product:id" element={<SingleProduct/>} />
         {/* <Route path='/admin' element={<Admin />}></Route> */}
         <Route path="/admin" element={<Dashboard/>}></Route>
+        <Route path="/admin/admin-user" element={<Admin/>}></Route>
         <Route path="/admin/users" element={<Users/>}></Route>
         <Route path="/admin/singleUser/:id" element={<SingleUserAdmin/>}></Route>
         <Route path="/admin/products" element={<Products/>}></Route>

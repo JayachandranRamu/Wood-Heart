@@ -110,7 +110,9 @@ import { color } from 'framer-motion';
            PRODUCTS
               </Button>
               </Link>
-              <Link to="/admin/products"> {/* Wrap the button with a Link component */}
+
+               {/* Admin- user */}
+              <Link to="/admin/admin-user"> {/* Wrap the button with a Link component */}       
         <Button variant="link">
           <Image
             src="https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-user.svg"
@@ -154,11 +156,12 @@ import { color } from 'framer-motion';
     const { isOpen } = useDisclosure()
   
     return (
+      <Link to={`${href}`}>
       <Stack spacing={4} >
         <Box
           py={2}
           as="a"
-          href={href ?? '#'}
+          // href={href ?? '#'}
           justifyContent="space-between"
           alignItems="center"
           _hover={{
@@ -184,6 +187,7 @@ import { color } from 'framer-motion';
         
         </Box>
       </Stack>
+      </Link>
     )
   }
   
@@ -198,23 +202,24 @@ import { color } from 'framer-motion';
     {
       label: 'DASHBOARD',
     //   src:'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category1.svg',
-   href:"#"
+   href:"/admin"
     },
     {
       label: 'USERS',
     //   src:'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category2.svg',
-      href:"#"
+      href:"/admin/users"
     },
     {
       label: 'PRODUCTS',
-      href:"#",
+      href:"/admin/products",
     //   src: 'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category3.svg',
     },
     // {
     //   label: 'ORDERS',
     //   href:"#",
     //   src: 'https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category4.svg',
-    // },
+    // }
+    // ,
     // {
     //   label: 'CABINETS',
     //   href:"#",
