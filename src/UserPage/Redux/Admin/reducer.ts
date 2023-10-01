@@ -1,3 +1,4 @@
+import { DELETE_PRODUCT, GET_PRODUCT_FAILURE, GET_PRODUCT_REQUEST, GET_PRODUCT_SUCCESS } from "./actionTypes"
 import { GET_SINGLE_USER_FAILURE, GET_SINGLE_USER_REQUEST, GET_SINGLE_USER_SUCCESS, GET_USER_FAILURE, GET_USER_LOADING, GET_USER_SUCCESS } from "./userTypes"
 
 
@@ -29,6 +30,32 @@ export const reducer=(state=initstate,{type,payload}:action)=>{
          case GET_USER_FAILURE:{
             return {...state,isError:true}
          }
+         case GET_PRODUCT_REQUEST: {
+            return {
+              ...state,
+              isLoading: true,
+            };
+          }
+          case GET_PRODUCT_FAILURE: {
+            return {
+              ...state,
+              isError: true,
+              isLoading: false,
+            };
+          }
+          case GET_PRODUCT_SUCCESS: {
+            return {
+              ...state,
+              isLoading: false,
+              products: payload,
+            };
+          }
+          case DELETE_PRODUCT: {
+            return {
+              ...state,
+              products: payload,
+            };
+          }
 //  ======================= single user cases============================
 case GET_SINGLE_USER_REQUEST:{
    return {...state,isLoading:true};

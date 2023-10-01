@@ -1,6 +1,10 @@
 import { Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, Flex, Image, Input, Text, useDisclosure } from "@chakra-ui/react"
 import React from "react"
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 export function CartDrawer({onOpen,onClose}:any) {
+  let UserData=useSelector((store:any)=>store.authReducer.UserData)
+  let Nav=useNavigate()
 console.log(onOpen)
     function onClosed(){
         onClose(false);
@@ -27,19 +31,27 @@ size={"sm"}
                 
             <DrawerBody>
            
-              <Flex>
-                <Flex w={"100%"} m={"auto"}>
-                <Box w={"50%"}>
-                  <Image src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/n9z22hla9a1iopdhugz5.png">
+              <Flex direction={"column-reverse"} >
+                {UserData?.addToCart?.map((el:any)=>
+                <Flex w={"100%"} m={"10px auto"} p={"10px"} gap={"20px"} alignItems={"center"} justifyContent={"space-between"} borderRadius={"20px"} direction={"row"} bg={"#f5f5f5"} >
+                <Box w={"30%"}>
+                  <Image w={"80%"} src={el.image} m={"5px"}>
 
                   </Image>
                 </Box>
-                <Box>
-<Text>Chairdfdf</Text>
-<Text>Pricedfdfdf</Text>
+                <Box fontWeight={"500"} color={"#2b3954"} w={"40%"} borderRadius={"20px"} p={"10px"}>
+<Text>{el.name}</Text>
+<Text fontSize={"15"}>Price : $ {el.price}</Text>
+
+                </Box>
+                <Box alignItems={"center"} w={"30%"}>
+                <Text bgColor={"#2b3954"} color={"white"} borderRadius={"7px"} p={"5px 0"} textAlign={"center"}>QTY : {el.quantity}</Text>
+                  <Text color={"#ffb128"} fontWeight={"600"} fontSize={"20"} m={"5px 0"} >
+                    $ {((`${el.price}`)* (` ${el.quantity}`))}
+                  </Text>
                 </Box>
                 </Flex>
-               
+)}
               </Flex>
             </DrawerBody>
   
@@ -47,10 +59,10 @@ size={"sm"}
               <Box>
 
               </Box>
-              <Button  colorScheme='white' fontSize={"16"} fontWeight={"400"}  bg={"#2b3954"} mr={3} >
-               PROCESSED TO CHECKOUT
+              <Button  onClick={()=>Nav("/cart")}   _hover={{ bgColor: "#e89f22" }} colorScheme='white' fontSize={"15"} fontWeight={"400"}  bg={"#2b3954"} mr={3} >
+               PROCEED TO CHECKOUT
               </Button>
-              <Button  variant='outline' color={"#2b3954"}>VIEW CART</Button>
+              <Button  variant='outline' color={"#2b3954"} fontSize={"15"} onClick={()=>Nav(-1)}>CONTINUE SHOPPING</Button>
             </DrawerFooter>
           </DrawerContent>
         </Drawer>

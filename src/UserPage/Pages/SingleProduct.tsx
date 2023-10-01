@@ -4,6 +4,7 @@ import Footer from '../Components/Footer';
 import { DesktopNav } from '../Components/BottomNavbar';
 import { SingleProductCard } from '../Components/SingleProductCard';
 import { Box } from '@chakra-ui/react';
+import FAQ from "../Components/FAQ";
 
 const SingleProduct = () => {
 
@@ -13,7 +14,7 @@ const SingleProduct = () => {
           <Box >
           <SingleProductCard />
           </Box>
-          
+          <FAQ />
    <Footer />
     </> )
 }
