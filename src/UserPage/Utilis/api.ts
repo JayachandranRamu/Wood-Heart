@@ -1,8 +1,8 @@
 import axios, { AxiosRequestConfig } from "axios";
 
-
-export let ProductURL="http://localhost:8080/products";
-export const userUrl="http://localhost:8080/user"
+//https://wood-heart-api.onrender.com
+export let ProductURL="https://wood-heart-api.onrender.com/products";
+export const userUrl="https://wood-heart-api.onrender.com/user"
 export const getProductDataFromAPI=(params:AxiosRequestConfig)=>{
 
   return  axios.get(ProductURL,params)

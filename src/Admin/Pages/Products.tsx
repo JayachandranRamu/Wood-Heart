@@ -171,7 +171,7 @@ const Products: React.FC = () => {
           </Stack>
         </Box>
         <Box w={"60%"}>
-          <SimpleGrid spacing={10} columns={[1, 2]} m={"80px auto"} w={"100%"}>
+          <SimpleGrid spacing={10} columns={[1, 2,3]} m={"80px auto"} w={"100%"}>
             {products?.map((el: any) => (
               <AdminProductCard key={el.id} {...el} />
             ))}
