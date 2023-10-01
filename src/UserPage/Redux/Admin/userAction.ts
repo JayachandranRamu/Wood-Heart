@@ -1,5 +1,14 @@
 import axios from "axios";
-import { GET_SINGLE_USER_FAILURE, GET_SINGLE_USER_REQUEST, GET_SINGLE_USER_SUCCESS, GET_USER_FAILURE, GET_USER_LOADING, GET_USER_SUCCESS } from "./userTypes";
+import { GET_SINGLE_USER_FAILURE, 
+  GET_SINGLE_USER_REQUEST,
+   GET_SINGLE_USER_SUCCESS, 
+   DELETE_SINGLE_USER_REQUEST,
+    DELETE_SINGLE_USER_SUCCESS,
+    DELETE_SINGLE_USER_FAILURE,
+     GET_USER_FAILURE, 
+     GET_USER_LOADING,
+      GET_USER_SUCCESS } from "./userTypes";
+
 import { Dispatch } from "redux";
 import { userUrl } from "../../Utilis/api";
 
@@ -49,3 +58,21 @@ export const getSingleUserby=(id:number) :any=>async(dispatch :Dispatch)=>{
     dispatch({type:GET_SINGLE_USER_FAILURE});
   }
 }
+
+
+
+ //to Delete a Single User by ID
+export const deleteSingleUser = (id: number): any => async (dispatch: Dispatch) => {
+  console.log(`${userUrl}/${id}`)
+  dispatch({ type: DELETE_SINGLE_USER_REQUEST });
+  try {
+   const res= await axios.delete(`${userUrl}/${id}`);
+    console.log(res);
+    
+    dispatch({ type: DELETE_SINGLE_USER_SUCCESS });
+  } catch (err) {
+    console.log(err);
+    dispatch({ type: DELETE_SINGLE_USER_FAILURE });
+  }
+};
+
