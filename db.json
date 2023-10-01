@@ -1393,6 +1393,19 @@
           "comment": "Highly recommend for a chic living room."
         }
       ]
+    },
+    {
+      "name": "Wooden Bed",
+      "category": "bed",
+      "price": "1200",
+      "image": "https://imgs.search.brave.com/KJXQobt4Gwsn2gQqQYQv0y4wNuoDOKK9Lx7yFePgOQQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA0Lzk3LzAyLzYx/LzM2MF9GXzQ5NzAy/NjExNl8wZmFxNzdu/WFNaTXIwUWRZVEN2/NTV5NUVxZ1Q5dlJN/VC5qcGc",
+      "brand": "sleepwell",
+      "size": "12",
+      "color": "black",
+      "material": "wood",
+      "about": "xyz",
+      "rating": "3",
+      "id": 36
     }
   ],
   "user": [
