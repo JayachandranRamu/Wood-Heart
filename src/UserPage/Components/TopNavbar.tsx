@@ -14,12 +14,21 @@ import {
   InputGroup,
   InputLeftElement,
 } from '@chakra-ui/react'
+import React from 'react';
+import {
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  VStack,
+} from '@chakra-ui/react';
 import {
   HamburgerIcon,
   CloseIcon,
 } from '@chakra-ui/icons'
 import { FaSearch} from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
+import LoginMenu from './Login';
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure()
@@ -85,15 +94,16 @@ const Navigate=useNavigate();
 
             </Image></Button>
             </Link>
-            <Link to="/admin"> {/* Wrap the button with a Link component */}
-      <Button variant="link">
-        <Image
+            {/* <Link to="#" te> Wrap the button with a Link component */}
+     
+        {/* <Image
           src="https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-user.svg"
           w={["15%","15%", "55%"]}
           alt="User Icon" // Add an alt attribute for accessibility
-        />
-      </Button>
-    </Link>
+        /> */}
+        <LoginMenu />
+     
+    {/* </Link> */}
 
 
         </Stack>
