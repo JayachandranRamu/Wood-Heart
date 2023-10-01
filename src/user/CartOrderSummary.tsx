@@ -110,7 +110,8 @@ export const CartOrderSummary = ({ cartItems, totalCartPrice }: CartOrderSummary
       >
        Continue to checkout
       </Button>
-      {checkoutStatus && <Text color={checkoutStatus.includes('Error') ? 'red' : 'green'}>{checkoutStatus}</Text>}
+      {checkoutStatus && <Text color={checkoutStatus.includes('Error') ? 'red' : 'green'}
+      >{checkoutStatus}</Text>}
     </Stack>
   )
 }

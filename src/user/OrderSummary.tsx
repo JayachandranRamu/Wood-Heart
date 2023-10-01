@@ -97,7 +97,7 @@ const OrderSummary: React.FC = () => {
                 >
                   <Text fontSize="xl">{item.name}</Text>
                   <Text fontSize="lg">
-                    Price: ${item.price.toFixed(1)}
+                    Price: ₹{item.price.toFixed(1)}
                   </Text>
                 </Flex>
               </Flex>
@@ -106,7 +106,7 @@ const OrderSummary: React.FC = () => {
         </Stack>
         <Box mt={6}>
           <Text fontSize="lg">
-            Total Price: ${totalCartPrice.toFixed(1)}
+            Total Price: ₹{totalCartPrice.toFixed(1)}
           </Text>
         </Box>
       </Flex>

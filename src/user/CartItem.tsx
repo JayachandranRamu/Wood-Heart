@@ -8,6 +8,8 @@ type CartItemProps = {
   id: number; 
   name: string;
   about: string;
+  category: string;
+  color: string;
   quantity: number;
   price: number;
   currency: string;
@@ -26,7 +28,9 @@ export const CartItem = (props: CartItemProps) => {
     isGiftWrapping,
     id,
     name,
-    about,
+    // about,
+    category,
+    color,
     quantity: initialQuantity,
     image,
     price,
@@ -84,7 +88,9 @@ const calculateUpdatedPrice = (newQuantity: number) => {
     <Flex direction={{ base: 'column', md: 'row' }} justify="space-between" align="center">
       <CartProductMeta
         name={name}
-        description={about}
+        // description={about}
+        category={category}
+        color={color}
         image={image}
         isGiftWrapping={isGiftWrapping}
       />
