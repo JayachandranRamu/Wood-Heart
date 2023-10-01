@@ -2,20 +2,25 @@ import React, { useEffect } from 'react'
 import   AdminNavbar  from '../Components/Admin-Navbar'
 import { useDispatch, useSelector } from 'react-redux'
 import axios from 'axios'
-import { getAllusers } from '../../UserPage/Redux/Admin/userAction'
+import { getAllusers,deleteSingleUser } from '../../UserPage/Redux/Admin/userAction'
 import { user } from '../../UserPage/Redux/Admin/constants'
 import styled from 'styled-components'
 import { AbsoluteCenter, Box, Button, Divider, Flex, Table, Tbody, Td, Tfoot, Th, Thead, Tr, useBreakpointValue } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 import { AdminFooter } from './AdminFooter'
+
+
+
+
+
 const Users = () => {
   const dispatch=useDispatch();
-  const userData=useSelector((store:any)=>{
+  const userData=useSelector((store:unknown)=>{
      return store.adminReducer.users
   })
   const buttonSize = useBreakpointValue({ base: 'sm', md: 'md', lg: 'lg' });
   const fontSize = useBreakpointValue({ base: 'sm', md: 'md', lg: 'lg' });
-  const headerSize = useBreakpointValue({ base: 'sm', md: 'md', lg: 'lg' });
+  // const headerSize = useBreakpointValue({ base: 'sm', md: 'md', lg: 'lg' });
 console.log(userData,"from user store data");
 
   useEffect(()=>{
@@ -28,6 +33,11 @@ console.log(userData,"from user store data");
   // .catch(err=>{
   //   console.log(err);
   // })
+
+  const handleDeleteUser = (id: number) => {
+    dispatch(deleteSingleUser(id)); 
+    
+  };
 
   return (
     <>
@@ -59,9 +69,12 @@ console.log(userData,"from user store data");
             <Link to={`/admin/singleUser/${ele.id}`}> <Button variant="outline" colorScheme="teal" size={buttonSize}>
                 View
               </Button></Link>
-             <Button variant="outline" colorScheme="red" size={buttonSize} ml={2}>
-                Del
-              </Button>
+              <Button variant='outline' 
+              colorScheme='red' 
+              size={buttonSize} ml={2} 
+              onClick={() => handleDeleteUser(ele.id)}>
+                    Del
+                  </Button>
               </Flex>  
             </Td>
           </Tr>

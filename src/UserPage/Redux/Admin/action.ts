@@ -2,7 +2,7 @@ import { Dispatch } from "redux";
 import {
   GET_PRODUCT_FAILURE,
   GET_PRODUCT_REQUEST,
-  GET_PRODUCT_SUCCESS,
+  GET_PRODUCT_SUCCESS
 } from "./actionTypes";
 import { getProductDataFromAPI } from "../../Utilis/api";
 
