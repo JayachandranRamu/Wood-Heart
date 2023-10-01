@@ -29,6 +29,7 @@ import { AUTH_SUCCESS } from '../Redux/actionTypes';
 import { GetAllUserData, LogoutStoringUserDatainLS, StoringUserDatainLS } from '../Redux/Auth/action';
 import { SignupModal } from './Signup';
 import { BsSimFill } from 'react-icons/bs';
+import { useNavigate } from 'react-router-dom';
 const LoginMenu = () => {
   const [SignOpen, setSignOpen] = useState<boolean>(false);
 
@@ -46,7 +47,7 @@ const LoginMenu = () => {
 let allUserData=useSelector((store:any)=>store.authReducer.allUserData);
 let isAuth=useSelector((store:any)=>store.authReducer.isAuth);
 let userData=useSelector((store:any)=>store.authReducer.UserData);
-
+let Navigate=useNavigate()
 
 
 
@@ -69,6 +70,11 @@ e.preventDefault();
 let obj={
   username,password
 }
+
+if(username=="admin" && password=="admin"){
+Navigate("/admin")
+}
+
 console.log(obj);
 console.log(allUserData);
 let ans=allUserData.find(((el:any)=>el.email==username && el.password==password));

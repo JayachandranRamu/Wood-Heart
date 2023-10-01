@@ -14,4 +14,6 @@ export const getProducts = (params: any) => (dispatch: Dispatch) => {
     })
     .catch(() => dispatch({ type: GET_PRODUCT_FAILURE }));
 };
-export const deleteProduct = (id) => (dispatch: Dispatch) => {};
+export const deleteProduct = (id) => (dispatch: Dispatch) => {
+  
+};

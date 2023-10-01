@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../Redux/rootReducer"; // Import the RootState type
 import { DELETE_PRODUCT } from "../../UserPage/Redux/Admin/actionTypes";
 import axios from "axios";
+import { ProductURL } from "../../UserPage/Utilis/api";
 // import { ProductURL } from "../../UserPage/Utilis/api";
 
 
@@ -49,8 +50,9 @@ const AdminProductCard: React.FC<ProductCardProps> = ({
       //   h={"650px"}
     >
       <Image
-        m={"20px auto"}
-        w={"90%"}
+        m={"40px auto"}
+        w={"100%"}
+        h={"150px"}
         // boxSize="320px" // Set a fixed size for the image (adjust as needed)
         // objectFit={"cover"}
         src={image}
