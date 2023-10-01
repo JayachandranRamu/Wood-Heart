@@ -20,6 +20,7 @@ function App() {
     
       <MainRoutes />
 
+      {/* <Cart /> */}
     
 
     </>
