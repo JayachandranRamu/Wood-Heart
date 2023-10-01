@@ -6,32 +6,19 @@ import {
     Button,
     Stack,
     Collapse,
-    Icon,
-    Popover,
-    PopoverTrigger,
-    PopoverContent,
     useColorModeValue,
     useBreakpointValue,
     useDisclosure,
     Image,
-    Input,
-    InputGroup,
-    InputLeftElement,
-    HStack,
-    LinkBox,
   } from '@chakra-ui/react'
   import {
     HamburgerIcon,
     CloseIcon,
-    ChevronDownIcon,
-    ChevronRightIcon,
   } from '@chakra-ui/icons'
-  import { FaSearch} from 'react-icons/fa';
   import {RxDashboard } from "react-icons/rx";
   import { Link, useNavigate } from 'react-router-dom';
   import { PiUserCircle } from "react-icons/pi";
   import { BsFillBoxSeamFill } from "react-icons/bs";
-import { color } from 'framer-motion';
   const linkColor:string = '#0b3954';
   const linkHoverColor:string = '#ffb128';
 

@@ -114,7 +114,8 @@ _hover={
       >
        CHECKOUT
       </Button>
-      {checkoutStatus && <Text color={checkoutStatus.includes('Error') ? 'red' : 'green'}>{checkoutStatus}</Text>}
+      {checkoutStatus && <Text color={checkoutStatus.includes('Error') ? 'red' : 'green'}
+      >{checkoutStatus}</Text>}
     </Stack>
   )
 }

@@ -12,11 +12,13 @@ interface PriceTagProps {
 
 export type FormatPriceOptions = { locale?: string; currency?: string }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function formatPrice(value: number, opts: { locale?: string; currency?: string } = {}) {
-  const { locale = 'en-US', currency = 'USD' } = opts
+  const { locale = 'en-IN', currency = 'INR' } = opts // Updated locale to 'en-IN' for Indian Rupees
   const formatter = new Intl.NumberFormat(locale, {
     currency,
     style: 'currency',
+    currencyDisplay: 'symbol', // To display currency symbol
     maximumFractionDigits: 2,
   })
   return formatter.format(value)
