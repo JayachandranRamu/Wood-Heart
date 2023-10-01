@@ -11,8 +11,6 @@ import Users from '../../Admin/Pages/Users'
 import Products from '../../Admin/Pages/Products'
 
 import Admin from '../../Admin/Pages/Admin'
-
-import SingleUser from '../../Admin/Pages/SingleUser'
 import SingleUserAdmin from '../../Admin/Pages/SingleUserAdmin'
 import { Checkout } from '../../user/Checkout'
 
