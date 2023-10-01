@@ -32,7 +32,7 @@ const OrderSummaryItem = (props: OrderSummaryItemProps) => {
   const { label, value, children } = props
   return (
     <Flex justify="space-between" fontSize="sm">
-      <Text fontWeight="medium" color={mode('gray.600', 'gray.400')}>
+      <Text fontWeight="medium" fontSize={"16px"} letterSpacing={"1px"} color={mode('gray.600', 'gray.400')}>
         {label}
       </Text>
       {value ? <Text fontWeight="medium">{value}</Text> : children}
@@ -72,13 +72,13 @@ export const CartOrderSummary = ({ cartItems, totalCartPrice }: CartOrderSummary
 
   return (
     <Stack spacing="8" 
-    borderWidth="1px" 
-    padding="8" width="full" boxShadow='md' p='6' rounded='md' bg='white'>
-      <Heading size="md">Order Summary</Heading>
+    padding="8" width="full" 
+    fontFamily={"poppins"} bgColor={"white"} p={"40px"} borderRadius={"20px"}  >
+      <Text fontSize={"20px"} fontWeight={"lightbold"} size="md" fontFamily={"poppins"}>Order Summary</Text>
 
       <Stack spacing="6">
-        <OrderSummaryItem label="Subtotal" value={formattedPrice} />
-        <OrderSummaryItem label="Shipping + Tax">
+        <OrderSummaryItem  label="Subtotal" value={formattedPrice} />
+        {/* <OrderSummaryItem label="Shipping + Tax">
           <Link href="#" textDecor="underline">
             Calculate shipping
           </Link>
@@ -87,12 +87,12 @@ export const CartOrderSummary = ({ cartItems, totalCartPrice }: CartOrderSummary
           <Link href="#" textDecor="underline">
             Add coupon code
           </Link>
-        </OrderSummaryItem>
+        </OrderSummaryItem> */}
         <Flex justify="space-between">
-          <Text fontSize="lg" fontWeight="semibold">
+          <Text fontSize="22px" fontWeight="semibold">
             Total
           </Text>
-          <Text fontSize="xl" fontWeight="extrabold">
+          <Text fontSize="22px" fontWeight="bold" letterSpacing={"1px"}>
             {formattedPrice}
 
 
@@ -102,13 +102,17 @@ export const CartOrderSummary = ({ cartItems, totalCartPrice }: CartOrderSummary
     
       <Button
         bg="#0b3954"
-        color="#ffb128"
+        color="white"
         size="lg"
-        fontSize="md"
-        rightIcon={<FaArrowRight />}
+        letterSpacing={"1px"}
+        fontWeight={"500"}
+        fontSize="18px"
+_hover={
+  {bg:"#e89f22"}
+}
         onClick={handleCheckout} 
       >
-       Continue to checkout
+       CHECKOUT
       </Button>
       {checkoutStatus && <Text color={checkoutStatus.includes('Error') ? 'red' : 'green'}
       >{checkoutStatus}</Text>}

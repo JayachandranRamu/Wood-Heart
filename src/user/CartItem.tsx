@@ -8,8 +8,6 @@ type CartItemProps = {
   id: number; 
   name: string;
   about: string;
-  category: string;
-  color: string;
   quantity: number;
   price: number;
   currency: string;
@@ -28,10 +26,10 @@ export const CartItem = (props: CartItemProps) => {
     isGiftWrapping,
     id,
     name,
-    // about,
+    about,
     category,
-    color,
-    quantity: initialQuantity,
+    brand,
+    quan,
     image,
     price,
     availableQuantity, 
@@ -41,9 +39,9 @@ export const CartItem = (props: CartItemProps) => {
   } = props
 
   
-  
+  console.log(quan)
   // Use state to track gauris quantity
-  const [quantity, setQuantity] = useState(initialQuantity);
+  const [quantity, setQuantity] = useState(quan);
 
   const borderColor = useColorModeValue('#0b3954', '#0b3954'); 
   
@@ -52,16 +50,17 @@ export const CartItem = (props: CartItemProps) => {
 
 
 const handleQuantityChange = (newQuantity: number) => {
-  setQuantity(newQuantity);
-  onChangeQuantity?.(id, newQuantity);
-  const updatedPrice = calculateUpdatedPrice(newQuantity);
 
+  setQuantity(newQuantity);
+  onChangeQuantity(id, newQuantity);
+  const updatedPrice = calculateUpdatedPrice(newQuantity);
     onUpdateTotalPrice?.(updatedPrice);
 };
 
 
 // eslint-disable-next-line react-hooks/exhaustive-deps
 const calculateUpdatedPrice = (newQuantity: number) => {
+
   return price * newQuantity;
 };
 
@@ -69,14 +68,14 @@ const calculateUpdatedPrice = (newQuantity: number) => {
   const incrementQuantity = () => {
     if (quantity < quantityLimit) {
     
-      handleQuantityChange(quantity+1);
+      handleQuantityChange(+quantity+1);
     }
   };
 
 
   const decrementQuantity = () => {
     if (quantity > 1) {
-      handleQuantityChange(quantity - 1);
+      handleQuantityChange((+quantity) - 1);
     }
   };
 
@@ -85,13 +84,13 @@ const calculateUpdatedPrice = (newQuantity: number) => {
   }, [calculateUpdatedPrice, onUpdateTotalPrice, quantity]);
 
   return (
-    <Flex direction={{ base: 'column', md: 'row' }} justify="space-between" align="center">
+    <Flex fontFamily={"poppins"}  bgColor={"white"} p={"20px 30px"} borderRadius={"20px"} direction={{ base: 'column', md: 'row' }} justify="space-between" align="center">
       <CartProductMeta
         name={name}
-        // description={about}
-        category={category}
-        color={color}
+        description={category}
         image={image}
+        price={price}
+        brand={brand}
         isGiftWrapping={isGiftWrapping}
       />
 
@@ -101,35 +100,39 @@ const calculateUpdatedPrice = (newQuantity: number) => {
         <Flex align="center" gap={5} 
         justify="space-between" 
         border="1px solid " 
-         borderColor={ "gray.200"} 
+ fontSize={"16px"}
+ fontWeight={"600"}
          borderRadius='4'
          boxShadow='base' 
          p='1' 
+         color={"white"}
          rounded='md'
-        bg='white'>
+        bg="#174b69">
           <button onClick={decrementQuantity} disabled={quantity <= 1}   
            style={{
-            border: `1px solid ${borderColor}`,
+    
             borderRadius: '4px', 
             padding: '4px', 
+            paddingLeft:"10px"
           }}
           >-</button>
           <Text>{quantity}</Text>
           <button onClick={incrementQuantity} disabled={quantity >= quantityLimit}
            style={{
-            border: `1px solid ${borderColor}`,
+       
             borderRadius: '4px', 
             padding: '4px', 
+            paddingRight:"10px"
           }}
           
           >+</button>
         </Flex>
 
-        <PriceTag price={calculateUpdatedPrice(quantity)} currency={"INR"} />
+        <PriceTag price={calculateUpdatedPrice(quantity)} currency={"USD"} />
         <CloseButton aria-label={`Delete ${name} from cart`} onClick={()=>{onClickDelete?.(id)} }/>
       </Flex>
 
-      {/* gbMobile */}
+
       <Flex
         mt="4"
         align="center"
@@ -137,8 +140,9 @@ const calculateUpdatedPrice = (newQuantity: number) => {
         justify="space-between"
         display={{ base: 'flex', md: 'none' }}
       >
-        <Link fontSize="sm" textDecor="underline" onClick={() => onClickDelete?.(id)}>
-          Delete
+        <Link fontSize="m" color={"red"} fontWeight={"500"} letterSpacing={"1px"} border={"1px solid red"} padding={"8px 10px"} borderRadius={"10px"}
+         onClick={() => onClickDelete?.(id)}>
+          DELETE
         </Link>
   
 
@@ -148,10 +152,13 @@ const calculateUpdatedPrice = (newQuantity: number) => {
         borderColor={"gray.200"}  
         borderRadius='4'
         boxShadow='base' p='1' 
-        rounded='md' bg='white'>
+        rounded='md' bg='white'         p='1' 
+        color={"white"}
+        rounded='md'
+       bg="#174b69">
           <button onClick={decrementQuantity} disabled={quantity <= 1}
            style={{
-            border: `1px solid ${borderColor}`,
+         
             borderRadius: '4px', 
             padding: '4px', 
           }}
@@ -159,7 +166,7 @@ const calculateUpdatedPrice = (newQuantity: number) => {
           <Text>{quantity}</Text>
           <button onClick={incrementQuantity} disabled={quantity >= quantityLimit}
            style={{
-            border: `1px solid ${borderColor}`,
+          
             borderRadius: '4px', 
             padding: '4px', 
           }}
@@ -167,7 +174,7 @@ const calculateUpdatedPrice = (newQuantity: number) => {
           
           >+</button>
         </Flex>
-        <PriceTag price={calculateUpdatedPrice(quantity)} currency={"INR"} />
+        <PriceTag price={calculateUpdatedPrice(quantity)} currency={"USD"} />
       </Flex>
     </Flex>
   )

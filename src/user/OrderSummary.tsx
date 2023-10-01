@@ -8,6 +8,8 @@ import {
   Stack,
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
+import { useSelector } from 'react-redux';
+import { CartProductMeta } from './CartProductMeta';
 
 type CartItem = {
   id: number;
@@ -17,21 +19,22 @@ type CartItem = {
 };
 
 const OrderSummary: React.FC = () => {
-  const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  
+  
+  let Data=useSelector((store:any)=>store.authReducer.UserData)
+  let cartItems=Data.addToCart;
+
   const [totalCartPrice, setTotalCartPrice] = useState<number>(0);
 
   useEffect(() => {
    
-    const storedCartItems = localStorage.getItem('cartData');
-    const storedTotalCartPrice = localStorage.getItem('cartPrice');
-
-    if (storedCartItems) {
-      setCartItems(JSON.parse(storedCartItems));
-    }
-
-    if (storedTotalCartPrice) {
-      setTotalCartPrice(parseFloat(storedTotalCartPrice));
-    }
+    let sum=0;
+    cartItems.map((el:any)=>{
+     console.log(sum,el.price,el.quantity)
+     sum+=+el.price*(+el.quantity)});
+     setTotalCartPrice(sum);
+     console.log(sum)
+    setTotalCartPrice(sum)
   }, []);
 
   return (
@@ -39,6 +42,7 @@ const OrderSummary: React.FC = () => {
     p='6' rounded='md' 
     bg='white'  
     marginTop={5}
+    w={"100%"}
      marginBottom={5} 
     // shadow={"dark-lg"}   
     borderRadius={10}  
@@ -64,49 +68,66 @@ const OrderSummary: React.FC = () => {
         {/* <Heading as="h1" size="xl" mb={6}>
           Cart Summary
         </Heading> */}
-         <Heading as="h3" mt={4} mb={4}>
+         <Heading fontFamily={"poppins"} as="h3" mt={4} mb={4}>
                     Order Summary
                     </Heading>
 
-        <Stack spacing={4}>
-          {cartItems.map((item) => (
-            <motion.div
-              key={item.id}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-            >
-              <Flex
-                borderWidth="1px"
-                borderRadius="lg"
-                overflow="hidden"
-                shadow="md"
-              >
-                <Image
-                  src={item.image}
-                  alt={item.name}
-                  width={100}
-                  height={100}
-                  objectFit="cover"
-                />
-                <Flex
-                  direction="column"
-                  justifyContent="space-between"
-                  p={4}
-                  flex="1"
-                >
-                  <Text fontSize="xl">{item.name}</Text>
-                  <Text fontSize="lg">
-                    Price: ₹{item.price.toFixed(1)}
-                  </Text>
-                </Flex>
-              </Flex>
-            </motion.div>
+        <Stack spacing={4} gap={"40px"}>
+          {cartItems.map((item:any) => (
+            // <motion.div
+            //   key={item.id}
+            //   initial={{ opacity: 0, x: -20 }}
+            //   animate={{ opacity: 1, x: 0 }}
+            //   exit={{ opacity: 0, x: -20 }}
+            // >
+            //   <Flex
+            //     borderWidth="1px"
+            //     borderRadius="lg"
+            //     overflow="hidden"
+            //     shadow="md"
+            //   >
+            //     <Image
+            //       src={item.image}
+            //       alt={item.name}
+            //       width={100}
+            //       height={100}
+            //       objectFit="cover"
+            //     />
+            //     <Flex
+            //       direction="column"
+            //       justifyContent="space-between"
+            //       p={4}
+            //       flex="1"
+            //     >
+            //       <Text fontSize="xl">{item.name}</Text>
+            //       <Text fontSize="lg">
+            //         Price: ${item.price.toFixed(1)}
+            //       </Text>
+            //     </Flex>
+            //   </Flex>
+            // </motion.div>
+            <Flex alignItems={"center"} justifyContent={"space-between"}>
+
+           <Box>
+           <CartProductMeta   
+            name={item.name}
+            description={item.category}
+            image={item.image}
+            price={item.price}
+            brand={item.brand}
+          
+          />
+           </Box>
+        
+          <Box>
+<Text color='gray.600' mb={"2px"} fontSize="14">Quantity : {item.quantity}</Text>
+          </Box>
+           </Flex>
           ))}
         </Stack>
         <Box mt={6}>
-          <Text fontSize="lg">
-            Total Price: ₹{totalCartPrice.toFixed(1)}
+          <Text fontSize="24" fontWeight={"600"} >
+            Total Price: $ {totalCartPrice.toFixed(1)}
           </Text>
         </Box>
       </Flex>

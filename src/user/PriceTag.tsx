@@ -51,13 +51,15 @@ const Price = (props: PriceProps) => {
   const color = isOnSale ? onSaleColor : defaultColor
   return (
     <Text
+    color="#ffb431"
       as="span"
-      fontWeight="medium"
-      color={color}
+      fontWeight="bold"
+      letterSpacing={"1px"}
+   fontSize={"20px"}
       textDecoration={isOnSale ? 'line-through' : 'none'}
       {...textProps}
     >
-      {children}
+     {children}
     </Text>
   )
 }
