@@ -1429,7 +1429,43 @@
       "id": 36
     }
   ],
+<<<<<<< HEAD
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  "user":[
+=======
   "user": [
+>>>>>>> 317b3b5887478be0e78debc07ddd8a2958429da7
     {
       "address": {
         "geolocation": {
@@ -1451,9 +1487,253 @@
       },
       "phone": "1-570-236-7033",
       "__v": 0,
-      "orders": [],
+      "orders": [{
+        "id": 11,
+        "category": "Lighting",
+        "name": "Crystal Floor Lamp",
+        "price": 199.99,
+        "image": "https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-product-pic2.webp",
+        "brand": "CrystalGlow",
+        "size": "Height: 60\"",
+        "material": "Crystal and Metal",
+        "color": "Silver",
+        "finish_type": "Shiny",
+        "about": "Brighten up your space with our Crystal Floor Lamp. This silver crystal floor lamp features a shiny finish and stands at a height of 60 inches. It adds a touch of glamour to any room. Dimensions: Height: 60\".",
+        "rating": 5,
+        "reviews": [
+          {
+            "username": "GlamourSpace",
+            "rating": 5,
+            "comment": "This crystal floor lamp is breathtaking! So elegant."
+          },
+          {
+            "username": "ShinyLighting",
+            "rating": 4,
+            "comment": "A bit pricey, but it's a showstopper."
+          },
+          {
+            "username": "CrystalLover",
+            "rating": 5,
+            "comment": "I'm in love with this floor lamp. It's a work of art."
+          },
+          {
+            "username": "EasyAssembly4",
+            "rating": 4,
+            "comment": "Installation was a bit tricky due to its size."
+          },
+          {
+            "username": "GlamorousHome",
+            "rating": 5,
+            "comment": "Highly recommend for a glamorous home."
+          }
+        ]
+      }
+      ,
+      {
+        "id": 12,
+        "category": "Tables",
+        "name": "Glass Top End Table",
+        "price": 99.99,
+        "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/n9z22hla9a1iopdhugz5.png",
+        "brand": "GlassGlow",
+        "size": "18\" x 18\" x 22\"",
+        "material": "Glass and Metal",
+        "color": "Clear and Gold",
+        "finish_type": "Glossy",
+        "about": "Add a touch of sophistication to your space with our Glass Top End Table. This clear glass end table features a glossy finish and elegant gold metal accents. It's perfect for placing by your sofa. Dimensions: 18\" x 18\" x 22\".",
+        "rating": 1,
+        "reviews": [
+          {
+            "username": "SophisticatedLiving",
+            "rating": 5,
+            "comment": "I love this glass end table! It's so chic."
+          },
+          {
+            "username": "ElegantDecorator",
+            "rating": 4,
+            "comment": "Great value for a stylish glass table."
+          },
+          {
+            "username": "HappyCustomer3",
+            "rating": 5,
+            "comment": "I'm so happy with this purchase. It's perfect for my living room."
+          },
+          {
+            "username": "EasyAssembly3",
+            "rating": 4,
+            "comment": "Assembly was straightforward, no complaints."
+          },
+          {
+            "username": "ChicHomeDesign",
+            "rating": 5,
+            "comment": "Highly recommend for a chic living room."
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "category": "Chairs",
+        "name": "Swivel Accent Chair",
+        "price": 299.9,
+        "image": "https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-product-pic7.webp",
+        "brand": "AccentStyle",
+        "size": "30\" x 30\" x 32\"",
+        "material": "Velvet",
+        "color": "Pink",
+        "finish_type": "Soft",
+        "about": "Add a pop of color to your space with our Swivel Accent Chair. This pink velvet chair features a soft finish and 360-degree swivel, perfect for adding flair to any room. Dimensions: 30\" x 30\" x 32\".",
+        "rating": 4.5,
+        "reviews": [
+          {
+            "username": "PinkObsession",
+            "rating": 5,
+            "comment": "I adore this pink accent chair! It's a statement piece."
+          },
+          {
+            "username": "ColorfulLiving",
+            "rating": 4,
+            "comment": "Great value for a stylish accent chair."
+          },
+          {
+            "username": "HappyDecorator2",
+            "rating": 5,
+            "comment": "I'm so happy with this purchase. It's perfect for my colorful decor."
+          },
+          {
+            "username": "EasyAssembly4",
+            "rating": 4,
+            "comment": "Assembly was straightforward, no complaints."
+          },
+          {
+            "username": "ColorfulHome",
+            "rating": 5,
+            "comment": "Highly recommend for adding a pop of color."
+          }
+        ]
+      }, {
+        "id": 8,
+        "category": "Chairs",
+        "name": "Ergonomic Office Chair",
+        "price": 249.95,
+        "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/u5ui5g6ahhlflfnx2ocz.png",
+        "brand": "ErgoComfort",
+        "size": "26\" x 26\" x 40\"",
+        "material": "Mesh",
+        "color": "Black",
+        "finish_type": "Matte",
+        "about": "Upgrade your office with our Ergonomic Office Chair. This black mesh office chair features a matte finish and ergonomic design for maximum comfort during long workdays. Dimensions: 26\" x 26\" x 40\".",
+        "rating": 2,
+        "reviews": [
+          {
+            "username": "OfficePro",
+            "rating": 5,
+            "comment": "This office chair is a game-changer! So comfortable."
+          },
+          {
+            "username": "ComfortAtWork",
+            "rating": 4,
+            "comment": "Great value for a comfortable office chair."
+          },
+          {
+            "username": "ProductiveDays",
+            "rating": 5,
+            "comment": "I'm very pleased with this purchase. It's perfect for work."
+          },
+          {
+            "username": "AssemblyChamp",
+            "rating": 4,
+            "comment": "Assembly was straightforward, no complaints."
+          },
+          {
+            "username": "OfficeComfortFan",
+            "rating": 5,
+            "comment": "Perfect for anyone who spends hours at the desk."
+          }
+        ]
+      }],
       "wishList": [],
-      "addToCart": []
+      "addToCart": [ {
+      "id": 4,
+      "category": "Desks",
+      "name": "Minimalist Writing Desk",
+      "price": 199.99,
+      "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/h74a1saedzwy1fo7w41r.png",
+      "brand": "MinimalCraft",
+      "size": "42\" x 24\" x 30\"",
+      "material": "Wood",
+      "color": "White",
+      "finish_type": "Matte",
+      "about": "Enhance your workspace with our Minimalist Writing Desk. This white wood writing desk features a matte finish and a clean design, perfect for productivity. Dimensions: 42\" x 24\" x 30\".",
+      "rating": 5,
+      "reviews": [
+        {
+          "username": "ProductivityPro",
+          "rating": 5,
+          "comment": "This desk has improved my productivity. Love it!"
+        },
+        {
+          "username": "CleanWorkspace",
+          "rating": 4,
+          "comment": "Great value for a stylish writing desk."
+        },
+        {
+          "username": "MinimalistAtHeart",
+          "rating": 5,
+          "comment": "I'm so happy with this purchase. It's perfect."
+        },
+        {
+          "username": "EasyAssembly",
+          "rating": 4,
+          "comment": "Assembly was straightforward, no complaints."
+        },
+        {
+          "username": "WorkspaceEnthusiast",
+          "rating": 5,
+          "comment": "Perfect for my minimalist home office."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "category": "Cabinets",
+      "name": "Vintage Storage Cabinet",
+      "price": 299.95,
+      "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/9kewtxq5gla58cldafzf.png",
+      "brand": "VintageVibes",
+      "size": "36\" x 18\" x 42\"",
+      "material": "Wood",
+      "color": "Antique White",
+      "finish_type": "Distressed",
+      "about": "Add a touch of vintage charm to your space with our Vintage Storage Cabinet. This antique white wood cabinet features a distressed finish and ample storage space. Dimensions: 36\" x 18\" x 42\".",
+      "rating": 3,
+      "reviews": [
+        {
+          "username": "VintageLover",
+          "rating": 5,
+          "comment": "I adore this vintage cabinet! It's a classic."
+        },
+        {
+          "username": "AntiqueEnthusiast",
+          "rating": 4,
+          "comment": "Great cabinet for a vintage look."
+        },
+        {
+          "username": "HappyHomeowner",
+          "rating": 5,
+          "comment": "I'm thrilled with this purchase. Highly recommend!"
+        },
+        {
+          "username": "EasyStorage",
+          "rating": 4,
+          "comment": "Assembly was straightforward, but it's heavy."
+        },
+        {
+          "username": "RetroStorageFan",
+          "rating": 5,
+          "comment": "Perfect for anyone needing vintage-style storage."
+        }
+      ]
+    }]
     },
     {
       "address": {

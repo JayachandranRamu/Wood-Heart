@@ -108,84 +108,84 @@ const SingleUserAdmin = () => {
   <TabPanels>
     <TabPanel>
       {/* --------------------------1------------------- */}
-    <Card
-   m={"auto"}
-   width={{ base: '90%', sm: '80%', md: '70%', lg: '60%' }}
-  direction={{ base: 'column', sm: 'row' }}
-  overflow='hidden'
-  variant='outline'
->
-  <Image
-   m={"auto"}
-    objectFit='cover'
-    maxW={{ base: '50%', sm: '150px' }}
-    src="https://images.pexels.com/photos/3965520/pexels-photo-3965520.jpeg?auto=compress&cs=tinysrgb&w=600"
-        alt='Caffe Latte'
-  />
-
-  <Stack >
-    <CardBody fontSize={fontSize}>
-      <Heading size='md'></Heading>
-      <Table   ml={"20px"} w={"100%"}>
-        <tr><td >Product</td><td> ---------product name-----------------------------------</td></tr>
-        <tr ><td>Category</td><td>---------category-----------------------------------</td></tr>
-        <tr><td>Price</td><td>-------price-----------------------------------</td></tr>
-        <tr><td>Order Placed</td> <td>------Ordered date-----------------------------------</td></tr>
-      </Table>
-    </CardBody>
-  </Stack>
-</Card>
-
-      <p>one!</p>
-      <p>one!</p>
-      <p>one!</p>
-      <p>one!</p>
-      <p>one!</p>
-      <p>one!</p>
-      <p>one!</p>
-      <p>one!</p>
-      <p>one!</p>
-      <p>one!</p>
+      
+     {
+       singleUser.orders&&singleUser.orders.length===0&&
+       <img style={{width:"50%",margin:"auto"}} 
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmijcBU3C1ir1i3w6-9WBstlyK-wdboFki3ll4yTyPbyjZEpu2oGvJlmYXDQ0h9AXffyk&usqp=CAU" alt="" />
+       
+     }
+      {
+        singleUser.orders&&singleUser.orders.map((ele:any)=>(
+          <Card
+          // m={"auto"}
+          mb={"20px"}
+          width={{ base: '90%', sm: '90%', md: '90%', lg: '95%' }}
+         direction={{ base: 'column', sm: 'row' }}
+         overflow='hidden'
+         variant='outline'
+       >
+         <Image
+          // m={"auto"}
+           objectFit='cover'
+           maxW={{ base: '50%', sm: '150px' }}
+           src={ele.image}
+               alt='Caffe Latte'
+         />
+       
+         <Stack >
+           <CardBody fontSize={fontSize}>
+             <Heading size='md'></Heading>
+             <Table   ml={"20px"} w={"100%"}>
+               <tr><td >Product</td><td> -----{ele.name}</td></tr>
+               <tr ><td>Category</td><td>-----{ele.category}</td></tr>
+               <tr><td>Price</td><td>-----₹{ele.price}</td></tr>
+               <tr><td>Order Placed</td> <td>-----Ordered date</td></tr>
+             </Table>
+           </CardBody>
+         </Stack>
+       </Card>
+        ))
+      }
     </TabPanel>
     <TabPanel>
+    {
+       singleUser.addToCart&&singleUser.addToCart.length===0&&
+       <img style={{width:"50%",margin:"auto"}} 
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmijcBU3C1ir1i3w6-9WBstlyK-wdboFki3ll4yTyPbyjZEpu2oGvJlmYXDQ0h9AXffyk&usqp=CAU" alt="" />
+       
+     }
          {/* --------------------------1------------------- */}
-    <Card
-   m={"auto"}
-   width={{ base: '90%', sm: '80%', md: '70%', lg: '60%' }}
-  direction={{ base: 'column', sm: 'row' }}
-  overflow='hidden'
-  variant='outline'
->
-  <Image
-   m={"auto"}
-    objectFit='cover'
-    maxW={{ base: '50%', sm: '150px' }}
-    src="https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&w=600"
-        alt='Caffe Latte'
-  />
-
-  <Stack >
-    <CardBody fontSize={fontSize}>
-      <Heading size='md'></Heading>
-      <Table   ml={"20px"} w={"100%"}>
-        <tr><td >Product</td><td> ---------product name-----------------------------------</td></tr>
-        <tr ><td>Category</td><td>---------category-----------------------------------</td></tr>
-        <tr><td>Price</td><td>-------price-----------------------------------</td></tr>
-        <tr><td>Order Placed</td> <td>------Ordered date-----------------------------------</td></tr>
-      </Table>
-    </CardBody>
-  </Stack>
-</Card>
-      <p>two!</p>
-      <p>two!</p>
-      <p>two!</p>
-      <p>two!</p>
-      <p>two!</p>
-      <p>two!</p>
-      <p>two!</p>
-      <p>two!</p>
-      <p>two!</p>
-      <p>two!</p>
+         {
+          singleUser.addToCart&&singleUser.addToCart.map((ele:any)=>(
+            <Card
+            mb={"20px"}
+            width={{ base: '90%', sm: '90%', md: '90%', lg: '90%' }}
+           direction={{ base: 'column', sm: 'row' }}
+           overflow='hidden'
+           variant='outline'
+         >
+           <Image
+            // m={"auto"}
+             objectFit='cover'
+             maxW={{ base: '50%', sm: '150px' }}
+             src={ele.image}
+                 alt='Caffe Latte'
+           />
+         
+           <Stack >
+             <CardBody fontSize={fontSize}>
+               <Heading size='md'></Heading>
+               <Table   ml={"20px"} w={"100%"}>
+                 <tr><td >Product</td><td> -----{ele.name}</td></tr>
+                 <tr ><td>Category</td><td>-----{ele.category}</td></tr>
+                 <tr><td>Price</td><td>-----₹{ele.price}</td></tr>
+               </Table>
+             </CardBody>
+           </Stack>
+         </Card>
+          ))
+         }
     </TabPanel>
   </TabPanels>
 </Tabs>

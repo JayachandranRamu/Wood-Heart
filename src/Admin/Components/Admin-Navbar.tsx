@@ -61,7 +61,7 @@ import { color } from 'framer-motion';
           </Flex>
           <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
             <Image src={"https://dev-to-uploads.s3.amazonaws.com/uploads/articles/abbpihhn1ujbkght2zby.png"} w={["100%","100%","30%"]}
-              textAlign={useBreakpointValue({ base: 'center', md: 'left' })} margin={"10px 0"} onClick={()=>Navigate("/")} >
+              textAlign={useBreakpointValue({ base: 'center', md: 'left' })} margin={"10px 0"} onClick={()=>Navigate("/admin")} >
              
             </Image>
   
