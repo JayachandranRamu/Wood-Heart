@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from "../Redux/rootReducer"; 
 import {
@@ -18,11 +18,14 @@ import {
     useColorModeValue,
     SimpleGrid,
     List,
-    ListItem
+    ListItem,
+    useToast
 } from '@chakra-ui/react';
 import { FaStar } from 'react-icons/fa';
 import { CartDrawer } from './CartDrawer';
 import { getSingleProductData } from '../Redux/UserPage/action';
+import { AddCartProduct } from '../Redux/Auth/action';
+import OrderSummary from '../../user/OrderSummary';
 
 export const SingleProductCard: React.FC = () => {
   let { id } = useParams<{ id: number }>();
@@ -37,7 +40,9 @@ export const SingleProductCard: React.FC = () => {
 //   }));
 
 let singleProduct=useSelector((store:RootState)=>store.productReducer.singleProduct)
-
+let UserData=useSelector((store:any)=>store.authReducer.UserData)
+let isAuth=useSelector((store:any)=>store.authReducer.isAuth)
+let Nav=useNavigate()
   const {
     getInputProps,
     getIncrementButtonProps,
@@ -49,21 +54,56 @@ let singleProduct=useSelector((store:RootState)=>store.productReducer.singleProd
     max: 1000,
     precision: 0,
   });
-
+  const toast = useToast()
   const inc = getIncrementButtonProps();
   const dec = getDecrementButtonProps();
   const input = getInputProps();
-
+console.log(input.value)
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   function onClose() {
     setIsOpen(!isOpen);
   }
+  function HandleAddCart(){
+
+    if(!isAuth){
+      toast({
+        title: 'Kindly Login.',
+        position:"top",
+        description: "To add products to your cart.",
+        status: 'info',
+        duration: 2000,
+        isClosable: true,
+      })
+Nav("/")
+    }
+
+    let cartProduct=singleProduct;
+    cartProduct.quantity=input.value;
+let b=UserData.addToCart.find(el=>el.id==cartProduct.id);
+console.log(b)
+if(b){
+  toast({
+    title: 'Product is Already in Cart.',
+    position:"top",
+    description: "Kindly,Go and check checkout page.",
+    status: 'info',
+    duration: 2000,
+    isClosable: true,
+  })
+}else{
+let a=UserData;
+    UserData.addToCart.push(cartProduct);
+    dispatch(AddCartProduct(UserData))
+   
+  }
+  setIsOpen(!isOpen);
+}
 
   useEffect(() => {
  
     dispatch(getSingleProductData(id));
-  }, [id]);
+  }, []);
 
   // ... rest of your component code
 console.log(singleProduct,id)
@@ -122,7 +162,8 @@ console.log(singleProduct,id)
         </HStack>
         <Button
           onClick={() => {
-            setIsOpen(!isOpen);
+            
+            HandleAddCart();
           }}
           bgColor={"#2b3954"}
           color={"white"}

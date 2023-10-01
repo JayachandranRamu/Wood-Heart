@@ -15,6 +15,8 @@ import Admin from '../../Admin/Pages/Admin'
 import SingleUser from '../../Admin/Pages/SingleUser'
 import SingleUserAdmin from '../../Admin/Pages/SingleUserAdmin'
 import { Checkout } from '../../user/Checkout'
+import PrivateRouter from './PrivateRoute'
+import { Cart } from '../../user/Cart'
 
 
 
@@ -27,13 +29,21 @@ const MainRoutes = () => {
 
         <Route path="/product/:id" element={<SingleProduct/>} />
   <Route path='/checkout' element={<Checkout />}/>
-        <Route path="/admin" element={<Dashboard/>}></Route>
-        <Route path="/admin/admin-user" element={<Admin/>}></Route>
+        <Route path="/admin" element={
+          <PrivateRouter>
+            <Dashboard/>
+          </PrivateRouter>
+        }></Route>
+        <Route path="/admin/admin-user" element={
+        <PrivateRouter>
+<Admin/>
+        </PrivateRouter>
+        }></Route>
         <Route path="/admin/users" element={<Users/>}></Route>
         <Route path="/admin/singleUser/:id" element={<SingleUserAdmin/>}></Route>
         <Route path="/admin/products" element={<Products/>}></Route>
         <Route path="/checkout" element={<Checkout/>}></Route>
-
+<Route path='/cart' element={<Cart />}></Route>
 
    
 

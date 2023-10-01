@@ -1,4 +1,4 @@
-import { AUTH_ADD_NEW_USER_DATA, AUTH_ALL_USER_DATA, AUTH_FAILURE, AUTH_LOGOUT_SUCCESS, AUTH_SUCCESS } from "../actionTypes";
+import { ADD_CART_PRODUCT_SUCCESS, ADMIN_CHECK, AUTH_ADD_NEW_USER_DATA, AUTH_ALL_USER_DATA, AUTH_FAILURE, AUTH_LOGOUT_SUCCESS, AUTH_SUCCESS } from "../actionTypes";
 interface UserData {
   // Define the structure of your JSON data here
   // For example, if it has 'username' and 'email' fields:
@@ -15,7 +15,8 @@ UserData: rawData ? JSON.parse(rawData) : {},
 isLoading:false,
 isError:false,
 userID:localStorage.getItem("LoginedUserDataID") || "",
-allUserData:[]
+allUserData:[],
+isAdmin:false
 }
 console.log(initialState)
 
@@ -62,6 +63,16 @@ userID:""
           ...state,
          allUserData:[...state.allUserData,action.payload]
         };
+      }
+      case ADMIN_CHECK:{
+        return {
+          ...state,
+         isAdmin:true
+        };
+      }
+      case ADD_CART_PRODUCT_SUCCESS:{
+       return { ...state,
+        UserData:action.payload}
       }
       default:
         return state; // Return the state as is for unknown actions

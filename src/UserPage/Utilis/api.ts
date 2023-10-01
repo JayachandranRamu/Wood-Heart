@@ -20,3 +20,7 @@ return axios.post(userUrl,newUser)
 export const GetAllUserDataFromAPI=()=>{
   return   axios.get(userUrl)
 }
+
+export const  AddCartProductToAPI=(userData:any)=>{
+return axios.patch(userUrl+"/"+userData.id,userData)
+}
