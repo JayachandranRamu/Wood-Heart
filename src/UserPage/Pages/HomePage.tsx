@@ -1,3 +1,4 @@
+import { useDispatch } from "react-redux"
 import { DesktopNav } from "../Components/BottomNavbar"
 import { Carousal } from "../Components/Carousal"
 import FAQ from "../Components/FAQ"
@@ -7,19 +8,25 @@ import LoginMenu from "../Components/Login"
 import NewsLetter from "../Components/NewsLetter"
 import TopNavbar from "../Components/TopNavbar"
 import TrustedSection from "../Components/TrustedSection"
-
+import {useEffect} from "react"
+import { GetAllUserData } from "../Redux/Auth/action"
 
 const HomePage = () => {
+
+  const dispatch=useDispatch();
+  
+ 
+
   return (
     <div>
         <TopNavbar />
         <DesktopNav />
+        
         <Hero />
         <TrustedSection />
         <Carousal />
-        {/* <NewsLetter /> */}
         <FAQ />
-      
+       
         <Footer />
         
     </div>
