@@ -57,11 +57,12 @@ const SingleUserAdmin = () => {
    </AbsoluteCenter>
    </Box>
    {isLoading&&
-   <Stack bg={"black"}
+   <Stack bg={"white"}
    m={"auto"}
    w={"80%"}
+   h={"350px"}
    >
-   <CircularProgress m={"auto"} isIndeterminate color='green.300' />
+   <CircularProgress  m={"auto"} isIndeterminate color='green.300' />
    </Stack>
   }
   {
@@ -86,7 +87,7 @@ const SingleUserAdmin = () => {
        <Table   ml={"20px"} w={"100%"}>
          <tr><td >Name</td><td>       {`${username}`||"not read"}                     </td></tr>
          <tr ><td>E-mail</td><td>     {`${email}`||"not read"}                        </td></tr>
-         <tr><td>Address</td>  <td style={{backgroundColor:"yellow"}}><tr><td>--city:</td>{`${address?.city}`||"not read"}</tr>
+         <tr><td>Address</td>  <td style={{backgroundColor:"white"}}><tr><td>--city:</td>{`${address?.city}`||"not read"}</tr>
                                <tr><td>--Street:</td>{`${address?.street}`||"not read"}</tr>
                                <tr><td>--Pincode:</td>{`${address?.zipcode}`||"not read"}</tr>
                                </td></tr>

@@ -10,7 +10,7 @@ import { GET_SINGLE_USER_FAILURE,
       GET_USER_SUCCESS } from "./userTypes";
 
 import { Dispatch } from "redux";
-import { userUrl } from "../../Utilis/api";
+import { extractTotalPages, userUrl } from "../../Utilis/api";
 
 const GetUserLoading={ type: typeof GET_USER_LOADING};
  
@@ -31,11 +31,12 @@ export interface userInterface{
 export const getAllusers=() :any=>async(dispatch:Dispatch) =>{
        dispatch({type:GET_USER_LOADING});
        try {
-        const response= await axios.get<userInterface[]>(userUrl);
-        console.log(response);
-        dispatch({ type: GET_USER_SUCCESS, payload: response});
+        // 
+        const response= await axios.get<userInterface[]>(`${userUrl}`);
+        
+        dispatch({ type: GET_USER_SUCCESS, payload:response});
       } catch (error) {
-        console.error(error);
+        // console.error(error);
         dispatch({type:GET_USER_FAILURE});
       }
 }
@@ -45,8 +46,8 @@ export const getAllusers=() :any=>async(dispatch:Dispatch) =>{
 export const getSingleUserby=(id:number) :any=>async(dispatch :Dispatch)=>{
      dispatch({type:GET_SINGLE_USER_REQUEST});
    try{
-         const response= await axios.get(`${userUrl}/${id}`);
-              console.log(response);
+         const response= await axios.get<userInterface[]>(`${userUrl}/${id}`);
+              // console.log(response);
               dispatch({type:GET_SINGLE_USER_SUCCESS,payload:response.data});
    }
   // .then(res=>{
@@ -66,12 +67,12 @@ export const deleteSingleUser = (id: number): any => async (dispatch: Dispatch) 
   console.log(`${userUrl}/${id}`)
   dispatch({ type: DELETE_SINGLE_USER_REQUEST });
   try {
-   const res= await axios.delete(`${userUrl}/${id}`);
-    console.log(res);
+   const res= await axios.delete<userInterface[]>(`${userUrl}/${id}`);
+    // console.log(res);
     
-    dispatch({ type: DELETE_SINGLE_USER_SUCCESS });
+    dispatch({ type: DELETE_SINGLE_USER_SUCCESS ,payload:id });
   } catch (err) {
-    console.log(err);
+    // console.log(err);
     dispatch({ type: DELETE_SINGLE_USER_FAILURE });
   }
 };
