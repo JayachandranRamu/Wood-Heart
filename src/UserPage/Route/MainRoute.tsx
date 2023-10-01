@@ -33,7 +33,10 @@ const MainRoutes = () => {
         <Route path="/admin/singleUser/:id" element={<SingleUserAdmin/>}></Route>
         <Route path="/admin/products" element={<Products/>}></Route>
         <Route path="/checkout" element={<Checkout/>}></Route>
-        {/* <Route path="/order-confirmation" element={<OrderConfirmation />}></Route> */}
+
+
+   
+
 
 
         <Route path="*" element={<Stack spacing={3}>
