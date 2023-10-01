@@ -86,9 +86,9 @@ const SingleUserAdmin = () => {
        <Table   ml={"20px"} w={"100%"}>
          <tr><td >Name</td><td>       {`${username}`||"not read"}                     </td></tr>
          <tr ><td>E-mail</td><td>     {`${email}`||"not read"}                        </td></tr>
-         <tr><td>Address</td>  <td style={{backgroundColor:"yellow"}}><tr><td>--city:</td>{`${address.city}`||"not read"}</tr>
-                               <tr><td>--Street:</td>{`${address.street}`||"not read"}</tr>
-                               <tr><td>--Pincode:</td>{`${address.zipcode}`||"not read"}</tr>
+         <tr><td>Address</td>  <td style={{backgroundColor:"yellow"}}><tr><td>--city:</td>{`${address?.city}`||"not read"}</tr>
+                               <tr><td>--Street:</td>{`${address?.street}`||"not read"}</tr>
+                               <tr><td>--Pincode:</td>{`${address?.zipcode}`||"not read"}</tr>
                                </td></tr>
          <tr><td>Phone</td> <td>      {phone}                        </td></tr>
        </Table>
