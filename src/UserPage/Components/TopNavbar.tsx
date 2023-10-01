@@ -32,6 +32,7 @@ import LoginMenu from './Login';
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure()
+
 const Navigate=useNavigate();
   return (
     <Box fontFamily={"Poppins"} mt={[0,"10px"]}>
@@ -78,22 +79,28 @@ const Navigate=useNavigate();
           direction={'row'}
           spacing={1}
           >
-<Link to="/admin"> 
+<Link to="/cart"> 
              <Button
-              display={{ base: 'none', md: 'inline-flex' }} 
+              display={{ md: 'inline-flex' }} 
               variant={'link'} >
-            <Image src='https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-cart.svg'  w={["45%","55%"]}>
+            <Image   w={['30%', '30%', '55%']}
+
+              m={[ 0]}
+              ml={["85%",0]}
+alignItems={"center"}
+
+              alt="User Icon" src='https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-cart.svg'  >
 
             </Image></Button>
             </Link>
-            <Link to="/admin"> 
+            {/* <Link to="/admin"> 
               <Button 
                display={{ base: 'none', md: 'inline-flex' }}
                 variant={'link'}>
             <Image src='https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-wishlist.svg'  w={["45%","55%"]} >
 
             </Image></Button>
-            </Link>
+            </Link> */}
             {/* <Link to="#" te> Wrap the button with a Link component */}
      
         {/* <Image

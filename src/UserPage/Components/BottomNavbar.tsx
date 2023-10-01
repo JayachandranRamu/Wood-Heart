@@ -98,7 +98,7 @@ import { Link } from 'react-router-dom';
   
     return (
       <Box fontFamily={"Poppins"} boxShadow="rgba(0, 0, 0, 0.1) -4px 9px 25px -6px" m={"auto"} mt={"10px"} >
-        <Stack direction="row" spacing={4} w="70%" m="auto">
+        <Stack direction="row" spacing={4} w="70%" m="auto" pb={"10px"}>
           {NAV_ITEMS.map((navItem) => (
             <Box key={navItem.label} m={"auto"} 
             // borderRight={"1.5px solid #f5f5f5"}

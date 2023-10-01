@@ -15,20 +15,22 @@ export type CartProductMetaProps = {
   name: string
   description: string
   image: string
+  price:any
+  brand:string
 }
 
 export const CartProductMeta = (props: CartProductMetaProps) => {
-  const { isGiftWrapping = true, image, name, description } = props
+  const { isGiftWrapping = true, image,brand, name, description,price } = props
   return (
-    <Stack direction="row" spacing="5" width="full">
+    <Stack direction="row" spacing="5" width="full" >
       <Image
         rounded="lg"
-        width="120px"
-        height="120px"
-        fit="cover"
+
+        height="150px"
+
         src={image}
         alt={name}
-        draggable="false"
+  
         loading="lazy"
       />
       <Box pt="4">
@@ -37,15 +39,14 @@ export const CartProductMeta = (props: CartProductMetaProps) => {
           <Text color={mode('gray.600', 'gray.400')} fontSize="sm">
             {description}
           </Text>
+          {/* <Text color={mode('gray.600', 'gray.400')} fontSize="sm">
+            {brand}
+          </Text> */}
+      
+          <Text color={mode('gray.600', 'gray.400')} fontSize="sm">
+            Price : $ {price}
+          </Text>
         </Stack>
-        {isGiftWrapping && (
-          <HStack spacing="1" mt="3" color={mode('gray.600', 'gray.400')}>
-            <Icon as={FiGift} boxSize="4" />
-            <Link fontSize="sm" textDecoration="underline">
-              Add gift wrapping
-            </Link>
-          </HStack>
-        )}
       </Box>
     </Stack>
   )

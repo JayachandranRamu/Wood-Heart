@@ -30,6 +30,7 @@ import { GetAllUserData, LogoutStoringUserDatainLS, StoringUserDatainLS } from '
 import { SignupModal } from './Signup';
 import { BsSimFill } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
+import { OrderDrawer } from './OrderDrawer';
 const LoginMenu = () => {
   const [SignOpen, setSignOpen] = useState<boolean>(false);
 
@@ -117,7 +118,7 @@ onClose()
           <Button as="div" border="none" variant="link">
             <Image
               src="https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-user.svg"
-              w={['20%', '20%', '55%']}
+              w={['30%', '30%', '55%']}
               m={['auto', 0]}
               alt="User Icon"
             />
@@ -131,8 +132,8 @@ onClose()
               
           <PopoverBody >
          
-            <Button w={"100%"}        fontSize="16" mb={"10px"}  variant='outline'  color={"#2b3954"} alignItems={"center"}>Profile</Button>
-            
+           <OrderDrawer />
+           
         
             <Button
               colorScheme="white"
@@ -194,6 +195,7 @@ onClose()
             >
               LOGIN
             </Button>
+           
             <Box m={"10px 35%"} mb={"0"} alignItems={"center"} justifyContent={"center"} w={"100%"}>
             <Button
               color="#2b3954"
