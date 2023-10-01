@@ -19,12 +19,10 @@ interface ProductCardProps {
 
 const AdminProductCard: React.FC<ProductCardProps> = ({
   id,
-  category,
+
   name,
   price,
   image,
-  brand,
-  rating,
 }) => {
   const client = axios.create({
     baseURL: ProductURL,
