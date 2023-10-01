@@ -35,8 +35,19 @@ const OrderSummary: React.FC = () => {
   }, []);
 
   return (
-    <Box boxShadow='2xl' p='6' rounded='md' bg='white'  marginTop={10}
-    marginBottom={10}>
+    <Box boxShadow='2xl' 
+    p='6' rounded='md' 
+    bg='white'  
+    marginTop={5}
+     marginBottom={5} 
+    // shadow={"dark-lg"}   
+    borderRadius={10}  
+    className="color-changing-box"
+    transition="box-shadow 0.3s ease-in-out" 
+    _hover={{
+      boxShadow: "0px 0px 20px 0px #ffb128",
+    }}
+   >
    
 
     <motion.div

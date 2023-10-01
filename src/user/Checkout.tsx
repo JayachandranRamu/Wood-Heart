@@ -17,6 +17,11 @@ import {
 import { FaArrowRight } from 'react-icons/fa';
 import OrderSummary from './OrderSummary';
 
+import { ChakraProvider, Icon } from '@chakra-ui/react';
+import { FaCcVisa, FaCcAmex, FaCcMastercard, FaCcDiscover } from 'react-icons/fa';
+
+   
+
 
 export const Checkout = () => {
 
@@ -60,15 +65,30 @@ export const Checkout = () => {
     // const TotalCartPrice = localStorage.getItem('cartPrice');
   return (
     <Container maxW="container.sm"
-    shadow={"dark-lg"}   
+    // shadow={"dark-lg"}   
     borderRadius={10}  
     color="#0b3954"
     marginTop={20}
-    marginBottom={20}>
+    marginBottom={20}
+    
+    // _hover={{
+    //   boxShadow: "0px 0px 20px 0px #ffb128",
+    //   transition: "box-shadow 0.3s ease-in-out",
+    // }}
+    // _focus={{
+    //   boxShadow: "0px 0px 20px 0px #0b3954",
+    //   transition: "box-shadow 0.3s ease-in-out",
+    // }}
+    // _active={{
+    //   boxShadow: "0px 0px 20px 0px #0b3954",
+    //   transition: "box-shadow 0.3s ease-in-out",
+    // }}
+    
+    >
       <Flex justify="center" align="center" minH="100vh">
         {cartItems && cartItems.length > 0 ? (
           <form onSubmit={handleSubmit}>
-                <Grid templateColumns="1fr" gap={4} >
+                <Grid templateColumns="1fr" gap={3} >
                     {/* order summary */}
                     
                         <OrderSummary />
@@ -77,7 +97,20 @@ export const Checkout = () => {
 
             <Divider />
             {/* Billing Address */}
-            <Grid templateColumns="1fr" gap={4}>
+            <Box 
+             boxShadow='2xl'
+              p='6' 
+             rounded='md' bg='white'  
+             marginTop={5}
+             marginBottom={5} 
+              borderRadius={10}
+              className="color-changing-box"
+              transition="box-shadow 0.3s ease-in-out" 
+              _hover={{
+                boxShadow: "0px 0px 20px 0px #ffb128",
+              }}
+               >
+            <Grid templateColumns="1fr" gap={3}   >
               <Heading as="h3" size="lg">
                 Billing Address
               </Heading>
@@ -101,6 +134,7 @@ export const Checkout = () => {
               onChange={handleInputChange}
               required />
               </FormControl>
+              <Grid templateColumns="1fr 1fr 1fr" gap={3}>
               <FormControl id="city">
                 <FormLabel>City</FormLabel>
                 <Input type="text" placeholder="India"  name="city"
@@ -108,7 +142,7 @@ export const Checkout = () => {
               onChange={handleInputChange}
               required />
               </FormControl>
-              <Grid templateColumns="1fr 1fr" gap={4}>
+             
                 <FormControl id="state">
                   <FormLabel>State</FormLabel>
                   <Input type="text" placeholder="MH"  name="state"
@@ -125,12 +159,25 @@ export const Checkout = () => {
                 </FormControl>
               </Grid>
             </Grid>
-
+            </Box>
             <Divider />
 
+            <Box 
+             boxShadow='2xl'
+              p='6' 
+             rounded='md' bg='white'  
+             marginTop={5}
+             marginBottom={5} 
+              borderRadius={10}
+              className="color-changing-box"
+              transition="box-shadow 0.3s ease-in-out" 
+              _hover={{
+                boxShadow: "0px 0px 20px 0px #ffb128",
+              }}
+               >
             {/* Payment */}
             <Grid templateColumns="1fr" 
-            gap={4} mt={4}  
+            gap={3} mt={4}  
             marginTop={10}
             marginBottom={10}>
               <Heading as="h3" size="lg">
@@ -138,12 +185,54 @@ export const Checkout = () => {
               </Heading>
               <Stack spacing={4}>
                 <Text fontSize="lg">Accepted Cards</Text>
-                <Flex>
-                  <i className="fab fa-cc-visa" aria-label="visa" />
-                  <i className="fab fa-cc-amex" aria-label="amex" />
-                  <i className="fab fa-cc-mastercard" aria-label="mastercard" />
-                  <i className="fab fa-cc-discover" aria-label="discover" />
-                </Flex>
+                <ChakraProvider>
+                  <Flex>
+                  <Icon
+                      as={FaCcVisa}
+                      aria-label="visa"
+                      boxSize={12}
+                      color="blue.500"
+                      boxShadow="md"
+                      border="1px solid snow"
+                      borderRadius="10px"
+                      margin="8px"
+                      padding="4px"
+                    />
+                    <Icon
+                      as={FaCcAmex}
+                      aria-label="amex"
+                      boxSize={12}
+                      color="green.500"
+                      boxShadow="md"
+                      border="1px solid snow"
+                      borderRadius="10px" 
+                      margin="8px"
+                      padding="4px"
+                    />
+                    <Icon
+                      as={FaCcMastercard}
+                      aria-label="mastercard"
+                      boxSize={12}
+                      color="red.500"
+                      boxShadow="md"
+                      border="1px solid snow"
+                      borderRadius="10px" 
+                      margin="8px"
+                      padding="4px"
+                    />
+                    <Icon
+                      as={FaCcDiscover}
+                      aria-label="discover"
+                      boxSize={12}
+                      color="orange.500"
+                      boxShadow="md"
+                      border="1px solid snow"
+                      borderRadius="10px" 
+                      margin="8px"
+                      padding="4px"
+                    />
+                  </Flex>
+                </ChakraProvider>
               </Stack>
               <FormControl id="nameoncard">
                 <FormLabel>Name on Card</FormLabel>
@@ -160,18 +249,15 @@ export const Checkout = () => {
               onChange={handleInputChange}
               required/>
               </FormControl>
+              <Grid gridTemplateColumns="1fr 1fr" gap={4}>
               <FormControl id="expmonth">
-                <FormLabel>Exp Month</FormLabel>
-                <Input type="number" placeholder="September"  name="expiryDate"
+                <FormLabel>MM / YY</FormLabel>
+                <Input type="month" placeholder="September"  name="expiryDate"
               value={formData.expiryDate}
               onChange={handleInputChange}
               required/>
               </FormControl>
-              <Grid templateColumns="1fr 1fr" gap={4}>
-                <FormControl id="expyear">
-                  <FormLabel>Exp Year</FormLabel>
-                  <Input type="number" placeholder="2027" />
-                </FormControl>
+              
                 <FormControl id="cvv">
                   <FormLabel>CVV</FormLabel>
                   <Input type="number" placeholder="665"  name="cvc"
@@ -181,11 +267,24 @@ export const Checkout = () => {
                 </FormControl>
               </Grid>
             </Grid>
-
-          
+            </Box>
+            
+            <Box 
+             boxShadow='2xl'
+              p='6' 
+             rounded='md' bg='white'  
+             marginTop={5}
+             marginBottom={5} 
+              borderRadius={10}
+              className="color-changing-box"
+              transition="box-shadow 0.3s ease-in-out" 
+              _hover={{
+                boxShadow: "0px 0px 20px 0px #ffb128",
+              }}
+               >
             {!isSameAddress && (
                 <form action="">
-            <Grid templateColumns="1fr" gap={4} mt={4}>
+            <Grid templateColumns="1fr" gap={3} mt={4}>
                 <Heading as="h3" size="lg">
                   Shipping Address
                 </Heading>
@@ -197,12 +296,11 @@ export const Checkout = () => {
                 <FormLabel>Address</FormLabel>
                 <Input type="text" placeholder="chat Street ,sadhu vihar" />
               </FormControl>
+              <Grid templateColumns="1fr 1fr 1fr" gap={3}>
               <FormControl id="city2">
                 <FormLabel>City</FormLabel>
                 <Input type="text" placeholder="India" />
               </FormControl>
-              </Grid>
-              <Grid templateColumns="1fr 1fr" gap={4}>
                 <FormControl id="state2">
                   <FormLabel>State</FormLabel>
                   <Input type="text" placeholder="MH" />
@@ -211,6 +309,7 @@ export const Checkout = () => {
                   <FormLabel>Zip</FormLabel>
                   <Input type="number" placeholder="400001" />
                 </FormControl>
+                </Grid>
                 </Grid>
               </form>
               
@@ -223,7 +322,7 @@ export const Checkout = () => {
                 </Checkbox>
               </FormLabel>
             </FormControl>
-
+            </Box>
           
             <Button type="submit" 
             colorScheme="blue" mt={4} 
