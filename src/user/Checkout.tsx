@@ -13,14 +13,21 @@ import {
   Input,
   Stack,
   Text,
+  useToast,
 } from "@chakra-ui/react";
 import { FaArrowRight } from 'react-icons/fa';
 import OrderSummary from './OrderSummary';
 
 import { ChakraProvider, Icon } from '@chakra-ui/react';
 import { FaCcVisa, FaCcAmex, FaCcMastercard, FaCcDiscover } from 'react-icons/fa';
+import Footer from "../UserPage/Components/Footer";
+import FAQ from "../UserPage/Components/FAQ";
+import { DesktopNav } from "../UserPage/Components/BottomNavbar";
 
-   
+import TopNavbar from "../UserPage/Components/TopNavbar"
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { AddCartProduct } from "../UserPage/Redux/Auth/action";
 
 
 export const Checkout = () => {
@@ -39,8 +46,9 @@ export const Checkout = () => {
     cvc: '',
   });
 
-
-
+let Nav=useNavigate()
+  const toast = useToast()
+  let dispatch=useDispatch();
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData({
@@ -48,15 +56,24 @@ export const Checkout = () => {
       [name]: value,
     });
   };
+  let Data=useSelector((store:any)=>store.authReducer.UserData)
+  let cartIte=Data.addToCart;
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+Data.orders=cartIte;
+Data.addToCart=[];
+dispatch(AddCartProduct(Data));
 
-    const orderedData = JSON.parse(localStorage.getItem('ordered_data') || '[]');
-    orderedData.push(formData);
-    localStorage.setItem('ordered_data', JSON.stringify(orderedData));
-
-    alert('Your order has been successfully placed. Thank you!');
-    window.location.href = '/';
+    toast({
+      position: 'top',
+      title: 'Ordered Succesfully',
+      description: "You orders are now placed successfully.",
+      status: 'success',
+      duration: 2000,
+      isClosable: true,
+    })
+   Nav("/");
+    
   };
 
 
@@ -64,35 +81,32 @@ export const Checkout = () => {
   const [isSameAddress, setIsSameAddress] = useState(true);
     // const TotalCartPrice = localStorage.getItem('cartPrice');
   return (
-    <Container maxW="container.sm"
-    // shadow={"dark-lg"}   
+    <>
+    <TopNavbar />
+    <DesktopNav />
+
+    <Box 
+  
+    w={"100%"}
     borderRadius={10}  
     color="#0b3954"
-    marginTop={20}
-    marginBottom={20}
-    
-    // _hover={{
-    //   boxShadow: "0px 0px 20px 0px #ffb128",
-    //   transition: "box-shadow 0.3s ease-in-out",
-    // }}
-    // _focus={{
-    //   boxShadow: "0px 0px 20px 0px #0b3954",
-    //   transition: "box-shadow 0.3s ease-in-out",
-    // }}
-    // _active={{
-    //   boxShadow: "0px 0px 20px 0px #0b3954",
-    //   transition: "box-shadow 0.3s ease-in-out",
-    // }}
-    
+ m={"auto"}
+ pt={"50px"}
+    bg={"#f5f5f5"}
+    fontFamily={"poppins"}
+ 
     >
-      <Flex justify="center" align="center" minH="100vh">
+      <Text fontSize={["32","48"]} fontWeight={"600"} bgColor={"#f5f5f5"}  textAlign={"center"} pb={"50px"} fontFamily={"poppins"} >
+            CheckOut Page</Text>
+
+      <Flex  justify="center"  bgColor={"#f5f5f5"} align="center" w={"100%"} >
         {cartItems && cartItems.length > 0 ? (
-          <form onSubmit={handleSubmit}>
-                <Grid templateColumns="1fr" gap={3} >
+          <form   onSubmit={handleSubmit} >
+                <Flex  bgColor={"#f5f5f5"} >
                     {/* order summary */}
                     
                         <OrderSummary />
-                        </Grid>
+                        </Flex>
 
 
             <Divider />
@@ -103,33 +117,34 @@ export const Checkout = () => {
              rounded='md' bg='white'  
              marginTop={5}
              marginBottom={5} 
-              borderRadius={10}
+              borderRadius={20}
               className="color-changing-box"
               transition="box-shadow 0.3s ease-in-out" 
               _hover={{
                 boxShadow: "0px 0px 20px 0px #ffb128",
               }}
+              
                >
             <Grid templateColumns="1fr" gap={3}   >
-              <Heading as="h3" size="lg">
+              <Heading fontFamily={"poppins"} as="h3" size="lg">
                 Billing Address
               </Heading>
               <FormControl id="name">
                 <FormLabel>Full Name</FormLabel>
-                <Input type="text" placeholder="Gauri Bidwai"  value={formData.username}
+                <Input type="text" placeholder="Enter Your Name" name="username"  value={formData.username}
               onChange={handleInputChange}
               />
               </FormControl>
               <FormControl id="email">
                 <FormLabel>Email</FormLabel>
-                <Input type="email" placeholder="gauribi@example.com"  name="email"
+                <Input type="email" placeholder="Enter Your Email"  name="email"
               value={formData.email}
               onChange={handleInputChange}
               required />
               </FormControl>
               <FormControl id="address">
                 <FormLabel>Address</FormLabel>
-                <Input type="text" placeholder="chat Street ,sadhu vihar"   name="street"
+                <Input type="text" placeholder="Enter Your Address"   name="street"
               value={formData.street}
               onChange={handleInputChange}
               required />
@@ -137,7 +152,7 @@ export const Checkout = () => {
               <Grid templateColumns="1fr 1fr 1fr" gap={3}>
               <FormControl id="city">
                 <FormLabel>City</FormLabel>
-                <Input type="text" placeholder="India"  name="city"
+                <Input type="text" placeholder="City"  name="city"
               value={formData.city}
               onChange={handleInputChange}
               required />
@@ -145,14 +160,14 @@ export const Checkout = () => {
              
                 <FormControl id="state">
                   <FormLabel>State</FormLabel>
-                  <Input type="text" placeholder="MH"  name="state"
+                  <Input type="text" placeholder="State"  name="state"
               value={formData.state}
               onChange={handleInputChange}
                />
                 </FormControl>
                 <FormControl id="zip">
-                  <FormLabel>Zip</FormLabel>
-                  <Input type="number" placeholder="40001"   name="zipCode"
+                  <FormLabel>Pincode</FormLabel>
+                  <Input type="number" placeholder="Pincode"   name="zipCode"
               value={formData.zipCode}
               onChange={handleInputChange}
               required/>
@@ -178,9 +193,9 @@ export const Checkout = () => {
             {/* Payment */}
             <Grid templateColumns="1fr" 
             gap={3} mt={4}  
-            marginTop={10}
+         
             marginBottom={10}>
-              <Heading as="h3" size="lg">
+              <Heading fontFamily={"poppins"} as="h3" size="lg">
                 Payment
               </Heading>
               <Stack spacing={4}>
@@ -239,12 +254,12 @@ export const Checkout = () => {
                 <Input type="text"  name="cardName"
               value={formData.cardName}
               onChange={handleInputChange}
-              placeholder="Gauri A. Bidwai" 
+              placeholder="Enter Your Name" 
               required/>
               </FormControl>
               <FormControl id="ccn">
                 <FormLabel>Credit Card Number</FormLabel>
-                <Input type="number" placeholder="1111-2222-3333-4444"  name="cardNumber"
+                <Input type="number" placeholder="XXXX XXXX XXXX XXXX"  name="cardNumber"
               value={formData.cardNumber}
               onChange={handleInputChange}
               required/>
@@ -260,7 +275,7 @@ export const Checkout = () => {
               
                 <FormControl id="cvv">
                   <FormLabel>CVV</FormLabel>
-                  <Input type="number" placeholder="665"  name="cvc"
+                  <Input type="number" placeholder="XXX"  name="cvc"
               value={formData.cvc}
               onChange={handleInputChange}
               required/>
@@ -290,24 +305,24 @@ export const Checkout = () => {
                 </Heading>
                 <FormControl id="shipping-fullname">
                   <FormLabel>Full Name</FormLabel>
-                  <Input type="text" placeholder="Gauri A. Bidwai" />
+                  <Input type="text" placeholder="Enter Your Name" />
                 </FormControl>
                 <FormControl id="address2">
                 <FormLabel>Address</FormLabel>
-                <Input type="text" placeholder="chat Street ,sadhu vihar" />
+                <Input type="text" placeholder="Enter Your Address" />
               </FormControl>
               <Grid templateColumns="1fr 1fr 1fr" gap={3}>
               <FormControl id="city2">
                 <FormLabel>City</FormLabel>
-                <Input type="text" placeholder="India" />
+                <Input type="text" placeholder="City" />
               </FormControl>
                 <FormControl id="state2">
                   <FormLabel>State</FormLabel>
-                  <Input type="text" placeholder="MH" />
+                  <Input type="text" placeholder="State" />
                 </FormControl>
                 <FormControl id="zip2">
-                  <FormLabel>Zip</FormLabel>
-                  <Input type="number" placeholder="400001" />
+                  <FormLabel>Pincode</FormLabel>
+                  <Input type="number" placeholder="Pincode" />
                 </FormControl>
                 </Grid>
                 </Grid>
@@ -323,19 +338,29 @@ export const Checkout = () => {
               </FormLabel>
             </FormControl>
             </Box>
-          
+          <Box m={"auto"} justifyContent={"center"}>
             <Button type="submit" 
-            colorScheme="blue" mt={4} 
-             bg="#0b3954"
-            color="#ffb128"
-            size="lg"
-            fontSize="md"
+            // colorScheme="blue" mt={4} 
+            //  bg="#0b3954"
+            // color="#ffb128"
+            // size="lg"
+            // fontSize="md"
             marginTop={10}
             marginBottom={20}
-            rightIcon={<FaArrowRight />}
+ 
+            bg="#0b3954"
+            color="white"
+            size="lg"
+            letterSpacing={"1px"}
+            fontWeight={"500"}
+            fontSize="18px"
+    _hover={
+      {bg:"#e89f22"}}
             >
-            Complete Order
+            COMPLETE ORDER
             </Button>
+            </Box>
+
           </form>
             ) : (
           <Box>
@@ -344,7 +369,11 @@ export const Checkout = () => {
             )}
 
       </Flex>
-    </Container>
+    </Box>
+       <FAQ />
+       
+       <Footer />
+       </>
   );
 };
 

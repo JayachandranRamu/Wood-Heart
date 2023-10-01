@@ -7,6 +7,7 @@ import {
   Link,
   Stack,
   useColorModeValue as mode,
+  Text,
 } from '@chakra-ui/react';
 import { CartItem } from './CartItem';
 import { CartOrderSummary } from './CartOrderSummary';
@@ -18,6 +19,7 @@ import FAQ from "../UserPage/Components/FAQ"
 import Footer from "../UserPage/Components/Footer"
 import TopNavbar from "../UserPage/Components/TopNavbar"
 import { GetAllUserData } from "../Redux/Auth/action"
+import { AddCartProduct } from '../UserPage/Redux/Auth/action';
 type CartItemData = {
   id: number;
   name: string;
@@ -30,94 +32,100 @@ type CartItemData = {
 
 
 export const Cart = () => {
-  let id=useSelector((store:any)=>store.authReducer.UserData)
-  let cart=id.addToCart;
-console.log(cart)
-  const [cartItems, setCartItems] = useState<CartItemData[]>(cart);
+  let Data=useSelector((store:any)=>store.authReducer.UserData)
+  let cartItems=Data.addToCart;
+
+
   const [totalCartPrice, setTotalCartPrice] = useState<number>(0);
   const isCartEmpty = cartItems.length === 0;
-
- 
+let [render,setRender]=useState(false)
+ let dispatch=useDispatch();
 
   const handleQuantityChange = (id: number, newQuantity: number) => {
+    console.log(newQuantity)
     const newCartItems = [...cartItems];
     const itemIndex = newCartItems.findIndex((item) => item.id === id);
-    if (itemIndex !== -1) {
-      newCartItems[itemIndex].quantity = +newQuantity;
-      setCartItems(newCartItems);
-    
-      localStorage.setItem('cartData', JSON.stringify(newCartItems));
-    }
+    console.log(newQuantity)
+      newCartItems[itemIndex].quantity = newQuantity;
+      setRender(!render)
+    Data.addToCart=newCartItems;
+   console.log(Data)
+    dispatch(AddCartProduct(Data));
   };
 
   const handlePriceChange = (id: number, newPrice: number) => {
-    const newCartItems = [...cartItems];
-    const itemIndex = newCartItems.findIndex((item) => item.id === id);
-    if (itemIndex !== -1) {
-   
-      newCartItems[itemIndex].price = newPrice;
-      setCartItems(newCartItems);
-      
-      localStorage.setItem('cartData', JSON.stringify(newCartItems));
-    }
+    // const newCartItems = [...cartItems];
+    // const itemIndex = newCartItems.findIndex((item) => item.id === id);
+    // if (itemIndex !== -1) {  
+    //   newCartItems[itemIndex].price = newPrice;
+    //   setCartItems(newCartItems);
+    setRender(!render)
+    console.log(newPrice)
+    // }
   };
 
   const handleRemoveItem = (id: number) => {
     const newCartItems = cartItems.filter((item) => item.id !== id);
-    setCartItems(newCartItems);
+    console.log(newCartItems)
+  
+    Data.addToCart=newCartItems;
+   setRender(!render)
+  dispatch(AddCartProduct(Data));
 
-    localStorage.setItem('cartData', JSON.stringify(newCartItems));
   };
 
   const handleContinueShopping = () => {
-   
     window.location.href = '/';
   };
 
   useEffect(() => {
- 
-    const newTotalPrice = cartItems.reduce(
-      (total, item) => total + item.price * item.quantity,
-      0
-    );
-    setTotalCartPrice(newTotalPrice);
-   
-    localStorage.setItem('cartPrice', JSON.stringify(newTotalPrice));
-  }, [cartItems]); 
+ let sum=0;
+   cartItems.map((el:any)=>{
+    console.log(sum,el.price,el.quantity)
+    sum+=+el.price*(+el.quantity)});
+    setTotalCartPrice(sum);
+    console.log(sum)
+  }, [cartItems,render]); 
 
   return (
     <>
     <TopNavbar />
     <DesktopNav />
+
+   
     <Box
-      boxShadow="dark-lg"
-      borderRadius={10}
-      maxW={{ base: '3xl', lg: '7xl' }}
+    fontFamily={"Poppins"}
+    bgColor={"#f5f5f5"}
+
+    
       mx="auto"
-      px={{ base: '4', md: '8', lg: '12' }}
-      py={{ base: '6', md: '8', lg: '12' }}
+     p={["20px","100px"]}
+     pt={"60px"}
+
       color="#0b3954"
-      marginTop={20}
-      marginBottom={20}
+
     >
+      <Text fontSize={["32","48"]} fontWeight={"600"} bgColor={"#f5f5f5"}  textAlign={"center"} pb={"50px"} fontFamily={"poppins"} >
+            Cart Page</Text>
+            {isCartEmpty?<Text textAlign={"center"} fontSize={"25px"} textTransform={"uppercase"}>Your Cart Is Currently Empty !</Text>:null}
       <Stack
         direction={{ base: 'column', lg: 'row' }}
         align={{ lg: 'flex-start' }}
         spacing={{ base: '8', md: '16' }}
       >
-        <Stack spacing={{ base: '8', md: '10' }} flex="2">
-          <Heading fontSize="2xl" fontWeight="extrabold">
-            Shopping Cart ({cartItems.length} items)
-          </Heading>
+        <Stack spacing={{ base: '8', md: '10' }} flex="2" >
+\
+       
 
-          <Stack spacing="6">
-            {cartItems.map((item) => (
+          <Stack spacing="6"  >
+            {cartItems.map((item:any) => (
               <CartItem
                 image={''}
+                quan={item.quantity}
                 key={item.id}
                 {...item}
-                onChangeQuantity={(newQuantity: number) =>
-                  handleQuantityChange(item.id, newQuantity)
+                onChangeQuantity={
+                  handleQuantityChange
                 }
                 onPriceChange={(newPrice: number) =>
                   handlePriceChange(item.id, newPrice)
@@ -131,10 +139,10 @@ console.log(cart)
         <Flex direction="column" align="center" flex="1">
           {isCartEmpty ? (
             <>
-              <div role="img" aria-label="Empty Bag Emoji">
-                🛍️
-              </div>
-              <h2 style={{ color: '#0b3954' }}> Your cart is empty</h2>
+            <Box m={"auto"}>
+  
+              <h2 style={{ color: '#0b3954',fontFamily:'poppins',fontSize:'20px' }}></h2>
+              </Box>
             </>
           ) : (
             <>
