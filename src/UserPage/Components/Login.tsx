@@ -25,7 +25,7 @@ import { BiSolidLockAlt } from "react-icons/bi";
 import { PiEyeBold, PiEyeClosedBold, } from 'react-icons/pi';
 import { useToast } from '@chakra-ui/react'
 import { useDispatch, useSelector } from 'react-redux';
-import { AUTH_SUCCESS } from '../Redux/actionTypes';
+import { ADMIN_CHECK, AUTH_SUCCESS } from '../Redux/actionTypes';
 import { GetAllUserData, LogoutStoringUserDatainLS, StoringUserDatainLS } from '../Redux/Auth/action';
 import { SignupModal } from './Signup';
 import { BsSimFill } from 'react-icons/bs';
@@ -72,6 +72,7 @@ let obj={
 }
 
 if(username=="admin" && password=="admin"){
+  dispatch({type:ADMIN_CHECK})
 Navigate("/admin")
 }
 

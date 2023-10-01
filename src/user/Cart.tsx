@@ -8,10 +8,16 @@ import {
   Stack,
   useColorModeValue as mode,
 } from '@chakra-ui/react';
-
 import { CartItem } from './CartItem';
 import { CartOrderSummary } from './CartOrderSummary';
-
+import { userUrl } from '../UserPage/Utilis/api';
+import { useSelector } from 'react-redux';
+import { useDispatch } from "react-redux"
+import { DesktopNav } from "../UserPage/Components/BottomNavbar"
+import FAQ from "../UserPage/Components/FAQ"
+import Footer from "../UserPage/Components/Footer"
+import TopNavbar from "../UserPage/Components/TopNavbar"
+import { GetAllUserData } from "../Redux/Auth/action"
 type CartItemData = {
   id: number;
   name: string;
@@ -21,45 +27,23 @@ type CartItemData = {
   currency: string;
 };
 
-const id = 10;
+
 
 export const Cart = () => {
-  const [cartItems, setCartItems] = useState<CartItemData[]>([]);
+  let id=useSelector((store:any)=>store.authReducer.UserData)
+  let cart=id.addToCart;
+console.log(cart)
+  const [cartItems, setCartItems] = useState<CartItemData[]>(cart);
   const [totalCartPrice, setTotalCartPrice] = useState<number>(0);
   const isCartEmpty = cartItems.length === 0;
 
-  useEffect(() => {
-    const localStorageCartData = localStorage.getItem('cartData');
-
-    if (localStorageCartData) {
-      const cartItems = JSON.parse(localStorageCartData);
-      setCartItems(cartItems);
-    } else {
-
-      fetch(`http://localhost:8000/user/${id}/`)
-
-        .then((response) => response.json())
-        .then((data) => {
-          const cartItems = data.cartData.map((item: CartItemData) => ({
-            ...item,
-            quantity: parseInt(`${item.quantity}`),
-            price: parseFloat(`${item.price}`),
-          }));
-          setCartItems(cartItems);
-          
-          localStorage.setItem('cartData', JSON.stringify(cartItems));
-        })
-        .catch((error) => {
-          console.error('Error fetching cart data:', error);
-        });
-    }
-  }, []); 
+ 
 
   const handleQuantityChange = (id: number, newQuantity: number) => {
     const newCartItems = [...cartItems];
     const itemIndex = newCartItems.findIndex((item) => item.id === id);
     if (itemIndex !== -1) {
-      newCartItems[itemIndex].quantity = newQuantity;
+      newCartItems[itemIndex].quantity = +newQuantity;
       setCartItems(newCartItems);
     
       localStorage.setItem('cartData', JSON.stringify(newCartItems));
@@ -102,6 +86,9 @@ export const Cart = () => {
   }, [cartItems]); 
 
   return (
+    <>
+    <TopNavbar />
+    <DesktopNav />
     <Box
       boxShadow="dark-lg"
       borderRadius={10}
@@ -164,5 +151,9 @@ export const Cart = () => {
         </Flex>
       </Stack>
     </Box>
+     <FAQ />
+       
+     <Footer />
+     </>
   );
 };

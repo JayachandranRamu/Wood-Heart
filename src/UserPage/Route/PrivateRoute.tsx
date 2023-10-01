@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 
 interface PrivateRouterProps {
@@ -6,9 +7,9 @@ interface PrivateRouterProps {
 }
 
 const PrivateRouter: React.FC<PrivateRouterProps> = ({ children }) => {
-  const auth: boolean = false;
+  const isAdmin: boolean = useSelector((store:any)=>store.authReducer.isAdmin);
 
-  return <div>{auth ? children : <Navigate to="/login" />}</div>;
+  return <div>{isAdmin ? children : <Navigate to="/" />}</div>;
 };
 
 export default PrivateRouter;

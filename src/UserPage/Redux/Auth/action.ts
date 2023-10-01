@@ -1,7 +1,7 @@
 
 import { Dispatch } from 'redux';
-import { GetAllUserDataFromAPI, PostUserDataInAPI } from '../../Utilis/api';
-import { AUTH_ADD_NEW_USER_DATA, AUTH_ALL_USER_DATA, AUTH_FAILURE, AUTH_LOGOUT_SUCCESS, AUTH_SUCCESS } from '../actionTypes';
+import { AddCartProductToAPI, GetAllUserDataFromAPI, PostUserDataInAPI } from '../../Utilis/api';
+import { ADD_CART_PRODUCT_SUCCESS, AUTH_ADD_NEW_USER_DATA, AUTH_ALL_USER_DATA, AUTH_FAILURE, AUTH_LOGOUT_SUCCESS, AUTH_SUCCESS } from '../actionTypes';
 
 // Define action types and payloads
 type AuthAllUserDataAction = {
@@ -45,3 +45,11 @@ export const LogoutStoringUserDatainLS=(dispatch:Dispatch)=>{
     dispatch({type:AUTH_LOGOUT_SUCCESS})
     }
 
+    export const AddCartProduct=(userData:any)=>(dispatch:Dispatch)=>{
+        localStorage.setItem("LoginedUserData",JSON.stringify(userData));
+        AddCartProductToAPI(userData).then(res=>
+            dispatch({type:ADD_CART_PRODUCT_SUCCESS,payload:userData})
+            )
+     
+
+    }
