@@ -13,3 +13,10 @@ console.log(id)
   return  axios.get(ProductURL+"/"+id)
 }
 
+export const  PostUserDataInAPI=(newUser:any)=>{
+return axios.post(userUrl,newUser)
+}
+
+export const GetAllUserDataFromAPI=()=>{
+  return   axios.get(userUrl)
+}
