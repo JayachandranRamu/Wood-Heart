@@ -139,8 +139,8 @@ import {
     )
   }
 
-  const MobileNavItem = ({ label, href,src }: NavItem) => {
-    const { isOpen } = useDisclosure()
+  const MobileNavItem = ({ label, href}: any) => {
+ 
   
     return (
       <Link to={`${href}`}>

@@ -3,7 +3,6 @@ import {
   Box,
   Flex,
   Heading,
-  Image,
   Text,
   Stack,
 } from '@chakra-ui/react';
@@ -11,12 +10,6 @@ import { motion } from 'framer-motion';
 import { useSelector } from 'react-redux';
 import { CartProductMeta } from './CartProductMeta';
 
-type CartItem = {
-  id: number;
-  name: string;
-  price: number;
-  image: string;
-};
 
 const OrderSummary: React.FC = () => {
   

@@ -1,28 +1,25 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, useSearchParams } from "react-router-dom";
-import { getProductsData } from "../Redux/UserPage/action";
-import { RootState } from "../Redux/rootReducer"; // Import the RootState type
+import { getProductsData } from "../Redux/UserPage/action"; 
 import ProductCard from "./ProductCard";
 import { SimpleGrid } from "@chakra-ui/react";
 import Sort from "./Sort";
 
-interface RouteParams {
-  name: string;
-}
+
 
 const ProductItems: React.FC = () => {
-  const { name } = useParams<RouteParams>(); // Specify the type for 'name'
+  const { name } = useParams(); // Specify the type for 'name'
   const dispatch = useDispatch();
   
-  const { products, isLoading, isError } = useSelector((store: RootState) => ({
+  const { products } = useSelector((store: any) => ({
     products: store.productReducer.products,
     isLoading: store.productReducer.isLoading,
     isError: store.productReducer.isError,
   }));
   const [searchParam] = useSearchParams();
 
-const params = {
+const params :any= {
   params: {
 category:name=="product"?null:name,
     _sort:searchParam.get("_sort"),

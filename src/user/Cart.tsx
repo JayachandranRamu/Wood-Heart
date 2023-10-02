@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import {
   Box,
   Flex,
-  Heading,
   HStack,
   Link,
   Stack,
@@ -11,23 +10,16 @@ import {
 } from '@chakra-ui/react';
 import { CartItem } from './CartItem';
 import { CartOrderSummary } from './CartOrderSummary';
-import { userUrl } from '../UserPage/Utilis/api';
+
 import { useSelector } from 'react-redux';
 import { useDispatch } from "react-redux"
 import { DesktopNav } from "../UserPage/Components/BottomNavbar"
 import FAQ from "../UserPage/Components/FAQ"
 import Footer from "../UserPage/Components/Footer"
 import TopNavbar from "../UserPage/Components/TopNavbar"
-import { GetAllUserData } from "../Redux/Auth/action"
+
 import { AddCartProduct } from '../UserPage/Redux/Auth/action';
-type CartItemData = {
-  id: number;
-  name: string;
-  about: string;
-  quantity: number;
-  price: number;
-  currency: string;
-};
+
 
 
 
@@ -53,7 +45,7 @@ let [render,setRender]=useState(false)
     dispatch(AddCartProduct(Data));
   };
 
-  const handlePriceChange = (id: number, newPrice: number) => {
+  const handlePriceChange = ( newPrice: number) => {
     // const newCartItems = [...cartItems];
     // const itemIndex = newCartItems.findIndex((item) => item.id === id);
     // if (itemIndex !== -1) {  
@@ -65,7 +57,7 @@ let [render,setRender]=useState(false)
   };
 
   const handleRemoveItem = (id: number) => {
-    const newCartItems = cartItems.filter((item) => item.id !== id);
+    const newCartItems = cartItems.filter((item:any) => item.id !== id);
     console.log(newCartItems)
   
     Data.addToCart=newCartItems;
@@ -128,7 +120,7 @@ let [render,setRender]=useState(false)
                   handleQuantityChange
                 }
                 onPriceChange={(newPrice: number) =>
-                  handlePriceChange(item.id, newPrice)
+                  handlePriceChange( newPrice)
                 }
                 onClickDelete={() => handleRemoveItem(item.id)}
               />

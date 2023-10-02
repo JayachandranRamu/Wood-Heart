@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+
 import   AdminNavbar  from '../Components/Admin-Navbar'
-import Dashboard from './Dashboard'
+
 import { useSelector } from 'react-redux'
-import { store } from '../../UserPage/Redux/store'
+
 import { Box, Center, Container, useColorModeValue } from '@chakra-ui/react'
 import MainScreen from './MainsScreen'
 import { AdminFooter } from './AdminFooter'

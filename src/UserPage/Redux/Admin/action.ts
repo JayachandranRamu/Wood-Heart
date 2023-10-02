@@ -8,16 +8,16 @@ import {
 import { ProductURL, getProductDataFromAPI } from "../../Utilis/api";
 import axios from "axios";
 
-export const getProducts = (params: any) => (dispatch: Dispatch) => {
+export const getProducts = (paramss: any) => (dispatch: Dispatch):void =>{
   dispatch({ type: GET_PRODUCT_REQUEST });
-  getProductDataFromAPI(params)
+  getProductDataFromAPI(paramss)
     .then((res: any) => {
       console.log("products rendering");
       dispatch({ type: GET_PRODUCT_SUCCESS, payload: res.data });
     })
     .catch(() => dispatch({ type: GET_PRODUCT_FAILURE }));
 };
-export const editProduct = (id: any, data: any) => (dispatch: Dispatch) => {
+export const editProduct = (id: any, data: any) => (dispatch: Dispatch):void => {
   dispatch({ type: GET_PRODUCT_REQUEST });
   axios.patch(`${ProductURL}/${id}`, data).then((res: any) => {
     console.log(res.data);

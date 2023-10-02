@@ -1,14 +1,14 @@
-import React, { useEffect } from 'react'
+import  { useEffect } from 'react'
 import   AdminNavbar  from '../Components/Admin-Navbar'
 import { shallowEqual, useDispatch, useSelector } from 'react-redux'
-import axios from 'axios'
+
 import { getAllusers,deleteSingleUser } from '../../UserPage/Redux/Admin/userAction'
-import { user } from '../../UserPage/Redux/Admin/constants'
-import styled from 'styled-components'
-import { AbsoluteCenter, Box, Button, CircularProgress, Divider, Flex, Stack, Table, Tbody, Td, Text, Tfoot, Th, Thead, Tr, useBreakpointValue } from '@chakra-ui/react'
+
+
+import {  Box, Button, CircularProgress,  Flex, Stack, Table, Tbody, Td, Text, Tfoot, Th, Thead, Tr, useBreakpointValue } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 import { AdminFooter } from './AdminFooter'
-import { store } from '../../UserPage/Redux/store'
+
 
 
 

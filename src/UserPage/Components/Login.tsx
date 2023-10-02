@@ -4,7 +4,6 @@ import { MdEmail } from "react-icons/md";
 import {
   Button,
   Input,
-  Link,
   Popover,
   PopoverTrigger,
   PopoverContent,
@@ -25,10 +24,10 @@ import { BiSolidLockAlt } from "react-icons/bi";
 import { PiEyeBold, PiEyeClosedBold, } from 'react-icons/pi';
 import { useToast } from '@chakra-ui/react'
 import { useDispatch, useSelector } from 'react-redux';
-import { ADMIN_CHECK, AUTH_SUCCESS } from '../Redux/actionTypes';
+import { ADMIN_CHECK } from '../Redux/actionTypes';
 import { GetAllUserData, LogoutStoringUserDatainLS, StoringUserDatainLS } from '../Redux/Auth/action';
 import { SignupModal } from './Signup';
-import { BsSimFill } from 'react-icons/bs';
+
 import { useNavigate } from 'react-router-dom';
 import { OrderDrawer } from './OrderDrawer';
 const LoginMenu = () => {

@@ -9,7 +9,6 @@ import {
   ModalFooter,
   ModalBody,
   ModalCloseButton,
-  useDisclosure,
   useToast,
 } from '@chakra-ui/react';
 import { PostUserData } from '../Redux/Auth/action';
@@ -30,7 +29,7 @@ interface SignupModalProps {
 export const SignupModal: React.FC<SignupModalProps> = ({onOpen,LetClose}:any) => {
     const toast = useToast()
     const dispatch=useDispatch();
-    const { onClose, isOpen } = useDisclosure()
+
   const [formData, setFormData] = useState<SignupFormData>({
     firstName: '',
     lastName: '',

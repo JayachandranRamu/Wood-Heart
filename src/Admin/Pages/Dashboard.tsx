@@ -1,5 +1,5 @@
 import { Grid, GridItem, Stack, Stat, StatArrow, StatGroup, StatHelpText, StatLabel, StatNumber, useBreakpointValue } from '@chakra-ui/react'
-import React from 'react';
+
 import AdminNavbar from "../Components/Admin-Navbar";
 import { AdminFooter } from './AdminFooter';
 import { CartesianGrid ,XAxis, ResponsiveContainer ,BarChart, YAxis, Tooltip, Legend, Bar, Line, LineChart, PieChart, Pie, Cell } from 'recharts';
@@ -9,7 +9,7 @@ import { BAR_DATA} from '../Components/Constants';
 const Dashboard = () => {
   const gridColumns = useBreakpointValue({ base: 1,sm:1, md: 2, lg: 2 });
   const gridRows=useBreakpointValue({base:2,sm:1,md:2,lg:2});
-  const gridWidth=useBreakpointValue({});
+
   const COLORS = ['#8884d8', '#82ca9d', '#ffc658', '#ff7f50']
 
  const data= BAR_DATA;
@@ -121,7 +121,7 @@ borderRadius={"15px"}
       <ResponsiveContainer width="100%" height="100%">
         <PieChart>
           <Pie data={piData} dataKey="value" cx="50%" cy="50%" outerRadius={80} fill="#8884d8" label>
-          {data.map((entry, index) => (
+          {data.map((_, index) => (
               <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
             ))}
           </Pie>

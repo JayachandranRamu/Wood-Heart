@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Box, Flex, Image } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 6;
 const TopProductPage: React.FC = () => {
-  const { name } = useParams<RouteParams>();
+  const { name } = useParams();
   return (
     <>
       <Flex 

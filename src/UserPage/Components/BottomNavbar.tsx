@@ -6,7 +6,7 @@ import {
     Image,
   } from '@chakra-ui/react';
 
-  import { FaArrowDown } from 'react-icons/fa';
+
 import { Link } from 'react-router-dom';
   interface NavItem {
     label: string;  
@@ -94,7 +94,7 @@ import { Link } from 'react-router-dom';
   
     const linkColor = useColorModeValue('#0b3954', 'gray.200');
     const linkHoverColor = useColorModeValue('#ffb128', 'white');
-    const popoverContentBgColor = useColorModeValue('white', 'gray.800');
+
   
     return (
       <Box fontFamily={"Poppins"} boxShadow="rgba(0, 0, 0, 0.1) -4px 9px 25px -6px" m={"auto"} mt={"10px"} >

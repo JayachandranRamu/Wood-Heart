@@ -1,11 +1,11 @@
 import { Box, Button, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../Redux/rootReducer"; // Import the RootState type
+// Import the RootState type
 import { DELETE_PRODUCT } from "../../UserPage/Redux/Admin/actionTypes";
 import axios from "axios";
 import { ProductURL } from "../../UserPage/Utilis/api";
-import { Navigate, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 // import { ProductURL } from "../../UserPage/Utilis/api";
 
 interface ProductCardProps {
@@ -30,7 +30,7 @@ const AdminProductCard: React.FC<ProductCardProps> = ({
   });
   let Navigate = useNavigate();
   const dispatch = useDispatch();
-  const { products } = useSelector((store: RootState) => ({
+  const { products } = useSelector((store: any) => ({
     products: store.adminReducer.products,
   }));
   const deleteProduct = (id: any) => {

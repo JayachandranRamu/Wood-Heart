@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../Redux/rootReducer";
 import {
   Box,
   Button,
@@ -15,24 +14,17 @@ import {
   Heading,
   Stack,
   Avatar,
-  useColorModeValue,
-  SimpleGrid,
-  List,
-  ListItem,
   useToast,
   InputGroup,
   InputRightElement,
-  Divider,
-  AbsoluteCenter,
 } from "@chakra-ui/react";
 import { FaStar } from "react-icons/fa";
 import { CartDrawer } from "./CartDrawer";
 import { AddProductReview, getSingleProductData } from "../Redux/UserPage/action";
 import { AddCartProduct } from "../Redux/Auth/action";
-import OrderSummary from "../../user/OrderSummary";
 
 export const SingleProductCard: React.FC = () => {
-  let { id } = useParams<{ id: number }>();
+  let { id } = useParams();
   const month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
   const d = new Date();
 let name = d.getDate()+" "+month[d.getMonth()];
@@ -51,9 +43,8 @@ console.log(name)
 
 
   let singleProduct = useSelector(
-    (store: RootState) => store.productReducer.singleProduct
+    (store: any) => store.productReducer.singleProduct
   );
-  let products = useSelector((store: any) => store.authReducer.products);
   let UserData = useSelector((store: any) => store.authReducer.UserData);
   let isAuth = useSelector((store: any) => store.authReducer.isAuth);
   let Nav = useNavigate();
@@ -90,7 +81,7 @@ console.log(name)
 
     let cartProduct = singleProduct;
     cartProduct.quantity = input.value;
-    let b = UserData.addToCart.find((el) => el.id == cartProduct.id);
+    let b = UserData.addToCart.find((el:any) => el.id == cartProduct.id);
     console.log(b);
     if (b) {
       toast({
@@ -102,7 +93,6 @@ console.log(name)
         isClosable: true,
       });
     } else {
-      let a = UserData;
       UserData.addToCart.push(cartProduct);
       dispatch(AddCartProduct(UserData));
     }
@@ -113,7 +103,7 @@ console.log(name)
 
   let [review,setReview]=useState("");
 let [star,setStar]=useState(5);
-  function StarEvents(i){
+  function StarEvents(i:any){
     setStar(i+1);
     
       }
@@ -197,14 +187,14 @@ function handleReviewClick(){
           <Flex alignItems={"center"} fontSize={18} m={"10px auto"}>
             {new Array(Math.floor(singleProduct?.rating || 1))
               .fill(0)
-              .map((el, index) => (
+              .map((_, index) => (
                 <Box key={index} m={"0px 1px"}>
                   <FaStar color="#ffb128" />
                 </Box>
               ))}
             {new Array(5 - Math.floor(singleProduct?.rating || 1))
               .fill(0)
-              .map((el, index) => (
+              .map((_, index) => (
                 <Box key={index} m={"0px 1px"}>
                   <FaStar color="grey" />
                 </Box>
@@ -400,14 +390,14 @@ function handleReviewClick(){
                     <Flex fontSize={18} m={"8px 0"}>
                       {new Array(Math.floor(el?.rating || 1))
                         .fill(0)
-                        .map((el, index) => (
+                        .map((_, index) => (
                           <Box key={index} m={"0px 1px"}>
                             <FaStar color="#ffb128" />
                           </Box>
                         ))}
                       {new Array(5 - Math.floor(el?.rating || 1))
                         .fill(0)
-                        .map((el, index) => (
+                        .map((_, index) => (
                           <Box key={index} m={"0px 1px"}>
                             <FaStar color="grey" />
                           </Box>

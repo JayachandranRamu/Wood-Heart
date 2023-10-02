@@ -1,17 +1,16 @@
-import React from 'react'
+
 import AdminNavbar from "../Components/Admin-Navbar";
-import { AbsoluteCenter, Box, Button, Center, CircularProgress, Divider, Grid, Heading, Image, SimpleGrid, Stack, Tab, TabIndicator, TabList, TabPanel, TabPanels, Table, Tabs, Text, useBreakpointValue } from '@chakra-ui/react';
-import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
+import {  Box,  Center, CircularProgress, Heading, Image, SimpleGrid, Stack, Tab, TabIndicator, TabList, TabPanel, TabPanels, Table, Tabs, Text, useBreakpointValue } from '@chakra-ui/react';
+import { Card, CardBody} from '@chakra-ui/react'
 import { AdminFooter } from './AdminFooter';
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import {useEffect } from "react";
 import { useParams } from 'react-router-dom';
-import { getSingleUserby, userInterface } from '../../UserPage/Redux/Admin/userAction';
-import { store } from '../../UserPage/Redux/store';
+import { getSingleUserby } from '../../UserPage/Redux/Admin/userAction';
 import ProductCard from '../../UserPage/Components/ProductCard';
 const SingleUserAdmin = () => {
   const fontSize = useBreakpointValue({ base: 'sm', md: 'md', lg: 'lg' });
-  const tableWidth = useBreakpointValue({ base: '90%', sm: '70%', md: '70%' });
+  // const tableWidth = useBreakpointValue({ base: '90%', sm: '70%', md: '70%' });
 
   const dispatch=useDispatch();
   const singleUser=useSelector((store:any)=>{
@@ -30,10 +29,7 @@ const SingleUserAdmin = () => {
     const email:string=singleUser.email;
     const username:string=singleUser.username;
     //const password
-    const phone:string=singleUser.phone;
-    const orders: []=singleUser.orders;
-    const wishList: []=singleUser.wishlist;
-    const cartitems:[]=singleUser.addToCart;
+    const phone:string=singleUser.phone;;
     // const {city ,street,number,zipcode }:string=singleUser.address;
     const address= singleUser.address;
 

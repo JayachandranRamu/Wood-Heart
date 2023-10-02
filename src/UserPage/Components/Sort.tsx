@@ -1,8 +1,6 @@
 import { Box, Flex, Select, Text } from '@chakra-ui/react'
-import React,{useState,useEffect} from 'react'
-import { FaStar } from 'react-icons/fa';
 import { useSearchParams } from 'react-router-dom'
-
+import { useState,useEffect } from 'react';
 
 
 const Sort = ({results}:any) => {

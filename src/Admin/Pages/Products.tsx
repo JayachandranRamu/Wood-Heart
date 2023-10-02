@@ -10,20 +10,18 @@ import { getProducts } from "../../UserPage/Redux/Admin/action";
 import {
   Box,
   Button,
-  Heading,
   Input,
   SimpleGrid,
   Stack,
   Text,
 } from "@chakra-ui/react";
 import AdminProductCard from "../Components/Admin_product_card";
-import { RootState } from "../Redux/rootReducer"; // Import the RootState type
 import axios from "axios";
 import { ProductURL } from "../../UserPage/Utilis/api";
 
 const Products: React.FC = () => {
   const dispatch = useDispatch();
-  const { products, isLoading, isError } = useSelector((store: RootState) => ({
+  const { products } = useSelector((store: any) => ({
     products: store.adminReducer.products,
     isLoading: store.adminReducer.isLoading,
     isError: store.adminReducer.isError,

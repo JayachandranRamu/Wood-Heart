@@ -11,7 +11,7 @@ import axios from 'axios';
 // Import the getProductDataFromAPI function if not already imported
 // Assuming it returns a Promise with a response object containing a 'data' field
 
-export const getProductsData = (params: any) => (dispatch: Dispatch) => {
+export const getProductsData = (params: any) => (dispatch: Dispatch):void => {
   dispatch({ type: PRODUCT_REQUEST });
   getProductDataFromAPI(params)
   .then((res) =>{
@@ -19,7 +19,7 @@ export const getProductsData = (params: any) => (dispatch: Dispatch) => {
     .catch(() => dispatch({ type: PRODUCT_FAILURE }));
 };
 
-export const getSingleProductData = (id: any) => (dispatch: Dispatch) => {
+export const getSingleProductData = (id: any) => (dispatch: Dispatch):void => {
   dispatch({ type: PRODUCT_REQUEST });
   getSingleProductDataFromAPI(id)
     .then((res) => {
@@ -28,7 +28,7 @@ export const getSingleProductData = (id: any) => (dispatch: Dispatch) => {
     .catch(() => dispatch({ type: PRODUCT_FAILURE }));
 };
 
-export const AddProductReview=(newProduct:any,id:number)=>(dispatch:Dispatch)=>{
+export const AddProductReview=(newProduct:any,id:number)=>(dispatch:Dispatch):void=>{
 console.log(id,newProduct)
   axios.patch(ProductURL+"/"+id,newProduct)
   .then(res=>{
