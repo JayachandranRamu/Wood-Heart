@@ -105,12 +105,12 @@ case DELETE_SINGLE_USER_REQUEST:
   };
 case DELETE_SINGLE_USER_SUCCESS:
     // deletedUserId = payload;
-   const  updatedUsers = state.users.filter((user:any) => user.id !== payload);
+    console.log(payload,"PAYLOAD")
     return {
       ...state,
       isDeleting: false,
       deleteError: false,
-      users: updatedUsers,
+      users: payload,
     };
 case DELETE_SINGLE_USER_FAILURE:
   return {

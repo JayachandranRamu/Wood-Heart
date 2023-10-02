@@ -42,7 +42,8 @@ const Users = () => {
   // })
 
   const handleDeleteUser = (id: number) => {
-    dispatch(deleteSingleUser(id)); 
+    let a=userData;
+    dispatch(deleteSingleUser(id,a)); 
   };
 
   return (

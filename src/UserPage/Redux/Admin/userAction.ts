@@ -63,14 +63,16 @@ export const getSingleUserby=(id:number) :any=>async(dispatch :Dispatch)=>{
 
 
  //to Delete a Single User by ID
-export const deleteSingleUser = (id: number): any => async (dispatch: Dispatch) => {
+export const deleteSingleUser = (id: number,a:any): any => async (dispatch: Dispatch) => {
   console.log(`${userUrl}/${id}`)
+  const  updatedUsers = a.filter((user:any) => user.id !== id);
+  console.log(updatedUsers);
   dispatch({ type: DELETE_SINGLE_USER_REQUEST });
   try {
    const res= await axios.delete<userInterface[]>(`${userUrl}/${id}`);
     // console.log(res);
     
-    dispatch({ type: DELETE_SINGLE_USER_SUCCESS ,payload:id });
+    dispatch({ type: DELETE_SINGLE_USER_SUCCESS ,payload:updatedUsers });
   } catch (err) {
     // console.log(err);
     dispatch({ type: DELETE_SINGLE_USER_FAILURE });
