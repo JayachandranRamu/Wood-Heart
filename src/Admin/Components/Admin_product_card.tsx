@@ -52,8 +52,8 @@ const AdminProductCard: React.FC<ProductCardProps> = ({
     >
       <Image
         m={"40px auto"}
-        w={"100%"}
-        h={"150px"}
+        w={"250px"}
+        h={"250px"}
         // boxSize="320px" // Set a fixed size for the image (adjust as needed)
         // objectFit={"cover"}
         src={image}
@@ -68,8 +68,11 @@ const AdminProductCard: React.FC<ProductCardProps> = ({
             // console.log(ProdId);
             deleteProduct(ProdId);
           }}
+          bg={"#0b3954"}
+          m={"20px 5px"}
+          _hover={{bg:"#e89f22"}}
         >
-          Delete
+          DELETE
         </Button>
         <Button
           colorScheme="orange"
@@ -77,8 +80,11 @@ const AdminProductCard: React.FC<ProductCardProps> = ({
             console.log("edit butn");
             Navigate("/admin/products/edit/" + id);
           }}
+          bg={"#0b3954"}
+          m={"20px 5px"}
+          _hover={{bg:"#e89f22"}}
         >
-          Edit
+          EDIT
         </Button>
       </Box>
     </Box>

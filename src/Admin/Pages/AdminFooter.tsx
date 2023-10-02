@@ -61,7 +61,7 @@ const SocialButton = ({
 export const AdminFooter=()=>{
   return (
     <Box
-      bg={useColorModeValue('gray.50', 'gray.900')}
+      bg={"white"}
       color={useColorModeValue('gray.700', 'gray.200')}>
       <Container
         as={Stack}
@@ -73,7 +73,7 @@ export const AdminFooter=()=>{
         align={{ base: 'center', md: 'center' }}>
         {/* <Logo /> */}
         <img src="https://i.ibb.co/FgV9Cb1/WOOD-HEART-idle.png" width="150" alt="" />
-        <Text>© september 2023 Wood Heart. All rights reserved</Text>
+        <Text></Text>
         <Stack direction={'row'} spacing={6}>
           <SocialButton label={'Twitter'} href={'#'}>
             <FaTwitter />

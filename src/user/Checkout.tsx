@@ -756,6 +756,7 @@ dispatch(AddCartProduct(Data));
             fontSize="18px"
     _hover={
       {bg:"#e89f22"}}
+      w={"100%"}
             >
             COMPLETE ORDER
             </Button>

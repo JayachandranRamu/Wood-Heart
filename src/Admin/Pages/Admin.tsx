@@ -20,7 +20,7 @@ const isAuth=useSelector((store:any)=>{
     <AdminNavbar />
    {
     isAuth&& <Container bg={"grey"} h={"550px"} maxW="7xl" p={{ base: 5, md: 10 }}>
-    <Center>
+    <Center >
       <Box
         maxH="400px"
         minH="354px"
@@ -34,7 +34,10 @@ const isAuth=useSelector((store:any)=>{
         bg={bg}
         role="group"
       >
+        
         <MainScreen />
+      
+        
       </Box>
     </Center>
   </Container>

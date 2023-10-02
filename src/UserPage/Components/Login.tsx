@@ -75,6 +75,7 @@ let obj={
 if(username=="admin" && password=="admin"){
   dispatch({type:ADMIN_CHECK})
 Navigate("/admin")
+
 }
 
 console.log(obj);

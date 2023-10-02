@@ -68,8 +68,8 @@ const OrderSummary: React.FC = () => {
         {/* <Heading as="h1" size="xl" mb={6}>
           Cart Summary
         </Heading> */}
-         <Heading fontFamily={"poppins"} as="h3" mt={4} mb={4}>
-                    Order Summary
+         <Heading fontFamily={"poppins"} as="h2" mt={4} mb={4}>
+                    ORDER SUMMARY
                     </Heading>
 
         <Stack spacing={4} gap={"40px"}>
@@ -106,9 +106,9 @@ const OrderSummary: React.FC = () => {
             //     </Flex>
             //   </Flex>
             // </motion.div>
-            <Flex alignItems={"center"} justifyContent={"space-between"}>
+            <Box alignItems={"center"} bg={"#f5f5f5"} gap={"20px"} borderRadius={"20px"} mt={"20px"} p={"50px"}  justifyContent={"space-between"}>
 
-           <Box>
+          
            <CartProductMeta   
             name={item.name}
             description={item.category}
@@ -117,17 +117,18 @@ const OrderSummary: React.FC = () => {
             brand={item.brand}
           
           />
+                  
+                  <Text bgColor={"#2b3954"} color={"white"} borderRadius={"7px"} p={"5px 0"} textAlign={"center"}>QUANTITY : {item.quantity}</Text>
+{/* <Text textAlign={"center"} color='gray.600' mb={"2px"} fontSize="14">Quantity : {item.quantity}</Text> */}
+          
+           
+
            </Box>
-        
-          <Box>
-<Text color='gray.600' mb={"2px"} fontSize="14">Quantity : {item.quantity}</Text>
-          </Box>
-           </Flex>
           ))}
         </Stack>
-        <Box mt={6}>
-          <Text fontSize="24" fontWeight={"600"} >
-            Total Price: $ {totalCartPrice.toFixed(1)}
+        <Box mt={6} >
+          <Text fontSize="28" fontWeight={"600"} color={"#ffb128"}   m={"5px 0"} >
+            Total Price:  $ {totalCartPrice.toFixed(1)}
           </Text>
         </Box>
       </Flex>

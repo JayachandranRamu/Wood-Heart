@@ -20,16 +20,23 @@ import {
   List,
   ListItem,
   useToast,
+  InputGroup,
+  InputRightElement,
+  Divider,
+  AbsoluteCenter,
 } from "@chakra-ui/react";
 import { FaStar } from "react-icons/fa";
 import { CartDrawer } from "./CartDrawer";
-import { getSingleProductData } from "../Redux/UserPage/action";
+import { AddProductReview, getSingleProductData } from "../Redux/UserPage/action";
 import { AddCartProduct } from "../Redux/Auth/action";
 import OrderSummary from "../../user/OrderSummary";
 
 export const SingleProductCard: React.FC = () => {
   let { id } = useParams<{ id: number }>();
-
+  const month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  const d = new Date();
+let name = d.getDate()+" "+month[d.getMonth()];
+console.log(name)
   // Specify the type for 'name'
   const dispatch = useDispatch();
 
@@ -39,9 +46,14 @@ export const SingleProductCard: React.FC = () => {
   //     isError: store.productReducer.isError,
   //   }));
 
+
+
+
+
   let singleProduct = useSelector(
     (store: RootState) => store.productReducer.singleProduct
   );
+  let products = useSelector((store: any) => store.authReducer.products);
   let UserData = useSelector((store: any) => store.authReducer.UserData);
   let isAuth = useSelector((store: any) => store.authReducer.isAuth);
   let Nav = useNavigate();
@@ -96,6 +108,48 @@ export const SingleProductCard: React.FC = () => {
     }
     setIsOpen(!isOpen);
   }
+
+
+
+  let [review,setReview]=useState("");
+let [star,setStar]=useState(5);
+  function StarEvents(i){
+    setStar(i+1);
+    
+      }
+  const GetStars = () => {
+    const listItems = [];
+    for (let i = 0; i < 5; i++) {
+     
+        
+      if(i<star){
+        listItems.push( <FaStar style={{color:"#ffb128"}}  onClick={()=>{StarEvents(i)}}/>);
+       ;
+      }else{
+        listItems.push( <FaStar style={{color:"grey"}}  onClick={()=>{StarEvents(i)}}/>);
+      }
+     
+    }
+    return listItems;
+  };
+function handleReviewClick(){
+  let obj={
+    "username": UserData.username,
+    "rating": star,
+    "comment": review,
+    "date": `${name} 2023`
+  }
+  console.log(obj);
+  singleProduct.reviews.push(obj);
+  let b=singleProduct;
+  console.log(b);
+  dispatch(AddProductReview(b,+singleProduct.id))
+  setReview("");
+  setStar(5);
+}
+
+
+
 
   useEffect(() => {
     dispatch(getSingleProductData(id));
@@ -283,7 +337,11 @@ export const SingleProductCard: React.FC = () => {
                   ml={"3px"}
                   textTransform={"lowercase"}
                 >
-                  <Text p={"10px"}>{singleProduct?.brand}</Text>
+                 
+              
+               
+                
+                 <Text p={"10px"}>{singleProduct?.brand}</Text>
                   <Text p={"10px"}>{singleProduct?.color}</Text>
                   <Text p={"10px"}>{singleProduct?.material}</Text>
                   <Text p={"10px"}>{singleProduct?.size}</Text>
@@ -311,7 +369,7 @@ export const SingleProductCard: React.FC = () => {
               </Heading>
             </Flex>
             <Stack direction="column" spacing={5} my={4}>
-              {singleProduct?.reviews?.map((el, index) => {
+              {singleProduct?.reviews?.map((el:any, index:any) => {
                 return (
                   <Stack
                     bg={"#fafafa"}
@@ -335,7 +393,7 @@ export const SingleProductCard: React.FC = () => {
                           {el?.username}
                         </Text>
                         <Text fontWeight="light" fontSize="xs">
-                          4 Oct 2022
+                         {(el.date)?el.date:"1 Oct 2023"}
                         </Text>
                       </Flex>
                     </HStack>
@@ -369,6 +427,68 @@ export const SingleProductCard: React.FC = () => {
                 );
               })}
             </Stack>
+           {isAuth && <Stack
+                    bg={"#fafafa"}
+                    m={"auto"}
+                    w={["100%", "85%"]}
+                    p={["05px", "20px"]}
+                    borderRadius={"20px"}
+                    
+                    direction="column"
+                  >
+                    <HStack spacing={3}>
+                      <Avatar
+                        size="md"
+                       
+                        src={
+                          "https://media.geeksforgeeks.org/wp-content/uploads/20210209004403/AVATAR1.png"
+                        }
+                      />
+                      <Flex direction="column">
+                        <Text fontWeight="500" fontSize="md">
+                     {UserData.username}
+                        </Text>
+                        <Text fontWeight="light" fontSize="xs">
+                        {name} 2023
+                        </Text>
+                      </Flex>
+                    </HStack>
+                    <Flex fontSize={18} m={"8px 0"}>
+                    {GetStars()}
+                    </Flex>
+                 
+                    <InputGroup size='md'>
+                    <Input
+                      color={"#5c676d"}
+                      bg={"white"}
+                      fontFamily={"poppins"}
+                      fontSize="16"
+                      textAlign="left"
+                      placeholder="Write Your Review"
+                      lineHeight="1.375"
+                      fontWeight="400"
+                      value={review}
+                      onChange={(e)=>{setReview(e.target.value)}}
+                      autoFocus
+                    >
+                     </Input>
+      <InputRightElement width='4.5rem' pr={"5px"}>
+        <Button h='1.75rem' size='sm' p={"auto 10px"}  bgColor={"#2b3954"}
+            color={"white"}
+            colorScheme="#f8ac2a"
+            fontWeight={500}
+            _hover={{ bgColor: "#e89f22" }}
+       
+        
+            borderRadius={"8px"}
+          
+         onClick={handleReviewClick}
+         >
+         SUBMIT
+        </Button>
+      </InputRightElement>
+    </InputGroup>
+                  </Stack>}
           </Container>
         </Box>
       </Box>

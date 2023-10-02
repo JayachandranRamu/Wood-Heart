@@ -5,7 +5,7 @@ import axios from 'axios'
 import { getAllusers,deleteSingleUser } from '../../UserPage/Redux/Admin/userAction'
 import { user } from '../../UserPage/Redux/Admin/constants'
 import styled from 'styled-components'
-import { AbsoluteCenter, Box, Button, CircularProgress, Divider, Flex, Stack, Table, Tbody, Td, Tfoot, Th, Thead, Tr, useBreakpointValue } from '@chakra-ui/react'
+import { AbsoluteCenter, Box, Button, CircularProgress, Divider, Flex, Stack, Table, Tbody, Td, Text, Tfoot, Th, Thead, Tr, useBreakpointValue } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 import { AdminFooter } from './AdminFooter'
 import { store } from '../../UserPage/Redux/store'
@@ -50,10 +50,10 @@ const Users = () => {
     <>
          <AdminNavbar />
          <Box position='relative' padding='10'>
-  <Divider />
-  <AbsoluteCenter fontSize={fontSize} bg='white' px='4'>
-    Customers 
-  </AbsoluteCenter>
+
+         <Text textAlign={"center"} fontSize={"35px"} m={"10px 0"} fontWeight={"bold"} bg='white' px='4'>
+    USERS 
+   </Text>
    </Box>
    {isLoading&&
    <Stack bg={"white"}
@@ -91,7 +91,7 @@ const Users = () => {
               colorScheme='red' 
               size={buttonSize} ml={2} 
               onClick={() => handleDeleteUser(ele.id)}>
-                    Del
+                    Delete
                   </Button>
               </Flex>  
             </Td>
