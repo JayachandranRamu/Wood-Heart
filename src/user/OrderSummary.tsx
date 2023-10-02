@@ -45,7 +45,7 @@ const OrderSummary: React.FC = () => {
     w={"100%"}
      marginBottom={5} 
     // shadow={"dark-lg"}   
-    borderRadius={10}  
+    borderRadius={20}  
     className="color-changing-box"
     transition="box-shadow 0.3s ease-in-out" 
     _hover={{
