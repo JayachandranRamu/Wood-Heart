@@ -19,16 +19,19 @@ import { DELETE_PRODUCT, GET_PRODUCT_FAILURE, GET_PRODUCT_REQUEST, GET_PRODUCT_S
 import { DELETE_SINGLE_USER_FAILURE, DELETE_SINGLE_USER_REQUEST, DELETE_SINGLE_USER_SUCCESS, GET_SINGLE_USER_FAILURE, GET_SINGLE_USER_REQUEST, GET_SINGLE_USER_SUCCESS, GET_USER_FAILURE, GET_USER_LOADING, GET_USER_SUCCESS } from "./userTypes"
 
 
-const initstate = {
-  users: [],
-  singleUser: {},
-  totalPages: 0,
-  orders: [],
-  products: [],
-  isError: false,
-  isAuth: false,
-  isLoading: false,
-};
+
+const initstate={
+    users:[],
+    singleUser:{},
+    totalPages:0,
+    orders:[],
+    products:[],
+    isError:false,
+    isAuth:true,
+    isLoading:false
+}
+
+
 
 type action = {
   type: string;
