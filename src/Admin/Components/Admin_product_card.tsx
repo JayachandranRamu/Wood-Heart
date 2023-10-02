@@ -5,8 +5,8 @@ import { RootState } from "../Redux/rootReducer"; // Import the RootState type
 import { DELETE_PRODUCT } from "../../UserPage/Redux/Admin/actionTypes";
 import axios from "axios";
 import { ProductURL } from "../../UserPage/Utilis/api";
+import { Navigate, useNavigate } from "react-router-dom";
 // import { ProductURL } from "../../UserPage/Utilis/api";
-
 
 interface ProductCardProps {
   id: number;
@@ -28,6 +28,7 @@ const AdminProductCard: React.FC<ProductCardProps> = ({
   const client = axios.create({
     baseURL: ProductURL,
   });
+  let Navigate = useNavigate();
   const dispatch = useDispatch();
   const { products } = useSelector((store: RootState) => ({
     products: store.adminReducer.products,
@@ -70,7 +71,15 @@ const AdminProductCard: React.FC<ProductCardProps> = ({
         >
           Delete
         </Button>
-        <Button colorScheme="orange">Edit</Button>
+        <Button
+          colorScheme="orange"
+          onClick={() => {
+            console.log("edit butn");
+            Navigate("/admin/products/edit/" + id);
+          }}
+        >
+          Edit
+        </Button>
       </Box>
     </Box>
   );

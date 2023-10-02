@@ -38,45 +38,68 @@ const Products: React.FC = () => {
   //   material: "",
   //   rating: "",
   // };
-  let newProduct = {};
+  const initProduct = {
+    name: "",
+    category: "",
+    price: "",
+    image: "",
+    brand: "",
+    size: "",
+    color: "",
+    material: "",
+    rating: "",
+    about: "",
+    reviews: [
+      {
+        username: "Sarah123",
+        rating: 5,
+        comment: "I love this dining table! It's beautiful and sturdy.",
+      },
+      {
+        username: "JohnDoe45",
+        rating: 4,
+        comment: "Great value for a modern dining table.",
+      },
+      {
+        username: "ElegantHome",
+        rating: 5,
+        comment: "I'm very pleased with this purchase. It's perfect.",
+      },
+      {
+        username: "FurnitureFanatic",
+        rating: 4,
+        comment: "Assembly was straightforward, but it took some time.",
+      },
+    ],
+  };
+  let newProd: any;
+  let [newProduct, setNewProduct] = useState(initProduct);
   const handleChange = (e: any) => {
-    newProduct = { ...newProduct, [e.target.name]: e.target.value };
+    // console.log(e.target.value);
+    console.log(newProduct);
+    newProd = {
+      ...newProduct,
+      [e.target.name]: e.target.value,
+      // e.target.name === "price" || "rating"
+      //   ? +e.target.value
+      //   :
+    };
+    setNewProduct(newProd);
+    // console.log(newProduct);
   };
   const AddProduct = (e: any) => {
+    // setNewProduct(newProd);
     e.preventDefault();
-    console.log(newProduct);
+    console.log("new prod", newProduct);
     axios.post(ProductURL, newProduct).then((res) => {
       console.log(res.data);
+      dispatch(getProducts());
+      setNewProduct(initProduct);
     });
-    newProduct = {};
   };
   useEffect(() => {
     dispatch(getProducts());
   }, [dispatch]);
-  // console.log(products);
-  // const dispatch = useDispatch();
-  // const data = useSelector((store: any) => store.productsReducer.products); // Adjust the store type
-  // const isLoading = useSelector((store: any) => store.productsReducer.isLoading); // Adjust the store type
-  //const [searchParam] = useSearchParams();
-  // const Navigate = useNavigate();
-
-  // const params = {
-  //   params: {
-  //     q: searchParam.get('query'),
-  //     category: searchParam.getAll('category'),
-  //     gender: searchParam.getAll('gender'),
-  //     price_gte: searchParam.get('price_gte'),
-  //     price_lte: searchParam.get('price_lte'),
-  //   },
-  // };
-
-  // useEffect(() => {
-  //   dispatch(getProducts(params));
-  // }, [searchParam, dispatch]);
-
-  // if (isLoading) {
-  //   return <h1>Loading...</h1>;
-  // }
 
   return (
     <>
@@ -90,7 +113,7 @@ const Products: React.FC = () => {
               placeholder="name"
               type="text"
               name="name"
-              value={newProduct.name}
+              // value={newProduct.name}
               onChange={handleChange}
             />
             <Input
@@ -171,7 +194,12 @@ const Products: React.FC = () => {
           </Stack>
         </Box>
         <Box w={"60%"}>
-          <SimpleGrid spacing={10} columns={[1, 2,3]} m={"80px auto"} w={"100%"}>
+          <SimpleGrid
+            spacing={10}
+            columns={[1, 2, 3]}
+            m={"80px auto"}
+            w={"100%"}
+          >
             {products?.map((el: any) => (
               <AdminProductCard key={el.id} {...el} />
             ))}
