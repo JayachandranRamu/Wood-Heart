@@ -9,7 +9,7 @@ const initstate={
     orders:[],
     products:[],
     isError:false,
-    isAuth:false,
+    isAuth:true,
     isLoading:false
 }
 
