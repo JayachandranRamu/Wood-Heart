@@ -1,5 +1,4 @@
-import { Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, Flex, Image, Input, Text, useDisclosure } from "@chakra-ui/react"
-import React from "react"
+import { Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, Flex, Image, Text } from "@chakra-ui/react"
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 export function CartDrawer({onOpen,onClose}:any) {
@@ -48,7 +47,7 @@ size={"sm"}
                 <Box alignItems={"center"} w={"30%"}>
                 <Text bgColor={"#2b3954"} color={"white"} borderRadius={"7px"} p={"5px 0"} textAlign={"center"}>QTY : {el.quantity}</Text>
                   <Text color={"#ffb128"} fontWeight={"600"} fontSize={"20"} m={"5px 0"} >
-                    $ {((`${el.price.toFixed(1)}`)* (` ${el.quantity}`))}
+                    $ {el.price.toFixed(1) * el.quantity}
                   </Text>
                 </Box>
                 </Flex>

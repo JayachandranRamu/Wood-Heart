@@ -1,9 +1,7 @@
 import { Box, Button, Heading, Input, Stack } from "@chakra-ui/react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
-import { RootState } from "../Redux/rootReducer"; // Import the RootState type
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { editProduct, getProducts } from "../../UserPage/Redux/Admin/action";
 
 export const EditProduct: React.FC = () => {
@@ -11,7 +9,7 @@ export const EditProduct: React.FC = () => {
 
   let { id } = useParams<{ id: any }>();
   const dispatch = useDispatch();
-  const { products } = useSelector((store: RootState) => ({
+  const { products } = useSelector((store: any) => ({
     products: store.adminReducer.products,
   }));
   const initProduct = {
@@ -79,14 +77,15 @@ export const EditProduct: React.FC = () => {
       <Box
         w={"30%"}
         m={"auto"}
-        mt={"80px"}
-        border={"1px solid orange"}
+        // mt={"80px"}
+        bg={"#fafafa"}
+        // border={"1px solid orange"}
         p={"40px"}
         borderRadius={"25px"}
       >
         <Stack spacing={4}>
-          <Heading mb={4} m={"auto"}>
-            Edit Product
+          <Heading m={"20px auto"} >
+            EDIT PRODUCT
           </Heading>
           <Input
             variant="filled"
@@ -168,8 +167,10 @@ export const EditProduct: React.FC = () => {
             onChange={handleChange}
             value={data.rating}
           />
-          <Button colorScheme="orange" onClick={handleUpdate}>
-            Update
+          <Button   bg={"#0b3954"}
+          m={"20px 5px"} color={"white"}
+          _hover={{bg:"#e89f22"}} onClick={handleUpdate}>
+            UPDATE
           </Button>
         </Stack>
       </Box>

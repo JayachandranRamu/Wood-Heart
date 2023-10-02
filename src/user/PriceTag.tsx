@@ -14,7 +14,7 @@ export type FormatPriceOptions = { locale?: string; currency?: string }
 
 // eslint-disable-next-line react-refresh/only-export-components
 export function formatPrice(value: number, opts: { locale?: string; currency?: string } = {}) {
-  const { locale = 'en-IN', currency = 'INR' } = opts // Updated locale to 'en-IN' for Indian Rupees
+  const { locale = 'en-US', currency = 'USD' } = opts // Updated locale to 'en-IN' for Indian Rupees
   const formatter = new Intl.NumberFormat(locale, {
     currency,
     style: 'currency',
@@ -46,9 +46,8 @@ interface PriceProps {
 
 const Price = (props: PriceProps) => {
   const { isOnSale, children, textProps } = props
-  const defaultColor = mode('gray.700', 'gray.400')
-  const onSaleColor = mode('gray.400', 'gray.700')
-  const color = isOnSale ? onSaleColor : defaultColor
+
+
   return (
     <Text
     color="#ffb431"

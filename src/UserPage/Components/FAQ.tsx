@@ -1,5 +1,4 @@
 import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Text } from '@chakra-ui/react';
-import React from 'react'
 const faqs = [
     {
       question: "How can I place an order?",
@@ -35,8 +34,8 @@ const faqs = [
       question: "Can I cancel or modify my order after it's placed?",
       answer:
         "We understand that circumstances may change. If you need to cancel or modify your order, please contact our customer support as soon as possible. We'll do our best to accommodate your request if the order has not already been processed.",
-    },
-  ];
+},
+];
 const FAQ = () => {
   return (
         <Box m={10} w={["80%"]} margin={"auto"} fontFamily={"poppins"} color={"#0b3954"}>

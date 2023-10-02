@@ -1,16 +1,16 @@
-import React from 'react'
+
 import AdminNavbar from "../Components/Admin-Navbar";
-import { AbsoluteCenter, Box, Button, Center, CircularProgress, Divider, Grid, Heading, Image, Stack, Tab, TabList, TabPanel, TabPanels, Table, Tabs, Text, useBreakpointValue } from '@chakra-ui/react';
-import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
+import {  Box,  Center, CircularProgress, Heading, Image, SimpleGrid, Stack, Tab, TabIndicator, TabList, TabPanel, TabPanels, Table, Tabs, Text, useBreakpointValue } from '@chakra-ui/react';
+import { Card, CardBody} from '@chakra-ui/react'
 import { AdminFooter } from './AdminFooter';
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import {useEffect } from "react";
 import { useParams } from 'react-router-dom';
-import { getSingleUserby, userInterface } from '../../UserPage/Redux/Admin/userAction';
-import { store } from '../../UserPage/Redux/store';
+import { getSingleUserby } from '../../UserPage/Redux/Admin/userAction';
+import ProductCard from '../../UserPage/Components/ProductCard';
 const SingleUserAdmin = () => {
   const fontSize = useBreakpointValue({ base: 'sm', md: 'md', lg: 'lg' });
-  const tableWidth = useBreakpointValue({ base: '90%', sm: '70%', md: '70%' });
+  // const tableWidth = useBreakpointValue({ base: '90%', sm: '70%', md: '70%' });
 
   const dispatch=useDispatch();
   const singleUser=useSelector((store:any)=>{
@@ -29,10 +29,7 @@ const SingleUserAdmin = () => {
     const email:string=singleUser.email;
     const username:string=singleUser.username;
     //const password
-    const phone:string=singleUser.phone;
-    const orders: []=singleUser.orders;
-    const wishList: []=singleUser.wishlist;
-    const cartitems:[]=singleUser.addToCart;
+    const phone:string=singleUser.phone;;
     // const {city ,street,number,zipcode }:string=singleUser.address;
     const address= singleUser.address;
 
@@ -50,11 +47,11 @@ const SingleUserAdmin = () => {
     
     <AdminNavbar/>
     
-    <Box w={"100%"} position='relative' padding='10'>
-   <Divider />
-   <AbsoluteCenter fontSize={fontSize} bg='white' px='4'>
-     Customer Details
-   </AbsoluteCenter>
+    <Box w={"100%"} position='relative' padding='10' color={"#0b3954"}>
+  
+   <Text textAlign={"center"} fontSize={"35px"} m={"20px 0"} fontWeight={"bold"} bg='white' px='4'>
+    USER DETAILS
+   </Text>
    </Box>
    {isLoading&&
    <Stack bg={"white"}
@@ -76,22 +73,24 @@ const SingleUserAdmin = () => {
    <Image
     m={"auto"}
      objectFit='cover'
-     maxW={{ base: '50%', sm: '150px' }}
-     src="https://w0.peakpx.com/wallpaper/466/249/HD-wallpaper-leonardo-dicaprio-profile-black-man-white-actor-blue.jpg"
+     maxW={{ base: '50%', sm: '30%' }}
+     src="https://www.getillustrations.com/photos/pack/3d-avatar-male_lg.png"
      alt='Caffe Latte'
    />
  
    <Stack m="auto">
-     <CardBody fontSize={fontSize}>
+     <CardBody fontSize={fontSize} bg={"#f5f5f5"} borderRadius={"20px"}>
        <Heading size='md'></Heading>
        <Table   ml={"20px"} w={"100%"}>
-         <tr><td >Name</td><td>       {`${username}`||"not read"}                     </td></tr>
-         <tr ><td>E-mail</td><td>     {`${email}`||"not read"}                        </td></tr>
-         <tr><td>Address</td>  <td style={{backgroundColor:"white"}}><tr><td>--city:</td>{`${address?.city}`||"not read"}</tr>
+         <tr><td >NAME :</td><td>       {`${username}`||"not read"}                     </td></tr>
+         <tr ><td>EMAIL :</td><td>     {`${email}`||"not read"}                        </td></tr>
+         <tr ><td>CITY :</td><td>     {`${address?.city}`||"not read"}                        </td></tr>
+         <tr ><td>PIN CODE :</td><td>     {`${address?.zipcode}`||"not read"}                        </td></tr>
+         {/* <tr><td>CITY :</td>  <td style={{backgroundColor:"white"}}><tr><td>CITY :</td>{`${address?.city}`||"not read"}</tr>
                                <tr><td>--Street:</td>{`${address?.street}`||"not read"}</tr>
-                               <tr><td>--Pincode:</td>{`${address?.zipcode}`||"not read"}</tr>
-                               </td></tr>
-         <tr><td>Phone</td> <td>      {phone}                        </td></tr>
+                               <tr><td>--Pincode:</td>{`${address?.zipcode}`||"not read"}</tr> */}
+                               {/* </td></tr> */}
+         <tr><td>PHONE :</td> <td>      {phone}                        </td></tr>
        </Table>
      </CardBody>
    </Stack>
@@ -101,12 +100,24 @@ const SingleUserAdmin = () => {
       {/* tabs to attain multiple container showcase */}
     {
       !isLoading&&  <Center>
-      <Tabs w={"90%"} mt={"40px"} size='md' variant='enclosed'>
+      <Tabs isFitted 
+      variant='unstyled'
+      // borderBottom={"2px solid black"}
+        w={"80%"} mt={"40px"} size='md'
+        //  variant='enclosed'
+       >
   <TabList>
     <Tab fontSize={fontSize}>Orders</Tab>
     <Tab fontSize={fontSize}>Cart Items</Tab>
   </TabList>
+  <TabIndicator
+      mt="-1.5px"
+      height="2px"
+      bg="blue.500"
+      borderRadius="1px"
+    />
   <TabPanels>
+
     <TabPanel>
       {/* --------------------------1------------------- */}
       
@@ -117,36 +128,39 @@ const SingleUserAdmin = () => {
        
      }
       {
-        singleUser.orders&&singleUser.orders.map((ele:any)=>(
-          <Card
-          // m={"auto"}
-          mb={"20px"}
-          width={{ base: '90%', sm: '90%', md: '90%', lg: '95%' }}
-         direction={{ base: 'column', sm: 'row' }}
-         overflow='hidden'
-         variant='outline'
-       >
-         <Image
-          // m={"auto"}
-           objectFit='cover'
-           maxW={{ base: '50%', sm: '150px' }}
-           src={ele.image}
-               alt='Caffe Latte'
-         />
+     
+          <SimpleGrid spacing={10} columns={[1,2,3]}  m={"80px auto"} mt={"40px"} w={"80%"} >
+          {singleUser.orders&&singleUser.orders.map((el:any)=><ProductCard key={el.id} {...el} />)}
+          </SimpleGrid>
+      //     <Box justifyContent={"center"}
+      //     // m={"auto"}
+      //     mb={"20px"}
+      //     width={{ base: '90%', sm: '90%', md: '90%', lg: '95%' }}
+      //    direction={{ base: 'column', sm: 'row' }}
+      //    overflow='hidden'
+      //    variant='outline'
+      //  >
+      //    <Image
+      //     // m={"auto"}
+      //      objectFit='cover'
+      //      maxW={{ base: '50%', sm: '150px' }}
+      //      src={ele.image}
+      //          alt='Caffe Latte'
+      //    />
        
-         <Stack >
-           <CardBody fontSize={fontSize}>
-             <Heading size='md'></Heading>
-             <Table   ml={"20px"} w={"100%"}>
-               <tr><td >Product</td><td> -----{ele.name}</td></tr>
-               <tr ><td>Category</td><td>-----{ele.category}</td></tr>
-               <tr><td>Price</td><td>-----₹{ele.price}</td></tr>
-               <tr><td>Order Placed</td> <td>-----Ordered date</td></tr>
-             </Table>
-           </CardBody>
-         </Stack>
-       </Card>
-        ))
+      //    <Stack >
+      //      <CardBody fontSize={fontSize}>
+      //        <Heading size='md'></Heading>
+      //        <Table   ml={"20px"} w={"100%"}>
+      //          <tr><td >Product</td><td> -----{ele.name}</td></tr>
+      //          <tr ><td>Category</td><td>-----{ele.category}</td></tr>
+      //          <tr><td>Price</td><td>-----₹{ele.price}</td></tr>
+      //          <tr><td>Order Placed</td> <td>-----Ordered date</td></tr>
+      //        </Table>
+      //      </CardBody>
+      //    </Stack>
+      //  </Box>
+        // ))
       }
     </TabPanel>
     <TabPanel>
@@ -158,34 +172,10 @@ const SingleUserAdmin = () => {
      }
          {/* --------------------------1------------------- */}
          {
-          singleUser.addToCart&&singleUser.addToCart.map((ele:any)=>(
-            <Card
-            mb={"20px"}
-            width={{ base: '90%', sm: '90%', md: '90%', lg: '90%' }}
-           direction={{ base: 'column', sm: 'row' }}
-           overflow='hidden'
-           variant='outline'
-         >
-           <Image
-            // m={"auto"}
-             objectFit='cover'
-             maxW={{ base: '50%', sm: '150px' }}
-             src={ele.image}
-                 alt='Caffe Latte'
-           />
          
-           <Stack >
-             <CardBody fontSize={fontSize}>
-               <Heading size='md'></Heading>
-               <Table   ml={"20px"} w={"100%"}>
-                 <tr><td >Product</td><td> -----{ele.name}</td></tr>
-                 <tr ><td>Category</td><td>-----{ele.category}</td></tr>
-                 <tr><td>Price</td><td>-----₹{ele.price}</td></tr>
-               </Table>
-             </CardBody>
-           </Stack>
-         </Card>
-          ))
+            <SimpleGrid spacing={10} columns={[1,2,3]}  m={"40px auto"} mt={"40px"} w={"80%"} >
+          { singleUser.addToCart&&singleUser.addToCart.map((el:any)=><ProductCard key={el.id} {...el} />)}
+          </SimpleGrid>
          }
     </TabPanel>
   </TabPanels>

@@ -10,11 +10,10 @@ import { GET_SINGLE_USER_FAILURE,
       GET_USER_SUCCESS } from "./userTypes";
 
 import { Dispatch } from "redux";
-import { extractTotalPages, userUrl } from "../../Utilis/api";
+import { userUrl } from "../../Utilis/api";
 
-const GetUserLoading={ type: typeof GET_USER_LOADING};
- 
-const GetUserSuccess={type:typeof GET_USER_SUCCESS,payload:[]}
+
+
 
 export interface userInterface{
     id:string
@@ -32,7 +31,7 @@ export const getAllusers=() :any=>async(dispatch:Dispatch) =>{
        dispatch({type:GET_USER_LOADING});
        try {
         // 
-        const response= await axios.get<userInterface[]>(`${userUrl}`);
+        const response= await axios.get(userUrl);
         
         dispatch({ type: GET_USER_SUCCESS, payload:response});
       } catch (error) {
@@ -69,7 +68,7 @@ export const deleteSingleUser = (id: number,a:any): any => async (dispatch: Disp
   console.log(updatedUsers);
   dispatch({ type: DELETE_SINGLE_USER_REQUEST });
   try {
-   const res= await axios.delete<userInterface[]>(`${userUrl}/${id}`);
+   await axios.delete(`${userUrl}/${id}`);
     // console.log(res);
     
     dispatch({ type: DELETE_SINGLE_USER_SUCCESS ,payload:updatedUsers });

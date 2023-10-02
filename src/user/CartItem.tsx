@@ -1,32 +1,15 @@
-import { CloseButton, Flex, Link, useColorModeValue,Text } from '@chakra-ui/react'
+import { CloseButton, Flex, Link, Text } from '@chakra-ui/react'
 import { PriceTag } from './PriceTag'
 import { CartProductMeta } from './CartProductMeta'
 import { useState,useEffect } from 'react';
 
-type CartItemProps = {
-  isGiftWrapping?: boolean;
-  id: number; 
-  name: string;
-  about: string;
-  quantity: number;
-  price: number;
-  currency: string;
-  image: string;
-  availableQuantity?: number; 
-  onChangeQuantity?: (id: number, newQuantity: number) => void;
-  onPriceChange?: (id: number, newPrice: number) => void;
-  onClickGiftWrapping?: () => void;
-  onClickDelete?: (id: number) => void; 
-  onUpdateTotalPrice?: (newTotal: number) => void;
-};
 
 
-export const CartItem = (props: CartItemProps) => {
+export const CartItem = (props: any) => {
   const {
     isGiftWrapping,
     id,
     name,
-    about,
     category,
     brand,
     quan,
@@ -43,7 +26,7 @@ export const CartItem = (props: CartItemProps) => {
   // Use state to track gauris quantity
   const [quantity, setQuantity] = useState(quan);
 
-  const borderColor = useColorModeValue('#0b3954', '#0b3954'); 
+
   
     const quantityLimit = availableQuantity || 50;
 
@@ -152,10 +135,9 @@ const calculateUpdatedPrice = (newQuantity: number) => {
         borderColor={"gray.200"}  
         borderRadius='4'
         boxShadow='base' p='1' 
-        rounded='md' bg='white'         p='1' 
-        color={"white"}
         rounded='md'
-       bg="#174b69">
+        color={"white"}
+   bg="#174b69">
           <button onClick={decrementQuantity} disabled={quantity <= 1}
            style={{
          

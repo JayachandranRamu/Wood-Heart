@@ -2,19 +2,19 @@ import React from 'react';
 import {
   Box,
   Button,
-  chakra,
+
   Flex,
   Heading,
-  IconButton,
-  Image,
+
+
   Stack,
-  useColorModeValue,
+
 } from '@chakra-ui/react';
-import { AiOutlineMenu } from 'react-icons/ai';
-import {FaArrowRight } from 'react-icons/fa';
+
+
 import { useNavigate } from 'react-router-dom';
 const Hero: React.FC = () => {
-  const bg = useColorModeValue('white', 'gray.800');
+
   let Navigate=useNavigate()
   return (
       <Box m={"50px auto"} fontFamily={"urbanist"}

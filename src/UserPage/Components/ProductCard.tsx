@@ -15,11 +15,9 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({
   id,
-  category,
   name,
   price,
   image,
-  brand,
   rating,
 }) => {
   
@@ -41,9 +39,9 @@ const ProductCard: React.FC<ProductCardProps> = ({
       <Text>{name}</Text>
       <Text fontWeight={"500"}>$ {price}</Text>
       <Flex alignItems={"center"} justifyContent={"center"} fontSize={"18"} m={"5px auto"}>
-{new Array(Math.floor(rating)).fill(0).map(el=>{
+{new Array(Math.floor(rating)).fill(0).map(()=>{
     return(<FaStar  color="#ffb128" />)})}
-    {new Array(5-Math.floor(rating)).fill(0).map(el=>{
+    {new Array(5-Math.floor(rating)).fill(0).map(()=>{
     return(<FaStar color="grey" />)})}
     
 </Flex>

@@ -10,19 +10,18 @@ import { getProducts } from "../../UserPage/Redux/Admin/action";
 import {
   Box,
   Button,
-  Heading,
   Input,
   SimpleGrid,
   Stack,
+  Text,
 } from "@chakra-ui/react";
 import AdminProductCard from "../Components/Admin_product_card";
-import { RootState } from "../Redux/rootReducer"; // Import the RootState type
 import axios from "axios";
 import { ProductURL } from "../../UserPage/Utilis/api";
 
 const Products: React.FC = () => {
   const dispatch = useDispatch();
-  const { products, isLoading, isError } = useSelector((store: RootState) => ({
+  const { products } = useSelector((store: any) => ({
     products: store.adminReducer.products,
     isLoading: store.adminReducer.isLoading,
     isError: store.adminReducer.isError,
@@ -107,10 +106,10 @@ const Products: React.FC = () => {
       <Box display={"flex"} justifyContent={"space-around"}>
         <Box w={"20%"}>
           <Stack spacing={4}>
-            <Heading mb={4}>Add New Product</Heading>
+            <Text textAlign={"center"} fontWeight={"bold"} mb={2} fontSize={"25"} color={"#0b3954"} >ADD NEW PRODUCT</Text>
             <Input
               variant="filled"
-              placeholder="name"
+              placeholder="Name"
               type="text"
               name="name"
               // value={newProduct.name}
@@ -118,7 +117,7 @@ const Products: React.FC = () => {
             />
             <Input
               variant="filled"
-              placeholder="category"
+              placeholder="Category"
               type="text"
               name="category"
               onChange={handleChange}
@@ -126,7 +125,7 @@ const Products: React.FC = () => {
             />
             <Input
               variant="filled"
-              placeholder="price"
+              placeholder="Price"
               type="number"
               name="price"
               value={newProduct.price}
@@ -134,7 +133,7 @@ const Products: React.FC = () => {
             />
             <Input
               variant="filled"
-              placeholder="image"
+              placeholder="Image"
               type="url"
               name="image"
               value={newProduct.image}
@@ -142,7 +141,7 @@ const Products: React.FC = () => {
             />
             <Input
               variant="filled"
-              placeholder="brand"
+              placeholder="Brand"
               type="text"
               name="brand"
               value={newProduct.brand}
@@ -150,7 +149,7 @@ const Products: React.FC = () => {
             />
             <Input
               variant="filled"
-              placeholder="size"
+              placeholder="Size"
               type="text"
               name="size"
               value={newProduct.size}
@@ -158,7 +157,7 @@ const Products: React.FC = () => {
             />
             <Input
               variant="filled"
-              placeholder="color"
+              placeholder="Color"
               type="text"
               name="color"
               value={newProduct.color}
@@ -166,7 +165,7 @@ const Products: React.FC = () => {
             />
             <Input
               variant="filled"
-              placeholder="material"
+              placeholder="Material"
               type="text"
               name="material"
               value={newProduct.material}
@@ -174,7 +173,7 @@ const Products: React.FC = () => {
             />
             <Input
               variant="filled"
-              placeholder="about"
+              placeholder="About"
               type="text"
               name="about"
               value={newProduct.about}
@@ -182,22 +181,24 @@ const Products: React.FC = () => {
             />
             <Input
               variant="filled"
-              placeholder="rating"
+              placeholder="Rating"
               type="number"
               name="rating"
               value={newProduct.rating}
               onChange={handleChange}
             />
-            <Button colorScheme="orange" onClick={AddProduct}>
-              Add Product
+            <Button  bg={"#0b3954"}
+          m={"20px 5px"} color={"white"}
+          _hover={{bg:"#e89f22"}} onClick={AddProduct}>
+              ADD PRODUCT
             </Button>
           </Stack>
         </Box>
-        <Box w={"60%"}>
+        <Box w={"70%"}>
           <SimpleGrid
             spacing={10}
-            columns={[1, 2, 3]}
-            m={"80px auto"}
+            columns={[1, 2,3]}
+            // m={"80px auto"}
             w={"100%"}
           >
             {products?.map((el: any) => (

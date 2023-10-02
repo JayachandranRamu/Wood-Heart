@@ -14,14 +14,6 @@ import {
   InputGroup,
   InputLeftElement,
 } from '@chakra-ui/react'
-import React from 'react';
-import {
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  VStack,
-} from '@chakra-ui/react';
 import {
   HamburgerIcon,
   CloseIcon,

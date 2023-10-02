@@ -1,11 +1,11 @@
-import * as React from 'react';
+
 import { Text, SimpleGrid, Box, Image, Flex, Stack } from '@chakra-ui/react';
 import CountUp from 'react-countup';
 
 interface StatData {
   id: number;
   label: string;
-  score: string;
+  score: number;
   start?:string;
   end?:string
 }
@@ -14,14 +14,14 @@ const statData: StatData[] = [
   {
     id: 1,
     label: 'Clients',
-    score: '550',
+    score: 550,
     start:"",
     end:""
   },
   {
     id: 2,
     label: 'Projects',
-    score: '421',
+    score: 421,
     start:"",
     end:""
   },
@@ -29,7 +29,7 @@ const statData: StatData[] = [
     id: 3,
     label: 'Revenue',
     start:"$",
-    score: '5',
+    score: 5,
     end:"M"
   }
 ];

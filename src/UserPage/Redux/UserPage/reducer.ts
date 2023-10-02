@@ -7,33 +7,10 @@ import {
 
 // Define your initial state with types
 
-interface Product{
-  id: number;
-  category: string;
-  name: string;
-  price: number;
-  image: string;
-  brand: string;
-  size: string;
-  material: string;
-  color: string;
-  finish_type: string;
-  about: string;
-  rating: number;
-  reviews: Review[];
-}
 
-interface Review {
-  username: string;
-  rating: number;
-  comment: string;
-}
-interface InitialState {
-  isLoading: boolean;
-  isError: boolean;
-  products: Product[]; // Replace 'YourProductType' with the actual type of products
-  singleProduct: Product;// Replace 'YourSingleProductType' with the actual type of singleProduct
-}
+
+
+
 
 const initialState= {
   isLoading: false,
@@ -46,7 +23,7 @@ const initialState= {
 
 // Create the reducer with types
 export const reducer = (
-  state: InitialState = initialState,
+  state: any = initialState,
   action: { type: string; payload: any } // Replace 'any' with the actual type of payload
 ) => {
   switch (action.type) {

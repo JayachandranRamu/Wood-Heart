@@ -1,4 +1,4 @@
-import React from 'react';
+
 import {
   Box,
   Container,
@@ -10,16 +10,9 @@ import {
   useColorModeValue,
   Image
 } from '@chakra-ui/react';
-import F6 from "../assets/images/F6.png"
-const Logo = (props) => {
-  return (
-    <svg height={32} viewBox="0 0 120 28" xmlns="http://www.w3.org/2000/svg" {...props}>
-      {/* SVG path data */}
-    </svg>
-  );
-};
 
-const ListHeader = ({ children }) => {
+
+const ListHeader = ({ children }:any) => {
   return (
     <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
       {children}
