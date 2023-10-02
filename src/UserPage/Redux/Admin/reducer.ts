@@ -1,5 +1,5 @@
 import { DELETE_PRODUCT, GET_PRODUCT_FAILURE, GET_PRODUCT_REQUEST, GET_PRODUCT_SUCCESS } from "./actionTypes"
-import { GET_SINGLE_USER_FAILURE, GET_SINGLE_USER_REQUEST, GET_SINGLE_USER_SUCCESS, GET_USER_FAILURE, GET_USER_LOADING, GET_USER_SUCCESS } from "./userTypes"
+import { DELETE_SINGLE_USER_FAILURE, DELETE_SINGLE_USER_REQUEST, DELETE_SINGLE_USER_SUCCESS, GET_SINGLE_USER_FAILURE, GET_SINGLE_USER_REQUEST, GET_SINGLE_USER_SUCCESS, GET_USER_FAILURE, GET_USER_LOADING, GET_USER_SUCCESS } from "./userTypes"
 
 
 const initstate={
@@ -24,12 +24,14 @@ export const reducer=(state=initstate,{type,payload}:action)=>{
             return {...state,isLoading:true};
          }
          case GET_USER_SUCCESS:{
-            console.log(payload.headers["x-total-count"],"pages");
-            return {...state,isLoading:false,users:payload.data,totalPages:payload.headers["x-total-count"]}
+            
+            return {...state,isLoading:false,users:payload.data}
          }
          case GET_USER_FAILURE:{
             return {...state,isError:true}
          }
+
+        //  =======================================================
          case GET_PRODUCT_REQUEST: {
             return {
               ...state,
@@ -70,7 +72,28 @@ case GET_SINGLE_USER_SUCCESS:{
 case GET_SINGLE_USER_FAILURE:{
    return {...state,isError:true}
 }
-
+// =============================================================
+case DELETE_SINGLE_USER_REQUEST:
+  return {
+    ...state,
+    isDeleting: true,
+    deleteError: false,
+  };
+case DELETE_SINGLE_USER_SUCCESS:
+    // deletedUserId = payload;
+   const  updatedUsers = state.users.filter((user:any) => user.id !== payload);
+    return {
+      ...state,
+      isDeleting: false,
+      deleteError: false,
+      users: updatedUsers,
+    };
+case DELETE_SINGLE_USER_FAILURE:
+  return {
+    ...state,
+    isDeleting: false,
+    deleteError: true,
+  };
          default:{
             return state;
          }
