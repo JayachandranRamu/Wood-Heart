@@ -39,7 +39,7 @@ const faqs = [
   ];
 const FAQ = () => {
   return (
-        <Box m={10} w={["80%"]}  fontFamily={"poppins"} color={"#0b3954"}>
+        <Box m={10} w={["80%"]} margin={"auto"} fontFamily={"poppins"} color={"#0b3954"}>
             <Text fontSize={["32","48"]} fontWeight={"600"}  textAlign={"center"} m={"40px"} fontFamily={"poppins"} >
             Frequently Asked Questions</Text>
         <Box m={"50px auto"}>

@@ -107,7 +107,7 @@ let [render,setRender]=useState(false)
     >
       <Text fontSize={["32","48"]} fontWeight={"600"} bgColor={"#f5f5f5"}  textAlign={"center"} pb={"50px"} fontFamily={"poppins"} >
             Cart Page</Text>
-            {isCartEmpty?<Text textAlign={"center"} fontSize={"25px"} textTransform={"uppercase"}>Your Cart Is Currently Empty !</Text>:null}
+            {cartItems.length<0?<Text textAlign={"center"} fontSize={"25px"} textTransform={"uppercase"}>Your Cart Is Currently Empty !</Text>:null}
       <Stack
         direction={{ base: 'column', lg: 'row' }}
         align={{ lg: 'flex-start' }}
