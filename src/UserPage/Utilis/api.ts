@@ -24,3 +24,13 @@ export const GetAllUserDataFromAPI=()=>{
 export const  AddCartProductToAPI=(userData:any)=>{
 return axios.patch(userUrl+"/"+userData.id,userData)
 }
+
+
+export function extractTotalPages(linkHeader: any) {
+  if (!linkHeader) {
+    return 1; // Default to 1 if Link header is not present
+  }
+
+  const match = linkHeader.match(/&page=(\d+)>; rel="last"/);
+  return match ? parseInt(match[1], 10) : 1;
+}

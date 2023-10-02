@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react'
 import   AdminNavbar  from '../Components/Admin-Navbar'
-import { useDispatch, useSelector } from 'react-redux'
+import { shallowEqual, useDispatch, useSelector } from 'react-redux'
 import axios from 'axios'
 import { getAllusers,deleteSingleUser } from '../../UserPage/Redux/Admin/userAction'
 import { user } from '../../UserPage/Redux/Admin/constants'
 import styled from 'styled-components'
-import { AbsoluteCenter, Box, Button, Divider, Flex, Table, Tbody, Td, Tfoot, Th, Thead, Tr, useBreakpointValue } from '@chakra-ui/react'
+import { AbsoluteCenter, Box, Button, CircularProgress, Divider, Flex, Stack, Table, Tbody, Td, Tfoot, Th, Thead, Tr, useBreakpointValue } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 import { AdminFooter } from './AdminFooter'
+import { store } from '../../UserPage/Redux/store'
 
 
 
@@ -15,17 +16,23 @@ import { AdminFooter } from './AdminFooter'
 
 const Users = () => {
   const dispatch=useDispatch();
-  const userData=useSelector((store:unknown)=>{
+  const userData=useSelector((store:any)=>{
      return store.adminReducer.users
-  })
+  });
+  const isLoading=useSelector((store:any)=>{
+    return store.adminReducer.isLoading;
+  },shallowEqual);
   const buttonSize = useBreakpointValue({ base: 'sm', md: 'md', lg: 'lg' });
   const fontSize = useBreakpointValue({ base: 'sm', md: 'md', lg: 'lg' });
   // const headerSize = useBreakpointValue({ base: 'sm', md: 'md', lg: 'lg' });
-console.log(userData,"from user store data");
+// console.log(userData,"from user store data");
 
+  
   useEffect(()=>{
        dispatch(getAllusers());
   },[]);
+  
+  
   // axios.get(`http://localhost:8080/user`)
   // .then(res=>{
   //   console.log(res.data)
@@ -36,7 +43,6 @@ console.log(userData,"from user store data");
 
   const handleDeleteUser = (id: number) => {
     dispatch(deleteSingleUser(id)); 
-    
   };
 
   return (
@@ -45,10 +51,20 @@ console.log(userData,"from user store data");
          <Box position='relative' padding='10'>
   <Divider />
   <AbsoluteCenter fontSize={fontSize} bg='white' px='4'>
-    Customers
+    Customers 
   </AbsoluteCenter>
    </Box>
-         <Table w="80%" m="auto" >
+   {isLoading&&
+   <Stack bg={"white"}
+   m={"auto"}
+   w={"80%"}
+   h={"350px"}
+   >
+   <CircularProgress  m={"auto"} isIndeterminate color='green.300' />
+   </Stack>
+}
+      {
+      !isLoading&&  <Table w="80%" m="auto" >
       <Thead>
         <Tr>
           <Th textAlign="center" fontSize={fontSize}>User name</Th>
@@ -59,6 +75,7 @@ console.log(userData,"from user store data");
       </Thead>
       <Tbody>
         {/*  */}
+      
         {userData?.map((ele:any) => (
           <Tr key={ele.id}>
             <Td textAlign="center" fontSize={fontSize}>{ele.username}</Td>
@@ -83,18 +100,20 @@ console.log(userData,"from user store data");
       <Tfoot w="100%">
         <Tr>
           <Td colSpan={4}>
-            <Flex justifyContent="end" >
+            {/* {paginate} */}
+            {/* <Flex justifyContent="end" >
               <Button variant="outline" colorScheme="green" size={buttonSize} ml={2}>
                 Prev
               </Button>
               <Button variant="outline" colorScheme="green" size={buttonSize} ml={2}>
                 Next
               </Button>
-            </Flex>
+            </Flex> */}
           </Td>
         </Tr>
       </Tfoot>
     </Table>
+      } 
     <AdminFooter/>
     </>
   )
