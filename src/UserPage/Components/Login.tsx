@@ -208,7 +208,9 @@ onClose()
             >
               New User ?
             </Button>
-            {SignOpen && <SignupModal onOpen={SignOpen} LetClose={SignClose} />}
+            {SignOpen && <SignupModal 
+            onOpens={SignOpen} 
+            LetClose={SignClose} />}
             </Box>
           
           </PopoverBody>

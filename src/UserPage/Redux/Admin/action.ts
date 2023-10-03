@@ -8,9 +8,9 @@ import {
 import { ProductURL, getProductDataFromAPI } from "../../Utilis/api";
 import axios from "axios";
 
-export const getProducts = (paramss: any) => (dispatch: Dispatch):void =>{
+export const getProducts = () => (dispatch: Dispatch):void =>{
   dispatch({ type: GET_PRODUCT_REQUEST });
-  getProductDataFromAPI(paramss)
+  getProductDataFromAPI({})
     .then((res: any) => {
       console.log("products rendering");
       dispatch({ type: GET_PRODUCT_SUCCESS, payload: res.data });

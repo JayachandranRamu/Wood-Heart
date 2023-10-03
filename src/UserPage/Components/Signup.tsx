@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { ReactNode, useState } from 'react';
 import {
   Button,
   Input,
@@ -22,11 +22,11 @@ interface SignupFormData {
 }
 
 interface SignupModalProps {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: any;
+  onClose: any;
 }
 
-export const SignupModal: React.FC<SignupModalProps> = ({onOpen,LetClose}:any) => {
+export const SignupModal: React.FC<SignupModalProps> = ({onOpens,LetClose}:any):ReactNode => {
     const toast = useToast()
     const dispatch=useDispatch();
 
@@ -92,7 +92,7 @@ export const SignupModal: React.FC<SignupModalProps> = ({onOpen,LetClose}:any) =
   };
 
   return (
-    <Modal isOpen={onOpen} onClose={LetClose} size="sm" isCentered >
+    <Modal isOpen={onOpens} onClose={LetClose} size="sm" isCentered >
       <ModalOverlay />
       <ModalContent fontFamily={"poppins"} borderRadius={"15px"}>
      

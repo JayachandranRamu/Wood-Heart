@@ -29,7 +29,7 @@ localStorage.setItem("isAuth","true")
 
 dispatch({type:AUTH_SUCCESS,payload:userData})
 }
-export const LogoutStoringUserDatainLS=(dispatch:Dispatch)=>{
+export const LogoutStoringUserDatainLS=(dispatch:Dispatch):void=>{
     localStorage.setItem("LoginedUserData","");
     localStorage.setItem("LoginedUserDataID","")
     localStorage.setItem("isAuth","false")
