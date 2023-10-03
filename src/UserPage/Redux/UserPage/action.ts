@@ -1,4 +1,4 @@
-import { Dispatch } from 'redux'; // Import Dispatch type if not already imported
+import { AnyAction, Dispatch } from 'redux'; // Import Dispatch type if not already imported
 import {
   PRODUCT_REQUEST,
   PRODUCT_SUCCESS,
@@ -11,7 +11,7 @@ import axios from 'axios';
 // Import the getProductDataFromAPI function if not already imported
 // Assuming it returns a Promise with a response object containing a 'data' field
 
-export const getProductsData = (params: any) => (dispatch: Dispatch):void => {
+export const getProductsData = (params: any) => (dispatch: Dispatch<AnyAction>):void => {
   dispatch({ type: PRODUCT_REQUEST });
   getProductDataFromAPI(params)
   .then((res) =>{

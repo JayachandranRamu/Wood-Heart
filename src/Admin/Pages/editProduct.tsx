@@ -53,10 +53,7 @@ export const EditProduct: React.FC = () => {
   const handleChange = (e: any) => {
     Prod = {
       ...data,
-      [e.target.name]:
-        e.target.name === "price" || "rating"
-          ? +e.target.value
-          : e.target.value,
+      [e.target.name]: e.target.value,
     };
     setData(Prod);
     console.log(Prod);
