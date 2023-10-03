@@ -11,7 +11,7 @@ Our project entails the development of a comprehensive furniture retail website,
 * Admin Page
 
 
-**Netlify :**  [Wood Heart Website]()
+**Vercel :**  [Wood Heart Website]()
 ## Tech Stack
 
 **Front-End :**
